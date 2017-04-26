@@ -41,3 +41,7 @@ Route::post('posts','PostsController@store');//保存文章
 Route::get('posts/{post}','PostsController@show');//显示某篇文章
 Route::get('tasks', 'TasksController@index');
 Route::get('tasks/{task}', 'TasksController@show');
+
+Route::get('admin','AdminController@index');//后台首页
+Route::get('article-list','AdminController@article');//文章列表
+Route::get('article-add','AdminController@articleAdd');//添加文章
