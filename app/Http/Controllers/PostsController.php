@@ -17,7 +17,8 @@ class PostsController extends Controller
     /*public function store(){
         $post = new Post();
         $post->title = request('title');
-        $post->content = request('content');
+        $post->content = request('content');  1234
+    1234
         $post->save();
         return redirect('posts');
     }*/
@@ -34,7 +35,7 @@ class PostsController extends Controller
         Post::create(request(['title', 'body']));
         return redirect('posts');
     }
-    //显示谋篇文章
+    //显示某篇文章
     public function show(Post $post){
         return view('posts.show', compact('post'));
     }

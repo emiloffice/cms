@@ -43,5 +43,11 @@ Route::get('tasks', 'TasksController@index');
 Route::get('tasks/{task}', 'TasksController@show');
 
 Route::get('admin','AdminController@index');//后台首页
+Route::get('menu','AdminController@menu');//菜单栏首页
+Route::get('add-menu','AdminController@addMenu');//菜单栏首页
 Route::get('article-list','AdminController@article');//文章列表
 Route::get('article-add','AdminController@articleAdd');//添加文章
+
+
+//系统设置
+Route::get('system-base','SystemController@base');//基本设置

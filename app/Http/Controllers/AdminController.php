@@ -30,4 +30,14 @@ class AdminController extends Controller
         Post::create(request(['title', 'body']));
         return redirect('posts');
     }
+    //add menu
+    public function addMenu()
+    {
+        return view('admin.menu.add');
+    }
+    //menu
+    public function menu()
+    {
+        return view('admin.menu.index');
+    }
 }
