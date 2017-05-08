@@ -18,17 +18,7 @@
                 </ul>
             </dd>
         </dl>
-        <dl id="menu-product">
-            <dt><i class="Hui-iconfont">&#xe620;</i> 产品管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
-            <dd>
-                <ul>
-                    <li><a href="product-brand" title="品牌管理">品牌管理</a></li>
-                    <li><a href="product-category" title="分类管理">分类管理</a></li>
-                    <li><a href="product-list" title="产品管理">产品管理</a></li>
-                </ul>
-            </dd>
-        </dl>
-        <dl id="menu-comments">
+        {{--<dl id="menu-comments">
             <dt><i class="Hui-iconfont">&#xe622;</i> 评论管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
@@ -36,8 +26,8 @@
                     <li><a href="feedback-list" title="意见反馈">意见反馈</a></li>
                 </ul>
             </dd>
-        </dl>
-        <dl id="menu-member">
+        </dl>--}}
+        {{--<dl id="menu-member">
             <dt><i class="Hui-iconfont">&#xe60d;</i> 会员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
@@ -50,7 +40,7 @@
                     <li><a href="member-record-share" title="分享记录">分享记录</a></li>
                 </ul>
             </dd>
-        </dl>
+        </dl>--}}
         <dl id="menu-admin">
             <dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
@@ -61,7 +51,7 @@
                 </ul>
             </dd>
         </dl>
-        <dl id="menu-tongji">
+        {{--<dl id="menu-tongji">
             <dt><i class="Hui-iconfont">&#xe61a;</i> 系统统计<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
@@ -74,15 +64,13 @@
                     <li><a href="charts-7" title="3D饼状图">3D饼状图</a></li>
                 </ul>
             </dd>
-        </dl>
+        </dl>--}}
         <dl id="menu-system">
             <dt><i class="Hui-iconfont">&#xe62e;</i> 系统管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
                     <li><a href="system-base" title="系统设置">系统设置</a></li>
                     <li><a href="system-category" title="栏目管理">栏目管理</a></li>
-                    <li><a href="system-data" title="数据字典">数据字典</a></li>
-                    <li><a href="system-shielding" title="屏蔽词">屏蔽词</a></li>
                     <li><a href="system-log" title="系统日志">系统日志</a></li>
                 </ul>
             </dd>

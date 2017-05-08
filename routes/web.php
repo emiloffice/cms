@@ -51,3 +51,17 @@ Route::get('admin-login', 'AdminController@login');//后台登录
 
 //系统设置
 Route::get('system-base','SystemController@base');//基本设置
+Route::get('system-category','SystemController@category');//栏目
+Route::get('category-add','SystemController@categoryAdd');//栏目添加
+Route::get('system-log','SystemController@log');//日志
+
+
+
+
+
+
+
+
+
+
+

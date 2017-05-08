@@ -134,25 +134,16 @@
     <script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
     <script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
     <script type="text/javascript">
-        var menu = $('#menu-system');
-        var dt = menu.children().eq(0);
-        var dd = menu.children().eq(1);
-        var li = dd.children().children().eq(0);
-        console.log(dt);
-        console.log(dd);
-        console.log(li);
-        dd.css('display', 'block');
-        dt.addClass('selected');
-        li.addClass('current');
-        $(function(){
+    $('#menu-system').menuSelector(1);
+    $(function(){
 
-            $('.skin-minimal input').iCheck({
-                checkboxClass: 'icheckbox-blue',
-                radioClass: 'iradio-blue',
-                increaseArea: '20%'
-            });
-            $.Huitab("#tab-system .tabBar span","#tab-system .tabCon","current","click","0");
+        $('.skin-minimal input').iCheck({
+            checkboxClass: 'icheckbox-blue',
+            radioClass: 'iradio-blue',
+            increaseArea: '20%'
         });
+        $.Huitab("#tab-system .tabBar span","#tab-system .tabCon","current","click","0");
+    });
     </script>
     <!--/请在上方写此页面业务相关的脚本-->
 @endsection
