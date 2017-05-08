@@ -15,11 +15,19 @@ class CreateAdminTable extends Migration
     {
         Schema::create('admin', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('password');
+            $table->string('email');
+            $table->string('mobile');
+            $table->string('permissions');
+            $table->string('login_ip');
+            $table->dateTime('login_time');
+            $table->string('status');
             $table->timestamps();
         });
     }
 
-    /**
+    /**gi
      * Reverse the migrations.
      *
      * @return void
