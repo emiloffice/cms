@@ -31,7 +31,7 @@ class AdminController extends Controller
             'title' => 'required|unique:posts|max:255',
             'content'=>'required|min:5',
         ]);
-        Post::create(request(['title', 'body']));
+        Post::create(request(['title', 'subtitle', 'system_cate_id', 'posts_category', 'sort', 'keyword', 'description', 'author','content']));
         return redirect('posts');
     }
     //add menu

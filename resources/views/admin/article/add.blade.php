@@ -5,19 +5,19 @@
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文章标题：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="" placeholder="" id="" name="">
+                    <input type="text" class="input-text" value="" placeholder="" id="" name="title">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">简略标题：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="" placeholder="" id="" name="">
+                    <input type="text" class="input-text" value="" placeholder="" id="" name="subtitle">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>分类栏目：</label>
                 <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
-				<select name="" class="select">
+				<select name="system_cate_id" class="select">
 					<option value="0">全部栏目</option>
 					<option value="1">新闻资讯</option>
 					<option value="11">├行业动态</option>
@@ -29,7 +29,7 @@
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文章类型：</label>
                 <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
-				<select name="" class="select">
+				<select name="posts_category" class="select">
 					<option value="0">全部类型</option>
 					<option value="1">帮助说明</option>
 					<option value="2">新闻资讯</option>
@@ -39,39 +39,39 @@
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">排序值：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="0" placeholder="" id="" name="">
+                    <input type="text" class="input-text" value="0" placeholder="" id="" name="sort">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">关键词：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="" placeholder="" id="" name="">
+                    <input type="text" class="input-text" value="" placeholder="" id="" name="keyword">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章摘要：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <textarea name="" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,200)"></textarea>
+                    <textarea name="description" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,200)"></textarea>
                     <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章作者：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="0" placeholder="" id="" name="">
+                    <input type="text" class="input-text" value="0" placeholder="" id="" name="author">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章来源：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="0" placeholder="" id="" name="">
+                    <input type="text" class="input-text" value="0" placeholder="" id="" name="source">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">允许评论：</label>
                 <div class="formControls col-xs-8 col-sm-9 skin-minimal">
                     <div class="check-box">
-                        <input type="checkbox" id="checkbox-pinglun">
+                        <input type="checkbox" id="checkbox-pinglun" name="comment_cate">
                         <label for="checkbox-pinglun">&nbsp;</label>
                     </div>
                 </div>
@@ -79,16 +79,16 @@
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">评论开始日期：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin" class="input-text Wdate">
+                    <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin" class="input-text Wdate" name="comment_start_date">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">评论结束日期：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax" class="input-text Wdate">
+                    <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax" class="input-text Wdate" name="comment_end_date">
                 </div>
             </div>
-            <div class="row cl">
+            {{--<div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">使用独立模版：</label>
                 <div class="formControls col-xs-8 col-sm-9 skin-minimal">
                     <div class="check-box">
@@ -97,7 +97,7 @@
                     </div>
                     <button onClick="mobanxuanze()" class="btn btn-default radius ml-10">选择模版</button>
                 </div>
-            </div>
+            </div>--}}
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">缩略图：</label>
                 <div class="formControls col-xs-8 col-sm-9">
@@ -108,10 +108,11 @@
                     </div>
                 </div>
             </div>
+            <input type="hidden" name="thumb">
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章内容：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <script id="editor" type="text/plain" style="width:100%;height:400px;"></script>
+                    <script id="editor" type="text/plain" style="width:100%;height:400px;" name="content"></script>
                 </div>
             </div>
             <div class="row cl">
