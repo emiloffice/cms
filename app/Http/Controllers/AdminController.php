@@ -44,4 +44,24 @@ class AdminController extends Controller
     {
         return view('admin.menu.index');
     }
+    //role
+    public function role()
+    {
+        return view('admin.role');
+    }
+    //add role
+    public function roleAdd()
+    {
+        return view('admin.roleAdd');
+    }
+    //permission
+    public function permission()
+    {
+        return view('admin.permission');
+    }
+    //admin-list
+    public function _list()
+    {
+        return view('admin.list');
+    }
 }

@@ -10,7 +10,20 @@ class Post extends Model
 {
     protected $fillable = [
         'title',
+        'subtitle',
+        'system_cate_id',
+        'posts_category',
+        'sort',
+        'keyword',
+        'description',
+        'author',
+        'source',
+        'comment_cate',
+        'comment_start_date',
+        'comment_end_date',
+        'thumb',
         'content',
+
     ];
     public function up(){
         Schema::create('posts', function (Blueprint $table){
