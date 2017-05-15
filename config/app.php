@@ -227,5 +227,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
+    'uploads' => [
+        'storage' => 'local',
+        'webpath' => 'uploads'
+    ]
 
 ];

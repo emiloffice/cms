@@ -10,14 +10,14 @@
                 </ul>
             </dd>
         </dl>
-        <dl id="menu-picture">
+        {{--<dl id="menu-picture">
             <dt><i class="Hui-iconfont">&#xe613;</i> 图片管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
                     <li><a href="picture-list" title="图片管理">图片管理</a></li>
                 </ul>
             </dd>
-        </dl>
+        </dl>--}}
         {{--<dl id="menu-comments">
             <dt><i class="Hui-iconfont">&#xe622;</i> 评论管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>

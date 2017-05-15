@@ -154,7 +154,7 @@
                 swf: 'lib/webuploader/0.1.5/Uploader.swf',
 
                 // 文件接收服务端。
-                server: 'fileupload.php',
+                server: '{{ URL('upload—file') }}',
 
                 // 选择文件的按钮。可选。
                 // 内部根据当前运行是创建，可能是input元素，也可能是flash.

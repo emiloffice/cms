@@ -4,7 +4,7 @@
         <div class="blog-post">
             <h2 class="blog-post-title">{{ $post->title }}</h2>
             <p class="blog-post-meta">{{ $post->created_at->toFormattedDateString() }} by <a href="#">Zen</a></p>
-            <p>{{  $post->content }}</p>
+            {!!$post->content!!}
         </div>
         @foreach($post->comments as $comment)
             <div class="card">
@@ -12,5 +12,6 @@
                     {{  $comment->created_at->diffForHumans() }}
                 </div>
             </div>
+        @endforeach
     </div>
 @endsection

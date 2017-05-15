@@ -35,6 +35,6 @@ $factory->define(App\Admin::class, function (Faker\Generator $faker) {
         'login_time' => '2017-05-13 08:55:01',
         'status' => '0',
         'password' => $password ?: $password = bcrypt('secret'),
-//        'remember_token' => str_random(10),
+        'remember_token' => str_random(10),
     ];
 });

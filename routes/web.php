@@ -74,7 +74,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 });
 
 
-
+Route::get('upload-file', 'AdminController@upload_file');//上传图片
 
 
 
@@ -82,3 +82,5 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('upload', 'UploadsController@upload');
