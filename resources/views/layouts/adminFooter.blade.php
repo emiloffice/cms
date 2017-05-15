@@ -5,3 +5,8 @@
 <script type="text/javascript" src="static/h-ui/js/H-ui.js"></script>
 <script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.page.js"></script>
 <!--/_footer /作为公共模版分离出去-->
+<script>
+    function logout() {
+        $.post('{{url('logout')}}');
+    }
+</script>

@@ -11,7 +11,7 @@ class LoginController extends Controller
 {
     use AuthenticatesUsers;
 
-    protected $redirectTo = '/admin/dash';
+    protected $redirectTo = '/admin';
     protected $username;
 
     public function __construct()
@@ -38,5 +38,9 @@ class LoginController extends Controller
     protected function guard()
     {
         return auth()->guard('admin');
+    }
+    public function logout()
+    {
+        return auth()->logout();
     }
 }
