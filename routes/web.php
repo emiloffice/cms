@@ -64,7 +64,14 @@ Route::get('system-log','SystemController@log');//日志
 
 
 
+Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
+{
+    $router->get('login', 'LoginController@showLoginForm')->name('admin.login');
+    $router->post('login', 'LoginController@login');
+    $router->post('logout', 'LoginController@logout');
 
+    $router->get('dash', 'DashboardController@index');
+});
 
 
 
