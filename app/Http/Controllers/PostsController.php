@@ -36,6 +36,11 @@ class PostsController extends Controller
     {
         return view('posts.index', compact('post'));
     }
+
+    public function edit()
+    {
+        return view('posts.edit');
+    }
     //显示某篇文章
     public function show(Post $post){
         return view('posts.show', compact('post'));

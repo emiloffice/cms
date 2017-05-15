@@ -48,6 +48,7 @@ Route::get('add-menu', 'AdminController@addMenu');//菜单栏首页
 Route::get('article-list', 'PostsController@index');//文章列表
 Route::get('article-add', 'PostsController@create');//添加文章
 Route::post('article-store', 'PostsController@store');//添加文章
+Route::post('article-edit', 'PostsController@edit');//修改php文章
 Route::get('admin-login', 'AdminController@login');//后台登录
 Route::get('admin-role', 'AdminController@role');//角色管理
 Route::get('admin-role-add', 'AdminController@roleAdd');//角色添加
@@ -70,3 +71,7 @@ Route::get('system-log','SystemController@log');//日志
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

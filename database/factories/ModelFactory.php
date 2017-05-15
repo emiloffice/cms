@@ -22,3 +22,19 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
         'remember_token' => str_random(10),
     ];
 });
+
+$factory->define(App\Admin::class, function (Faker\Generator $faker) {
+    static $password;
+
+    return [
+        'name' => $faker->name,
+        'email' => $faker->safeEmail,
+        'mobile' => '13888888888',
+        'login_ip' => '127.0.0.1',
+        'permissions' => 'admin',
+        'login_time' => '2017-05-13 08:55:01',
+        'status' => '0',
+        'password' => $password ?: $password = bcrypt('secret'),
+//        'remember_token' => str_random(10),
+    ];
+});
