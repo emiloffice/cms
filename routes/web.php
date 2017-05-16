@@ -85,4 +85,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+Route::post('upload', 'UploadsController@upload');
 Route::get('upload', 'UploadsController@upload');
