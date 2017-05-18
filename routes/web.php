@@ -12,9 +12,7 @@
 */
 use App\Task;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','');
 /*Route::get('tasks', function (){
     return $tasks = DB::table('tasks')->latest()->get();
     $tasks = DB::table('tasks')->latest()->get();
