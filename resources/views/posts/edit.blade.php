@@ -1,18 +1,18 @@
 @extends('layouts.adminMaster')
 @section('content')
     <article class="page-container">
-        <form class="form form-horizontal" id="form-article-add" action="{{url('article-store')}}" method="post">
+        <form class="form form-horizontal" id="form-article-add" action="{{url('admin/article-store')}}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="_token"         value="{{csrf_token()}}"/>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文章标题：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="" placeholder="" id="" name="title">
+                    <input type="text" class="input-text" value="{{ $post->title }}" placeholder="" id="" name="title">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">简略标题：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="" placeholder="" id="" name="subtitle">
+                    <input type="text" class="input-text" value="{{ $post->subtitle }}" placeholder="" id="" name="subtitle">
                 </div>
             </div>
             <div class="row cl">
@@ -40,39 +40,39 @@
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">排序值：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="0" placeholder="" id="" name="sort">
+                    <input type="text" class="input-text" value="{{ $post->sort }}" placeholder="" id="" name="sort">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">关键词：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="" placeholder="" id="" name="keyword">
+                    <input type="text" class="input-text" value="{{ $post->keyword }}" placeholder="" id="" name="keyword">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章摘要：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <textarea name="description" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,200)"></textarea>
+                    <textarea name="description" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,200)">{{ $post->description }}</textarea>
                     <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章作者：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="0" placeholder="" id="" name="author">
+                    <input type="text" class="input-text" value="{{ $post->author }}" placeholder="" id="" name="author">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章来源：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="0" placeholder="" id="" name="source">
+                    <input type="text" class="input-text" value="{{ $post->source }}" placeholder="" id="" name="source">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">允许评论：</label>
                 <div class="formControls col-xs-8 col-sm-9 skin-minimal">
                     <div class="check-box">
-                        <input type="checkbox" id="checkbox-pinglun" name="comment_cate">
+                        <input type="checkbox" id="checkbox-pinglun" name="comment_cate" value="{{ $post->comment_cate }}">
                         <label for="checkbox-pinglun">&nbsp;</label>
                     </div>
                 </div>
@@ -128,14 +128,14 @@
 @endsection
 @section('script')
     <!--请在下方写此页面业务相关的脚本-->
-    <script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
-    <script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script>
-    <script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
-    <script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
-    <script type="text/javascript" src="lib/webuploader/0.1.5/webuploader.min.js"></script>
-    <script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.config.js"></script>
-    <script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
-    <script type="text/javascript" src="lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" src="/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+    <script type="text/javascript" src="/lib/webuploader/0.1.5/webuploader.min.js"></script>
+    <script type="text/javascript" src="/lib/ueditor/1.4.3/ueditor.config.js"></script>
+    <script type="text/javascript" src="/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
+    <script type="text/javascript" src="/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
     <script type="text/javascript">
         $(function(){
             $('.skin-minimal input').iCheck({

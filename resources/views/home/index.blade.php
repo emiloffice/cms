@@ -132,10 +132,10 @@
         </div>
     </div>
     <div class="hidden-lg hidden-md sm-despriction">
-        <p id="video_despriction">
+        <p>
                 &nbsp;&nbsp;&nbsp;&nbsp;Seeking Dawn is a massive survival-exploration VR game from Multiverse. It puts you into an immersive alien "death world" chock-full of interesting flora and fauna, unknown dangers and wonderful delights.
         </p>
-        <a id="status" href="/seekingdawn" class="text-align-center" style="display: block;text-align: center;">
+        <a href="/seekingdawn" class="text-align-center" style="display: block;text-align: center;">
             LEARN MORE
         </a>
     </div>

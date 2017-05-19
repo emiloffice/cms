@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Home;
 
+use App\Post;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -72,7 +73,7 @@ class IndexController extends Controller
 
     public function privacy()
     {
-        return view('home.privacy');
+        return view('home.legal.privacy');
     }
     public function publishing()
     {
@@ -92,10 +93,19 @@ class IndexController extends Controller
     }
     public function tos()
     {
-        return view('home.tos');
+        return view('home.legal.tos');
     }
     public function values()
     {
         return view('home.values');
+    }
+    public function posts()
+    {
+        $posts = Post::latest()->get();
+        return view('home.posts', compact('posts'));
+    }
+    public function Show(Post $post)
+    {
+        return view('home.show', compact('post'));
     }
 }

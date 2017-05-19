@@ -114,6 +114,15 @@
 			</div>
 		</div>
 	</div>
+    <div class="hidden-lg hidden-md sm-despriction">
+        <p id="video_despriction" class="des">
+            Seeking Dawn is a large scale survival-exploration FPS/RPG VR game from Multiverse. It puts the player into an immersive alien "death world" full of interesting creatures, unknown dangers and wonderful delights, complete with an epic story and characters with vivid personality.<br>
+            The game will feature more than 10 hours of content for the average player on the first play-through. Harder challenges and the lure of better loot ensure subsequent play-throughs remain fun and attractive.
+        </p>
+        <div class="status">
+            COMING SOON
+        </div>
+    </div>
 	<div class="poster poster1 section">
 		<div class="shadow"></div>
         <div class="hidden-xs hidden-sm hidden-md height-100px"></div>

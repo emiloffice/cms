@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
-
+use App\Http\Controllers\Controller;
 class UploadsController extends Controller
 {
     public function upload(Request $request)
@@ -19,10 +19,13 @@ class UploadsController extends Controller
                 $realPath = $file->getRealPath();//临时绝对路径
                 $fileName = date('YmdHis').uniqid().'.'.$ext;
                 $bool = Storage::disk('uploads')->put($fileName, file_get_contents($realPath));
-                var_dump($bool);
+                $res['status'] = "success";
+                $res['code'] = '0';
+                $res['filepath'] = $fileName;
+                $res = json_encode($res);
+//                dd($res);
+                return $res;
             }
-
-            dd($file);
             exit;
         }
         return view('admin.upload.index');

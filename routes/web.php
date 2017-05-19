@@ -32,10 +32,8 @@ Route::get('tasks/{task}' ,function ($id){
     $task = Task::findorFail($id);
     return view('tasks/show', compact('task'));
 });*/
-Route::get('posts','PostsController@index');//文章页
-Route::get('posts/create','PostsController@create');//创建文章
-Route::post('posts','PostsController@store');//保存文章
-Route::get('posts/{post}','PostsController@show');//显示某篇文章
+
+/*
 Route::get('tasks', 'TasksController@index');
 Route::get('tasks/{task}', 'TasksController@show');
 
@@ -57,6 +55,7 @@ Route::get('system-base','SystemController@base');//基本设置
 Route::get('system-category','SystemController@category');//栏目
 Route::get('category-add','SystemController@categoryAdd');//栏目添加
 Route::get('system-log','SystemController@log');//日志
+*/
 
 Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
 {
@@ -64,6 +63,8 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->get('index', 'IndexController@index');
     $router->get('', 'IndexController@index');
     $router->get('about', 'IndexController@about');
+    $router->get('posts/{post}','IndexController@show');//显示某篇文章
+    $router->get('posts','IndexController@posts');//显示某篇文章
     $router->get('comingsoon', 'IndexController@comingsoon');
     $router->get('company', 'IndexController@company');
     $router->get('contact', 'IndexController@contact');
@@ -80,6 +81,8 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->get('template', 'IndexController@template');
     $router->get('tos', 'IndexController@tos');
     $router->get('values', 'IndexController@values');
+    $router->get('legal/privacy', 'IndexController@privacy');
+    $router->get('legal/tos', 'IndexController@tos');
 });
 
 
@@ -92,18 +95,38 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 
     $router->get('dash', 'DashboardController@index');
     $router->get('index', 'AdminController@index');
+
+    $router->get('posts','PostsController@index');//文章页
+    $router->get('posts/create','PostsController@create');//创建文章
+    $router->post('posts','PostsController@store');//保存文章
+    $router->get('posts/{post}','PostsController@show');//后台显示某篇文章
+    $router->get('posts-edit/{id}','PostsController@edit');//后台显示某篇文章
+    $router->get('/', 'AdminController@index');//后台首页
+    $router->get('menu', 'AdminController@menu');//菜单栏首页
+    $router->get('add-menu', 'AdminController@addMenu');//菜单栏首页
+    $router->get('article-list', 'PostsController@index');//文章列表
+    $router->get('article-add', 'PostsController@create');//添加文章
+    $router->post('article-store', 'PostsController@store');//添加文章
+    $router->post('article-edit', 'PostsController@edit');//修改php文章
+    $router->get('admin-login', 'AdminController@login');//后台登录
+    $router->get('admin-role', 'AdminController@role');//角色管理
+    $router->get('admin-role-add', 'AdminController@roleAdd');//角色添加
+    $router->get('admin-permission', 'AdminController@permission');//权限管理
+    $router->get('admin-list', 'AdminController@_list');//权限管理
+
+    //系统设置
+    $router->get('system-base','SystemController@base');//基本设置
+    $router->get('system-category','SystemController@category');//栏目
+    $router->get('category-add','SystemController@categoryAdd');//栏目添加
+    $router->get('system-log','SystemController@log');//日志
+    //文件上传
+    $router->post('upload', 'UploadsController@upload');
+    $router->put('upload', 'UploadsController@upload');
+    $router->get('upload', 'UploadsController@upload');
 });
-
-
-Route::get('upload-file', 'AdminController@upload_file');//上传图片
-
-
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::post('upload', 'UploadsController@upload');
-Route::put('upload', 'UploadsController@upload');
-Route::get('upload', 'UploadsController@upload');

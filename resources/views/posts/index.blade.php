@@ -58,30 +58,17 @@
                     <tr class="text-c">
                         <td><input type="checkbox" value="" name=""></td>
                         <td>{{$post->id}}</td>
-                        <td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang','10001')" title="查看">{{ $post->title }}</u></td>
+                        <td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','{{url('admin/posts-edit')}}','{{ $post->id }}')" title="查看">{{ $post->title }}</u></td>
                         <td>{{ $post->system_cate_id }}</td>
                         <td>{{ $post->author }}</td>
                         <td>{{ $post->updated_at }}</td>
                         <td>21212</td>
                         <td class="td-status"><span class="label label-success radius">已发布</span></td>
-                        <td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a>
-                            <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
-                            <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+                        <td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_stop(this,'{{ $post->id }}')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a>
+                            <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add','{{ $post->id }}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+                            <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'{{ $post->id }}')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
                     </tr>
                     @endforeach
-                    <tr class="text-c">
-                        <td><input type="checkbox" value="" name=""></td>
-                        <td>10002</td>
-                        <td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_edit('查看','article-zhang','10002')" title="查看">资讯标题</u></td>
-                        <td>行业动态</td>
-                        <td>H-ui</td>
-                        <td>2014-6-11 11:11:42</td>
-                        <td>21212</td>
-                        <td class="td-status"><span class="label label-success radius">草稿</span></td>
-                        <td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_shenhe(this,'10001')" href="javascript:;" title="审核">审核</a>
-                            <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
-                            <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
-                    </tr>
                     </tbody>
                 </table>
             </div>
@@ -92,9 +79,9 @@
 @stop
 @section('script')
     <!--请在下方写此页面业务相关的脚本-->
-    <script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
-    <script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
-    <script type="text/javascript" src="lib/laypage/1.2/laypage.js"></script>
+    <script type="text/javascript" src="/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+    <script type="text/javascript" src="/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="/lib/laypage/1.2/laypage.js"></script>
     <script type="text/javascript">
         $('#menu-article').menuSelector(1);
         $('.table-sort').dataTable({

@@ -1,7 +1,7 @@
 @extends('layouts.adminMaster')
 @section('content')
     <article class="page-container">
-        <form class="form form-horizontal" id="form-article-add" action="{{url('article-store')}}" method="post">
+        <form class="form form-horizontal" id="form-article-add" action="{{url('admin/article-store')}}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="_token"         value="{{csrf_token()}}"/>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文章标题：</label>
@@ -108,8 +108,8 @@
                         <button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>
                     </div>
                 </div>
+                <input type="hidden" name="thumb" value="" id="thumb_path">
             </div>
-            <input type="hidden" name="thumb">
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章内容：</label>
                 <div class="formControls col-xs-8 col-sm-9">
@@ -128,14 +128,14 @@
 @endsection
 @section('script')
     <!--请在下方写此页面业务相关的脚本-->
-    <script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
-    <script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script>
-    <script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
-    <script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
-    <script type="text/javascript" src="lib/webuploader/0.1.5/webuploader.min.js"></script>
-    <script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.config.js"></script>
-    <script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
-    <script type="text/javascript" src="lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" src="/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+    <script type="text/javascript" src="/lib/webuploader/0.1.5/webuploader.min.js"></script>
+    <script type="text/javascript" src="/lib/ueditor/1.4.3/ueditor.config.js"></script>
+    <script type="text/javascript" src="/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
+    <script type="text/javascript" src="/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
     <script type="text/javascript">
         $(function(){
             $('.skin-minimal input').iCheck({
@@ -149,18 +149,19 @@
                 $btn = $("#btn-star"),
                 state = "pending",
                 uploader;
-
+            var thumbnailWidth = 100;
+            var thumbnailHeight = 100;
             var uploader = WebUploader.create({
                 auto: true,
-                swf: 'lib/webuploader/0.1.5/Uploader.swf',
+                swf: '/lib/webuploader/0.1.5/Uploader.swf',
 
                 // 文件接收服务端。
-                server: '{{ url('upload-file') }}',
+                server: '{{ url('admin/upload') }}',
 
                 // 选择文件的按钮。可选。
                 // 内部根据当前运行是创建，可能是input元素，也可能是flash.
                 pick: '#filePicker',
-
+                formData: {"_token": "{{ csrf_token() }}"},
                 // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
                 resize: false,
                 // 只允许选择图片文件。
@@ -168,7 +169,7 @@
                     title: 'Images',
                     extensions: 'gif,jpg,jpeg,bmp,png',
                     mimeTypes: 'image/*'
-                }
+                },
             });
             uploader.on( 'fileQueued', function( file ) {
                 var $li = $(
@@ -207,7 +208,11 @@
             });
 
             // 文件上传成功，给item添加成功class, 用样式标记上传成功。
-            uploader.on( 'uploadSuccess', function( file ) {
+            uploader.on( 'uploadSuccess', function( file, response ) {
+//                var res = eval("("+response+")");
+//                console.log(res)
+//                $('#thumb_path').val(res.filepath);
+                $('#thumb_path').val(response.filepath);
                 $( '#'+file.id ).addClass('upload-state-success').find(".state").text("已上传");
             });
 
