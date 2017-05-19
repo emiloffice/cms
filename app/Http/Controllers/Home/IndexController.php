@@ -12,23 +12,6 @@ class IndexController extends Controller
     {
         return view('home.index');
     }
-    /*$router->get('about', 'IndexController@about');
-    $router->get('comingsoon', 'IndexController@comingsoon');
-    $router->get('company', 'IndexController@company');
-    $router->get('contact', 'IndexController@contact');
-    $router->get('dreamflight', 'IndexController@dreamflight');
-    $router->get('galactic', 'IndexController@galactic');
-    $router->get('jobs', 'IndexController@jobs');
-    $router->get('legal', 'IndexController@legal');
-    $router->get('ourgames', 'IndexController@ourgames');
-    $router->get('press', 'IndexController@press');
-    $router->get('privacy', 'IndexController@privacy');
-    $router->get('publishing', 'IndexController@publishing');
-    $router->get('seekingdawn', 'IndexController@seekingdawn');
-    $router->get('team', 'IndexController@team');
-    $router->get('template', 'IndexController@template');
-    $router->get('tos', 'IndexController@tos');
-    $router->get('values', 'IndexController@values');*/
     public function about()
     {
         return view('home.about');

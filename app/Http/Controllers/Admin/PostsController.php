@@ -43,8 +43,6 @@ class PostsController extends Controller
 
     public function edit(Post $post)
     {
-        dd($post);
-//        dd(Post);
         return view('posts.edit', compact('post'));
     }
     //显示某篇文章

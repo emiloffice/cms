@@ -100,7 +100,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('posts/create','PostsController@create');//创建文章
     $router->post('posts','PostsController@store');//保存文章
     $router->get('posts/{post}','PostsController@show');//后台显示某篇文章
-    $router->get('posts-edit/{id}','PostsController@edit');//后台显示某篇文章
+    $router->get('posts-edit/{post}','PostsController@edit');//后台显示某篇文章
     $router->get('/', 'AdminController@index');//后台首页
     $router->get('menu', 'AdminController@menu');//菜单栏首页
     $router->get('add-menu', 'AdminController@addMenu');//菜单栏首页
