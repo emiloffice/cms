@@ -12,7 +12,6 @@
 */
 use App\Task;
 
-Route::get('/','');
 /*Route::get('tasks', function (){
     return $tasks = DB::table('tasks')->latest()->get();
     $tasks = DB::table('tasks')->latest()->get();
@@ -59,7 +58,29 @@ Route::get('system-category','SystemController@category');//栏目
 Route::get('category-add','SystemController@categoryAdd');//栏目添加
 Route::get('system-log','SystemController@log');//日志
 
-
+Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
+{
+//    $router->get('login', 'LoginController@showLoginForm')->name('admin.login');
+    $router->get('index', 'IndexController@index');
+    $router->get('', 'IndexController@index');
+    $router->get('about', 'IndexController@about');
+    $router->get('comingsoon', 'IndexController@comingsoon');
+    $router->get('company', 'IndexController@company');
+    $router->get('contact', 'IndexController@contact');
+    $router->get('dreamflight', 'IndexController@dreamflight');
+    $router->get('galactic', 'IndexController@galactic');
+    $router->get('jobs', 'IndexController@jobs');
+    $router->get('legal/', 'IndexController@legal');
+    $router->get('ourgames', 'IndexController@ourgames');
+    $router->get('press', 'IndexController@press');
+    $router->get('privacy', 'IndexController@privacy');
+    $router->get('publishing', 'IndexController@publishing');
+    $router->get('seekingdawn', 'IndexController@seekingdawn');
+    $router->get('team', 'IndexController@team');
+    $router->get('template', 'IndexController@template');
+    $router->get('tos', 'IndexController@tos');
+    $router->get('values', 'IndexController@values');
+});
 
 
 Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
