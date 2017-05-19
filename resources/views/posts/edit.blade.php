@@ -80,13 +80,13 @@
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">评论开始日期：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin" class="input-text Wdate" name="comment_start_date">
+                    <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin" class="input-text Wdate" name="comment_start_date" value="{{ $post->comment_start_date }}">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">评论结束日期：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax" class="input-text Wdate" name="comment_end_date">
+                    <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax" class="input-text Wdate" name="comment_end_date" value="{{ $post->comment_end_date }}">
                 </div>
             </div>
             {{--<div class="row cl">
@@ -103,7 +103,9 @@
                 <label class="form-label col-xs-4 col-sm-2">缩略图：</label>
                 <div class="formControls col-xs-8 col-sm-9">
                     <div class="uploader-thum-container">
-                        <div id="fileList" class="uploader-list"></div>
+                        <div id="fileList" class="uploader-list">
+                            <div class="pic-box" ><img src="{{url('uploads')}}/{{ $post->thumb }}" style="width: 200px;height: 200px;"></div>
+                        </div>
                         <div id="filePicker">选择图片</div>
                         <button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>
                     </div>
@@ -113,8 +115,9 @@
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章内容：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <script id="editor" type="text/plain" style="width:100%;height:400px;" name="content"></script>
+                    <script id="editor" type="text/plain" style="width:100%;height:400px;" name="content">{!! $post->content !!}</script>
                 </div>
+                <input type="hidden" name="thumb" value="" id="thumb_path">
             </div>
             <div class="row cl">
                 <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
@@ -149,18 +152,19 @@
                 $btn = $("#btn-star"),
                 state = "pending",
                 uploader;
-
+            var thumbnailWidth = 200;
+            var thumbnailHeight = 200;
             var uploader = WebUploader.create({
                 auto: true,
-                swf: 'lib/webuploader/0.1.5/Uploader.swf',
+                swf: '/lib/webuploader/0.1.5/Uploader.swf',
 
                 // 文件接收服务端。
-                server: 'fileupload.php',
+                server: '{{ url('admin/upload') }}',
 
                 // 选择文件的按钮。可选。
                 // 内部根据当前运行是创建，可能是input元素，也可能是flash.
                 pick: '#filePicker',
-
+                formData: {"_token": "{{ csrf_token() }}"},
                 // 不压缩image, 默认如果是jpeg，文件上传前会压缩一把再上传！
                 resize: false,
                 // 只允许选择图片文件。
@@ -207,7 +211,8 @@
             });
 
             // 文件上传成功，给item添加成功class, 用样式标记上传成功。
-            uploader.on( 'uploadSuccess', function( file ) {
+            uploader.on( 'uploadSuccess', function( file, response) {
+                $('#thumb_path').val(response.filepath);
                 $( '#'+file.id ).addClass('upload-state-success').find(".state").text("已上传");
             });
 
@@ -245,7 +250,6 @@
             });
 
             var ue = UE.getEditor('editor');
-
         });
     </script>
     <!--/请在上方写此页面业务相关的脚本-->
