@@ -119,6 +119,10 @@
 <div class="white-background">
     <div class="container article">
         <h1>{{ $post->title }}</h1>
+        <p>{{ $post->author }}</p>
+        <p>{{ $post->created_at }}</p>
+        <p>{{ $post->author }}</p>
+        <p>{{ $post->author }}</p>
         {!! $post->content !!}
     </div>
 </div>

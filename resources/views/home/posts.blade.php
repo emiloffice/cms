@@ -120,8 +120,8 @@
     <div class="container article">
         @foreach($posts as $post)
             <div class="article-list">
-                <div>{{$post->title}}</div>
-                {{--<div>{{$post->thumb}}</div>--}}
+                <div><a href="{{url('posts')}}/{{$post->id}}">{{$post->title}}</a></div>
+                <img src="{{url('')}}">{{$post->thumb}}</img>
                 <div>{{$post->despriction}}</div>
             </div>
         @endforeach
