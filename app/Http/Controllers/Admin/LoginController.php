@@ -6,6 +6,8 @@ use Illuminate\Auth\Authenticatable;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Redirect;
 
 class LoginController extends Controller
 {
@@ -41,6 +43,10 @@ class LoginController extends Controller
     }
     public function logout()
     {
-        return auth()->logout();
+
+        if(Auth::guard('admin')->user()){
+            Auth::guard('admin')->logout();
+        }
+        return Redirect::to('admin/login');
     }
 }

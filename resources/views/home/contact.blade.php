@@ -1,64 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Contact</title>
+    <link href="/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <link href="/bootstrap/3.3.7/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+    <!--[if IE 7]>
+    <link href="/font-awesome/css/font-awesome-ie7.min.css" rel="stylesheet">
+    <![endif]-->
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Contact Multiverse Entertainment">
-    <meta name="DC.title" content="Contact">
-    <meta name="robots" content="index,follow">
-    <meta name="author" content="">
-
-    <title>Contact - Multiverse Entertainment</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="{{ asset('/css/grayscale.css') }}" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="{{ asset('/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-        <!-- Google Analytics for www.multiverseinc.com -->
+    <!-- Google Analytics for www.multiverseinc.com -->
     <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-80726941-2', 'auto');
-      ga('send', 'pageview');
+        ga('create', 'UA-80726941-2', 'auto');
+        ga('send', 'pageview');
 
-    </script>
-
-    <!-- Hotjar Tracking Code for http://www.multiverseinc.com -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:261362,hjsv:5};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
 </head>
-
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-    
+<body>
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
@@ -67,7 +40,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" style="width: 225px;" href="/">
-                    <span class="light"></span><img src="/img/multiverselogolong.png" align="left" style="height: auto; width: 100%;">
+                    <span class="light"></span><img src="/img/multiverselogolong.png" align="left" class="img-responsive">
                 </a>
             </div>
 
@@ -104,93 +77,97 @@
                         <a href="contact">Contact</a>
                     </li>
                 </ul>
+                <ul class="media-link hidden-sm hidden-xs">
+                    <li><a href="https://www.facebook.com/MultiverseVR/" target="_blank"><i class="fa fa-facebook color-white"></i></a></li>
+                    <li><a href="https://twitter.com/VRmultiverse" target="_blank"><i class="fa fa-twitter color-white"></i></a></li>
+                    <!-- <li><a href="#"><i class="iconfont icon-ins color-white" target="_blank">&#xe614;</i></a></li> -->
+                    <li><a href="https://www.linkedin.com/company/multiverse-entertainment" target="_blank"><i class="fa fa-linkedin color-white"></i></a></li>
+                    <!-- <li><a href="#"><i class="iconfont icon-twitch color-white" target="_blank">&#xe7ed;</i></a></li> -->
+                </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container -->
     </nav>
 
-    <!-- Particle Background Canvas -->
-    <div id="particles-js" style="position: fixed; z-index: -999; width: 100vw; height: 100vh;">
-        <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;" width="1920" height="589">
-    </div>
 
-    <!-- Banner -->
-    <div class="banner" style="background-image: url(/img/contact-bg.jpg)">
-        <div class="container-fluid text-center">
-            <div class="row">
-                <h1 class="banner-title">Contact Us</h1>
-            </div>
+    <div class="banner contact-banner">
+        <div class="container">
+            <div class="title">CONTACT US</div>
+            <div class="des">via phone, email, social media, or good ol' regular mail</div>
         </div>
     </div>
+    @if (count($errors) > 0)
+        <div class="alert alert-danger alert-dismissible">
+                @foreach ($errors->all() as $error)
+                    <p>{{ $error }}</p>
+                @endforeach
+        </div>
+    @endif
+    @if(Session::has('message'))
+        <div class="alert alert-info"> {{Session::get('message')}}
+        </div>
+    @endif
+    <div class="container contact-form">
+        <h2 class="text-center">Got a question for us?</h2>
+        <form action="{{ url('contact') }}" class="" method="post">
+            {{ csrf_field() }}
+            <div class="contact-input col-lg-6">
+                <div class="form-group">
+                    <label for="name" class="sr-only"></label>
+                    <input type="text" placeholder="Your Name" name="name" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="organization" class="sr-only"></label>
+                    <input type="text" placeholder="Organization" name="organization"  class="form-control" id="organization">
+                </div>
+                <div class="form-group">
+                    <label for="email" class="sr-only"></label>
+                    <input type="email" placeholder="Email" name="email"  class="form-control" id="email">
+                </div>
+                <div class="form-group">
+                    <label for="tel" class="sr-only"></label>
+                    <input type="tel" placeholder="Phone" name="phone"  class="form-control" id="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message" class="sr-only"></label>
+                    <textarea name="message" placeholder="Message" id="message" rows="3"  class="form-control" style="width: 100%"></textarea>
+                </div>
+                <div class="btn-block text-center">
 
-     <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <p>Feel free to email us to provide some feedback on our projects, give us suggestions for improvements, or to just say hello!</p>
-                <p><a href="mailto:contact@multiverseinc.com">contact@multiverseinc.com</a>
-                </p>
-                <ul class="list-inline banner-social-buttons">
-                    <div>
-                        <div class="col-md-4">
-                            <li>
-                                <a href="https://twitter.com/VRmultiverse" class="btn btn-default btn-lg img-responsive"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                            </li>
-                        </div>
-                        <div class="col-md-4">
-                            <li>
-                                <a href="https://www.facebook.com/Multiverse-Entertainment-271977999842067/" class="btn btn-default btn-lg img-responsive"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                            </li>
-                        </div>
-                        <div class="col-md-4">
-                            <li>
-                                <a href="https://www.linkedin.com/company/multiverse-entertainment" class="btn btn-default btn-lg img-responsive"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
-                            </li>
-                        </div>
-                    </div>
-                </ul>
+                    <button type="submit" class="btn btn-danger">SEND</button>
+                </div>
             </div>
+        </form>
+    </div>
+    <div class="footer">
+        <div class="left fl col-sm-12 col-md-4">
+            <div class="text"><a href="http://www.multiverseinc.com/legal/tos/">Terms of Service </a>|<a href="http://www.multiverseinc.com/legal/privacy/" target="_blank"> Privacy Policy</a> 	</div>
+            <div class="text">Copyright © Shenzhen Modengshiji Technology Co. Ltd. ICP</div>
+            <div class="text">Record: <a href="">粤ICP备16110936-1</a></div>
         </div>
-    </section>
-
-    <!-- Map Section -->
-    <!-- <section id="address" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Street Map</h2>
-            </div>
+        <div class="center fl col-md-4 hidden-sm hidden-xs">
+            <ul>
+                <li class="fl pd-20"><a href="https://www.facebook.com/MultiverseVR" target="_blank"><i class="fa fa-facebook fa-3x color-white"></i></a></li>
+                <li class="fl pd-20"><a href="https://twitter.com/VRmultiverse" target="_blank"><i class="fa fa-twitter fa-3x color-white"></i></a></li>
+                <!-- <li class="fl"><a href="#"><i class="iconfont icon-ins color-white" target="_blank">&#xe614;</i></a></li> -->
+                <li class="fl pd-20"><a href="https://www.linkedin.com/company/multiverse-entertainment" target="_blank"><i class="fa fa-linkedin fa-3x color-white"></i></a></li>
+                <!-- <li class="fl"><a href="#"><i class="iconfont icon-twitch color-white">&#xe7ed;</i></a></li> -->
+            </ul>
         </div>
-    </section>
-
-    <div id="map"></div> -->
-
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <i style="font-size:15px">Copyright &copy; Multiverse Entertainment LLC 2016</i>
+        <div class="right fl col-md-4 hidden-sm hidden-xs">
+            <div class="text">PARNERST</div>
+            <ul class="platform">
+                <li class="fl"><img src="/img/vive.png" alt="vive"></li>
+                <li class="fl"><img src="/img/oculus.png" alt="Gear VR"></li>
+                <li class="fl"><img src="/img/steam.png" alt="SteamVR"></li>
+                <li class="fl"><img src="/img/playstation.png" alt="unity"></li>
+            </ul>
         </div>
-    </footer>
-
-    <!-- jQuery -->
-    <script src="{{ asset('/js/jquery.js') }}"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="{{ asset('/js/bootstrap.min.js') }}"></script>
-
-    <!-- Plugin JavaScript -->
-    <script src="{{ asset('/js/jquery.easing.min.js') }}"></script>
-
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
+    </div>
+    <script src="/js/jquery-3.2.1.js"></script>
+    <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="{{ asset('/js/grayscale.js') }}"></script>
-
-    <!-- Particle BG JavaScript -->
-    <script src="{{ asset('/js/particles.js') }}"></script>
-    <script src="{{ asset('/js/app.js') }}"></script>
-
+    <script src="/js/grayscale.js"></script>
 </body>
-
 </html>

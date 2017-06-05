@@ -60,8 +60,9 @@ Route::get('system-log','SystemController@log');//日志
 Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
 {
 //    $router->get('login', 'LoginController@showLoginForm')->name('admin.login');
-    $router->get('index', 'IndexController@index');
     $router->get('', 'IndexController@index');
+    $router->get('index', 'IndexController@index');
+    $router->get('home', 'IndexController@index');
     $router->get('about', 'IndexController@about');
     $router->get('posts/{post}','IndexController@show');//显示某篇文章
     $router->get('posts','IndexController@posts');//显示某篇文章
@@ -83,6 +84,8 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->get('values', 'IndexController@values');
     $router->get('legal/privacy', 'IndexController@privacy');
     $router->get('legal/tos', 'IndexController@tos');
+    $router->get('contact', 'IndexController@contact');
+    $router->post('contact', 'IndexController@contact');
 });
 
 
@@ -90,8 +93,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 {
     $router->get('login', 'LoginController@showLoginForm')->name('admin.login');
     $router->post('login', 'LoginController@login');
-    $router->post('logout', 'LoginController@logout');
-    $router->get('logout', 'LoginController@logout');
+    $router->any('logout', 'LoginController@logout');
 
     $router->get('dash', 'DashboardController@index');
     $router->get('index', 'AdminController@index');
@@ -100,7 +102,8 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('posts/create','PostsController@create');//创建文章
     $router->post('posts','PostsController@store');//保存文章
     $router->get('posts/{post}','PostsController@show');//后台显示某篇文章
-    $router->get('posts-edit/{post}','PostsController@edit');//后台显示某篇文章
+    $router->get('posts-edit/{post}','PostsController@edit');//编辑某篇文章
+    $router->post('posts-update/{id}','PostsController@update');//更新某篇文章
     $router->get('/', 'AdminController@index');//后台首页
     $router->get('menu', 'AdminController@menu');//菜单栏首页
     $router->get('add-menu', 'AdminController@addMenu');//菜单栏首页
@@ -123,6 +126,8 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->post('upload', 'UploadsController@upload');
     $router->put('upload', 'UploadsController@upload');
     $router->get('upload', 'UploadsController@upload');
+    //消息列表
+    $router->get('message-list','MessageController@index');
 });
 
 

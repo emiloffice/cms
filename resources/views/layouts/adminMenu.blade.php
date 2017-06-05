@@ -10,6 +10,14 @@
                 </ul>
             </dd>
         </dl>
+        <dl id="menu-message">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 消息管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a href="{{ url('admin/message-list') }}" title="消息管理">消息列表</a></li>
+                </ul>
+            </dd>
+        </dl>
         {{--<dl id="menu-upload">
             <dt><i class="Hui-iconfont">&#xe613;</i> 图片管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
@@ -45,8 +53,8 @@
             <dt><i class="Hui-iconfont">&#xe62d;</i> 管理员管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a href="admin-role" title="角色管理">角色管理</a></li>
-                    <li><a href="admin-permission" title="权限管理">权限管理</a></li>
+                    {{--<li><a href="admin-role" title="角色管理">角色管理</a></li>
+                    <li><a href="admin-permission" title="权限管理">权限管理</a></li>--}}
                     <li><a href="admin-list" title="管理员列表">管理员列表</a></li>
                 </ul>
             </dd>

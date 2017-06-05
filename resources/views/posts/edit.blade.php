@@ -1,7 +1,7 @@
 @extends('layouts.adminMaster')
 @section('content')
     <article class="page-container">
-        <form class="form form-horizontal" id="form-article-add" action="{{url('admin/article-store')}}" method="post" enctype="multipart/form-data">
+        <form class="form form-horizontal" id="form-article-add" action="{{url('admin/posts-update')}}/{{$post->id}}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="_token"         value="{{csrf_token()}}"/>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文章标题：</label>
