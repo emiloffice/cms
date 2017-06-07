@@ -55,7 +55,7 @@
                 <ul>
                     {{--<li><a href="admin-role" title="角色管理">角色管理</a></li>
                     <li><a href="admin-permission" title="权限管理">权限管理</a></li>--}}
-                    <li><a href="admin-list" title="管理员列表">管理员列表</a></li>
+                    <li><a href="{{ url('admin/admin-list') }}" title="管理员列表">管理员列表</a></li>
                 </ul>
             </dd>
         </dl>
@@ -79,7 +79,7 @@
                 <ul>
                     {{--<li><a href="system-base" title="系统设置">系统设置</a></li>
                     <li><a href="system-category" title="栏目管理">栏目管理</a></li>--}}
-                    <li><a href="system-log" title="系统日志">系统日志</a></li>
+                    <li><a href="{{ url('admin/system-log') }}" title="系统日志">系统日志</a></li>
                 </ul>
             </dd>
         </dl>
