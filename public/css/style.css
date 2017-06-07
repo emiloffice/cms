@@ -39,12 +39,13 @@ body{
         margin: 45px 0;
     }
     .blog-area .blog{
-        height: 30rem;
+        height: 37.5rem;
         width: 100%;
         float: left;
         background: #ffffff;
         overflow: hidden;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
+        padding: 0;
     }
     .blog-area .blog:nth-of-type(1){
         margin-left: 0;
@@ -57,21 +58,21 @@ body{
         height: 100%;
     }
     .blog-area .blog .title{
-        margin-top: 18px;
-        padding-left: 10px;
+        margin: 1rem 0;
+        padding-left: 1rem;
         font-size: 2.2rem;
         line-height: 1em;
     }
     .blog-area .blog .create_at{
         padding-left: 10px;
         font-size: 1rem;
-        line-height: 1rem;
+        line-height: 2rem;
     }
     .blog-area .blog .des {
-        height: 7.5rem;
+        height: 8.5rem;
         overflow: hidden;
         position: relative;
-        padding: 0 1rem;
+        padding: 1rem;
         font-size: 1.3rem;
     }
     .blog-area .blog .des::after {
@@ -80,6 +81,9 @@ body{
         right: 1rem;
         position: absolute;
         background-color: #fff;
+    }
+    .blog-area .blog .link-href {
+        padding-left: 1rem;
     }
 }
 /*小屏幕*/
@@ -119,6 +123,7 @@ body{
         float: left;
         background: #ffffff;
         overflow: hidden;
+        margin-bottom: 2rem;
     }
     .blog-area .blog:nth-of-type(1){
         margin-left: 0;
@@ -185,6 +190,7 @@ body{
         float: left;
         background: #ffffff;
         overflow: hidden;
+        margin-bottom: 2rem;
     }
     .blog-area .blog:nth-of-type(1){
         margin-left: 0;
@@ -247,13 +253,14 @@ body{
         margin: 45px 0;
     }
     .blog-area .blog{
-        height: 378px;
+        height: 37.8rem;
         width: 32%;
         margin-left: 15px;
         float: left;
         background: #ffffff;
         overflow: hidden;
         padding: 0;
+        margin-bottom: 2rem;
     }
     .blog-area .blog:nth-of-type(1){
         margin-left: 0;
@@ -266,7 +273,7 @@ body{
         height: 100%;
     }
     .blog-area .blog .title{
-        margin-top: 1.8rem;
+        margin: 1rem 0;
         padding-left: 1rem;
         font-size: 2.2rem;
         line-height: 1em;
@@ -274,13 +281,13 @@ body{
     .blog-area .blog .create_at{
         padding-left: 1rem;
         font-size: 1rem;
-        line-height: 1rem;
+        line-height: 2em;
     }
     .blog-area .blog .des {
         height: 7.5rem;
         overflow: hidden;
         position: relative;
-        padding: 0 1rem;
+        padding: 1rem;
         font-size: 1.3rem;
     }
     .blog-area .blog .des::after {
@@ -638,7 +645,7 @@ footer .partneres_link li{
     background: #ffffff;
     margin-left: 12%;
 }
-.blog-list .blog:nth-of-type(1),.blog:nth-of-type(4),.blog:nth-of-type(7),.blog:nth-of-type(10){
+.blog-list .blog:nth-of-type(1),.blog:nth-of-type(4),.blog:nth-of-type(7),.blog:nth-of-type(10),.blog:nth-of-type(13),.blog:nth-of-type(16),.blog:nth-of-type(19){
     margin-left: 0;
 }
 .blog-list .blog .thumb{

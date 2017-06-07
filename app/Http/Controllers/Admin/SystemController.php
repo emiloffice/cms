@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 class SystemController extends Controller
@@ -21,6 +22,7 @@ class SystemController extends Controller
     }
     //
     public function log(){
+        $admins = admin::latest()->get();
         return view('system.log');
     }
 }

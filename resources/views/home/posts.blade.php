@@ -52,26 +52,28 @@
                         <a href="index"></a>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="about">About</a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">Games</a>
                         <ul class="dropdown-menu" style="background: black;">
-                            <li><a href="about" style="color: white;">Who We Are</a></li>
-                            <li><a href="team" style="color: white;">Our Team</a></li>
-                            <li><a href="values" style="color: white;">Our Values</a></li>
-                            <li><a href="legal" style="color: white;">Legal</a></li>
+                            <li><a href="seekingdawn" style="color: white;">Seeking Dawn</a>
+                            <li><a href="https://www.oculus.com/experiences/gear-vr/1013248532088752/" style="color: white;" target="_blank">Dream Flight</a></li>
+                            <li><a href="https://play.google.com/store/apps/details?id=com.multiverse.galaxyrush" style="color: white;" target="_blank">Galactic Rush</a></li>
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">Games</a>
+                        <a href="https://www.linkedin.com/company/multiverse-entertainment">CAREERS</a>
+                    </li>
+                    <li>
+                        <a href="posts">DEVBLOG</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">ABOUTS</a>
                         <ul class="dropdown-menu" style="background: black;">
-                            <li><a href="ourgames" style="color: white;">Our Games</a></li>
-                            <li><a href="seekingdawn" style="color: white;">Seeking Dawn</a>
+                            <li><a href="{{url('about#company')}}" style="color: white;">Company</a>
+                            <li><a href="{{url('about#press')}}" style="color: white;">Press</a>
+                            <li><a href="{{url('about#partner')}}" style="color: white;">Partner</a>
+                            <li><a href="{{url('privacy')}}" style="color: white;">privacy</a>
+                            <li><a href="{{url('tos')}}" style="color: white;">Terms of Service</a>
                         </ul>
-                    </li>
-                    <li>
-                        <a href="publishing">Publishing</a>
-                    </li>
-                    <li>
-                        <a href="jobs">Jobs</a>
                     </li>
                     <li>
                         <a href="contact">Contact</a>
@@ -98,27 +100,15 @@
     </div>
     <div class="blog-area">
         <div class="container">
+            @foreach($posts as $post)
             <div class="blog col-lg-3 col-md-3 col-xs-3 col-sm-12">
-                <div class="create_at">22 April 2017</div>
-                <div class="title">Seeking Dawn Early Access The Boss Update 0.41</div>
-                <div class="thumb"><img src="/img/thumb1.jpg" alt=""></div>
-                <div class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis </div>
-                <a href="#" class="link-href">Read More</a>
+                <div class="create_at">{{ $post->created_at }}</div>
+                <div class="title">{{ $post->title }}</div>
+                <div class="thumb"><img src="/uploads/{{$post->thumb or 'thumb1.jpg'}}" alt=""></div>
+                <div class="des">{{$post->description}} </div>
+                <a href="{{url('posts')}}/{{$post->id}}" class="link-href">Read More</a>
             </div>
-            <div class="blog col-lg-3 col-md-3 col-xs-3 col-sm-12">
-                <div class="create_at">22 April 2017</div>
-                <div class="title">Seeking Dawn Early Access The Boss Update 0.41</div>
-                <div class="thumb"></div>
-                <div class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis </div>
-                <a href="#" class="link-href">Read More</a>
-            </div>
-            <div class="blog col-lg-3 col-md-3 col-xs-3 col-sm-12">
-                <div class="create_at">22 April 2017</div>
-                <div class="title">Seeking Dawn Early Access The Boss Update 0.41</div>
-                <div class="thumb"></div>
-                <div class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis </div>
-                <a href="#" class="link-href">Read More</a>
-            </div>
+            @endforeach
         </div>
     </div>
 

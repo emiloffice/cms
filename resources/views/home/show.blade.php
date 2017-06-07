@@ -30,82 +30,101 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    <!-- Comment #1: OG Tags -->
+    <meta property="og:url"           content="{{url('posts')}}/{{$post->id}}" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="{{$post->title}}" />
+    <meta property="og:description"   content="{{$post->description}}" />
+    <meta property="og:image"         content="{{url('uploads')}}/{{$post->thumb}}" />
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" style="width: 225px;" href="/">
-                    <span class="light"></span><img src="/img/multiverselogolong.png" align="left" class="img-responsive">
-                </a>
-            </div>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav" style="text-align: center;">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="index"></a>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="about">About</a>
-                        <ul class="dropdown-menu" style="background: black;">
-                            <li><a href="about" style="color: white;">Who We Are</a></li>
-                            <li><a href="team" style="color: white;">Our Team</a></li>
-                            <li><a href="values" style="color: white;">Our Values</a></li>
-                            <li><a href="legal" style="color: white;">Legal</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">Games</a>
-                        <ul class="dropdown-menu" style="background: black;">
-                            <li><a href="ourgames" style="color: white;">Our Games</a></li>
-                            <li><a href="seekingdawn" style="color: white;">Seeking Dawn</a>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="publishing">Publishing</a>
-                    </li>
-                    <li>
-                        <a href="jobs">Jobs</a>
-                    </li>
-                    <li>
-                        <a href="contact">Contact</a>
-                    </li>
-                </ul>
-                <ul class="media-link hidden-sm hidden-xs">
-                    <li><a href="https://www.facebook.com/MultiverseVR/" target="_blank"><i class="fa fa-facebook color-white"></i></a></li>
-                    <li><a href="https://twitter.com/VRmultiverse" target="_blank"><i class="fa fa-twitter color-white"></i></a></li>
-                    <!-- <li><a href="#"><i class="iconfont icon-ins color-white" target="_blank">&#xe614;</i></a></li> -->
-                    <li><a href="https://www.linkedin.com/company/multiverse-entertainment" target="_blank"><i class="fa fa-linkedin color-white"></i></a></li>
-                    <!-- <li><a href="#"><i class="iconfont icon-twitch color-white" target="_blank">&#xe7ed;</i></a></li> -->
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<!-- Navigation -->
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" style="width: 225px;" href="/">
+                <span class="light"></span><img src="/img/multiverselogolong.png" align="left" class="img-responsive">
+            </a>
         </div>
-        <!-- /.container -->
-    </nav>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+            <ul class="nav navbar-nav" style="text-align: center;">
+                <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                <li class="hidden">
+                    <a href="index"></a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">Games</a>
+                    <ul class="dropdown-menu" style="background: black;">
+                        <li><a href="seekingdawn" style="color: white;">Seeking Dawn</a>
+                        <li><a href="https://www.oculus.com/experiences/gear-vr/1013248532088752/" style="color: white;" target="_blank">Dream Flight</a></li>
+                        <li><a href="https://play.google.com/store/apps/details?id=com.multiverse.galaxyrush" style="color: white;" target="_blank">Galactic Rush</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="https://www.linkedin.com/company/multiverse-entertainment">CAREERS</a>
+                </li>
+                <li>
+                    <a href="posts">DEVBLOG</a>
+                </li>
+                <li>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">ABOUTS</a>
+                    <ul class="dropdown-menu" style="background: black;">
+                        <li><a href="{{url('about#company')}}" style="color: white;">Company</a>
+                        <li><a href="{{url('about#press')}}" style="color: white;">Press</a>
+                        <li><a href="{{url('about#partner')}}" style="color: white;">Partner</a>
+                        <li><a href="{{url('privacy')}}" style="color: white;">privacy</a>
+                        <li><a href="{{url('tos')}}" style="color: white;">Terms of Service</a>
+                    </ul>
+                </li>
+                <li>
+                    <a href="contact">Contact</a>
+                </li>
+            </ul>
+            <ul class="media-link hidden-sm hidden-xs">
+                <li><a href="https://www.facebook.com/MultiverseVR/" target="_blank"><i class="fa fa-facebook color-white"></i></a></li>
+                <li><a href="https://twitter.com/VRmultiverse" target="_blank"><i class="fa fa-twitter color-white"></i></a></li>
+                <!-- <li><a href="#"><i class="iconfont icon-ins color-white" target="_blank">&#xe614;</i></a></li> -->
+                <li><a href="https://www.linkedin.com/company/multiverse-entertainment" target="_blank"><i class="fa fa-linkedin color-white"></i></a></li>
+                <!-- <li><a href="#"><i class="iconfont icon-twitch color-white" target="_blank">&#xe7ed;</i></a></li> -->
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
 
     <div class="banner post-banner container-fluid">
         <div class="logo"><img src="/img/multiverse.png" alt=""></div>
     </div>
     <div class="container post-area">
-        <h1 class="title text-center ">Seeking Dawn Early Access:The Boss Update 0.4 Now live!</h1>
-        <p class="create_at text-center container">December 26.2016</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
-        <div class="media-link text-center">
+        <h1 class="title text-center ">{{ $post->title }}</h1>
+        <p class="create_at text-center container">{{ $post->created_at }}</p>
+        <div>
+            {!! $post->content !!}
+        </div>
+        {{--<div class="media-link text-center">
             <a href="#"><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
             <a href="#"><i class="fa fa-instagram"></i></a>
             <a href="#"><i class="fa fa-google-plus"></i></a>
             <a href="#"><i class="fa fa-linkedin"></i></a>
             <a href="#"><i class="fa fa-reddit-alien"></i></a>
-        </div>
+        </div>--}}
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s); js.id = id;
+                js.src = "//connect.facebook.net/zh_CN/sdk.js#xfbml=1&version=v2.9&appId=";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+        <div class="fb-comments" data-href="https://developers.facebook.com/docs/plugins/comments#configurator" data-width="1000" data-numposts="5"></div>
     </div>
     <div class="footer">
         <div class="left fl col-sm-12 col-md-4">
@@ -136,6 +155,7 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="/js/grayscale.js"></script>
+
 </body>
 </body>
 </html>

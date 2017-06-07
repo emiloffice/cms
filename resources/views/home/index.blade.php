@@ -56,27 +56,28 @@
                         <a href="index"></a>
                     </li>
                     <li class="dropdown">
-                        <a href="about">ABOUT</a>
-                        {{--<a class="dropdown-toggle" data-toggle="dropdown" href="about">About</a>
-                        <ul class="dropdown-menu" style="background: black;">
-                            <li><a href="about" style="color: white;">Who We Are</a></li>
-                            <li><a href="team" style="color: white;">Our Team</a></li>
-                            <li><a href="values" style="color: white;">Our Values</a></li>
-                            <li><a href="legal" style="color: white;">Legal</a></li>
-                        </ul>--}}
-                    </li>
-                    <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">Games</a>
                         <ul class="dropdown-menu" style="background: black;">
-                            <li><a href="ourgames" style="color: white;">Our Games</a></li>
                             <li><a href="seekingdawn" style="color: white;">Seeking Dawn</a>
+                            <li><a href="https://www.oculus.com/experiences/gear-vr/1013248532088752/" style="color: white;" target="_blank">Dream Flight</a></li>
+                            <li><a href="https://play.google.com/store/apps/details?id=com.multiverse.galaxyrush" style="color: white;" target="_blank">Galactic Rush</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="publishing">Publishing</a>
+                    <li class="dropdown">
+                        <a href="https://www.linkedin.com/company/multiverse-entertainment">CAREERS</a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/company/multiverse-entertainment" target="_blank">Jobs</a>
+                        <a href="posts">DEVBLOG</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">ABOUTS</a>
+                        <ul class="dropdown-menu" style="background: black;">
+                            <li><a href="{{url('about#company')}}" style="color: white;">Company</a>
+                            <li><a href="{{url('about#press')}}" style="color: white;">Press</a>
+                            <li><a href="{{url('about#partner')}}" style="color: white;">Partner</a>
+                            <li><a href="{{url('privacy')}}" style="color: white;">privacy</a>
+                            <li><a href="{{url('tos')}}" style="color: white;">Terms of Service</a>
+                        </ul>
                     </li>
                     <li>
                         <a href="contact">Contact</a>
@@ -138,46 +139,14 @@
                 <p class="des">We will continue to update the blog, welcome enthusiasts and we interact</p>
             </div>
             <div class="blog-area container">
+                @foreach($posts as $post)
                 <div class="blog">
                     <div class="thumb"><img src="/img/thumb2.jpg" alt=""></div>
-                    <p class="title">Seeking Dawn</p>
-                    <p class="create_at">March 11, 2016</p>
-                    <p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-                        Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
-                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-                        Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
-                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
+                    <p class="title">{{ $post->title }}</p>
+                    <p class="create_at">{{ $post->created_at }}</p>
+                    <p class="des">{{ $post->description }}</p>
                 </div>
-                <div class="blog ">
-                    <div class="thumb"><img src="/img/thumb2.jpg" alt=""></div>
-                    <p class="title">Seeking Dawn</p>
-                    <p class="create_at">March 11, 2016</p>
-                    <p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-                        Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
-                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-                        Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
-                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
-                </div>
-                <div class="blog ">
-                    <div class="thumb"><img src="/img/thumb2.jpg" alt=""></div>
-                    <p class="title">Seeking Dawn</p>
-                    <p class="create_at">March 11, 2016</p>
-                    <p class="des">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-                        Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
-                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet.
-                        Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor.
-                        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-                        Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget.</p>
-                </div>
-
+                @endforeach
             </div>
         </div>
     </div>

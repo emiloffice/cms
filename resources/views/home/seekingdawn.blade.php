@@ -12,11 +12,12 @@
 
 	
     <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('/css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('/bootstrap/3.3.7/css/bootstrap.css') }}" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="{{ asset('/css/grayscale.css') }}" rel="stylesheet">
 	<link href="{{ asset('/css/sk.css') }}" rel="stylesheet">
+	<link href="{{ asset('/css/style.css') }}" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="{{ asset('/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -42,7 +43,8 @@
     <![endif]-->
 </head>
 <body>
-	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -58,39 +60,41 @@
                 <ul class="nav navbar-nav" style="text-align: center;">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
-                        <a href="/index"></a>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="/about">About</a>
-                        <ul class="dropdown-menu" style="background: black;">
-                            <li><a href="/about" style="color: white;">Who We Are</a></li>
-                            <li><a href="/team" style="color: white;">Our Team</a></li>
-                            <li><a href="/values" style="color: white;">Our Values</a></li>
-                            <li><a href="/legal" style="color: white;">Legal</a></li>
-                        </ul>
+                        <a href="index"></a>
                     </li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">Games</a>
                         <ul class="dropdown-menu" style="background: black;">
-                            <li><a href="/ourgames" style="color: white;">Our Games</a></li>
-                            <li><a href="/seekingdawn" style="color: white;">Seeking Dawn</a>
+                            <li><a href="seekingdawn" style="color: white;">Seeking Dawn</a>
+                            <li><a href="https://www.oculus.com/experiences/gear-vr/1013248532088752/" style="color: white;" target="_blank">Dream Flight</a></li>
+                            <li><a href="https://play.google.com/store/apps/details?id=com.multiverse.galaxyrush" style="color: white;" target="_blank">Galactic Rush</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="https://www.linkedin.com/company/multiverse-entertainment">CAREERS</a>
+                    </li>
+                    <li>
+                        <a href="posts">DEVBLOG</a>
+                    </li>
+                    <li>
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">ABOUTS</a>
+                        <ul class="dropdown-menu" style="background: black;">
+                            <li><a href="{{url('about#company')}}" style="color: white;">Company</a>
+                            <li><a href="{{url('about#press')}}" style="color: white;">Press</a>
+                            <li><a href="{{url('about#partner')}}" style="color: white;">Partner</a>
+                            <li><a href="{{url('privacy')}}" style="color: white;">privacy</a>
+                            <li><a href="{{url('tos')}}" style="color: white;">Terms of Service</a>
                         </ul>
                     </li>
                     <li>
-                        <a href="/publishing">Publishing</a>
-                    </li>
-                    <li>
-                        <a href="/jobs">Jobs</a>
-                    </li>
-                    <li>
-                        <a href="/contact">Contact</a>
+                        <a href="contact">Contact</a>
                     </li>
                 </ul>
-                <ul class="banner_link hidden-sm hidden-xs">
-                    <li><a href="https://www.facebook.com/MultiverseVR/" target="_blank"><i class="iconfont icon-facebook color-white">&#xe613;</i></a></li>
-                    <li><a href="https://twitter.com/VRmultiverse" target="_blank"><i class="iconfont icon-socialmediaiconwhitetwitter color-white">&#xe601;</i></a></li>
+                <ul class="media-link hidden-sm hidden-xs">
+                    <li><a href="https://www.facebook.com/MultiverseVR/" target="_blank"><i class="fa fa-facebook color-white"></i></a></li>
+                    <li><a href="https://twitter.com/VRmultiverse" target="_blank"><i class="fa fa-twitter color-white"></i></a></li>
                     <!-- <li><a href="#"><i class="iconfont icon-ins color-white" target="_blank">&#xe614;</i></a></li> -->
-                    <li><a href="https://www.linkedin.com/company/multiverse-entertainment" target="_blank"><i class="iconfont icon-linkedin color-white">&#xe615;</i></a></li>
+                    <li><a href="https://www.linkedin.com/company/multiverse-entertainment" target="_blank"><i class="fa fa-linkedin color-white"></i></a></li>
                     <!-- <li><a href="#"><i class="iconfont icon-twitch color-white" target="_blank">&#xe7ed;</i></a></li> -->
                 </ul>
             </div>
@@ -98,6 +102,7 @@
         </div>
         <!-- /.container -->
     </nav>
+
 	<div id="banner" class="">
 		<video  preload="auto" autoplay controls="controls" width="100%" height="auto" id="banner_video" muted="true" poster="/img/SeekingDawn_Banner.png" >
 			<source src="/video/seekingDawnPlay.mp4">
@@ -165,10 +170,10 @@
 	</footer>
 
 	<!-- jQuery -->
-    <script src="{{ asset('/js/jquery.js') }}"></script>
+    <script src="{{ asset('/js/jquery-3.2.1.js') }}"></script>
 
 	<!-- Bootstrap Core JavaScript -->
-	<script src="/js/bootstrap.min.js"></script>
+	<script src="{{ url('/bootstrap/3.3.7/js/bootstrap.js') }}"></script>
 	<!-- Custom Theme JavaScript -->
 	<script src="/js/grayscale.js"></script>
         <!-- Particle BG JavaScript -->

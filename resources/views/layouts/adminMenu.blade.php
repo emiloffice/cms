@@ -77,8 +77,8 @@
             <dt><i class="Hui-iconfont">&#xe62e;</i> 系统管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a href="system-base" title="系统设置">系统设置</a></li>
-                    <li><a href="system-category" title="栏目管理">栏目管理</a></li>
+                    {{--<li><a href="system-base" title="系统设置">系统设置</a></li>
+                    <li><a href="system-category" title="栏目管理">栏目管理</a></li>--}}
                     <li><a href="system-log" title="系统日志">系统日志</a></li>
                 </ul>
             </dd>
