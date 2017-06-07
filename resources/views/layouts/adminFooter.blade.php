@@ -7,6 +7,8 @@
 <!--/_footer /作为公共模版分离出去-->
 <script>
     function logout() {
-        $.post('{{url('logout')}}');
+        $.get('{{url('admin/logout')}}',function (result) {
+            console.log(result)
+        });
     }
 </script>

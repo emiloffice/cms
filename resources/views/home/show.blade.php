@@ -83,7 +83,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="contact">Contact</a>
+                    <a href="/contact">Contact</a>
                 </li>
             </ul>
             <ul class="media-link hidden-sm hidden-xs">
