@@ -142,12 +142,12 @@
             </ul>
         </div>
         <div class="right fl col-md-4 hidden-sm hidden-xs">
-            <div class="text">PARNERST</div>
+            <div class="text">PARTNERS</div>
             <ul class="platform">
                 <li class="fl"><img src="/img/vive.png" alt="vive"></li>
                 <li class="fl"><img src="/img/oculus.png" alt="Gear VR"></li>
                 <li class="fl"><img src="/img/steam.png" alt="SteamVR"></li>
-                <li class="fl"><img src="/img/playstation.png" alt="unity"></li>
+                {{--<li class="fl"><img src="/img/playstation.png" alt="unity"></li>--}}
             </ul>
         </div>
     </div>

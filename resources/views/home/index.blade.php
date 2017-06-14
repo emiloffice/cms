@@ -9,6 +9,7 @@
     <meta name="robots" content="index,follow">
     <meta name="author" content="">
     <title>Multiverse Entertainment</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url('/images/favicon.ico') }}" media="screen" />
     <link href="/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="/css/style.css" rel="stylesheet">
@@ -119,7 +120,7 @@
             LEARN MORE
         </a>
     </div>
-    <div class="creators container">
+    {{--<div class="creators container">
         <div class="thumb col-lg-6 col-md-6 col-md-6 col-sm-12"><img src="/img/thumb2.jpg" alt=""></div>
         <div class="col-lg-6">
             <div class="subtitle">Multiverse</div>
@@ -129,6 +130,19 @@
                 Seeking Dawn will be a VR game of the largest scale, and is being painstaking crafted to perfection.</p>
             <a href="#" class="link-href">LEARN MORE</a>
         </div>
+    </div>--}}
+    <div class="creators">
+        <div class="content col-sm-12 col-md-6 col-md-offset-6">
+            <div class="name">Multiverse</div>
+            <div class="title">THE CREATORS</div>
+            <div class="des">We are hardcore gamers, and we wanted a VR game with depth,
+                requires thinking, and contains hundreds of hours of addictive gameplay.
+                Seeking Dawn will be a VR game of the largest scale,
+                and is being painstaking crafted to perfection.
+            </div>
+            <a class="contact" href="http://www.multiverseinc.com/contact">CONTACT</a>
+        </div>
+
     </div>
     <!--dev blog-->
     <div class="dev-blog container-fluid">
@@ -150,7 +164,7 @@
             </div>
         </div>
     </div>
-    <div class="published_game text-algin container">
+   {{-- <div class="published_game text-algin container">
         <div class="title font-size-32 text-align-center">
             THE ONLINE GAME
         </div>
@@ -165,6 +179,29 @@
                     DOWNLOAD</a>
 
             </div>
+        </div>
+        <div class="right col-md-6 hidden-sm hidden-xs">
+            <img src="/img/game1.png" alt="游戏图片">
+        </div>
+    </div>--}}
+    <div class="published_game text-algin">
+        <div class="title font-size-32 text-center">
+            THE ONLINE GAME
+        </div>
+        <div class="subtitle text-center">these games worth you experience</div>
+        <div class="left col-md-6 col-sm-12">
+            <div class="game_name font-size-32">Reveries: Dream Flight</div>
+            <p>Dream Flight is a beautiful game about exploration and discovery. Learn to guide and collect a variety of magical flight machines, and experience magnificent and ethereal scenery underwritten by a mesmerizing soundtrack.</p>
+            <p>Dream Flight is a hands-free experience. No controller is needed. However, headphones are highly recommended!</p>
+            <div class="download fl">
+                <a class="btn" href="https://www.oculus.com/experiences/gear-vr/1013248532088752/" target="_blank">
+                    <i class="fa fa-download"></i>
+                    DOWNLOAD</a>
+
+            </div>
+            {{--<div class="fl">
+                <i class="iconfont icon color-white icon-next">&#xe612;</i>
+            </div>--}}
         </div>
         <div class="right col-md-6 hidden-sm hidden-xs">
             <img src="/img/game1.png" alt="游戏图片">
@@ -186,12 +223,12 @@
             </ul>
         </div>
         <div class="right fl col-md-4 hidden-sm hidden-xs">
-            <div class="text">PARNERST</div>
+            <div class="text">PARTNERS</div>
             <ul class="platform">
                 <li class="fl"><img src="/img/vive.png" alt="vive"></li>
                 <li class="fl"><img src="/img/oculus.png" alt="Gear VR"></li>
                 <li class="fl"><img src="/img/steam.png" alt="SteamVR"></li>
-                <li class="fl"><img src="/img/playstation.png" alt="unity"></li>
+                {{--<li class="fl"><img src="/img/playstation.png" alt="unity"></li>--}}
             </ul>
         </div>
     </div>

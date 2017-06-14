@@ -683,6 +683,7 @@ ul.banner_link>li{
     -ms-opacity: 0.3;
     opacity: 0.3;
 }
+/*creators*/
 .creators {
     background-color: #e7e7e7;
     width: 100%;
@@ -692,8 +693,6 @@ ul.banner_link>li{
     background: url(/img/creators_banner.jpg) no-repeat center;
 }
 .creators .content{
-    // margin-left: 60%;
-    // width: 380px;
     padding-top: 60px;
 }
 .creators .content .name{

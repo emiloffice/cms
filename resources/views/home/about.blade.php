@@ -95,30 +95,22 @@
     <div class="banner about-banner text-center">
         <div class="container">
             <p class="title">Multiverse</p>
-            <p class="">Create Virtual Reality Games</p>
+            <p class="subtitle">Create <span>Virtual</span> Real<span>ity</span>    Games</p>
             <p class=""><span>Premium virtual Reality Content Publisher</span></p>
         </div>
     </div>
-    <div class="company container text-center">
+    <div class="company container-fluid text-center tab-area">
         <p class="title ">OUR COMPANY</p>
-        <ul>
-            <li class="col-lg-4">
-                <img src="/img/d1.png" alt="">
-                <p>#1 Rated</p>
-                <p>Chinese VR Studio</p>
-                <p>in the world</p>
-            </li>
-            <li class="col-lg-4">
-                <img src="/img/d2.png" alt="">
-                <p>Proven Track</p>
-                <p>record making</p>
-                <p>games</p>
-            </li>
-            <li class="col-lg-4">
-                <img src="/img/d3.png" alt="">
-                <p>Talented Global</p>
-                <p>Team</p>
-            </li>
+        <ul id="company-content" class="tab-content">
+            <li class="active">To provide help for excellent developers to create and build extraordinary games.</li>
+            <li>Working with creativeness, efficiency and joy.</li>
+            <li>MULTIVERSE is found in March 2016, the initial published game <Dream Flight> has gained a magnificent review from Gear VR. Through an entire year of efforts, finally a well-crafted new game <Seeking Dawn> is coming soon...</li>
+        </ul>
+        <ul id="btn-area" class="tab-nav">
+            <li class="active">our vision</li>
+            <li>our value</li>
+            <li>our story</li>
+
         </ul>
     </div>
     <div class="press text-center">
@@ -152,7 +144,11 @@
     <div class="about-partners">
         <div class="container">
             <p class="title text-center">OUR PARTNERS</p>
-            <img src="/img/our-partners.jpg" alt="our partners" style="margin: 0 auto;display: block">
+            <ul>
+                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center"><img src="{{ url('img/vive.png') }}" alt="vive"></li>
+                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center"><img src="{{ url('img/oculus.png') }}" alt=""></li>
+                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center"><img src="{{ url('img/steam.png') }}" alt=""></li>
+            </ul>
 
             {{--<div class="join-area">
                 <div class="col-lg-8 col-lg-offset-2">
@@ -178,12 +174,12 @@
             </ul>
         </div>
         <div class="right fl col-md-4 hidden-sm hidden-xs">
-            <div class="text">PARNERST</div>
+            <div class="text">PARTNERS</div>
             <ul class="platform">
                 <li class="fl"><img src="/img/vive.png" alt="vive"></li>
                 <li class="fl"><img src="/img/oculus.png" alt="Gear VR"></li>
                 <li class="fl"><img src="/img/steam.png" alt="SteamVR"></li>
-                <li class="fl"><img src="/img/playstation.png" alt="unity"></li>
+                {{--<li class="fl"><img src="/img/playstation.png" alt="unity"></li>--}}
             </ul>
         </div>
     </div>
@@ -191,5 +187,10 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="/js/grayscale.js"></script>
+    <script>
+        var tabs = document.querySelector('.tab-area');
+        var uls= document.getElementsByTagName('.tab-content');
+        console.log(uls)
+    </script>
 </body>
 </html>

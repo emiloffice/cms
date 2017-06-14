@@ -142,6 +142,39 @@
             </div>
         </form>
     </div>
+    {{--<div class="contact-partners text-center">
+        <div class="title ">PARTNERS</div>
+        <ul class="container">
+            <li class="col-lg-2 col-md-2 col-sm-4 col-xs-12"><img src="{{url('img/vive.png')}}" alt=""></li>
+            <li class="col-lg-2 col-md-2 col-sm-4 col-xs-12"><img src="{{url('img/vive.png')}}" alt=""></li>
+            <li class="col-lg-2 col-md-2 col-sm-4 col-xs-12"><img src="{{url('img/vive.png')}}" alt=""></li>
+            <li class="col-lg-2 col-md-2 col-sm-4 col-xs-12"><img src="{{url('img/vive.png')}}" alt=""></li>
+            <li class="col-lg-2 col-md-2 col-sm-4 col-xs-12"><img src="{{url('img/vive.png')}}" alt=""></li>
+            <li class="col-lg-2 col-md-2 col-sm-4 col-xs-12"><img src="{{url('img/vive.png')}}" alt=""></li>
+        </ul>
+    </div>--}}
+    <div class="clear_fix"></div>
+    <div class="contact">
+        <div class="title text-center">CONTACT</div>
+        <div class="container">
+            <ul class="col-lg-6 col-md-6 col-sm-6 col-md-12">
+                <li><a href="mailto:chenjun.li@multiverseinc.com" target="_blank">General:chenjun.li@multiverseinc.com</a></li>
+                <li><a href="mailto:chenjun.li@multiverseinc.com" target="_blank">Public Relations:chenjun.li@multiverseinc.com</a></li>
+                <li><a href="mailto:chenjun.li@multiverseinc.com" target="_blank">Careers:chenjun.li@multiverseinc.com</a></li>
+                <li><a href="mailto:chenjun.li@multiverseinc.com" target="_blank">Business:chenjun.li@multiverseinc.com</a></li>
+            </ul>
+            <ul class="col-lg-6 col-md-6 col-sm-6 col-md-12">
+                <li><a href="" target="_blank">facebook.com/MultiverseVR</a></li>
+                <li><a href="" target="_blank">twitter.com/VRmultiverse</a></li>
+                <li><a href="" target="_blank">instagram.com//MultiverseVR</a></li>
+                <li><a href="" target="_blank">linkedin.com/company/multiverse-entertainment</a></li>
+            </ul>
+        </div>
+
+    </div>
+    <div id="googleMap" style="width: 100%;height: 30rem">
+
+    </div>
     <div class="footer">
         <div class="left fl col-sm-12 col-md-4">
             <div class="text"><a href="http://www.multiverseinc.com/legal/tos/">Terms of Service </a>|<a href="http://www.multiverseinc.com/legal/privacy/" target="_blank"> Privacy Policy</a> 	</div>
@@ -158,12 +191,11 @@
             </ul>
         </div>
         <div class="right fl col-md-4 hidden-sm hidden-xs">
-            <div class="text">PARNERST</div>
+            <div class="text">PARTNERS</div>
             <ul class="platform">
                 <li class="fl"><img src="/img/vive.png" alt="vive"></li>
                 <li class="fl"><img src="/img/oculus.png" alt="Gear VR"></li>
                 <li class="fl"><img src="/img/steam.png" alt="SteamVR"></li>
-                <li class="fl"><img src="/img/playstation.png" alt="unity"></li>
             </ul>
         </div>
     </div>
@@ -171,5 +203,30 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="/js/grayscale.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCWrXFcigxn4wV3r1vKeX-k6GUorhCgQhY&sensor=false"></script>
+    <script>
+        var myCenter=new google.maps.LatLng(51.508742,-0.120850);
+        var marker;
+
+        function initialize()
+        {
+            var mapProp = {
+                center:myCenter,
+                zoom:5,
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+            };
+
+            var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+            marker=new google.maps.Marker({
+                position:myCenter,
+                animation:google.maps.Animation.BOUNCE
+            });
+
+            marker.setMap(map);
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
 </body>
 </html>
