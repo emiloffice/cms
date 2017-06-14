@@ -188,9 +188,17 @@
     <!-- Custom Theme JavaScript -->
     <script src="/js/grayscale.js"></script>
     <script>
-        var tabs = document.querySelector('.tab-area');
-        var uls= document.getElementsByTagName('.tab-content');
-        console.log(uls)
+        var tabs = $('.tab-area');
+        var uls= $('.tab-content');
+        var ulv= $('.tab-nav');
+        ulv.children('li').click(function () {
+            var _li = $(this).index()
+            ulv.children('li').removeClass('active');
+            uls.children('li').removeClass('active');
+            $(this).addClass('active');
+            uls.children().eq(_li).addClass('active');
+            console.log(this)
+        })
     </script>
 </body>
 </html>
