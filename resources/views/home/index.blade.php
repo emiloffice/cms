@@ -189,7 +189,7 @@
             <div class="title text-center">WANT TO BE ON THE FRONTIER OF VR INNOVATION</div>
             <form action="{{ url('subscribe') }}" class="form_content" method="post">
                 <input type="email" class="email_input" placeholder="YOUR EMAIL" name="email" id="email">
-                <button class="subscribe_btn" type="submit">subscribe</button>
+                <button class="subscribe_btn" type="button" onclick="form_submit()">subscribe</button>
             </form>
         </div>
     </div>
@@ -222,5 +222,32 @@
     <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Custom Theme JavaScript -->
     <script src="/js/grayscale.js"></script>
+    <script>
+        function form_submit(){
+            var ele = $('#email');
+            var _email = $('#email').val();
+            var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            if(!myreg.test(_email)){
+                alert('E-mail format is incorrect!!!')
+                ele.focus();
+                return false;
+            }else{
+                {{--$.post('{{url('subscribe')}}', {email:_email}, function () {--}}
+                    {{--console.log(_email)--}}
+                {{--})--}}
+                $.ajax({
+                    url:'{{url('subscribe')}}',
+                    type:'POST',
+                    data:{email:_email},
+                    dataType:'json',
+                    success:function (res) {
+                        console.log(res.status)
+                    }
+                })
+
+            }
+        }
+
+    </script>
 </body>
 </html>
