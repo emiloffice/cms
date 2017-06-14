@@ -70,7 +70,7 @@
                     <a href="https://www.linkedin.com/company/multiverse-entertainment">CAREERS</a>
                 </li>
                 <li>
-                    <a href="posts">DEVBLOG</a>
+                    <a href="#">DEVBLOG</a>
                 </li>
                 <li>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">ABOUTS</a>

@@ -68,7 +68,7 @@
                         <a href="https://www.linkedin.com/company/multiverse-entertainment">CAREERS</a>
                     </li>
                     <li>
-                        <a href="posts">DEVBLOG</a>
+                        <a href="#">DEVBLOG</a>
                     </li>
                     <li>
                         <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">ABOUTS</a>
@@ -187,7 +187,7 @@
     <div class="subscribe">
         <div class="content">
             <div class="title text-center">WANT TO BE ON THE FRONTIER OF VR INNOVATION</div>
-            <form action="#" class="form_content">
+            <form action="{{ url('subscribe') }}" class="form_content" method="post">
                 <input type="email" class="email_input" placeholder="YOUR EMAIL" name="email" id="email">
                 <button class="subscribe_btn" type="submit">subscribe</button>
             </form>

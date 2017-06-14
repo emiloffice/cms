@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Home;
 
 use App\Message;
 use App\Post;
+use App\Subscribe;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -102,5 +103,20 @@ class IndexController extends Controller
     public function Show(Post $post)
     {
         return view('home.show', compact('post'));
+    }
+    public function Subscribe(Request $request){
+        if($request->isMethod('post')){
+            $this->validate(request(), [
+                'email'=>'required|unique:subscribes|email',
+            ]);
+            Subscribe::create(request(['email']));
+            $rst['status'] = 'success';
+            $rst['code'] = '1';
+        }else{
+            $rst['status'] = 'error';
+            $rst['code'] = '-1';
+        }
+        $rst = json_encode($rst);
+        return $rst;
     }
 }

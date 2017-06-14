@@ -18,6 +18,14 @@
                 </ul>
             </dd>
         </dl>
+        <dl id="menu-subscribe">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 订阅管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a href="{{ url('admin/subscribes-list') }}" title="消息管理">订阅列表</a></li>
+                </ul>
+            </dd>
+        </dl>
         {{--<dl id="menu-upload">
             <dt><i class="Hui-iconfont">&#xe613;</i> 图片管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>

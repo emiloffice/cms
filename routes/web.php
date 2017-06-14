@@ -86,6 +86,7 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->get('legal/tos', 'IndexController@tos');
     $router->get('contact', 'IndexController@contact');
     $router->post('contact', 'IndexController@contact');
+    $router->any('subscribe', 'IndexController@Subscribe');
 });
 
 
@@ -128,6 +129,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('upload', 'UploadsController@upload');
     //消息列表
     $router->get('message-list','MessageController@index');
+    $router->get('subscribes-list','SubscribeController@index');
 });
 
 
