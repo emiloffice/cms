@@ -154,7 +154,7 @@
         </ul>
     </div>--}}
     <div class="clear_fix"></div>
-    <div class="contact">
+    <div class="contact-link">
         <div class="title text-center">CONTACT</div>
         <div class="container">
             <ul class="col-lg-6 col-md-6 col-sm-6 col-md-12">

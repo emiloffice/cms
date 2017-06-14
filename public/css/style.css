@@ -162,10 +162,10 @@ ul,li{
         position: absolute;
         background-color: #fff;
     }
-    .contact ul{
+    .contact-link ul{
         /*padding-left: 10%;*/
     }
-    .contact ul:first-of-type{
+    .contact-link ul:first-of-type{
         border-right: 1px solid #000000;
     }
 }
@@ -238,10 +238,10 @@ ul,li{
         position: absolute;
         background-color: #fff;
     }
-    .contact ul{
+    .contact-link ul{
         padding-left: 10%;
     }
-    .contact ul:first-of-type{
+    .contact-link ul:first-of-type{
         border-right: 1px solid #000000;
     }
 }
@@ -315,10 +315,10 @@ ul,li{
     .blog-area .blog .link-href{
         padding-left: 1rem;
     }
-    .contact ul{
+    .contact-link ul{
         padding-left: 10%;
     }
-    .contact ul:first-of-type{
+    .contact-link ul:first-of-type{
         border-right: 1px solid #000000;
     }
 }
@@ -483,15 +483,15 @@ nav ul.media-link>li{
     padding: 20px 0;
 }
 
-.contact{
+.contact-link{
     padding: 30px 0;
     background: #d7d7d7;
 }
-.contact .title{
+.contact-link .title{
     font-size: 30px;
     margin-bottom: 20px;
 }
-.contact a,.contact a:active,.contact a:visited{
+.contact-link a,.contact-link a:active,.contact-link a:visited{
     color: #000000;
     font-size: 16px;
     line-height: 1.5em;
