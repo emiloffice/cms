@@ -145,7 +145,7 @@
 
     </div>
     <!--dev blog-->
-    <div class="dev-blog container-fluid">
+    <div class="dev-blog container-fluid hidden">
         <div class="container">
             <div class="title-part">
                 <p class="subtitle">Blog</p>
@@ -164,26 +164,6 @@
             </div>
         </div>
     </div>
-   {{-- <div class="published_game text-algin container">
-        <div class="title font-size-32 text-align-center">
-            THE ONLINE GAME
-        </div>
-        <div class="subtitle text-align-center">these games worth you experience</div>
-        <div class="left col-md-6 col-sm-12">
-            <div class="game_name font-size-32">Reveries: Dream Flight</div>
-            <p>Dream Flight is a beautiful game about exploration and discovery. Learn to guide and collect a variety of magical flight machines, and experience magnificent and ethereal scenery underwritten by a mesmerizing soundtrack.</p>
-            <p>Dream Flight is a hands-free experience. No controller is needed. However, headphones are highly recommended!</p>
-            <div class="download fl">
-                <a class="btn" href="https://www.oculus.com/experiences/gear-vr/1013248532088752/" target="_blank">
-                    <i class="fa fa-download"></i>
-                    DOWNLOAD</a>
-
-            </div>
-        </div>
-        <div class="right col-md-6 hidden-sm hidden-xs">
-            <img src="/img/game1.png" alt="游戏图片">
-        </div>
-    </div>--}}
     <div class="published_game text-algin">
         <div class="title font-size-32 text-center">
             THE ONLINE GAME
@@ -199,12 +179,18 @@
                     DOWNLOAD</a>
 
             </div>
-            {{--<div class="fl">
-                <i class="iconfont icon color-white icon-next">&#xe612;</i>
-            </div>--}}
         </div>
         <div class="right col-md-6 hidden-sm hidden-xs">
             <img src="/img/game1.png" alt="游戏图片">
+        </div>
+    </div>
+    <div class="subscribe">
+        <div class="content">
+            <div class="title text-center">WANT TO BE ON THE FRONTIER OF VR INNOVATION</div>
+            <form action="#" class="form_content">
+                <input type="email" class="email_input" placeholder="YOUR EMAIL" name="email" id="email">
+                <button class="subscribe_btn" type="submit">subscribe</button>
+            </form>
         </div>
     </div>
     <div class="footer">

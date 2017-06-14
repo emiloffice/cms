@@ -324,13 +324,8 @@ ul,li{
 }
 
 /*nav start*/
-@media(min-width:768px) {
-    /*p {*/
-        /*margin: 0 0 35px;*/
-        /*font-size: 20px;*/
-        /*line-height: 1.6;*/
-    /*}*/
-}
+
+
 
 a {
     color: #66ccff;
@@ -427,10 +422,109 @@ a:focus {
         border-bottom: 1px solid rgba(255,255,255,.3);
         background: #000;
     }
+    .about-banner {
+        background: url(../img/about-banner.jpg) no-repeat center;
+        background-size: cover;
+    }
+    .about-banner .title,.about-banner .subtitle{
+        font-size: 4.8rem;
+        line-height: 1.5em;
+    }
+    .about-banner .subtitle span{
+        color: #7b7b7b;
+        font-size: 4.8rem;
+    }
+    .subscribe{
+        width: 100%;
+        height: 145px;
+        color: #000;
+        background-color: #d7d7d7;
+    }
+    .subscribe .content{
+        width: 480px;
+        margin: 0 auto;
+    }
+    .subscribe .content .title{
+        padding-top: 35px;
+    }
+    .subscribe .content .email_input {
+        width: 300px;
+        height: 50px;
+        float: left;
+        text-indent: 2em;
+        border: 1px solid #d3d3d3;
+    }
+    .subscribe .content .subscribe_btn {
+        width: 130px;
+        height: 50px;
+        float: left;
+        background-color: #ffffff;
+        border: 1px solid #d3d3d3;
+        border-radius: 5px;
+        margin-left: 40px;
+        color: #030303;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .subscribe .content .form_content{
+        margin-top: 20px;
+    }
 
 
 }
-
+@media(max-width: 768px) {
+    .about-banner {
+        background: url(../img/about-banner.jpg) no-repeat center;
+        background-size: cover;
+    }
+    .about-banner .title, .about-banner .subtitle {
+        font-size: 2.8rem;
+        line-height: 1.5em;
+    }
+    .about-banner .subtitle span{
+        color: #7b7b7b;
+        font-size: 2.8rem;
+    }
+    .subscribe{
+        width: 100%;
+        height: 145px;
+        color: #000;
+        background-color: #d7d7d7;
+    }
+    .subscribe .content{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .subscribe .content .title{
+        padding-top: 35px;
+    }
+    .subscribe .content .email_input {
+        width: 65%;
+        height: 50px;
+        float: left;
+        text-indent: 2em;
+        border: 1px solid #d3d3d3;
+        margin-left: 4%;
+    }
+    .subscribe .content .subscribe_btn {
+        width: 25%;
+        height: 50px;
+        float: left;
+        background-color: #ffffff;
+        border: 1px solid #d3d3d3;
+        border-radius: 5px;
+        margin-left: 2%;
+        color: #030303;
+        line-height: 50px;
+        text-align: center;
+        cursor: pointer;
+    }
+    .subscribe .content .form_content{
+        margin-top: 20px;
+        display: inline;
+    }
+}
 nav ul.media-link{
     float: left;
     margin: 10px -60px 0px 30px;
@@ -446,18 +540,7 @@ nav ul.media-link>li{
     background-size: cover;
 
 }
-.about-banner {
-    background: url(../img/about-banner.jpg) no-repeat center;
-    background-size: cover;
-}
-.about-banner .title,.about-banner .subtitle{
-    font-size: 4.8rem;
-    line-height: 1.5em;
-}
-.about-banner .subtitle span{
-    color: #7b7b7b;
-    font-size: 4.8rem;
-}
+
 .blog-banner{
     background: url("../img/blog_banner.jpg") no-repeat center;
     background-size: cover;
@@ -496,6 +579,10 @@ nav ul.media-link>li{
     font-size: 16px;
     line-height: 1.5em;
 }
+
+
+
+
 /*footer start*/
 .footer{
     background-color: #000;
@@ -591,16 +678,15 @@ footer .partneres_link li{
 
 }
 .press{
-    height: 620px;
     background: url(../img/press-bg.png) no-repeat center;
     background-size: cover;
     position: relative;
     color: #ffffff;
+    padding: 40px 0;
 }
 .press .title{
     font-size: 4rem;
     color: #ffffff;
-    padding-top: 45px;
 }
 .press .btn-area{
     /*background: #ffffff;*/
@@ -631,7 +717,7 @@ footer .partneres_link li{
     margin: 0 auto;
 }
 .press #posts-area{
-    margin-top: 100px;
+    margin-top: 60px;
 }
 .press #posts-area .post .thumb{
     /*background: #6dcff6;*/
@@ -907,7 +993,7 @@ footer .partneres_link li{
 }
 .published_game .left{
     float: left;
-    padding-left: 10rem;
+    padding-left: 10%;;
 }
 .published_game .left .game_name{
     padding: 30px 0;
@@ -955,7 +1041,7 @@ footer .partneres_link li{
 #company-content li.active{
     display: block;
     height: 20rem;
-    width: 50rem;
+    /*width: 50rem;*/
     background: #ffffff;
     margin: 0 auto;
     filter: alpha(Opacity=50);
@@ -968,11 +1054,12 @@ footer .partneres_link li{
 }
 #company-content li{
     display: none;
+    padding: 1rem;
 
 }
 #btn-area{
-    width: 50rem;
-    margin: 0 auto;
+    /*width: 50rem;*/
+    /*margin: 0 auto;*/
 }
 #btn-area li{
     cursor: pointer;
