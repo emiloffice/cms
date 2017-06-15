@@ -242,6 +242,8 @@
                     dataType:'json',
                     success:function (res) {
                         console.log(res.status)
+                        ele.val('');
+                        alert('SUCCESS!!!');
                     }
                 })
 

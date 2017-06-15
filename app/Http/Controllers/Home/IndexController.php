@@ -110,6 +110,9 @@ class IndexController extends Controller
                 'email'=>'required|unique:subscribes|email',
             ]);
             Subscribe::create(request(['email']));
+            if(request('callback')!==''){
+                $rst['callback']=request('callback');
+            }
             $rst['status'] = 'success';
             $rst['code'] = '1';
         }else{
