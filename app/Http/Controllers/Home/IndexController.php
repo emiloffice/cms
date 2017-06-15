@@ -105,7 +105,7 @@ class IndexController extends Controller
         return view('home.show', compact('post'));
     }
     public function Subscribe(Request $request){
-        if($request->isMethod('post')){
+        if($request->isMethod('post')||$request->isMethod('get')){
             $this->validate(request(), [
                 'email'=>'required|unique:subscribes|email',
             ]);
