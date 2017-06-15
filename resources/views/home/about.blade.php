@@ -145,9 +145,9 @@
         <div class="container">
             <p class="title text-center">OUR PARTNERS</p>
             <ul>
-                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center"><img src="{{ url('img/vive.png') }}" alt="vive"></li>
-                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center"><img src="{{ url('img/oculus.png') }}" alt=""></li>
-                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center"><img src="{{ url('img/steam.png') }}" alt=""></li>
+                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center"><img src="{{ url('img/partners1.png') }}" alt="vive"></li>
+                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center"><img src="{{ url('img/press3.png') }}" alt=""></li>
+                <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 text-center"><img src="{{ url('img/partners-steam.png') }}" alt=""></li>
             </ul>
 
             {{--<div class="join-area">

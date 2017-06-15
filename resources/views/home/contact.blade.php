@@ -158,9 +158,9 @@
         <div class="title text-center">CONTACT</div>
         <div class="container">
             <ul class="col-lg-6 col-md-6 col-sm-6 col-md-12">
-                <li><a href="mailto:chenjun.li@multiverseinc.com" target="_blank">General:chenjun.li@multiverseinc.com</a></li>
-                <li><a href="mailto:chenjun.li@multiverseinc.com" target="_blank">Public Relations:chenjun.li@multiverseinc.com</a></li>
-                <li><a href="mailto:chenjun.li@multiverseinc.com" target="_blank">Careers:chenjun.li@multiverseinc.com</a></li>
+                <li><a href="mailto:contact@multiverseinc.com" target="_blank">General:contact@multiverseinc.com</a></li>
+                <li><a href="mailto:bo.liu@multiverseinc.com" target="_blank">Public Relations:bo.liu@multiverseinc.com</a></li>
+                <li><a href="mailto:lilian.chen@multiverseinc.com" target="_blank">Careers:lilian.chen@multiverseinc.com</a></li>
                 <li><a href="mailto:chenjun.li@multiverseinc.com" target="_blank">Business:chenjun.li@multiverseinc.com</a></li>
             </ul>
             <ul class="col-lg-6 col-md-6 col-sm-6 col-md-12">
@@ -205,21 +205,22 @@
     <script src="/js/grayscale.js"></script>
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCWrXFcigxn4wV3r1vKeX-k6GUorhCgQhY&sensor=false"></script>
     <script>
-        var myCenter=new google.maps.LatLng(51.508742,-0.120850);
+//        var myCenter=new google.maps.LatLng(22.5169188860,113.9212878783);
+        var uluru = {lat: 22.5169188860, lng: 113.9212878783};
         var marker;
 
         function initialize()
         {
             var mapProp = {
-                center:myCenter,
-                zoom:5,
+                center:uluru,
+                zoom:10,
                 mapTypeId:google.maps.MapTypeId.ROADMAP
             };
 
             var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
 
             marker=new google.maps.Marker({
-                position:myCenter,
+                position:uluru,
                 animation:google.maps.Animation.BOUNCE
             });
 
