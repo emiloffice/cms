@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    @include('layouts.meta')
+        @include('layouts.meta')
 </head>
 <body>
-    @include('layouts.nav')
-    @include('layouts.header')
-    @section('content')
+        @include('layouts.nav')
+        @section('content')
 
-    @show
-    @include('layouts.errors')
-    @include('layouts.footer')
+        @show
+        @include('layouts.footer')
 </body>
 </html>

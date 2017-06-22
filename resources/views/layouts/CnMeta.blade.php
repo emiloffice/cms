@@ -5,9 +5,7 @@
 <meta name="DC.title" content="Home">
 <meta name="robots" content="index,follow">
 <meta name="author" content="">
-@section('title')
-<title>Multiverse Entertainment</title>
-@show
+<title>@section('')Multiverse Entertainment</title>
 <link rel="shortcut icon" type="image/x-icon" href="{{ url('favicon.ico') }}" media="screen" />
 <link href="/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
 <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">

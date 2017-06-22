@@ -5,7 +5,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand page-scroll" style="" href="/" id="logo">
+            <a class="navbar-brand page-scroll" id="logo" href="/cn/">
                 <span class="light"></span><img src="/img/multiverselogolong.png" align="left" class="img-responsive">
             </a>
         </div>
@@ -18,7 +18,7 @@
                     <a href="index"></a>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">Games</a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">游戏专区</a>
                     <ul class="dropdown-menu" style="background: black;">
                         <li><a href="seekingdawn" style="color: white;">Seeking Dawn</a>
                         <li><a href="https://www.oculus.com/experiences/gear-vr/1013248532088752/" style="color: white;" target="_blank">Dream Flight</a></li>
@@ -26,26 +26,26 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="https://www.linkedin.com/company/multiverse-entertainment">CAREERS</a>
+                    <a href="https://www.linkedin.com/company/multiverse-entertainment" target="_blank">招贤纳士</a>
                 </li>
                 <li>
-                    <a href="#">DEVBLOG</a>
+                    <a href="#">开发者日志</a>
                 </li>
                 <li>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">ABOUTS</a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">关于我们</a>
                     <ul class="dropdown-menu" style="background: black;">
-                        <li><a href="{{url('about#company')}}" style="color: white;">Company</a>
-                        <li><a href="{{url('about#press')}}" style="color: white;">Press</a>
-                        <li><a href="{{url('about#partner')}}" style="color: white;">Partner</a>
-                        <li><a href="{{url('privacy')}}" style="color: white;">privacy</a>
-                        <li><a href="{{url('tos')}}" style="color: white;">Terms of Service</a>
+                        <li><a href="{{url('cn/about#company')}}" style="color: white;">公司简介</a>
+                        <li><a href="{{url('cn/about#press')}}" style="color: white;">媒体资源</a>
+                        <li><a href="{{url('cn/about#partner')}}" style="color: white;">合租伙伴</a>
+                        <li><a href="{{url('cn/privacy')}}" style="color: white;">隐私条款</a>
+                        <li><a href="{{url('cn/tos')}}" style="color: white;">服务条款</a>
                     </ul>
                 </li>
                 <li>
-                    <a href="contact">Contact</a>
+                    <a href="contact">联系我们</a>
                 </li>
                 <li>
-                    <a href="/cn/">EN/CN</a>
+                    <a href="{{url('index')}}">CN/EN</a>
                 </li>
             </ul>
             <ul class="media-link hidden-sm hidden-xs">

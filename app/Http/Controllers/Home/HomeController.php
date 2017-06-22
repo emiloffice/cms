@@ -8,7 +8,7 @@ use App\Subscribe;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class IndexController extends Controller
+class HomeController extends Controller
 {
     public function index()
     {
@@ -17,8 +17,7 @@ class IndexController extends Controller
     }
     public function test()
     {
-            $posts = Post::latest()->take(3)->get();
-            return view('home.index', compact('posts'));
+        return view('home.test');
     }
     public function about()
     {

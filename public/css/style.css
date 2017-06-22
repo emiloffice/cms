@@ -21,6 +21,9 @@ ul,li{
 }
 /*超小屏幕*/
 @media screen and (max-width: 768px) {
+    #logo{
+        width: 170px;
+    }
     .banner{
         height: 24rem;
         line-height: 1.5em;
@@ -91,6 +94,9 @@ ul,li{
 }
 /*小屏幕*/
 @media screen and (max-width: 992px) and (min-width: 768px){
+    #logo{
+        width: 170px;
+    }
     .banner{
         height: 24rem;
         line-height: 1.5em;
@@ -171,6 +177,9 @@ ul,li{
 }
 /*中等屏幕*/
 @media screen and (max-width: 1200px) and (min-width: 992px){
+    #logo{
+        width: 170px;
+    }
     .banner{
         height: 24rem;
         line-height: 1.5em;
@@ -247,6 +256,9 @@ ul,li{
 }
 /*大屏幕*/
 @media screen and (min-width: 1200px){
+    #logo{
+        width: 250px;
+    }
     .banner{
         height: 50rem;
         line-height: 1.5em;
@@ -1069,4 +1081,10 @@ footer .partneres_link li{
 }
 ul#company-content {
     font-size: 1.8rem;
+}
+.errorPage{
+    min-height: 45rem;
+    padding-top: 10rem;
+    background: url("../img/about-banner.png") no-repeat center;
+    color: #ffffff;
 }
