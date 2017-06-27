@@ -42,7 +42,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="contact">联系我们</a>
+                    <a href="{{url('cn/contact')}}">联系我们</a>
                 </li>
                 <li>
                     <a href="{{url('index')}}">CN/EN</a>
