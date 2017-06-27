@@ -21,6 +21,7 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->get('index', 'HomeController@index');
     $router->get('test', 'HomeController@test');
     $router->get('home', 'HomeController@index');
+    $router->get('isCN', 'HomeController@isCN');
     $router->get('about', 'HomeController@about');
     $router->get('posts/{post}','HomeController@show');//显示某篇文章
     $router->get('posts','HomeController@posts');//显示某篇文章

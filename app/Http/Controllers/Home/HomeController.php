@@ -13,7 +13,60 @@ class HomeController extends Controller
     public function index()
     {
         $posts = Post::latest()->take(3)->get();
+        $rst = $this->isCN();
+        if ($rst=='1'){
+            return view('cn.index', compact('posts'));
+        }else{
+
+            return view('home.index', compact('posts'));
+        }
+    }
+    public function ipInfo(){
+        $ip = $this->getIP();
+        $url="http://ip.taobao.com/service/getIpInfo.php?ip=".$ip;
+        $info=json_decode(file_get_contents($url));
+        if((string)$info->code=='1'){
+            return false;
+        }
+        $data = (array)$info->data;
+        return $data;
+    }
+
+    public function isCN()
+    {
+        $info = $this->ipInfo();
+        if ($info['country']=='中国'){
+            return '1';
+        }else{
+            return '0';
+        }
+    }
+    public function home()
+    {
+        $posts = Post::latest()->take(3)->get();
         return view('home.index', compact('posts'));
+    }
+    function getIP() {
+        if (getenv('HTTP_CLIENT_IP')) {
+            $ip = getenv('HTTP_CLIENT_IP');
+        }
+        elseif (getenv('HTTP_X_FORWARDED_FOR')) {
+            $ip = getenv('HTTP_X_FORWARDED_FOR');
+        }
+        elseif (getenv('HTTP_X_FORWARDED')) {
+            $ip = getenv('HTTP_X_FORWARDED');
+        }
+        elseif (getenv('HTTP_FORWARDED_FOR')) {
+            $ip = getenv('HTTP_FORWARDED_FOR');
+
+        }
+        elseif (getenv('HTTP_FORWARDED')) {
+            $ip = getenv('HTTP_FORWARDED');
+        }
+        else {
+            $ip = $_SERVER['REMOTE_ADDR'];
+        }
+        return $ip;
     }
     public function test()
     {
