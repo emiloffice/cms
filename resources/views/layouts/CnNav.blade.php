@@ -20,7 +20,7 @@
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">游戏专区</a>
                     <ul class="dropdown-menu" style="background: black;">
-                        <li><a href="{{url('seekingdawn')}}" style="color: white;">Seeking Dawn</a>
+                        <li><a href="http://www.seekingdawnvr.com/" style="color: white;" target="_blank">Seeking Dawn</a></li>
                         <li><a href="https://www.oculus.com/experiences/gear-vr/1013248532088752/" style="color: white;" target="_blank">Dream Flight</a></li>
                         <li><a href="https://play.google.com/store/apps/details?id=com.multiverse.galaxyrush" style="color: white;" target="_blank">Galactic Rush</a></li>
                     </ul>
