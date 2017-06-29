@@ -37,8 +37,8 @@
                         <li><a href="{{url('cn/about#company')}}" style="color: white;">公司简介</a>
                         <li><a href="{{url('cn/about#press')}}" style="color: white;">媒体资源</a>
                         <li><a href="{{url('cn/about#partner')}}" style="color: white;">合租伙伴</a>
-                        <li><a href="{{url('cn/privacy')}}" style="color: white;">隐私条款</a>
-                        <li><a href="{{url('cn/tos')}}" style="color: white;">服务条款</a>
+                        <li><a href="{{url('privacy')}}" style="color: white;">隐私条款</a>
+                        <li><a href="{{url('tos')}}" style="color: white;">服务条款</a>
                     </ul>
                 </li>
                 <li>
