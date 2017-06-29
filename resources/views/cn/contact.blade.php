@@ -70,6 +70,7 @@
     </div>
     <div class="container text-center" style="padding-top: 5rem;padding-bottom: 5rem;">
         <p>地址：<span>广东省深圳市南山区南山大道南园枫叶大厦25楼G室</span></p>
+        <p>邮箱：<span>contact@multiverseinc.com</span></p>
         <p>联系电话：<span>13812345678</span></p>
     </div>
     <div id="googleMap" style="width: 100%;height: 30rem">
