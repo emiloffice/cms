@@ -1,4 +1,9 @@
 @extends('layouts.CnMaster')
+@section('meta')
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=6dc20d244b122a968c2b35c23e8ec405"></script>
+    <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+    @endsection
 @section('content')
     <div class="banner contact-banner">
         <div class="container">
@@ -73,17 +78,17 @@
         <p>邮箱：<span>contact@multiverseinc.com</span></p>
         <p>联系电话：<span>13812345678</span></p>
     </div>
-    <div id="googleMap" style="width: 100%;height: 30rem">
+    {{--<div id="googleMap" style="width: 100%;height: 30rem">
 
-    </div>
-
+    </div>--}}
+    <div id="amap" style="height: 30rem"></div>
 @endsection
 @section('other')
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCWrXFcigxn4wV3r1vKeX-k6GUorhCgQhY&sensor=false"></script>
+    {{--<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCWrXFcigxn4wV3r1vKeX-k6GUorhCgQhY&sensor=false"></script>--}}
     @endsection
 
 @section('script')
-    var uluru = {lat: 22.5169188860, lng: 113.9212878783};
+{{--    var uluru = {lat: 22.5169188860, lng: 113.9212878783};
     var marker;
 
     function initialize()
@@ -104,5 +109,21 @@
     marker.setMap(map);
     }
 
-    google.maps.event.addDomListener(window, 'load', initialize);
+    google.maps.event.addDomListener(window, 'load', initialize);--}}
+    //初始化地图对象，加载地图
+    var map = new AMap.Map("amap", {
+    resizeEnable: true,
+    center: [113.9213000000, 22.5169200000],//地图中心点
+    zoom: 13 //地图显示的缩放级别
+    });
+    //添加点标记，并使用自己的icon
+    new AMap.Marker({
+    map: map,
+    position: [113.9213, 22.51692],
+    icon: new AMap.Icon({
+    size: new AMap.Size(40, 50),  //图标大小
+    image: "{{url('img/amap-logo.png')}}",
+    imageOffset: new AMap.Pixel(0, -60)
+    })
+    });
 @endsection
