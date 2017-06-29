@@ -82,6 +82,7 @@
 
     </div>--}}
     <div id="amap" style="height: 30rem"></div>
+    <div id="tip" class="tip"></div>
 @endsection
 @section('other')
     {{--<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCWrXFcigxn4wV3r1vKeX-k6GUorhCgQhY&sensor=false"></script>--}}
@@ -110,20 +111,21 @@
     }
 
     google.maps.event.addDomListener(window, 'load', initialize);--}}
-    //初始化地图对象，加载地图
-    var map = new AMap.Map("amap", {
+    var map = new AMap.Map('amap', {
     resizeEnable: true,
-    center: [113.9213000000, 22.5169200000],//地图中心点
-    zoom: 13 //地图显示的缩放级别
+    center: [113.9213000000, 22.5169200000],
+    zoom: 13
     });
-    //添加点标记，并使用自己的icon
-    new AMap.Marker({
-    map: map,
-    position: [113.9213, 22.51692],
-    icon: new AMap.Icon({
-    size: new AMap.Size(40, 50),  //图标大小
-    image: "{{url('img/amap-logo.png')}}",
-    imageOffset: new AMap.Pixel(0, -60)
-    })
+    var marker = new AMap.Marker({
+    position: map.getCenter()
+    });
+    marker.setMap(map);
+    // 设置鼠标划过点标记显示的文字提示
+    marker.setTitle('');
+
+    // 设置label标签
+    marker.setLabel({//label默认蓝框白底左上角显示，样式className为：amap-marker-label
+    offset: new AMap.Pixel(20, 20),//修改label相对于maker的位置
+    content: "南园枫叶大厦"
     });
 @endsection
