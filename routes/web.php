@@ -53,7 +53,7 @@ Route::group(['prefix' => 'cn','namespace' => 'Home'],function ($router){
     $router->get('contact', 'CnController@contact');
     $router->get('about', 'CnController@about');
     $router->get('index', 'CnController@index');
-//    $router->get('', 'CnController@index');
+    $router->get('seekingdawn', 'CnController@seekingdawn');
 });
 
 Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)

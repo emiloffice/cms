@@ -32,4 +32,8 @@ class CnController extends Controller
     {
         return view('cn.about');
     }
+    public function seekingdawn()
+    {
+        return view('cn.seekingdawn');
+    }
 }
