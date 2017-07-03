@@ -1088,3 +1088,33 @@ ul#company-content {
     background: url("../img/about-banner.png") no-repeat center;
     color: #ffffff;
 }
+/*ambassador project page*/
+div#form-ambassador {
+    color: #c9c9c9;
+    padding: 1rem;
+    width: 26rem;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 1rem;
+
+}
+div#form-ambassador .input-list{
+    width: 24rem;
+    margin-bottom: 1rem;
+}
+div#form-ambassador label{
+    display: none;
+}
+div#form-ambassador .input-list input{
+    width: 100%;
+    color: #000000;
+    padding: 0 5px;
+    outline: none;
+    border: none;
+}
+.ambassador-banner{
+    height: 40rem !important;
+    background: url(../img/contact-banner.jpg) no-repeat center;
+    background-size: cover;
+    padding-top: 4rem;
+}

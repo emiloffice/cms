@@ -46,6 +46,7 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->get('contact', 'HomeController@contact');
     $router->post('contact', 'HomeController@contact');
     $router->any('subscribe', 'HomeController@Subscribe');
+    $router->any('ambassador', 'HomeController@ambassador');
     $router->any('*', 'HomeController@index');
 });
 Route::group(['prefix' => 'cn','namespace' => 'Home'],function ($router){

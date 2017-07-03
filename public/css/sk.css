@@ -83,6 +83,7 @@
     background: url(/img/poster2.jpg) no-repeat center;
     width: 100%;
     height: auto;
+    min-height: 30rem;
     display: block;
 }
 .poster img{

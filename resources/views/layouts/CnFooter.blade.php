@@ -1,17 +1,17 @@
 <div class="footer">
     <div class="left fl col-sm-12 col-md-4">
-        <div class="text"><a href="http://www.multiverseinc.com/legal/tos/">服务条款 </a>|<a href="http://www.multiverseinc.com/legal/privacy/" target="_blank"> 隐私政策</a> 	</div>
+        {{--<div class="text"><a href="http://www.multiverseinc.com/legal/tos/">服务条款 </a>|<a href="http://www.multiverseinc.com/legal/privacy/" target="_blank"> 隐私政策</a> 	</div>--}}
         <div class="text">Copyright © 深圳摩登世纪科技有限公司</div>
         <div class="text">Record: <a href="http://www.miibeian.gov.cn/" target="_blank">粤ICP备16110936-1</a></div>
     </div>
     <div class="center fl col-md-4 hidden-sm hidden-xs">
-        <ul>
+        {{--<ul>
             <li class="fl pd-20"><a href="https://www.facebook.com/MultiverseVR" target="_blank"><i class="fa fa-facebook fa-3x color-white"></i></a></li>
             <li class="fl pd-20"><a href="https://twitter.com/VRmultiverse" target="_blank"><i class="fa fa-twitter fa-3x color-white"></i></a></li>
             <!-- <li class="fl"><a href="#"><i class="iconfont icon-ins color-white" target="_blank">&#xe614;</i></a></li> -->
             <li class="fl pd-20"><a href="https://www.linkedin.com/company/multiverse-entertainment" target="_blank"><i class="fa fa-linkedin fa-3x color-white"></i></a></li>
             <!-- <li class="fl"><a href="#"><i class="iconfont icon-twitch color-white">&#xe7ed;</i></a></li> -->
-        </ul>
+        </ul>--}}
     </div>
     <div class="right fl col-md-4 hidden-sm hidden-xs">
         <div class="text">合作伙伴</div>

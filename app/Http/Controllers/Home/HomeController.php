@@ -85,6 +85,10 @@ class HomeController extends Controller
         return view('home.company');
     }
 
+    public function ambassador()
+    {
+        return view('home.ambassador');
+    }
     public function contact(Request $request)
     {
         if($request->isMethod('post')){
