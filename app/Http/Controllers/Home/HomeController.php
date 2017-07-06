@@ -90,7 +90,7 @@ class HomeController extends Controller
                 'name'=>'required',
                 'email'=>'required',
             ]);
-            User::create(request(['name', 'email', '']))
+            User::create(request(['name', 'email', '']));
         }
         return view('home.ambassador');
     }

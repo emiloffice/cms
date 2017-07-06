@@ -16,7 +16,7 @@ class AddSomeFieldsToUsersTable extends Migration
         Schema::table('users', function (Blueprint $table) {
             $table->string('referral_code')->after('remember_token')->nullable();//推荐码
             $table->string('referrals_id')->after('referral_code')->nullable();//推荐人的ID
-            $table->string('ambassdor_times')->after('referrals_id')->nullable();//吸引的人数
+            $table->string('ambassador_times')->after('referrals_id')->nullable();//吸引的人数
         });
     }
 
