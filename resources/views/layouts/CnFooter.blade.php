@@ -30,8 +30,6 @@
 @section('other')
 
     @show
-<script>
-    @section('script')
-        haha
+@section('script')
+
     @show
-</script>

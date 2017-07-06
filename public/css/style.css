@@ -16,7 +16,7 @@ body{
 .pd-20{
     padding: 20px;
 }
-ul,li{
+ul>li{
     list-style: none;
 }
 /*超小屏幕*/
@@ -1112,9 +1112,27 @@ div#form-ambassador .input-list input{
     outline: none;
     border: none;
 }
+div#form-ambassador button[type="submit"]{
+    display: block;
+    background: rgba(197, 71, 103, 0.7);
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 8rem;
+    text-align: center;
+    margin: 0 auto;
+    color: #ffffff;
+    margin-top: 2rem;
+}
 .ambassador-banner{
     height: 40rem !important;
     background: url(../img/contact-banner.jpg) no-repeat center;
     background-size: cover;
     padding-top: 4rem;
+}
+.ambassador-area{
+    width: 30rem;
+    margin: 0 auto;
+    height: 50rem;
 }

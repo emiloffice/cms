@@ -30,5 +30,4 @@
 @section('other')
     @show
 @section('script')
-
     @show

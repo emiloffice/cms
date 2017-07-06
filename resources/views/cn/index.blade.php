@@ -87,4 +87,29 @@
     </div>
 @endsection
 @section('script')
+    <script>
+        function form_submit(){
+            var ele = $('#email');
+            var _email = $('#email').val();
+            var myreg = /^([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+@([a-zA-Z0-9]+[_|\_|\.]?)*[a-zA-Z0-9]+\.[a-zA-Z]{2,3}$/;
+            if(!myreg.test(_email)){
+                alert('E-mail format is incorrect!!!')
+                ele.focus();
+                return false;
+            }else{
+                $.ajax({
+                    url:'{{url('subscribe')}}',
+                    type:'POST',
+                    data:{email:_email},
+                    dataType:'json',
+                    success:function (res) {
+                        console.log(res.status)
+                        ele.val('');
+                        alert('SUCCESS!!!');
+                    }
+                })
+
+            }
+        }
+    </script>
 @endsection

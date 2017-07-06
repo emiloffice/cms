@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Home;
 use App\Message;
 use App\Post;
 use App\Subscribe;
+use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
@@ -68,10 +69,7 @@ class HomeController extends Controller
         }
         return $ip;
     }
-    public function test()
-    {
-        return view('home.test');
-    }
+
     public function about()
     {
         return view('home.about');
@@ -85,8 +83,15 @@ class HomeController extends Controller
         return view('home.company');
     }
 
-    public function ambassador()
+    public function ambassador(Request $request)
     {
+        if($request->isMethod('post')){
+            $this->validate(request(), [
+                'name'=>'required',
+                'email'=>'required',
+            ]);
+            User::create(request(['name', 'email', '']))
+        }
         return view('home.ambassador');
     }
     public function contact(Request $request)
@@ -182,5 +187,46 @@ class HomeController extends Controller
         }
         $rst = json_encode($rst);
         return $rst;
+    }
+    /*
+     * @param int $no_of_codes//定义一个int类型的参数 用来确定生成多少个优惠码
+     * @param array $exclude_codes_array//定义一个exclude_codes_array类型的数组
+     * @param init $code_length //定义一个code_length的参数来确定优惠码的长度
+     * @return array//返回数组
+     * */
+    public function referralCode($no_of_codes, $exclude_codes_array='', $code_length = 6)
+    {
+        $characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        $promotion_codes = array();//这个数组用来接收生成的优惠码
+        for ($j = 0; $j < $no_of_codes; $j++){
+            $code = "";
+            for ($i = 0; $i < $code_length; $i++){
+                $code .= $characters[mt_rand(0, strlen($characters) - 1)];
+            }
+            //如果生成的6位随机数不在我们定义的$promotion_codes函数里
+            if (!in_array($code, $promotion_codes)){
+                if (is_array($exclude_codes_array)){
+                    if (!in_array($code, $exclude_codes_array)){//排除已经使用的优惠码数
+                        $promotion_codes[$j] = $code;//将新生成的优惠码赋值给promotion_codes数组
+                    }else{
+                        $j--;
+                    }
+                }else {
+                    $promotion_codes[$j] = $code;//将优惠码赋值给数组
+                }
+            }else{
+                $j--;
+            }
+        }
+        if ($no_of_codes = 1){
+            $promotion_codes = $promotion_codes[0];
+        }
+        return $promotion_codes;
+    }
+    public function test()
+    {
+        $code = $this->referralCode(1,'');
+        print_r($code);
+//        return view('home.test');
     }
 }
