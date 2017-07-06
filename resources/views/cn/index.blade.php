@@ -11,7 +11,7 @@
         <div id="banner_des" class="hidden-sm hidden-xs">
             <img id="video_title" src="/img/SeekingDawn_logo.png">
             <p id="video_despriction">
-                Seeking Dawn是由Multiverse制作的大规模的生存探索类VR游戏. 带你进入身临其境的外星人“死亡世界”，里面充满了有趣的植物和动物，未知的危险和美妙的食物在等着你来体验！
+                Seeking Dawn是由Multiverse制作的大型科幻RPG类VR游戏，游戏具有丰富合成玩法。带你进入身临其境的外星人“死亡世界”，里面充满了有趣的植物以及动物，去探索未知的危险和美妙的食物吧！
             </p>
             <a id="status" href="/seekingdawn">
                 获取更多
@@ -20,7 +20,7 @@
     </div>
     <div class="hidden-lg hidden-md sm-despriction">
         <p>
-            &nbsp;Seeking Dawn是由Multiverse制作的大规模的生存探索类VR游戏. 带你进入身临其境的外星人“死亡世界”，里面充满了有趣的植物和动物，未知的危险和美妙的食物在等着你来体验！
+            Seeking Dawn是由Multiverse制作的大型科幻RPG类VR游戏，游戏具有丰富合成玩法。带你进入身临其境的外星人“死亡世界”，里面充满了有趣的植物以及动物，去探索未知的危险和美妙的食物吧！
         </p>
         <a href="/seekingdawn" class="text-align-center" style="display: block;text-align: center;">
             获取更多
@@ -31,7 +31,7 @@
             <div class="name">Multiverse</div>
             <div class="title">游戏厂商</div>
             <div class="des">
-                我们都是铁杆玩家，我们想要一个深度的、需要思考的，并包含数百小时的上瘾的VR游戏。Seeking Dawn就是这样的游戏，它将是最大规模的VR游戏。一切正在精心制作完美中，敬请期待。
+                我们都是重度的硬核玩家，我们想要一个深度的、值得思考的、并且包含能够反复积累并且让人上瘾和探索的VR游戏。《Seeking Dawn》就是一款这样的游戏，它将是最大规模的VR游戏之一。一切正在精心制作中，请等待一会。
             </div>
             <a class="contact" href="http://www.multiverseinc.com/contact">联系我们</a>
         </div>
@@ -64,7 +64,9 @@
         <div class="subtitle text-center">这些游戏值得您体验</div>
         <div class="left col-md-6 col-sm-12">
             <div class="game_name font-size-32">Reveries: Dream Flight</div>
-            <p>Dream Flight是一款音乐跑酷游戏，主打享受梦幻的虚拟世界。驾驶着小姑娘的纸飞机，穿越充满魔力的梦幻世界，寻找失散的同伴。不需要手柄，也没有血腥的厮杀，Dream Flight让你彻底陶醉在充满艺术感的视听盛宴中。游戏中每一首背景音乐都由西方独立音乐制作人倾情打造。</p>
+            <p>
+                Dream Flight是一款音乐跑酷游戏，主打梦幻唯美的虚拟世界。驾驶着小姑娘的纸飞机，穿越充满魔力的梦幻世界，寻找失散的同伴。这款游戏不需要手柄，也没有血腥的厮杀，玩家将伴随着由西方独立音乐制作人倾力打造的唯美背景音乐去享受游戏，彻底陶醉在充满艺术感的视听盛宴中。
+            </p>
             <div class="download fl">
                 <a class="btn" href="https://www.oculus.com/experiences/gear-vr/1013248532088752/" target="_blank">
                     <i class="fa fa-download"></i>
@@ -81,7 +83,7 @@
             <div class="title text-center">想要加入VR创新领域？</div>
             <form action="{{ url('subscribe') }}" class="form_content" method="post">
                 <input type="email" class="email_input" placeholder="你的邮箱" name="email" id="email">
-                <button class="subscribe_btn" type="button" onclick="form_submit()">发送</button>
+                <button class="subscribe_btn" type="button" onclick="form_submit()">订阅</button>
             </form>
         </div>
     </div>
