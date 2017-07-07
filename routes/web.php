@@ -98,6 +98,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('upload', 'UploadsController@upload');
     //消息列表
     $router->get('message-list','MessageController@index');
+    $router->get('ambassador-list','AmbassadorController@index');
     $router->get('subscribes-list','SubscribeController@index');
 });
 

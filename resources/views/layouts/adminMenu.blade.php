@@ -2,6 +2,14 @@
 <aside class="Hui-aside">
 
     <div class="menu_dropdown bk_2">
+        <dl id="menu-ambassador">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 大使计划<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a href="{{ url('admin/ambassador-list') }}" title="ambassador">计划管理</a></li>
+                </ul>
+            </dd>
+        </dl>
         <dl id="menu-article">
             <dt><i class="Hui-iconfont">&#xe616;</i> 资讯管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
