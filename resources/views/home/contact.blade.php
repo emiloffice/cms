@@ -6,7 +6,7 @@
     <div class="banner contact-banner">
         <div class="container">
             <div class="title">CONTACT US</div>
-            <div class="des">via phone, email, social media, or good ol' regular mail</div>
+            <div class="des">Fill out the information below and we will be sure to contact you back either by email or phone</div>
         </div>
     </div>
     @if (count($errors) > 0)
@@ -74,10 +74,10 @@
                 <li><a href="mailto:chenjun.li@multiverseinc.com" target="_blank">Business:chenjun.li@multiverseinc.com</a></li>
             </ul>
             <ul class="col-lg-6 col-md-6 col-sm-6 col-md-12">
-                <li><a href="" target="_blank">facebook.com/MultiverseVR</a></li>
-                <li><a href="" target="_blank">twitter.com/VRmultiverse</a></li>
-                <li><a href="" target="_blank">instagram.com//MultiverseVR</a></li>
-                <li><a href="" target="_blank">linkedin.com/company/multiverse-entertainment</a></li>
+                <li><a href="https://www.facebook.com/MultiverseVR" target="_blank">facebook.com/MultiverseVR</a></li>
+                <li><a href="https://twitter.com/VRmultiverse" target="_blank">twitter.com/VRmultiverse</a></li>
+                <li><a href="https://www.instagram.com/vrmultiverse/" target="_blank">instagram.com//vrmultiverse</a></li>
+                <li><a href="https://linkedin.com/company/multiverse-entertainment" target="_blank">linkedin.com/company/multiverse-entertainment</a></li>
             </ul>
         </div>
 

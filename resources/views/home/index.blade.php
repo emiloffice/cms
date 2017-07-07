@@ -11,7 +11,7 @@
         <div id="banner_des" class="hidden-sm hidden-xs">
             <img id="video_title" src="/img/SeekingDawn_logo.png">
             <p id="video_despriction">
-                Seeking Dawn is a massive survival-exploration VR game from Multiverse. It puts you into an immersive alien "death world" chock-full of interesting flora and fauna, unknown dangers and wonderful delights.
+                Seeking Dawn is a massive survival-exploration VR game from Multiverse. It puts you into an immersive alien "death world" filled with unknown dangers, interesting environments, and breathtaking visuals.
             </p>
             <a id="status" href="/seekingdawn">
                 LEARN MORE
@@ -20,7 +20,7 @@
     </div>
     <div class="hidden-lg hidden-md sm-despriction">
         <p>
-            &nbsp;&nbsp;&nbsp;&nbsp;Seeking Dawn is a massive survival-exploration VR game from Multiverse. It puts you into an immersive alien "death world" chock-full of interesting flora and fauna, unknown dangers and wonderful delights.
+            Seeking Dawn is a massive survival-exploration VR game from Multiverse. It puts you into an immersive alien "death world" filled with unknown dangers, interesting environments, and breathtaking visuals.
         </p>
         <a href="/seekingdawn" class="text-align-center" style="display: block;text-align: center;">
             LEARN MORE
@@ -40,12 +40,12 @@
     <div class="creators">
         <div class="content col-sm-12 col-md-6 col-md-offset-6">
             <div class="name">Multiverse</div>
-            <div class="title">THE CREATORS</div>
-            <div class="des">We are hardcore gamers, and we wanted a VR game with depth,
-                requires thinking, and contains hundreds of hours of addictive gameplay.
-                Seeking Dawn will be a VR game of the largest scale,
-                and is being painstaking crafted to perfection.
-            </div>
+            <div class="title">Founders</div>
+            <div class="des">
+                <p>Built from the ground up and consisting of team members who came from triple A game studios such as Disney and Riot Games.
+                </p>
+                <p>As developers we wanted to develop a VR game with depth that requires a unique approach to solving puzzles and that would contain hundreds of hours of replay value. We are building one of the largest VR games available and understand what it means to have a community built around our game and this is exactly the type of development process we are instilling into Seeking Dawn. This will be one of the largest VR games available, and is being painstakingly crafted to perfection.             </div>
+                </p>
             <a class="contact" href="http://www.multiverseinc.com/contact">CONTACT</a>
         </div>
 
@@ -72,13 +72,14 @@
     </div>
     <div class="published_game text-algin">
         <div class="title font-size-32 text-center">
-            THE ONLINE GAME
+            OUR GAMES
         </div>
-        <div class="subtitle text-center">these games worth you experience</div>
+        <div class="subtitle text-center">Experience our other titles</div>
         <div class="left col-md-6 col-sm-12">
             <div class="game_name font-size-32">Reveries: Dream Flight</div>
-            <p>Dream Flight is a beautiful game about exploration and discovery. Learn to guide and collect a variety of magical flight machines, and experience magnificent and ethereal scenery underwritten by a mesmerizing soundtrack.</p>
-            <p>Dream Flight is a hands-free experience. No controller is needed. However, headphones are highly recommended!</p>
+            <p>Dream Flight is a beautiful game about exploration and discovery. Learn to guide and collect a variety of magical flight machines, and experience magnificent and breathtaking scenery while enjoying its world class soundtrack
+            </p>
+            <p>Dream Flight is a hands-free experience. No controllers are needed. However, we highly recommend the use of headphones!</p>
             <div class="download fl">
                 <a class="btn" href="https://www.oculus.com/experiences/gear-vr/1013248532088752/" target="_blank">
                     <i class="fa fa-download"></i>

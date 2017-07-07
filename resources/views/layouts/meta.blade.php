@@ -9,11 +9,14 @@
 <title>Multiverse Entertainment</title>
 @show
 <link rel="shortcut icon" type="image/x-icon" href="{{ url('favicon.ico') }}" media="screen" />
-<link href="/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
-<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<link href="/css/style.css" rel="stylesheet">
+<link href="{{url('bootstrap/3.3.7/css/bootstrap.css')}}" rel="stylesheet">
+<link href="{{url('css/sk.css')}}" rel="stylesheet">
+<link href="{{url('font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
+<link href="{{url('css/style.css')}}" rel="stylesheet">
+@section('other')
+@show
 <!--[if IE 7]>
-<link href="/font-awesome/css/font-awesome-ie7.min.css" rel="stylesheet">
+<link href="{{url('font-awesome/css/font-awesome-ie7.min.css')}}" rel="stylesheet">
 <![endif]-->
 
 <!-- Google Analytics for www.multiverseinc.com -->

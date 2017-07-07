@@ -36,7 +36,7 @@
                     <ul class="dropdown-menu" style="background: black;">
                         <li><a href="{{url('about#company')}}" style="color: white;">Company</a>
                         <li><a href="{{url('about#press')}}" style="color: white;">Press</a>
-                        <li><a href="{{url('about#partner')}}" style="color: white;">Partner</a>
+                        <li><a href="{{url('about#partner')}}" style="color: white;">Partners</a>
                         <li><a href="{{url('privacy')}}" style="color: white;">privacy</a>
                         <li><a href="{{url('tos')}}" style="color: white;">Terms of Service</a>
                     </ul>
