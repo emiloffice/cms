@@ -32,7 +32,7 @@
                     <a href="#">DEVBLOG</a>
                 </li>
                 <li>
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">ABOUTS</a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">ABOUT US</a>
                     <ul class="dropdown-menu" style="background: black;">
                         <li><a href="{{url('about#company')}}" style="color: white;">Company</a>
                         <li><a href="{{url('about#press')}}" style="color: white;">Press</a>
