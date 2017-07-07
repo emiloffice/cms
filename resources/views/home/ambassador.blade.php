@@ -24,8 +24,16 @@
                         <label for="code"></label>
                         <input type="text" name="code">
                     </div>
+                    @if($errors->any())
+                        <ul class="alert alert-danger">
+                            @foreach($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    @endif
                     <button type="submit">SUBMIT</button>
                 </form>
+
             </div>
         </div>
     </div>
@@ -33,6 +41,9 @@
         <div class="ambassador-area">
             <div class="panel panel-default">
                 <div class="panel-heading">TOP AMBASSADORS</div>
+                @if($abs == null)
+                    <p class="text-center">We need you join in this ambassador project！</p>
+                @else
                 <table class="table">
                     <thead>
                         <tr>
@@ -40,37 +51,36 @@
                             <th>Name</th>
                             <th>Email</th>
                             <th>code</th>
+                            <th>times</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Emil Wong</td>
-                            <td>85835839@qq.com</td>
-                            <td>98ECDB</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Emil Wong</td>
-                            <td>85835839@qq.com</td>
-                            <td>98ECDB</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Emil Wong</td>
-                            <td>85835839@qq.com</td>
-                            <td>98ECDB</td>
-                        </tr>
+                        @foreach($abs as $k=>$ab)
+                            <tr>
+                                <td>{{$k+1}}</td>
+                                <td>{{$ab->name}}</td>
+                                <td>{{$ab->email}}</td>
+                                <td>{{$ab->ambassador_code}}</td>
+                                <td>{{$ab->ambassador_times}}</td>
+                            </tr>
+
+
+
+                        @endforeach
                     </tbody>
                 </table>
+                @endif
             </div>
             <div class="ambassador-search">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Search your email...">
-                    <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Go!</button>
-                </span>
-                </div><!-- /input-group -->
+                <form action="{{url('ambassador/search')}}" method="post">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search your email..." name="search">
+                        <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit">Go!</button>
+                    </span>
+                    </div><!-- /input-group -->
+                </form>
             </div>
         </div>
 

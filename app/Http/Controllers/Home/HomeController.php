@@ -8,6 +8,7 @@ use App\Subscribe;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -88,18 +89,54 @@ class HomeController extends Controller
         if($request->isMethod('post')){
             $this->validate(request(), [
                 'name'=>'required',
-                'email'=>'required',
+                'email'=>'required|unique:users',
             ]);
             $user = new User;
             $user->name = $request->name;
             $user->email = $request->email;
-            $user->password = encrypt('123456');
-            $user->referral_code = $request->referral_code;
-            $user->ambassador_code = $this->referralCode(1);
+            $user->password = '123456';
+            $code = $user->referral_code = $request->code;
+            if ($code!==''){
+                $ambassador = DB::table('users')->where('ambassador_code',$code)->first();
+                if ($ambassador){
+                    $c = $user->referrals_id = $ambassador->id;
+                    DB::table('users')->where('id', $c)->increment('ambassador_times');
+                }else{
+                    $user->referrals_id = '';
+                }
+            }else{
+                $user->referrals_id = '';
+            }
+
+            $ambassador_code = $user->ambassador_code = $this->referralCode(1);
+            $user->ambassador_times = '0';
             $user->save();
-//            print_r($user);
+            if ($user){
+                return redirect('ambassador/code/'.$ambassador_code);
+            }
         }
-        return view('home.ambassador');
+        if($request->isMethod('get')){
+            $abs = User::where([])->orderBy('ambassador_times', 'desc')->take(10)->get();
+            return view('home.ambassador', compact('abs'));
+        }
+    }
+
+    public function ambassadorCode($code)
+    {
+        return view('home.ambassadorCode', compact('code'));
+    }
+    public function ambassadorSearch(Request $request)
+    {
+        if ($request->isMethod('post')){
+            $this->validate(request(), [
+                'search'=>'required',
+            ]);
+            $search = $request->search;
+            $user = DB::table('users')->where('name', $search)->orWhere('email', $search)->orWhere('ambassador_code', $search)->first();
+        }else{
+            $user = '';
+        }
+        return view('home.ambassadorSearch', compact('user'));
     }
     public function contact(Request $request)
     {
