@@ -8,6 +8,7 @@
             <div class="title">Ambassador Program</div>
             <div id="form-ambassador">
                 <form action="{{url('ambassador')}}" method="post">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
                     <div class="input-list">
                         <p>Name</p>
                         <label for="name"></label>
@@ -30,20 +31,49 @@
     </div>
     <div class="container">
         <div class="ambassador-area">
-            <p class="">TOP AMBASSADORS</p>
-            <ol>
-                <li>哈哈</li>
-                <li>嘿嘿</li>
-                <li>呵呵</li>
-                <li>哒哒</li>
-                <li>嘻嘻</li>
-                <li>嘀嘀</li>
-                <li>噹噹</li>
-                <li>哔哔</li>
-                <li>哩哩</li>
-                <li>嘟嘟</li>
-            </ol>
+            <div class="panel panel-default">
+                <div class="panel-heading">TOP AMBASSADORS</div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>code</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Emil Wong</td>
+                            <td>85835839@qq.com</td>
+                            <td>98ECDB</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Emil Wong</td>
+                            <td>85835839@qq.com</td>
+                            <td>98ECDB</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Emil Wong</td>
+                            <td>85835839@qq.com</td>
+                            <td>98ECDB</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ambassador-search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search your email...">
+                    <span class="input-group-btn">
+                    <button class="btn btn-default" type="button">Go!</button>
+                </span>
+                </div><!-- /input-group -->
+            </div>
         </div>
+
     </div>
 
     @endsection

@@ -1,6 +1,6 @@
 @extends('layouts.CnMaster')
 @section('title')
-    <title>seeking dawn • multiverse • 深圳摩登世纪科技有限公司</title>
+    <title>Seeking Dawn | Multiverse Inc. | 深圳摩登世纪科技有限公司</title>
     @endsection
 @section('content')
     <div id="banner" class="container-fluid" style="padding: 0px!important;">

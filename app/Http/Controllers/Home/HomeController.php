@@ -90,7 +90,14 @@ class HomeController extends Controller
                 'name'=>'required',
                 'email'=>'required',
             ]);
-            User::create(request(['name', 'email', '']));
+            $user = new User;
+            $user->name = $request->name;
+            $user->email = $request->email;
+            $user->password = encrypt('123456');
+            $user->referral_code = $request->referral_code;
+            $user->ambassador_code = $this->referralCode(1);
+            $user->save();
+//            print_r($user);
         }
         return view('home.ambassador');
     }

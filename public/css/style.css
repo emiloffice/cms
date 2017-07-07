@@ -1132,7 +1132,13 @@ div#form-ambassador button[type="submit"]{
     padding-top: 4rem;
 }
 .ambassador-area{
-    width: 30rem;
     margin: 0 auto;
-    height: 50rem;
+    min-height: 30rem;
+    padding: 3rem 0;
+    min-width: 24rem;
+    max-width: 60rem;
+}
+.ambassador-search {
+    max-width: 40rem;
+    margin: 3rem auto;
 }
