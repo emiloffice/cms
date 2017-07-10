@@ -8,11 +8,11 @@
 @section('title')
 <title>Multiverse Entertainment</title>
 @show
-<link rel="shortcut icon" type="image/x-icon" href="{{ url('favicon.ico') }}" media="screen" />
-<link href="{{url('bootstrap/3.3.7/css/bootstrap.css')}}" rel="stylesheet">
-<link href="{{url('css/sk.css')}}" rel="stylesheet">
-<link href="{{url('font-awesome/css/font-awesome.min.css')}}" rel="stylesheet">
-<link href="{{url('css/style.css')}}" rel="stylesheet">
+<link rel="shortcut icon" type="image/x-icon" href="{{Config::get('constants.CDN_HOST')}}favicon.ico" media="screen" />
+<link href="{{Config::get('constants.CDN_HOST')}}bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+<link href="{{Config::get('constants.CDN_HOST')}}css/sk.css" rel="stylesheet">
+<link href="{{Config::get('constants.CDN_HOST')}}font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<link href="{{Config::get('constants.CDN_HOST')}}css/style.css" rel="stylesheet">
 @section('other')
 @show
 <!--[if IE 7]>
