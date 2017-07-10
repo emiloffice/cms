@@ -436,7 +436,7 @@ a:focus {
         background: #000;
     }
     .about-banner {
-        background: url(../img/about-banner.jpg) no-repeat center;
+        background: url(//cdn.multiverseinc.com/img/about-banner.jpg) no-repeat center;
         background-size: cover;
     }
     .about-banner .title,.about-banner .subtitle{
@@ -493,7 +493,7 @@ a:focus {
 }
 @media(max-width: 768px) {
     .about-banner {
-        background: url(../img/about-banner.jpg) no-repeat center;
+        background: url(//cdn.multiverseinc.com/img/about-banner.jpg) no-repeat center;
         background-size: cover;
     }
     .about-banner .title, .about-banner .subtitle {
@@ -560,18 +560,18 @@ nav ul.media-link>li{
 }
 /*nav end*/
 .contact-banner{
-    background: url("../img/contact-banner.jpg") no-repeat center;
+    background: url("//cdn.multiverseinc.com/img/contact-banner.jpg") no-repeat center;
     background-size: cover;
 
 }
 
 .blog-banner{
-    background: url("../img/blog_banner.jpg") no-repeat center;
+    background: url("//cdn.multiverseinc.com/img/blog_banner.jpg") no-repeat center;
     background-size: cover;
 }
 .post-banner{
     position: relative;
-    background: url(../img/post-banner.jpg) no-repeat center;
+    background: url(//cdn.multiverseinc.com/img/post-banner.jpg) no-repeat center;
     background-size: cover;
 }
 .contact-input{
@@ -690,7 +690,7 @@ footer .partneres_link li{
 .company{
     height: 37rem;
     color: #5a5a5a;
-    background: url("../img/2.jpg") no-repeat center;
+    background: url("//cdn.multiverseinc.com/img/2.jpg") no-repeat center;
     background-size: cover;
 }
 .company .title{
@@ -702,7 +702,7 @@ footer .partneres_link li{
 
 }
 .press{
-    background: url(../img/press-bg.png) no-repeat center;
+    background: url(//cdn.multiverseinc.com/img/press-bg.png) no-repeat center;
     background-size: cover;
     position: relative;
     color: #ffffff;
@@ -947,12 +947,11 @@ footer .partneres_link li{
 }
 /*creators*/
 .creators {
-    background-color: #e7e7e7;
     width: 100%;
     height: 380px;
     color: #000;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url(/img/creators_banner.jpg) no-repeat center;
+    background: url("//cdn.multiverseinc.com/img/creators_banner.jpg") no-repeat center;
 }
 .creators .content{
     padding-top: 60px;
@@ -1097,7 +1096,7 @@ ul#company-content {
 .errorPage{
     min-height: 45rem;
     padding-top: 10rem;
-    background: url("../img/about-banner.png") no-repeat center;
+    background: url("//cdn.multiverseinc.com/img/about-banner.png") no-repeat center;
     color: #ffffff;
 }
 /*ambassador project page*/
@@ -1139,7 +1138,7 @@ div#form-ambassador button[type="submit"]{
 }
 .ambassador-banner{
     height: 40rem !important;
-    background: url(../img/contact-banner.jpg) no-repeat center;
+    background: url(//cdn.multiverseinc.com/img/contact-banner.jpg) no-repeat center;
     background-size: cover;
     padding-top: 4rem;
 }
