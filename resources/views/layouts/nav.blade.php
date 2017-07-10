@@ -28,9 +28,9 @@
                 <li class="dropdown">
                     <a href="https://www.linkedin.com/company/multiverse-entertainment">CAREERS</a>
                 </li>
-                <li>
+                {{--<li>
                     <a href="#">DEVBLOG</a>
-                </li>
+                </li>--}}
                 <li>
                     <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">ABOUT US</a>
                     <ul class="dropdown-menu" style="background: black;">
