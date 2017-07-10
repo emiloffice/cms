@@ -36,21 +36,21 @@
             <div class="btn-area hidden-xs" id="prev-btn"><i class="fa fa-chevron-left"></i></div>
             <div class="col-lg-4">
                 <div class="post">
-                    <div class="thumb"><img src="/img/press1.png" alt=""></div>
+                    <div class="thumb"><img src="{{Config::get('constants.CDN_HOST')}}img/press1.png" alt=""></div>
                     <div class="des">“One of the most visually compelling experiences”</div>
                     <a href="#" class="link-href">Read More</a>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="post">
-                    <div class="thumb"><img src="/img/press2.png" alt=""></div>
+                    <div class="thumb"><img src="{{Config::get('constants.CDN_HOST')}}img/press2.png" alt=""></div>
                     <div class="des">“One of the most anticipated games of the year”</div>
                     <a href="#" class="link-href">Read More</a>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="post">
-                    <div class="thumb"><img src="/img/press3.png" alt=""></div>
+                    <div class="thumb"><img src="{{Config::get('constants.CDN_HOST')}}img/press3.png" alt=""></div>
                     <div class="des">“One of the most breathtaking experiences we have ever seen”</div>
                     <a href="#" class="link-href">Read More</a>
                 </div>

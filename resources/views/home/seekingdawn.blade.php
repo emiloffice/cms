@@ -3,16 +3,16 @@
     <title>Seeking Dawn Multiverse Inc.</title>
 @endsection
 @section('other')
-    <link href="{{url('css/sk.css')}}" rel="stylesheet">
+    <link href="{{Config::get('constants.CDN_HOST')}}css/sk.css" rel="stylesheet">
     @endsection
 @section('content')
 	<div id="banner" class="">
-		<video  preload="auto" autoplay controls="controls" width="100%" height="auto" id="banner_video" muted="true" poster="/img/SeekingDawn_Banner.png" >
-			<source src="/video/seekingDawnPlay.mp4">
+		<video  preload="auto" autoplay controls="controls" width="100%" height="auto" id="banner_video" muted="true" poster="{{Config::get('constants.CDN_HOST')}}img/SeekingDawn_Banner.png" >
+			<source src="{{Config::get('constants.CDN_HOST')}}video/seekingDawnPlay.mp4">
 		</video>
 		<div id="banner_shadow"></div>
 		<div id="banner_des"  class="hidden-sm hidden-xs">
-			<img id="video_title" src="/img/SeekingDawn_logo.png"></img>
+			<img id="video_title" src="{{Config::get('constants.CDN_HOST')}}img/SeekingDawn_logo.png"><{{Config::get('constants.CDN_HOST')}}img>
 			<p id="video_despriction" class="des">
                 Seeking Dawn is a grand-scaled VR game that blends together Survival, exploration, FPS and RPG elements.  The game puts its players in an immersive alien world filled with interesting creatures, unknown dangers, and many other surprises still to be discovered.
                 <br>
@@ -53,7 +53,7 @@
 		</div>
 	</div>
 	<div class="poster poster2 section">
-		<!-- <img src="/img/poster2.png" alt="poster1" > -->
+		<!-- <img src="{{Config::get('constants.CDN_HOST')}}img/poster2.png" alt="poster1" > -->
 		<div class="shadow"></div>
         <div class="hidden-xs hidden-sm hidden-md height-100px"></div>
 		<div class="title col-md-6 col-md-offset-6 col-sm-12">STORY</div>

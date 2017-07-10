@@ -15,17 +15,17 @@
     <div class="right fl col-md-4 hidden-sm hidden-xs">
         <div class="text">PARTNERS</div>
         <ul class="platform">
-            <li class="fl"><img src="/img/vive.png" alt="vive"></li>
-            <li class="fl"><img src="/img/oculus.png" alt="Gear VR"></li>
-            <li class="fl"><img src="/img/steam.png" alt="SteamVR"></li>
+            <li class="fl"><img src="{{Config::get('constants.CDN_HOST')}}img/vive.png" alt="vive"></li>
+            <li class="fl"><img src="{{Config::get('constants.CDN_HOST')}}img/oculus.png" alt="Gear VR"></li>
+            <li class="fl"><img src="{{Config::get('constants.CDN_HOST')}}img/steam.png" alt="SteamVR"></li>
             {{--<li class="fl"><img src="/img/playstation.png" alt="unity"></li>--}}
         </ul>
     </div>
 </div>
-<script src="/js/jquery-3.2.1.js"></script>
-<script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="{{Config::get('constants.CDN_HOST')}}js/jquery-3.2.1.js"></script>
+<script src="{{Config::get('constants.CDN_HOST')}}bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Custom Theme JavaScript -->
-<script src="/js/grayscale.js"></script>
+<script src="{{Config::get('constants.CDN_HOST')}}js/grayscale.js"></script>
 @section('other')
     @show
 @section('script')

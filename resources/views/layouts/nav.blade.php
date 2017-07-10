@@ -6,7 +6,7 @@
                 <i class="fa fa-bars"></i>
             </button>
             <a class="navbar-brand page-scroll" style="" href="/" id="logo">
-                <span class="light"></span><img src="/img/multiverselogolong.png" align="left" class="img-responsive">
+                <span class="light"></span><img src="{{Config::get('constants.CDN_HOST')}}img/multiverselogolong.png" align="left" class="img-responsive">
             </a>
         </div>
 

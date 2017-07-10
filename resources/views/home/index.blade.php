@@ -4,12 +4,12 @@
 @endsection
 @section('content')
     <div id="banner" class="container-fluid" style="padding: 0px!important;">
-        <video  preload="auto" autoplay  width="100%" height="auto" id="banner_video" poster="/img/SeekingDawn_Banner.jpg"  muted="true">
+        <video  preload="auto" autoplay  width="100%" height="auto" id="banner_video" poster="{{Config::get('constants.CDN_HOST')}}img/SeekingDawn_Banner.jpg"  muted="true">
             <source src="https://s3-us-west-2.amazonaws.com/multiverseinc/SeekingDawnAlphaTrailerV1.mp4">
         </video>
         <div id="banner_shadow"  class="hidden-sm hidden-xs"></div>
         <div id="banner_des" class="hidden-sm hidden-xs">
-            <img id="video_title" src="/img/SeekingDawn_logo.png">
+            <img id="video_title" src="{{Config::get('constants.CDN_HOST')}}img/SeekingDawn_logo.png">
             <p id="video_despriction">
                 Seeking Dawn is a massive survival-exploration VR game from Multiverse. It puts you into an immersive alien "death world" filled with unknown dangers, interesting environments, and breathtaking visuals.
             </p>
@@ -27,7 +27,7 @@
         </a>
     </div>
     {{--<div class="creators container">
-        <div class="thumb col-lg-6 col-md-6 col-md-6 col-sm-12"><img src="/img/thumb2.jpg" alt=""></div>
+        <div class="thumb col-lg-6 col-md-6 col-md-6 col-sm-12"><img src="{{Config::get('constants.CDN_HOST')}}img/thumb2.jpg" alt=""></div>
         <div class="col-lg-6">
             <div class="subtitle">Multiverse</div>
             <div class="title">THE CREATORS</div>
@@ -61,7 +61,7 @@
             <div class="blog-area container">
                 @foreach($posts as $post)
                 <div class="blog">
-                    <div class="thumb"><img src="/img/thumb2.jpg" alt=""></div>
+                    <div class="thumb"><img src="{{Config::get('constants.CDN_HOST')}}img/thumb2.jpg" alt=""></div>
                     <p class="title">{{ $post->title }}</p>
                     <p class="create_at">{{ $post->created_at }}</p>
                     <p class="des">{{ $post->description }}</p>
@@ -88,7 +88,7 @@
             </div>
         </div>
         <div class="right col-md-6 hidden-sm hidden-xs">
-            <img src="/img/game1.png" alt="游戏图片">
+            <img src="{{Config::get('constants.CDN_HOST')}}img/game1.png" alt="游戏图片">
         </div>
     </div>
     <div class="subscribe">
@@ -116,7 +116,7 @@
                 {{--console.log(_email)--}}
             {{--})--}}
             $.ajax({
-                url:'{{url('subscribe')}}',
+                url:'https://multiverseinc.com/subscribe',
                 type:'POST',
                 data:{email:_email},
                 dataType:'json',
