@@ -87,9 +87,9 @@
             </form>
         </div>
     </div>
-    <div class="container-fluid bg-color text-center" style="padding: 3rem 0">
-        <h3 style="padding-bottom: 2rem">Multiverse E3现场接受VRfoucus采访</h3>
-        <iframe height=390 width=510 src='http://player.youku.com/embed/XMjg2OTY5MTc3Mg==' frameborder=0 'allowfullscreen'></iframe>
+    <div class="container-fluid bg-color text-center" style="padding: 3rem 0" id="outside-video">
+        <h3>E3 MultiverseE3现场接受VRfocus采访</h3>
+        <iframe class="videoFrame" src='http://player.youku.com/embed/XMjg2OTY5MTc3Mg==' frameborder=0 allowfullscreen="true" ></iframe>
     </div>
 @endsection
 @section('script')
@@ -116,6 +116,9 @@
                 })
 
             }
+        }
+        function changeUrl(url) {
+            document.frames[0].location.href = url;
         }
     </script>
 @endsection

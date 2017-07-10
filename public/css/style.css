@@ -91,6 +91,7 @@ ul>li{
     .blog-area .blog .link-href {
         padding-left: 1rem;
     }
+
 }
 /*小屏幕*/
 @media screen and (max-width: 992px) and (min-width: 768px){
@@ -483,7 +484,12 @@ a:focus {
         margin-top: 20px;
     }
 
-
+    .videoFrame {
+        max-width: 50rem;
+        width: 50%;
+        min-height: 30rem;
+        margin: 0 auto;
+    }
 }
 @media(max-width: 768px) {
     .about-banner {
@@ -535,6 +541,12 @@ a:focus {
     .subscribe .content .form_content{
         margin-top: 20px;
         display: inline;
+    }
+    .videoFrame {
+        max-width: 50rem;
+        width: 90%;
+        min-height: 20rem;
+        margin: 0 auto;
     }
 }
 nav ul.media-link{
