@@ -15,13 +15,14 @@ class HomeController extends Controller
     public function index()
     {
         $posts = Post::latest()->take(3)->get();
-        $rst = $this->isCN();
+        return view('home.index', compact('posts'));
+        /*$rst = $this->isCN();
         if ($rst=='1'){
             return view('cn.index', compact('posts'));
         }else{
 
             return view('home.index', compact('posts'));
-        }
+        }*/
     }
     public function ipInfo(){
         $ip = $this->getIP();
