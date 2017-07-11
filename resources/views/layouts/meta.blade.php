@@ -11,8 +11,9 @@
 <link rel="shortcut icon" type="image/x-icon" href="{{Config::get('constants.CDN_HOST')}}favicon.ico" media="screen" />
 <link href="{{Config::get('constants.CDN_HOST')}}bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
 <link href="{{Config::get('constants.CDN_HOST')}}css/sk.css" rel="stylesheet">
-<link href="{{Config::get('constants.CDN_HOST')}}font-awesome/css/font-awesome.min.css" rel="stylesheet">
+{{--<link href="{{Config::get('constants.CDN_HOST')}}font-awesome/css/font-awesome.min.css" rel="stylesheet">--}}
 {{--<link href="{{Config::get('constants.CDN_HOST')}}css/style.css" rel="stylesheet">--}}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/multiverseinc/css/style.css">
 @section('other')
 @show
