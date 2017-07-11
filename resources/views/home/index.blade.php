@@ -5,7 +5,7 @@
 @section('content')
     <div id="banner" class="container-fluid" style="padding: 0px!important;">
         <video  preload="auto" autoplay  width="100%" height="auto" id="banner_video" poster="https://s3-us-west-2.amazonaws.com/img/SeekingDawn_Banner.jpg"  muted="true">
-            <source src="https://s3-us-west-2.amazonaws.com/multiverseinc/SeekingDawnAlphaTrailerV1.mp4">
+
         </video>
         <div id="banner_shadow"  class="hidden-sm hidden-xs"></div>
         <div id="banner_des" class="hidden-sm hidden-xs">
@@ -128,6 +128,9 @@
             })
 
         }
+    }
+    window.onload = function () {
+        document.querySelector("#banner_video").src = 'https://s3-us-west-2.amazonaws.com/multiverseinc/SeekingDawnAlphaTrailerV1.mp4';
     }
 </script>
 @endsection

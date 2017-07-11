@@ -951,7 +951,7 @@ footer .partneres_link li{
     min-height: 35rem;
     color: #000;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    background: url("//cdn.multiverseinc.com/img/creators_banner.jpg") no-repeat center;
+    background: url("https://s3-us-west-2.amazonaws.com/multiverseinc/img/creators_banner.jpg") no-repeat center;
     background-size: cover;
 }
 .creators .content{
