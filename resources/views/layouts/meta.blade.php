@@ -13,7 +13,8 @@
 <link href="{{Config::get('constants.CDN_HOST')}}css/sk.css" rel="stylesheet">
 {{--<link href="{{Config::get('constants.CDN_HOST')}}font-awesome/css/font-awesome.min.css" rel="stylesheet">--}}
 {{--<link href="{{Config::get('constants.CDN_HOST')}}css/style.css" rel="stylesheet">--}}
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+{{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">--}}
+<link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/multiverseinc/css/style.css">
 @section('other')
 @show
