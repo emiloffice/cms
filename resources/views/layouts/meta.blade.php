@@ -12,7 +12,8 @@
 <link href="{{Config::get('constants.CDN_HOST')}}bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
 <link href="{{Config::get('constants.CDN_HOST')}}css/sk.css" rel="stylesheet">
 <link href="{{Config::get('constants.CDN_HOST')}}font-awesome/css/font-awesome.min.css" rel="stylesheet">
-<link href="{{Config::get('constants.CDN_HOST')}}css/style.css" rel="stylesheet">
+{{--<link href="{{Config::get('constants.CDN_HOST')}}css/style.css" rel="stylesheet">--}}
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/multiverseinc/css/style.css">
 @section('other')
 @show
 <!--[if IE 7]>
