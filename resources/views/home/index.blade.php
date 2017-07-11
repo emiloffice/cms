@@ -4,7 +4,7 @@
 @endsection
 @section('content')
     <div id="banner" class="container-fluid" style="padding: 0px!important;">
-        <video  preload="auto" autoplay  width="100%" height="auto" id="banner_video" poster="{{Config::get('constants.CDN_HOST')}}img/SeekingDawn_Banner.jpg"  muted="true">
+        <video  preload="auto" autoplay  width="100%" height="auto" id="banner_video" poster="https://s3-us-west-2.amazonaws.com/img/SeekingDawn_Banner.jpg"  muted="true">
             <source src="https://s3-us-west-2.amazonaws.com/multiverseinc/SeekingDawnAlphaTrailerV1.mp4">
         </video>
         <div id="banner_shadow"  class="hidden-sm hidden-xs"></div>
