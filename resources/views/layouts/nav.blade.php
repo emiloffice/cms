@@ -18,7 +18,7 @@
                     <a href="index"></a>
                 </li>
                 <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="ourgames">Games</a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Games</a>
                     <ul class="dropdown-menu" style="background: black;">
                         <li><a href="seekingdawn" style="color: white;">Seeking Dawn</a>
                         <li><a href="https://www.oculus.com/experiences/gear-vr/1013248532088752/" style="color: white;" target="_blank">Dream Flight</a></li>

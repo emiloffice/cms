@@ -130,7 +130,7 @@
         }
     }
     window.onload = function () {
-        document.querySelector("#banner_video").src = 'https://s3-us-west-2.amazonaws.com/multiverseinc/SeekingDawnAlphaTrailerV1.mp4';
+        document.querySelector("#banner_video").src = '{{Config::get('constants.CDN_HOST')}}/video/SeekingDawnAlphaTrailerV1.mp4';
     }
 </script>
 @endsection
