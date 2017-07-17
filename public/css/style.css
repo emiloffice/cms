@@ -1139,7 +1139,7 @@ div#form-ambassador button[type="submit"]{
 }
 .ambassador-banner{
     height: 40rem !important;
-    background: url(//cdn.multiverseinc.com/img/ambassador-bg.jpg) no-repeat center;
+    background: url(//cdn.multiverseinc.com/img/ambassador-bg.png) no-repeat center;
     background-size: cover;
     padding-top: 4rem;
 }
