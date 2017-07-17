@@ -5,13 +5,13 @@
 @section('content')
     <div class="banner ambassador-banner">
         <div class="container">
-            <div class="title">Ambassador Project</div>
+            <div class="title">Ambassador Program</div>
         </div>
     </div>
     <div class="container">
         <div class="ambassador-area text-center">
-            <h3>Remember, your ambassador code is <span style="color: #d9534f;">{{ $code }}</span>!</h3>
-            <a href="{{url('ambassador')}}" class="" role="button">go back to ambassador project</a>
+            <h3>Thank you for joining the Ambassador Program! Here is your referral code: <span style="color: #d9534f;">{{ $code }}</span>!</h3>
+            <a href="{{url('ambassador')}}" class="" role="button">Return to the Ambassador Program home page</a>
         </div>
     </div>
 

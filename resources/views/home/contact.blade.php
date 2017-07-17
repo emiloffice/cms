@@ -82,9 +82,9 @@
         </div>
 
     </div>
-    <div id="googleMap" style="width: 100%;height: 30rem">
+    {{--<div id="googleMap" style="width: 100%;height: 30rem">
 
-    </div>
+    </div>--}}
     @endsection
 @section('other')
     <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCWrXFcigxn4wV3r1vKeX-k6GUorhCgQhY&sensor=false"></script>

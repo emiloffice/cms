@@ -6,7 +6,7 @@
 <meta name="robots" content="index,follow">
 <meta name="author" content="">
 @section('title')
-    <title>Multiverse Entertainment • 深圳摩登世纪科技有限公司</title>
+    <title>Multiverse Entertainment LLC • 深圳摩登世纪科技有限公司</title>
 @show
 <link rel="shortcut icon" type="image/x-icon" href="{{ url('favicon.ico') }}" media="screen" />
 <link href="/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
