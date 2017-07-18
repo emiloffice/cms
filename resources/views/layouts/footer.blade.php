@@ -15,10 +15,10 @@
     <div class="right fl col-md-4 hidden-sm hidden-xs">
         <div class="text">PARTNERS</div>
         <ul class="platform">
-            <li class="fl"><img src="{{Config::get('constants.CDN_HOST')}}img/vive.png" alt="vive"></li>
-            <li class="fl"><img src="{{Config::get('constants.CDN_HOST')}}img/oculus.png" alt="Gear VR"></li>
-            <li class="fl"><img src="{{Config::get('constants.CDN_HOST')}}img/steam.png" alt="SteamVR"></li>
-            {{--<li class="fl"><img src="/img/playstation.png" alt="unity"></li>--}}
+            <li class="fl col-lg-4 col-md-4"><img src="{{Config::get('constants.CDN_HOST')}}img/vive.png" alt="vive"></li>
+            <li class="fl col-lg-4 col-md-4"><img src="{{Config::get('constants.CDN_HOST')}}img/oculus.png" alt="Gear VR"></li>
+            <li class="fl col-lg-4 col-md-4"><img src="{{Config::get('constants.CDN_HOST')}}img/steam.png" alt="SteamVR"></li>
+            <li class="fl col-lg-4 col-md-4"><img src="/img/playstation.png" alt="playstation"></li>
         </ul>
     </div>
 </div>
