@@ -13,6 +13,7 @@
 <link href="{{Config::get('constants.CDN_HOST')}}css/sk.css" rel="stylesheet">
 <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="{{Config::get('constants.CDN_HOST')}}css/style.css">
+<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/multiverseinc/css/style.css">
 @section('other')
 @show
 <!--[if IE 7]>
