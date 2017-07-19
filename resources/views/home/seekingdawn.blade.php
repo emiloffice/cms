@@ -15,10 +15,10 @@
     <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     {{--<link rel="stylesheet" href="{{Config::get('constants.CDN_HOST')}}css/style.css">--}}
     <link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/multiverseinc/css/style.css">
-    <link rel="stylesheet" href="/fullpage/jquery.fullpage.css">
+    <link rel="stylesheet" href="{{Config::get('constants.CDN_HOST')}}fullpage/jquery.fullpage.css">
     <script src="{{Config::get('constants.CDN_HOST')}}js/jquery-3.2.1.js"></script>
-    <script rel="stylesheet" src="/js/jquery-ui.js"></script>
-    <script rel="stylesheet" src="/fullpage/jquery.fullpage.js"></script>
+    <script rel="stylesheet" src="{{Config::get('constants.CDN_HOST')}}js/jquery-ui.js"></script>
+    <script rel="stylesheet" src="{{Config::get('constants.CDN_HOST')}}fullpage/jquery.fullpage.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
@@ -248,9 +248,8 @@
     window.onload = function () {
         document.querySelector("#banner_video").src = '{{Config::get('constants.CDN_HOST')}}video/seekingDawnPlay.mp4';
     }
-    $('#banner').on('click', function () {
+    $('#fullpage').click(function () {
         console.log('点击播放')
-        _video.play()
     })
 </script>
 </html>
