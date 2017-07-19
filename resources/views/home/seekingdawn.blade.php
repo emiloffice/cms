@@ -32,7 +32,10 @@
             text-align:center;
             overflow: hidden;
         }
-
+        video::-webkit-media-controls-enclosure {
+            /*禁用播放器控制栏的样式*/
+            display: none !important;
+        }
         #banner_video{
             position: absolute;
             right: 0;
@@ -99,6 +102,7 @@
             border-radius: 5px;
             margin-top: 50px;
             font-size: 20px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -244,5 +248,8 @@
     window.onload = function () {
         document.querySelector("#banner_video").src = '{{Config::get('constants.CDN_HOST')}}video/seekingDawnPlay.mp4';
     }
+    $('#banner').on('tap', function () {
+        _video.play()
+    })
 </script>
 </html>
