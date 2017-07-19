@@ -248,7 +248,8 @@
     window.onload = function () {
         document.querySelector("#banner_video").src = '{{Config::get('constants.CDN_HOST')}}video/seekingDawnPlay.mp4';
     }
-    $('#banner').on('tap', function () {
+    $('#banner').on('click', function () {
+        console.log('点击播放')
         _video.play()
     })
 </script>
