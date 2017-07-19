@@ -155,7 +155,7 @@
                     <a href="contact">Contact</a>
                 </li>
                 <li>
-                    <a href="/cn/">中文</a>
+                    <a href="/cn/">中文网</a>
                 </li>
             </ul>
             <ul class="media-link hidden-sm hidden-xs">
