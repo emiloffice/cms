@@ -1,7 +1,7 @@
 <div class="footer">
     <div class="left fl col-sm-12 col-md-4">
         <div class="text"><a href="http://www.multiverseinc.com/legal/tos/">Terms of Service </a>|<a href="http://www.multiverseinc.com/legal/privacy/" target="_blank"> Privacy Policy</a> 	</div>
-        <div class="text">Copyright © Multiverse Entertainment LLC</div>
+        <div class="text" style="margin-top: 1.5rem;">Copyright © Multiverse Entertainment LLC</div>
     </div>
     <div class="center fl col-md-4 hidden-sm hidden-xs">
         <ul>
@@ -13,12 +13,12 @@
         </ul>
     </div>
     <div class="right fl col-md-4 hidden-sm hidden-xs">
-        <div class="text">PARTNERS</div>
+        <span class="text">PARTNERS</span>
         <ul class="platform">
-            <li class="fl col-lg-6 col-md-6"><img src="{{Config::get('constants.CDN_HOST')}}img/vive.png" alt="vive"></li>
-            <li class="fl col-lg-6 col-md-6"><img src="{{Config::get('constants.CDN_HOST')}}img/oculus.png" alt="Gear VR"></li>
-            <li class="fl col-lg-6 col-md-6"><img src="{{Config::get('constants.CDN_HOST')}}img/steam.png" alt="SteamVR"></li>
-            <li class="fl col-lg-6 col-md-6"><img src="/img/playstation.png" alt="playstation"></li>
+            <li class="fl col-lg-3 col-md-3"><i class="iconfont icon-btn_game_vive"></i></li>
+            <li class="fl col-lg-3 col-md-3"><i class="iconfont icon-oculus"></i></li>
+            <li class="fl col-lg-3 col-md-3"><i class="iconfont icon-steam"></i></li>
+            <li class="fl col-lg-3 col-md-3"><i class="iconfont icon-playstation"></i></li>
         </ul>
     </div>
 </div>
