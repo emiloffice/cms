@@ -1154,3 +1154,9 @@ div#form-ambassador button[type="submit"]{
     max-width: 40rem;
     margin: 3rem auto;
 }
+.platform img {
+    height: 3.8rem;
+}
+video::-webkit-media-controls {
+    display:none !important;
+}

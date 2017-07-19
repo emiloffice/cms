@@ -37,6 +37,7 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->get('privacy', 'HomeController@privacy');
     $router->get('publishing', 'HomeController@publishing');
     $router->get('seekingdawn', 'HomeController@seekingdawn');
+    $router->get('seekingdawntest', 'HomeController@seekingdawntest');
     $router->get('team', 'HomeController@team');
     $router->get('template', 'HomeController@template');
     $router->get('tos', 'HomeController@tos');

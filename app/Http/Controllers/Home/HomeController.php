@@ -274,4 +274,9 @@ class HomeController extends Controller
         print_r($code);
 //        return view('home.test');
     }
+
+    public function seekingdawntest()
+    {
+        return view('home.seekingdawntest');
+    }
 }
