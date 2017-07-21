@@ -7,9 +7,8 @@
         <ul>
             <li class="fl pd-20"><a href="https://www.facebook.com/MultiverseVR" target="_blank"><i class="fa fa-facebook fa-3x color-white"></i></a></li>
             <li class="fl pd-20"><a href="https://twitter.com/VRmultiverse" target="_blank"><i class="fa fa-twitter fa-3x color-white"></i></a></li>
-            <!-- <li class="fl"><a href="#"><i class="iconfont icon-ins color-white" target="_blank">&#xe614;</i></a></li> -->
             <li class="fl pd-20"><a href="https://www.linkedin.com/company/multiverse-entertainment" target="_blank"><i class="fa fa-linkedin fa-3x color-white"></i></a></li>
-            <!-- <li class="fl"><a href="#"><i class="iconfont icon-twitch color-white">&#xe7ed;</i></a></li> -->
+            <li class="fl pd-20"><a href="https://www.instagram.com/vrmultiverse/" target="_blank"><i class="fa fa-instagram fa-3x color-white"></i></a></li>
         </ul>
     </div>
     <div class="right fl col-md-4 hidden-sm hidden-xs">

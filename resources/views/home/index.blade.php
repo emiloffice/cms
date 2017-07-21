@@ -74,7 +74,7 @@
         <div class="title font-size-32 text-center">
             OUR GAMES
         </div>
-        <div class="subtitle text-center">Experience our other titles</div>
+        <div class="subtitle text-center">Experience our games</div>
         <div class="left col-md-6 col-sm-12">
             <div class="game_name font-size-32">Reveries: Dream Flight</div>
             <p>Dream Flight is a beautiful game about exploration and discovery. Learn to guide and collect a variety of magical flight machines, and experience magnificent and breathtaking scenery while enjoying its world class soundtrack
