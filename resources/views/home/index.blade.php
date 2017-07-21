@@ -88,7 +88,7 @@
             </div>
         </div>
         <div class="right col-md-6 hidden-sm hidden-xs">
-            <img src="{{Config::get('constants.CDN_HOST')}}img/game1.png" alt="游戏图片">
+            <img src="{{Config::get('constants.CDN_HOST')}}img/game1.png" alt="Reveries: Dream Flight thumb">
         </div>
     </div>
     <div class="subscribe">
