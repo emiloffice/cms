@@ -26,7 +26,7 @@
                     </ul>
                 </li>
                 <li class="dropdown">
-                    <a href="https://www.linkedin.com/company/multiverse-entertainment">CAREERS</a>
+                    <a href="https://www.indeed.com/cmp/Multiverse-Entertainment">CAREERS</a>
                 </li>
                 {{--<li>
                     <a href="#">DEVBLOG</a>
