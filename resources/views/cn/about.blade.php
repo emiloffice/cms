@@ -67,6 +67,7 @@
     </div>
 @endsection
 @section('script')
+    <script>
     var tabs = $('.tab-area');
     var uls= $('.tab-content');
     var ulv= $('.tab-nav');
@@ -78,4 +79,5 @@
     uls.children().eq(_li).addClass('active');
     console.log(this)
     })
+    </script>
 @endsection

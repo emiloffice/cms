@@ -45,7 +45,7 @@
                     <a href="{{url('cn/contact')}}">联系我们</a>
                 </li>
                 <li>
-                    <a href="{{url('index')}}">CN/EN</a>
+                    <a href="{{url('index')}}">EN</a>
                 </li>
             </ul>
             {{--<ul class="media-link hidden-sm hidden-xs">--}}

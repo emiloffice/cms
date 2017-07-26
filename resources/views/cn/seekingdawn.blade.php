@@ -65,11 +65,12 @@
 @endsection
 
 @section('script')
+    <script>
         var _video = document.getElementById('banner_video');
         _video.controls = false;
         _video.autoplay = true;
         _video.loop = true;
         _video.preload = true;
         _video.muned = true;
-
+    </script>
 @endsection

@@ -89,28 +89,7 @@
     @endsection
 
 @section('script')
-{{--    var uluru = {lat: 22.5169188860, lng: 113.9212878783};
-    var marker;
-
-    function initialize()
-    {
-    var mapProp = {
-    center:uluru,
-    zoom:10,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-    };
-
-    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-
-    marker=new google.maps.Marker({
-    position:uluru,
-    animation:google.maps.Animation.BOUNCE
-    });
-
-    marker.setMap(map);
-    }
-
-    google.maps.event.addDomListener(window, 'load', initialize);--}}
+    <script>
     var map = new AMap.Map('amap', {
     resizeEnable: true,
     center: [113.9213000000, 22.5169200000],
@@ -128,4 +107,5 @@
     offset: new AMap.Pixel(20, 20),//修改label相对于maker的位置
     content: "南园枫叶大厦"
     });
+    </script>
 @endsection
