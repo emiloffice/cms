@@ -22,7 +22,7 @@
     </div>
 </div>
 <script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-3.2.1.js"></script>
-<script src="//{{getenv('RESOURCE_PATH')}}bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!-- Custom Theme JavaScript -->
 <script src="//{{getenv('RESOURCE_PATH')}}/js/grayscale.js"></script>
 @section('other')
