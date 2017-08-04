@@ -4,83 +4,118 @@
     @endsection
 @section('content')
     <div class="banner ambassador-banner">
+        <div class="join-btn btn-area">Join the community groups</div>
+    </div>
+    <div class="ambassador-rank">
         <div class="container">
-            <div class="title">Ambassador Program</div>
-            <div id="form-ambassador">
-                <form action="{{url('ambassador')}}" method="post">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <div class="input-list">
-                        <p>Name</p>
-                        <label for="name"></label>
-                        <input type="text" name="name">
-                    </div>
-                    <div class="input-list">
-                        <p>Email</p>
-                        <label for="email"></label>
-                        <input type="email" name="email">
-                    </div>
-                    <div class="input-list">
-                        <p>Referral Code</p>
-                        <label for="code"></label>
-                        <input type="text" name="code">
-                    </div>
-                    @if($errors->any())
-                        <ul class="alert alert-danger">
-                            @foreach($errors->all() as $error)
-                                <li>{{ $error }}</li>
-                            @endforeach
-                        </ul>
-                    @endif
-                    <button type="submit">SUBMIT</button>
-                </form>
-
+            <div class="rank-area  text-center">
+                <div class="title">AMBASSADOR RANKING</div>
+                <div class="col-md-12 col-lg-12 rank-table-head">
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">RANK</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">USER NAME</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">REFFERALS</div>
+                </div>
+                <div class="col-md-12 col-lg-12 rank-table-body">
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
+                </div>
+                <div class="col-md-12 col-lg-12 rank-table-body">
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
+                </div>
+                <div class="col-md-12 col-lg-12 rank-table-body">
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
+                </div>
+                <div class="col-md-12 col-lg-12 rank-table-body">
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
+                </div>
+                <div class="col-md-12 col-lg-12 rank-table-body">
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
+                </div>
+                <div class="col-md-12 col-lg-12 rank-table-body">
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
+                </div>
+                <div class="col-md-12 col-lg-12 rank-table-body">
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
+                </div>
+                <div class="col-md-12 col-lg-12 rank-table-body">
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
+                </div>
+                <div class="col-md-12 col-lg-12 rank-table-body">
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
+                </div>
+                <div class="col-md-12 col-lg-12 rank-table-body">
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="container">
-        <div class="ambassador-area">
-            <div class="panel panel-default">
-                <div class="panel-heading">TOP AMBASSADORS</div>
-                @if($abs == null)
-                    <p class="text-center">We need you join in this ambassador project！</p>
-                @else
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>Name</th>
-                            <th>Email</th>
-                            <th>code</th>
-                            <th>times</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach($abs as $k=>$ab)
-                            <tr>
-                                <td>{{$k+1}}</td>
-                                <td>{{$ab->name}}</td>
-                                <td>{{$ab->email}}</td>
-                                <td>{{$ab->ambassador_code}}</td>
-                                <td>{{$ab->ambassador_times}}</td>
-                            </tr>
 
-
-
-                        @endforeach
-                    </tbody>
-                </table>
-                @endif
-            </div>
-            <div class="ambassador-search">
-                <form action="{{url('ambassador/search')}}" method="post">
-                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search your email..." name="search">
-                        <span class="input-group-btn">
-                        <button class="btn btn-default" type="submit">Go!</button>
-                    </span>
-                    </div><!-- /input-group -->
-                </form>
+    <div class="ambassador-loot">
+        <div class="container">
+            <div class=" panel">
+                <div class="title"><span>LOOT</span></div>
+                <ul class="loot-list">
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="./img/loot1.png" alt="loot"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="./img/loot1.png" alt="loot"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="./img/loot1.png" alt="loot"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="./img/loot1.png" alt="loot"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="./img/loot1.png" alt="loot"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="./img/loot1.png" alt="loot"></li>
+                </ul>
+                <ul class="loot-content-list">
+                    <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <p>10 Referrals (100 Points） = Tier 1</p>
+                        <p>Thank you letter + “Seeking Dawn” Key-chain</p>
+                    </li>
+                    <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <p>20 Referrals (200 Points）  = Tier 2</p>
+                        <p>Tier 1 Prizes + 11x17 Signed Poster by developer or Freeman</p>
+                    </li>
+                    <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <p>30 Referrals  (300 Points） = Tier 3</p>
+                        <p> Tier 1 + Tier 2 Prizes + “Seeking Dawn” T-Shirt</p>
+                    </li>
+                    <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <p>40 Referrals (400 Points） = Tier 4 </p>
+                        <p>Tier 1 + Tier 2 Prizes +“Seeking Dawn” Backpack</p>
+                    </li>
+                    <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <p>50 Referrals  (500 Points）  = Tier 5</p>
+                        <p>Tier 1 + Tier 2 + T-Shirt + Backpack + Hat</p>
+                    </li>
+                    <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <p>70 Referrals (700 Points）  = Tier 6 </p>
+                        <p>In-Game item named after them + Standard Copy of “Seeking Dawn”</p>
+                    </li>
+                    <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <p>80 Referrals (800 Points）  = Tier 7 </p>
+                        <p>Tier 6 + In-game cosmetic + Signed Poster + Backpack + T-Shirt]</p>
+                    </li>
+                    <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <p>100 Referrals (1000 Points）  = Tier 8 (Ultimate Prize)</p>
+                        <p>Tier 7 + signed Hat + Early Access / head-start + Character named
+                            after you in-game + Meet & Greet with Staff/Dev Team</p>
+                    </li>
+                </ul>
             </div>
         </div>
 

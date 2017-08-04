@@ -103,6 +103,7 @@
     z-index: 2;
     color: white;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: left;
 }
 .poster .shadow{
     position: absolute;

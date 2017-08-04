@@ -1,0 +1,57 @@
+// Variables
+@import "variables";
+.login-header {
+  background: $theme-bg-black;
+  height: 10rem;
+  line-height: 10rem;
+}
+.login-content{
+   background: url("img/login-bg.png") no-repeat center;
+   height: 83.5rem;
+  .panel {
+    background: url("img/login-panel-bg.png") no-repeat center;
+    height: 45rem;
+    margin-top: 22rem;
+    padding-top: 8.5rem;
+  }
+  .login-input-group{
+    width: 90%;
+    max-width: 38rem;
+    margin: 0 auto;
+    text-align: left;
+    padding-top: 1.5rem;
+    label {
+      display: block;
+      color: #ffffff;
+    }
+    input#username {
+      width: 100%;
+      background: none;
+      border: $input-border;
+    }
+  }
+ }
+
+.login-btn-default {
+  width: 11.8rem;
+  height: 3rem;
+  background-color: #bfbfbf;
+  color: #000000;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+  margin-left: 12px;
+}
+.login-btn-default:first-of-type{
+  margin-left: 0;
+}
+.btn-submit {
+  background-color: #ffae00;
+}
+.login-footer {
+  padding: 4.5rem 0;
+  background-color: #000000;
+}
+

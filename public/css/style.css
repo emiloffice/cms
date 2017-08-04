@@ -1139,10 +1139,101 @@ div#form-ambassador button[type="submit"]{
     margin-top: 2rem;
 }
 .ambassador-banner{
-    height: 40rem !important;
-    background: url(//cdn.multiverseinc.com/img/ambassador-bg.png) no-repeat center;
+    height: 70rem !important;
+    background: url(/img/am_banner_bg.png) no-repeat bottom;
+    background-color: #000000;
+    /* background: url(//cdn.multiverseinc.com/img/am-banner-bg.jpg) no-repeat center; */
     background-size: cover;
     padding-top: 4rem;
+}
+.ambassador-banner .btn-area{
+    font-size: 2.2rem;
+    line-height: 2.5em;
+    padding: 0 1rem;
+    background: rgba(0,0,0,0.5);
+    border-radius: 1rem;
+    margin-bottom: -15rem;
+}
+.ambassador-rank{
+    background: #000000;
+    padding: 5rem 0;
+}
+.rank-area {
+    background: url(/img/rank-bg.png) top center no-repeat;
+    background-size: cover;
+    height: 73rem;
+    width: 100%;
+    max-width: 1200px;
+    padding: 0;
+    border-radius: 1rem;
+    margin: 0 auto;
+}
+.rank-area .title{
+    font-size: 3rem;
+    line-height: 3rem;
+    color: #ffae00;
+    text-align: center;
+    padding-top: 7rem;
+}
+.rank-table thead tr{
+    border-image: url('/img/rank-table-border-line.png') no-repeat center;
+}
+.rank-table-head {
+    font-size: 2.4rem;
+    color: #ffae00;
+    font-weight: 300;
+    font-family: MicrosoftYaHei;
+    height: 8rem;
+    line-height: 8rem;
+}
+.rank-table-body {
+    border-top: 0.4rem solid transparent;
+    border-image: url(/img/rank-table-border-line.png) 10 round;
+    line-height: 5rem;
+    height: 5rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+.rank-table-body .rank {
+    color: #ffae00;
+}
+.ambassador-loot{
+    background-color: #000000;
+    padding: 5rem 0;
+}
+.ambassador-loot .panel{
+    background: url(/img/loot-panel-bg.png) top center no-repeat;
+    background-size: cover;
+    height: 107rem;
+    border-radius: 1rem;
+}
+.ambassador-loot .panel .title{
+    font-size: 3.0rem;
+    line-height: 10rem;
+    height: 10rem;
+    color: #ffae00;
+    text-align: center;
+    width: 100%;
+}
+.ambassador-loot .panel .title span {
+    vertical-align: bottom;
+    line-height: 100%;
+}
+ul.loot-list {
+    padding: 8rem 0;
+    text-align: center;
+}
+ul.loot-list li img{
+    padding-bottom: 2rem;
+}
+ul.loot-content-list{
+    font-family: 'AdobeHeitiStd Regular';
+    font-size: 1.8rem;
+    color: #ffae00;
+}
+ul.loot-content-list>li>p:last-of-type {
+    font-size: 1.4rem;
+    color: #fff;
 }
 .ambassador-area{
     margin: 0 auto;
@@ -1161,3 +1252,4 @@ div#form-ambassador button[type="submit"]{
 video::-webkit-media-controls {
     display:none !important;
 }
+

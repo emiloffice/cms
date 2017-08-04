@@ -50,6 +50,8 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->any('ambassador', 'HomeController@ambassador');
     $router->any('ambassador/code/{code}', 'HomeController@ambassadorCode');
     $router->any('ambassador/search', 'HomeController@ambassadorSearch');
+    $router->any('user/login', 'UserController@login');
+    $router->any('user/center', 'UserController@center');
     $router->any('*', 'HomeController@index');
 });
 Route::group(['prefix' => 'cn','namespace' => 'Home'],function ($router){
