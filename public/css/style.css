@@ -1154,6 +1154,9 @@ div#form-ambassador button[type="submit"]{
     border-radius: 1rem;
     margin-bottom: -15rem;
 }
+.join-btn.btn-area a {
+    color: inherit;
+}
 .ambassador-rank{
     background: #000000;
     padding: 5rem 0;
@@ -1188,6 +1191,15 @@ div#form-ambassador button[type="submit"]{
 }
 .rank-table-body {
     border-top: 0.4rem solid transparent;
+    border-image: url(/img/rank-table-border-line.png) 10 round;
+    line-height: 5rem;
+    height: 5rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+.rank-table-body:last-of-type {
+    border-top: 0.4rem solid transparent;
+    border-bottom: 0.4rem solid transparent;
     border-image: url(/img/rank-table-border-line.png) 10 round;
     line-height: 5rem;
     height: 5rem;

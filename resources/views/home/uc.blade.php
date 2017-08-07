@@ -18,17 +18,66 @@
 <div class="uc-header">
     <div class="container">
         <div class="logo"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></div>
+        <div class="right">
+            <a href="/logout" class="logout">logout</a>
+        </div>
     </div>
 </div>
 <div class="uc-content">
     <div class="container">
         <div action="#" class="panel">
+            <div class="uc-container">
+                <p class="title">Base information & friends</p>
+                <div class="main-table">
+                    <div class="left">
+                        <div class="">My profile</div>
+                        <div class="">Security</div>
+                        <div class="">
+                            <p>Quests</p>
+                            <p>1. Gain 10 points for referring your first friend</p>
+                            <p>2. Gain 5 points for liking our Facebook Page</p>
+                            <p>3. Gain 5 point for "following" our Facebook page</p>
+                            <p>4. Gain 5 points for joining our community group</p>
+                            <p>5. Gain 5 points for following our Twitter Page</p>
+                        </div>
+                        <div class="">
+                            <p>Invite friends</p>
+                            <div><input type="text" value="{{ url('ambassador') }}/{{ $point->referral_code }}" readonly><button id="#" class="refer">Refer Now!</button></div>
+                            <p>The six digits on the link are a recommendation code</p>
+                        </div>
+                    </div>
+
+                    <div class="right">
+                        <div class="profile"><img src="//{{getenv('RESOURCE_PATH')}}/img/d1.png" alt="profile"><p class="name">{{ $user->name }}</p></div>
+                        <ul class="reward-list">
+                            <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
+                            <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
+                            <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="title">Recommended friends</p>
+                <ul class="friends">
+                    @if(count($friends)===0)
+                        <p>No recommendation of friends, recommend it</p>
+                        @else
+                        @foreach($friends as $friend)
+                            <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""><p>{{ $friend->name }}</p></li>
+                        @endforeach
+                    @endif
+                </ul>
+            </div>
         </div>
     </div>
 </div>
 <div class="uc-footer">
-    <div class="left"></div>
-    <div class="right"></div>
+    <div class="container">
+        <div class="left">
+            <a href="#">Terms of Service</a>|<a href="#">Privacy Policy</a>
+            <p>Copyright © Multiverse Entertainment LLC</p>
+        </div>
+        <div class="right"></div>
+    </div>
 </div>
 </body>
 

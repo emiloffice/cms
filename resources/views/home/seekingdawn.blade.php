@@ -173,7 +173,7 @@
 
 <div id="fullpage">
     <div id="#banner" class="section">
-        <video  preload="auto" autoplay width="100%" id="banner_video" muted="true" poster="{{Config::get('constants.CDN_HOST')}}img/SeekingDawn_Banner.jpg" webkit-playsinline>
+        <video  preload="auto" autoplay="true" width="100%" id="banner_video" muted="true" poster="{{Config::get('constants.CDN_HOST')}}img/SeekingDawn_Banner.jpg" webkit-playsinline>
         </video>
         <div id="banner_shadow"></div>
         <div id="banner_des"  class="">
@@ -238,14 +238,15 @@
 <script src="{{Config::get('constants.CDN_HOST')}}js/grayscale.js"></script>
 <!-- Custom Theme JavaScript -->
 <script>
-    var _video = document.getElementById('banner_video');
-    _video.controls = false;
-    _video.autoplay = true;
-    _video.loop = true;
-    _video.preload = true;
-    _video.muned = true;
+
     window.onload = function () {
         document.querySelector("#banner_video").src = '{{Config::get('constants.CDN_HOST')}}video/seekingDawnPlay.mp4';
+        var _video = document.getElementById('banner_video');
+        _video.controls = false;
+        _video.autoplay = true;
+        _video.loop = true;
+        _video.preload = true;
+        _video.muned = true;
     }
     $('#fullpage').click(function () {
         console.log('点击播放')

@@ -22,9 +22,13 @@
     </div>
     <div class="login-content">
         <div class="container">
-            <form action="{{ url('user/login') }}" class="panel" method="POST">
+            <form action="{{ url('user/register') }}" class="panel" method="POST">
                 {{--{!! csrf_field() !!}--}}
                 {{ csrf_field() }}
+                <div class="login-input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username">
+                </div>
                 <div class="login-input-group">
                     <label for="email">Email</label>
                     <input type="text" id="email" name="email">
@@ -35,9 +39,13 @@
                 </div>
 
                 <div class="login-input-group">
+                    <label for="referralCode">Referral Code</label>
+                    <input type="text" id="referralCode" name="referral_code" value="{{ $code }}">
+                </div>
+                <div class="login-input-group">
                     <button class="login-btn-default btn-submit">Sign Up</button>
-                    {{--<button class="login-btn-default btn-facebook">Logoin&Like</button>--}}
-                    {{--<button class="btn-twitter login-btn-default">Login&Follow</button>--}}
+                    <button class="login-btn-default btn-facebook">Logoin&Like</button>
+                    <button class="btn-twitter login-btn-default">Login&Follow</button>
                 </div>
             </form>
         </div>

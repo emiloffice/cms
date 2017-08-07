@@ -12,7 +12,7 @@
 */
 use App\Task;
 
-
+Auth::routes();
 
 Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
 {
@@ -47,12 +47,24 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->get('contact', 'HomeController@contact');
     $router->post('contact', 'HomeController@contact');
     $router->any('subscribe', 'HomeController@Subscribe');
-    $router->any('ambassador', 'HomeController@ambassador');
-    $router->any('ambassador/code/{code}', 'HomeController@ambassadorCode');
+    $router->any('ambassador', 'UserController@ambassador');
+    $router->any('ambassador/{code}', 'UserController@ambassadorCode');
     $router->any('ambassador/search', 'HomeController@ambassadorSearch');
+    $router->any('login', 'UserController@login');
+    $router->any('logout', 'UserController@logout');
     $router->any('user/login', 'UserController@login');
-    $router->any('user/center', 'UserController@center');
+    $router->any('user/logout', 'UserController@logout');
+    $router->any('user/register', 'UserController@register');
+    $router->any('register', 'UserController@register');
+
+
+
+
+
     $router->any('*', 'HomeController@index');
+});
+Route::group(['prefix' => '','namespace' => 'Home', 'middleware' => 'auth'],function ($router) {
+    $router->any('user/center', 'UserController@center');
 });
 Route::group(['prefix' => 'cn','namespace' => 'Home'],function ($router){
     $router->get('/', 'CnController@index');
@@ -106,7 +118,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
 });
 
 
-Auth::routes();
+
 
 Route::get('/home', 'HomeController@index');
 

@@ -4,7 +4,11 @@
     @endsection
 @section('content')
     <div class="banner ambassador-banner">
-        <div class="join-btn btn-area">Join the community groups</div>
+        @if($user=='')
+            <div class="join-btn btn-area"><a href="{{ url('register') }}?code={{ $code }}">Join the ambassador project</a></div>
+            @else
+            <div class="join-btn btn-area"><a href="#">Join the community groups</a></div>
+        @endif
     </div>
     <div class="ambassador-rank">
         <div class="container">
@@ -13,58 +17,16 @@
                 <div class="col-md-12 col-lg-12 rank-table-head">
                     <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">RANK</div>
                     <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">USER NAME</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">REFFERALS</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">REFERRALS</div>
                 </div>
+
+                @foreach($points as $p)
                 <div class="col-md-12 col-lg-12 rank-table-body">
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier {{ $p->points_level }}</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">{{ $p->name }}</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">{{ $p->points }}</div>
                 </div>
-                <div class="col-md-12 col-lg-12 rank-table-body">
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
-                </div>
-                <div class="col-md-12 col-lg-12 rank-table-body">
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
-                </div>
-                <div class="col-md-12 col-lg-12 rank-table-body">
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
-                </div>
-                <div class="col-md-12 col-lg-12 rank-table-body">
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
-                </div>
-                <div class="col-md-12 col-lg-12 rank-table-body">
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
-                </div>
-                <div class="col-md-12 col-lg-12 rank-table-body">
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
-                </div>
-                <div class="col-md-12 col-lg-12 rank-table-body">
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
-                </div>
-                <div class="col-md-12 col-lg-12 rank-table-body">
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
-                </div>
-                <div class="col-md-12 col-lg-12 rank-table-body">
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier8</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">spider man</div>
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">580</div>
-                </div>
+                @endforeach
             </div>
         </div>
     </div>
@@ -74,12 +36,12 @@
             <div class=" panel">
                 <div class="title"><span>LOOT</span></div>
                 <ul class="loot-list">
-                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="./img/loot1.png" alt="loot"></li>
-                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="./img/loot1.png" alt="loot"></li>
-                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="./img/loot1.png" alt="loot"></li>
-                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="./img/loot1.png" alt="loot"></li>
-                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="./img/loot1.png" alt="loot"></li>
-                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="./img/loot1.png" alt="loot"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/img/loot1.png" alt="loot"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/img/loot1.png" alt="loot"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/img/loot1.png" alt="loot"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/img/loot1.png" alt="loot"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/img/loot1.png" alt="loot"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/img/loot1.png" alt="loot"></li>
                 </ul>
                 <ul class="loot-content-list">
                     <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">

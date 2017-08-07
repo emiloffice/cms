@@ -22,23 +22,15 @@
 </div>
 <div class="login-content">
     <div class="container">
-        <form action="{{ route('register') }}" role="form" class="panel" method="POST">
-            {{ csrf_field() }}
-            <div class="login-input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username">
-            </div>
+        <form action="{{ route('register') }}" class="panel" method="POST">
+            {!! csrf_field() !!}
             <div class="login-input-group">
                 <label for="password">Password</label>
-                <input type="password" id="password" name="password">
+                <input type="text" id="password" name="password">
             </div>
             <div class="login-input-group">
                 <label for="email">Email</label>
                 <input type="text" id="email" name="email">
-            </div>
-            <div class="login-input-group">
-                <label for="referralCode">Referral Code</label>
-                <input type="text" id="referralCode" name="referralCode">
             </div>
             <div class="login-input-group">
                 <button class="login-btn-default btn-submit">Sign Up</button>
