@@ -42,7 +42,7 @@
                         </div>
                         <div class="">
                             <p>Invite friends</p>
-                            <div><input type="text" value="{{ url('ambassador') }}/{{ $point->referral_code }}" readonly><button id="#" class="refer">Refer Now!</button></div>
+                            <div><input type="text" value="{{ url('ambassador') }}/{{ $point->referral_code }}" readonly id="link"><button id="copy" class="refer" onclick="copy('link', 'copy')">Copy&Share</button></div>
                             <p>The six digits on the link are a recommendation code</p>
                         </div>
                     </div>
@@ -80,5 +80,29 @@
     </div>
 </div>
 </body>
-
+<script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-3.2.1.js"></script>
+<script src="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/js/bootstrap.js"></script>
+<script>
+    function copy(copytargetid,copybtnid){
+        var cpt = document.getElementById(copytargetid);
+        var cpb = document.getElementById(copybtnid);
+        $(cpt).focus();
+        $(cpt).select();
+        try{
+            if(document.execCommand('copy', false, null)){
+                $(cpb).tooltip({title:"copied!", placement: "bottom", trigger: "manual"});
+                $(cpb).tooltip('show');
+                cpb.onmouseout=function(){$(cpb).tooltip('destroy')};
+            } else{
+                $(cpb).tooltip({title:"failed!", placement: "bottom", trigger: "manual"});
+                $(cpb).tooltip('show');
+                cpb.onmouseout=function(){$(cpb).tooltip('destroy')};
+            }
+        } catch(err){
+            $(cpb).tooltip({title:"failed!", placement: "bottom", trigger: "manual"});
+            $(cpb).tooltip('show');
+            cpb.onmouseout=function(){$(cpb).tooltip('destroy')};
+        }
+    }
+</script>
 </html>
