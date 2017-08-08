@@ -123,6 +123,9 @@ class UserController extends Controller
     public function ambassador()
     {
         $user = Auth::user();
+        if ($user === ''){
+            $user = null;
+        }
         $points = Point::where([])->orderBy('points','desc')->take(10)
             ->join('users', 'points.user_id', '=', 'users.id')
             ->get();
@@ -132,6 +135,9 @@ class UserController extends Controller
     {
         if ($code){
             $user = Auth::user();
+            if ($user === ''){
+                $user = null;
+            }
             $points = Point::where([])->orderBy('points','desc')->take(10)
                 ->join('users', 'points.user_id', '=', 'users.id')
                 ->get();
