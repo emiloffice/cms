@@ -4,7 +4,7 @@
     @endsection
 @section('content')
     <div class="banner ambassador-banner">
-        @if($user==='')
+        @if($user!==''||$user!==null)
             <div class="join-btn btn-area"><a href="{{ url('register') }}?code={{ $code }}">Join the ambassador project</a></div>
             @else
             <div class="join-btn btn-area"><a href="#">Join the community groups</a></div>
