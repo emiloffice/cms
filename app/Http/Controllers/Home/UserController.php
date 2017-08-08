@@ -142,9 +142,6 @@ class UserController extends Controller
                 ->join('users', 'points.user_id', '=', 'users.id')
                 ->get();
             $point = Point::where('referral_code', $code)->first();
-            if ($point !== '') {
-                echo $point;
-            }
         }
             return view('home.ambassador', compact('points','user','code'));
     }
