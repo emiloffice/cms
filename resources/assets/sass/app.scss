@@ -2,12 +2,25 @@
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
+html {
+  font-size: 100px;
+}
+
+body {
+  font-size: 0.14rem;
+}
+
+p {
+  font-size: 14px;
+  font-size: 0.14rem;
+}
+
 // Variables
 @import "variables";
-// Login
-//@import "login";
-// UserCenter
-//@import "uc";
+// header
+@import "header";
+// footer
+@import "footer";
 
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";

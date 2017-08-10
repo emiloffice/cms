@@ -1,22 +1,20 @@
 // Variables
 @import "variables";
-.login-header {
+.reg-header {
   background: $theme-bg-black;
   height: 1rem;
   line-height: 1rem;
 }
-
-.login-content{
-   background: url("img/login-bg.png") no-repeat center;
-   height: 8.35rem;
+.reg-content{
+  background: url("img/login-bg.png") no-repeat center;
+  height: 8.35rem;
   .panel {
     background: url("img/login-panel-bg.png") no-repeat center;
-    height: 3.5rem;
+    height: 4.5rem;
     margin-top: 2.2rem;
-    padding-top: 0.95rem;
-    background-size: contain;
+    padding-top: 0.7rem;
   }
-  .login-input-group{
+  .reg-input-group{
     width: 90%;
     max-width: 3.8rem;
     margin: 0 auto;
@@ -39,9 +37,9 @@
       color: #ff00d8;;
     }
   }
- }
+}
 
-.login-btn-default {
+.reg-btn-default {
   width: 1.18rem;
   height: 0.3rem;
   background-color: #bfbfbf;
@@ -53,16 +51,13 @@
   border-radius: 3px;
   margin-left: 9px;
 }
-.login-btn-default:first-of-type{
+.reg-btn-default:first-of-type{
   margin-left: 0;
 }
 .btn-submit {
   background-color: #ffae00;
 }
-.login-btn-default.btn-submit {
-  margin-top: 0.15rem;
-}
-.login-footer {
+.reg-footer {
   padding: 0.45rem 0;
   background-color: #000000;
   color: #6a6a6a;
@@ -71,9 +66,3 @@
   }
 }
 
-/*
-.login-content .panel {
-  background: url(/images/login-panel-bg.png?0753c7b…) no-repeat center;
-
-}
-*/

@@ -30,10 +30,10 @@
                 <p class="title">Base information & friends</p>
                 <div class="main-table">
                     <div class="left">
-                        <div class="">My profile</div>
+                        {{--<div class=""></div>--}}
                         <div class="">Security</div>
                         <div class="">
-                            <p>Quests</p>
+                            <p class="title">Quests</p>
                             <p>1. Gain 10 points for referring your first friend</p>
                             <p>2. Gain 5 points for liking our Facebook Page</p>
                             <p>3. Gain 5 point for "following" our Facebook page</p>
@@ -41,18 +41,19 @@
                             <p>5. Gain 5 points for following our Twitter Page</p>
                         </div>
                         <div class="">
-                            <p>Invite friends</p>
+                            <p class="title">Invite friends</p>
                             <div><input type="text" value="{{ url('ambassador') }}/{{ $point->referral_code }}" readonly id="link"><button id="copy" class="refer" onclick="copy('link', 'copy')">Copy&Share</button></div>
                             <p>The six digits on the link are a recommendation code</p>
                         </div>
                     </div>
 
                     <div class="right">
-                        <div class="profile"><img src="//{{getenv('RESOURCE_PATH')}}/img/d1.png" alt="profile"><p class="name">{{ $user->name }}</p></div>
+                        <div class="profile"><img src="//{{getenv('RESOURCE_PATH')}}/img/headimg.png" alt="profile"><p class="name">{{ $user->name }}</p></div>
                         <ul class="reward-list">
+                            <p class="text-center">暂无标签</p>
+                            {{--<li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
                             <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
-                            <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
-                            <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
+                            <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>--}}
                         </ul>
                     </div>
                 </div>
@@ -62,7 +63,7 @@
                         <p>No recommendation of friends, recommend it</p>
                         @else
                         @foreach($friends as $friend)
-                            <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""><p>{{ $friend->name }}</p></li>
+                            <li><img src="//{{getenv('RESOURCE_PATH')}}/img/headimg.png" alt=""><p>{{ $friend->name }}</p></li>
                         @endforeach
                     @endif
                 </ul>

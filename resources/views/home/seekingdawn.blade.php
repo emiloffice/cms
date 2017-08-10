@@ -179,9 +179,9 @@
         <div id="banner_des"  class="">
             <img id="video_title" src="{{Config::get('constants.CDN_HOST')}}img/SeekingDawn_logo.png">
             <p id="video_despriction" class="des">
-                Seeking Dawn is an expansive VR action-survival game set on a sprawling and dangerous planet with a mysterious history. Blending survival, exploration, gritty combat and intricate skill & tech trees, Seeking Dawn puts you in an immersive, alien world where the only option is to fight for survival. Fascinating creatures, unknown dangers, and chilling surprises are yours to uncover as you traverse the alien world of Alpha Centauri.
+                Seeking Dawn is an expansive VR game of action and survival set on a sprawling planet of dangerous creatures and alien mysteries. Stranded with limited resources, you must venture out to scavenge for supplies, craft weapons and equipment for protection, and decipher strange discoveries as you traverse the planet.
                 <br>
-                Seeking Dawn’s rich sci-fi story will keep you riveted with hundreds of hours of gameplay on your own or with friends. create weapons and equipment to venture deeper into the unknown, and try your hand at harder challenge modes for even better loot. Scavenge, craft, build, explore, fight, and most importantly, find a way home.
+                An extensive sci-fi adventure offering dozens of hours of gameplay, Seeking Dawn combines rich storytelling with gritty combat in both solo and cooperative modes, as well as additional challenge modes for even better loot. Scavenge, craft, build, explore, fight, and most importantly, find a way home.
             </p>
             <div id="status">
                 COMING SOON
@@ -205,15 +205,13 @@
 
         <div class="des col-md-6 col-md-offset-6 col-sm-12">
             <p>
-                -	Co-op Campaign mode - Take on the planet’s dangers with friends<br>
-                -	Keep yourself alive while struggling with depleting oxygen reserves and other challenging survival mechanics<br>
-                -	Discover the alien flora and fauna of Alpha Centauri - but make sure they don’t find you first<br>
-                -	Create hundreds of equipment pieces in an expansive crafting tree<br>
-                -	Explore customizable Tech Trees to upgrade your skills<br>
-                -	Delve into an arsenal of construction options to build a base that will protect you from the outside world<br>
-                -	Feed your RPG need with collection mechanics in place, allowing you to create more and more powerful items for the fight ahead<br>
-                -	Realistic climbing, swimming, and rope swinging mechanics to allow for a fully explored VR space<br>
-                -	+ too much more to list!</p>
+                -	FPS combat meets gritty survival in VR.<br>
+                -	Solo and cooperative play with a full, story-rich campaign.<br>
+                -	PvP gameplay with 2 game modes for 4-16 players.<br>
+                -	Extensive character development with intricate skill trees.<br>
+                -	Build your base and install defenses to keep your squad safe.<br>
+                -	Deep crafting system with 50+ tools for combat and survival.<br>
+                -	Explore with full movement including climbing and swimming.<br>
         </div>
     </div>
     <div class="poster poster2 section">

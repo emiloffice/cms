@@ -2,6 +2,10 @@
 @section('title')
     <title>Multiverse • Ambassador Project</title>
     @endsection
+@section('other')
+    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/ambassador.css') }}" rel="stylesheet">
+    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/footer.css') }}" rel="stylesheet">
+    @endsection
 @section('content')
     <div class="banner ambassador-banner">
         @if($user == null || !isset($user))

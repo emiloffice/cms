@@ -1,7 +1,7 @@
 <div class="footer">
     <div class="left fl col-sm-12 col-md-4">
         <div class="text"><a href="http://www.multiverseinc.com/legal/tos/">Terms of Service </a>|<a href="http://www.multiverseinc.com/legal/privacy/" target="_blank"> Privacy Policy</a> 	</div>
-        <div class="text" style="margin-top: 1.5rem;">Copyright © Multiverse Entertainment LLC</div>
+        <div class="text" style="margin-top: 15px;">Copyright © Multiverse Entertainment LLC</div>
     </div>
     <div class="center fl col-md-4 hidden-sm hidden-xs">
         <ul>
