@@ -23,7 +23,7 @@
         $(document).ready(function() {
             $('#fullpage').fullpage({
                 verticalCentered: true,
-                continuousVertical: true
+                continuousVertical: false//全屏滚动
             });
         });
     </script>

@@ -2,12 +2,23 @@
 .footer{
   background-color: #000;
   width: 100%;
-  height: 193px;
-  padding: 0 5%;
+  padding: 50px 5%;
   font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .footer>div{
-  padding-top: 50px;
+  height: 60px;
+  display: table;
+}
+.footer>div .text{
+  float: left;
+}
+.footer>div>div,.footer>div>ul,.footer>div>p{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+  //float: left;
+  padding: 0;
+  margin: 0;
 }
 .footer .left a{
   color: #333;
@@ -24,10 +35,12 @@
   padding:  0 30px;
 }
 .footer .text{
-  margin-bottom: 10px;
 }
 .footer ul.platform li{
   padding-right: 20px;
+}
+.footer .social-link li{
+  padding: 0 20px;
 }
 /*footer end*/
 footer{
@@ -60,6 +73,7 @@ footer .media-link a{
   width: 5%;
   font-size: 35px;
 }
+
 footer .copyright{
   font-size: 2.2rem;
   color: #ffffff;

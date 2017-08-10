@@ -24,6 +24,7 @@ ul>li{
 @media screen and (max-width: 768px) {
     #logo{
         width: 170px;
+        margin: 3px 0;
     }
     .banner{
         height: 24rem;
@@ -260,6 +261,7 @@ ul>li{
 @media screen and (min-width: 1200px){
     #logo{
         width: 250px;
+        padding: 9px;
     }
     .banner{
         height: 50rem;
@@ -552,8 +554,9 @@ a:focus {
 }
 nav ul.media-link{
     float: left;
-    margin: 10px -60px 0px 30px;
+    margin: 0;
     list-style:none;
+    padding: 15px;
 }
 nav ul.media-link>li{
     float: left;
