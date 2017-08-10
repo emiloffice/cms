@@ -98,6 +98,7 @@
     font-size: 32px;
     color: white;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    text-align: left;
 }
 .poster .des{
     z-index: 2;
