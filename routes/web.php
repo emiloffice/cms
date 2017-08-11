@@ -70,6 +70,8 @@ Route::group(['prefix' => 'OAuth','namespace' => 'OAuth'],function ($router)
 //    $router->get('facebook-callback', 'FacebookController@callback');
     $router->get('facebook-callback', 'FacebookController@handleProviderCallback');
     $router->get('facebook-auth-info', 'FacebookController@authInfo');
+    $router->get('twitter', 'TwitterController@redirectToProvider');
+    $router->get('twitter-callback', 'TwitterController@handleProviderCallback');
 });
 Route::group(['prefix' => '','namespace' => 'Home', 'middleware' => 'auth'],function ($router) {
     $router->any('user/center', 'UserController@center');

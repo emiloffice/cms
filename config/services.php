@@ -39,8 +39,15 @@ return [
         'client_id' => '334111223669076',
         'client_secret' => '06a137b4d36325336caa59d2992ba9f8',
         'app_secret' => '06a137b4d36325336caa59d2992ba9f8',
-        'redirect' => 'www.multiverseinc.com/OAuth/facebook-callback',
+        'redirect' => 'http://www.multiverseinc.com/OAuth/facebook-callback',
         'default_graph_version' => 'v2.10',
+    ],
+    'twitter' => [
+//        'app_id' => '893469595020873728',
+        'client_id' => '893469595020873728',
+        'client_secret' => '8ZHGBK9W3d1YLv9P1dNDBqNDeYOmO0DrppwCiLdsGBbqSvuCZ3',
+        'app_secret' => '8ZHGBK9W3d1YLv9P1dNDBqNDeYOmO0DrppwCiLdsGBbqSvuCZ3',
+        'redirect' => 'http://www.multiverseinc.com/OAuth/twitter-callback',
     ]
 
 ];
