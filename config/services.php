@@ -35,7 +35,12 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
     'facebook' => [
-
+        'app_id' => '334111223669076',
+        'client_id' => '334111223669076',
+        'client_secret' => '06a137b4d36325336caa59d2992ba9f8',
+        'app_secret' => '06a137b4d36325336caa59d2992ba9f8',
+        'redirect' => 'http://www.multiverseinc.com/OAuth/facebook-callback',
+        'default_graph_version' => 'v2.10',
     ]
 
 ];

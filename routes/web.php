@@ -66,7 +66,9 @@ Route::group(['prefix' => 'test','namespace' => 'Home'],function ($router)
 Route::group(['prefix' => 'OAuth','namespace' => 'OAuth'],function ($router)
 {
     $router->get('facebook-login', 'FacebookController@login');
-    $router->get('facebook-callback', 'FacebookController@callback');
+    $router->get('facebook', 'FacebookController@redirectToProvider');
+//    $router->get('facebook-callback', 'FacebookController@callback');
+    $router->get('facebook-callback', 'FacebookController@handleProviderCallback');
     $router->get('facebook-auth-info', 'FacebookController@authInfo');
 });
 Route::group(['prefix' => '','namespace' => 'Home', 'middleware' => 'auth'],function ($router) {
