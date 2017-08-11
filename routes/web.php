@@ -16,7 +16,6 @@ Auth::routes();
 
 Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
 {
-//    $router->get('login', 'LoginController@showLoginForm')->name('admin.login');
     $router->get('', 'HomeController@index');
     $router->get('index', 'HomeController@home');
     $router->get('test', 'HomeController@test');
@@ -57,11 +56,11 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->any('user/register', 'UserController@register');
     $router->any('register', 'UserController@register');
 
-
-
-
-
     $router->any('*', 'HomeController@index');
+});
+Route::group(['prefix' => 'test','namespace' => 'Home'],function ($router)
+{
+    $router->get('', 'TestController@index');
 });
 Route::group(['prefix' => '','namespace' => 'Home', 'middleware' => 'auth'],function ($router) {
     $router->any('user/center', 'UserController@center');

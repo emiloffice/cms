@@ -272,7 +272,6 @@ class HomeController extends Controller
     {
         $code = $this->referralCode(1,'');
         print_r($code);
-//        return view('home.test');
     }
 
     public function seekingdawntest()

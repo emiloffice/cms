@@ -93,7 +93,7 @@
     </div>
     <div class="subscribe">
         <div class="content">
-            <div class="title text-center">WANT TO BE ON THE FRONTIER OF VR INNOVATION</div>
+            <div class="title text-center">JOIN OUR MAILING LIST TO GET UPDATES ON OUR GAME:</div>
             <form action="{{ url('subscribe') }}" class="form_content" method="post">
                 <input type="email" class="email_input" placeholder="YOUR EMAIL" name="email" id="email">
                 <button class="subscribe_btn" type="button" onclick="form_submit()">subscribe</button>
