@@ -43,10 +43,8 @@ return [
         'default_graph_version' => 'v2.10',
     ],
     'twitter' => [
-//        'app_id' => '893469595020873728',
-        'client_id' => '893469595020873728',
+        'client_id' => 'rbdWaYXk6o0gn41ikLDJ9bj2V',
         'client_secret' => '8ZHGBK9W3d1YLv9P1dNDBqNDeYOmO0DrppwCiLdsGBbqSvuCZ3',
-        'app_secret' => '8ZHGBK9W3d1YLv9P1dNDBqNDeYOmO0DrppwCiLdsGBbqSvuCZ3',
         'redirect' => 'http://www.multiverseinc.com/OAuth/twitter-callback',
     ]
 
