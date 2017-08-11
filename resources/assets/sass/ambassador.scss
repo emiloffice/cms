@@ -48,19 +48,19 @@ div#form-ambassador button[type="submit"]{
   margin-top: 0.2rem;
 }
 .ambassador-banner{
-  height: 10rem !important;
-  background: url(/img/am_banner_bg.png) no-repeat bottom;
+  height: 11rem !important;
+  background: url(/img/am_banner_bg.png) center no-repeat;
   background-color: #000000;
   background-size: cover;
 }
 .ambassador-banner .btn-area{
-  font-size: 0.22rem;
-  line-height: 0.55rem;
-  height: 0.55rem;
-  padding: 0 0.12rem;
+  font-size: 0.20rem;
+  line-height: 0.45rem;
+  height: 0.45rem;
+  padding: 0 0.22rem;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0.1rem;
-  margin-bottom: -1.8rem;
+  margin-bottom: -0.8rem;
 }
 .join-btn.btn-area a {
   color: inherit;
@@ -84,7 +84,7 @@ div#form-ambassador button[type="submit"]{
   line-height: 0.36rem;
   color: #ffae00;
   text-align: center;
-  padding-top: 0.84rem;
+  padding: 0.64rem 0px;
   font-family: prototype;
 }
 .rank-table thead tr{
@@ -153,6 +153,7 @@ ul.loot-content-list{
   font-family: 'AdobeHeitiStd Regular';
   font-size: 0.18rem;
   color: #ffae00;
+  margin-top: 0.1rem;
 }
 ul.loot-content-list>li>p:last-of-type {
   font-size: 0.18rem;

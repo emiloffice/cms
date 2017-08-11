@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\OAuth;
 
+use app\Http\Controllers\Home\UserController;
 use Facebook\Exceptions\FacebookResponseException;
 use Facebook\Exceptions\FacebookSDKException;
 use Facebook\Facebook;
@@ -40,6 +41,12 @@ class FacebookController extends Controller
     public function handleProviderCallback()
     {
         $user = Socialite::driver('facebook')->user();
+        $userController = new UserController();
+        $oauthFrom = 'facebook';
+        $res = $userController->createUser($user, $oauthFrom);
+        if ($res!== 'false') {
+            dd($res);
+        }
         dd($user);
         // $user->token;
     }

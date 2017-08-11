@@ -169,4 +169,23 @@ class UserController extends Controller
             return 'Tier 9';
         }
     }
+    /*
+     * @param $params
+     * @param $OAuthFrom
+     * */
+    public function createUser($params, $OAuthFrom)
+    {
+        if ($params !== '' && $OAuthFrom !== '') {
+            $user = new User;
+            $user->name = $params->name;
+            $user->email = $params->email;
+            $user->avatar = $params->avatar;
+            $user->avatar_original = $params->avatar_original;
+            $user->password = bcrypt('123456');
+            $user->save();
+            return $user->id;
+        }else {
+            return 'false';
+        }
+    }
 }

@@ -51,6 +51,7 @@
                     <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/img/loot1.png" alt="loot"></li>
                     <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/img/loot1.png" alt="loot"></li>
                 </ul>
+                <div class="clearfix"></div>
                 <ul class="loot-content-list">
                     <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                         <p>10 Referrals (100 Points） = Tier 1</p>
@@ -86,6 +87,7 @@
                             after you in-game + Meet & Greet with Staff/Dev Team</p>
                     </li>
                 </ul>
+                <div class="clearfix"></div>
             </div>
         </div>
 
