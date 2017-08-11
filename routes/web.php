@@ -58,9 +58,16 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
 
     $router->any('*', 'HomeController@index');
 });
+// 测试单元
 Route::group(['prefix' => 'test','namespace' => 'Home'],function ($router)
 {
     $router->get('', 'TestController@index');
+});
+Route::group(['prefix' => 'OAuth','namespace' => 'OAuth'],function ($router)
+{
+    $router->get('facebook-login', 'FacebookController@login');
+    $router->get('facebook-callback', 'FacebookController@callback');
+    $router->get('facebook-auth-info', 'FacebookController@authInfo');
 });
 Route::group(['prefix' => '','namespace' => 'Home', 'middleware' => 'auth'],function ($router) {
     $router->any('user/center', 'UserController@center');
