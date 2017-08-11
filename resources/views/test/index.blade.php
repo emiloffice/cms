@@ -2,22 +2,22 @@
 <html>
 <head>
     <!-- HTTPS required. HTTP will give a 403 forbidden response -->
-    <script src="https://sdk.accountkit.com/en_US/sdk.js"></script>
 </head>
 <body>
-    <div class="facebook-login" onclick="FB.login()"></div>
+    <button class="facebook-login" onclick="FB.login()">FB login</button>
 </body>
 <script>
-    window.fbAsyncInit() = function () {
+    window.fbAsyncInit = function() {
         FB.init({
-            appId               : '334111223669076',
-            autoLogAppEvents    : true,
-            xfbml               : true,
-            version             : 'v2.10'
+            appId            : '334111223669076',
+            autoLogAppEvents : true,
+            xfbml            : true,
+            version          : 'v2.10'
         });
         FB.AppEvents.logPageView();
     };
-    (function (d, s, id) {
+
+    (function(d, s, id){
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) {return;}
         js = d.createElement(s); js.id = id;
