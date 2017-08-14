@@ -36,6 +36,7 @@ class TwitterController extends Controller
             $userModel->oauth_types = 'facebook';
             $userModel->password = bcrypt('123456');
             print_r($userModel->email);
+            print_r('has string');
 //            $userModel->save();
             redirect('user-center');
         }else{
@@ -46,6 +47,7 @@ class TwitterController extends Controller
             $userModel->oauth_types = 'facebook';
             $userModel->password = bcrypt('123456');
             print_r($userModel->email);
+            print_r('has string');
 //            $userModel->save();
             redirect('confirm-email');
         }
