@@ -36,17 +36,17 @@ class TwitterController extends Controller
             $userModel->oauth_types = 'facebook';
             $userModel->password = bcrypt('123456');
             print_r($userModel->email);
-            $userModel->save();
+//            $userModel->save();
             redirect('user-center');
         }else{
-            $userModel->email = 'none';
+            $userModel->email = 'test@multiverseinc.com';
             $userModel->avatar = $user->avatar;
             $userModel->avatar_original = $user->avatar_original;
             $userModel->oauth_token = $user->token;
             $userModel->oauth_types = 'facebook';
             $userModel->password = bcrypt('123456');
             print_r($userModel->email);
-            $userModel->save();
+//            $userModel->save();
             redirect('confirm-email');
         }
 
