@@ -28,7 +28,7 @@ class TwitterController extends Controller
         $user = Socialite::driver('twitter')->user();
         $userModel = new User;
         $userModel->name = $user->name;
-        if ($user->email!==''){
+        if ($user->email!==''||$user->email!=='null'){
             $userModel->email = $user->email;
             $userModel->avatar = $user->avatar;
             $userModel->avatar_original = $user->avatar_original;
