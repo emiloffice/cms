@@ -194,11 +194,6 @@ class UserController extends Controller
      * */
     public function confirmEmail()
     {
-        $email = 'emil@multiverseinc.com';
-        $user = session('OAUTH_INFO');
-        if ($user !== null || $user !== ''){
-            print_r($user);
-        }
         return view('home.confirmEmail');
     }
     public function sendConfirmEmail(Request $request)
@@ -219,6 +214,9 @@ class UserController extends Controller
 
         $code = session('EMAIL_CONFIRM_CODE');
         if ($code === $request->code){
+            $user = session('OAUTH_INFO');
+            $user->email = $request->email;
+            $this->createUser($user,'twitter');
             return 'success';
         }else{
             return 'error';
