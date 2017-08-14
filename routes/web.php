@@ -55,6 +55,7 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->any('user/logout', 'UserController@logout');
     $router->any('user/register', 'UserController@register');
     $router->any('register', 'UserController@register');
+    $router->any('confirm-email', 'UserController@confirmEmail');
 
     $router->any('*', 'HomeController@index');
 });

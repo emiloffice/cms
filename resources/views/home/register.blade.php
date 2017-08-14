@@ -11,6 +11,7 @@
     <meta name="author" content="EmilWong">
     <link rel="shortcut icon" type="image/x-icon" href="//{{getenv('RESOURCE_PATH')}}/favicon.ico" media="screen" />
     <link href="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <link href="//{{getenv('RESOURCE_PATH')}}/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/app.css') }}" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/reg.css') }}" rel="stylesheet">
 </head>
@@ -44,8 +45,8 @@
                 </div>
                 <div class="reg-input-group">
                     <button class="reg-btn-default btn-submit">Register</button>
-                    {{--<button class="login-btn-default btn-facebook">Logoin&Like</button>
-                    <button class="btn-twitter login-btn-default">Login&Follow</button>--}}
+                    <a class="reg-btn-oauth" href="{{url('OAuth/facebook')}}"><p><i class="fa fa-facebook"></i> Register</p></a>
+                    <a class="reg-btn-oauth" href="{{url('OAuth/twitter')}}"><p><i class="fa fa-twitter"></i> Register</p></a>
                 </div>
                 <div class="reg-input-group">
                     <p>Registered account, <a href="{{ url('login') }}" class="login-href">login</a> now!</p>
@@ -63,22 +64,4 @@
         </div>
     </div>
 </body>
-<script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '334111223669076',
-            xfbml      : true,
-            version    : 'v2.10'
-        });
-        FB.AppEvents.logPageView();
-    };
-
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
-</script>
 </html>

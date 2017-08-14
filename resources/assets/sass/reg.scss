@@ -30,7 +30,7 @@
       border: $input-border;
       padding: 0 10px;
     }
-    p {
+    >p {
       color: #ffffff;
     }
     .login-href {
@@ -40,6 +40,7 @@
 }
 
 .reg-btn-default {
+  display: inline-block;
   width: 1.18rem;
   height: 0.3rem;
   background-color: #bfbfbf;
@@ -50,6 +51,26 @@
   appearance: none;
   border-radius: 3px;
   margin-left: 9px;
+}
+.reg-btn-oauth {
+  display: inline-block;
+  width: 1.18rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  text-align: center;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+  margin-left: 9px;
+  cursor: pointer;
+}
+.reg-btn-oauth:link,.reg-btn-oauth:visited,.reg-btn-oauth:hover,.reg-btn-oauth:active{
+  color: initial;
+  text-decoration: none;
 }
 .reg-btn-default:first-of-type{
   margin-left: 0;

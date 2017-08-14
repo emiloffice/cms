@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
-    <title>Seeking Dawn Multiverse Inc.</title>
+    <title>Multiverse Entertainment LLC | User Center</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -42,15 +42,15 @@
                         </div>
                         <div class="">
                             <p class="title">Invite friends</p>
-                            <div><input type="text" value="{{ url('ambassador') }}/{{ $point->referral_code }}" readonly id="link"><button id="copy" class="refer" onclick="copy('link', 'copy')">Copy&Share</button></div>
-                            <p>The six digits on the link are a recommendation code</p>
+                            <div><input type="text" value="{{ url('ambassador') }}/{{ $point->referral_code }}" readonly id="link"><button id="copy" class="refer" onclick="copy('link', 'copy')">Copy & Share</button></div>
+                            <p>The six digits "<span class="special-text">{{ $point->referral_code }}</span>" on the link are a referral code</span>
                         </div>
                     </div>
 
                     <div class="right">
                         <div class="profile"><img src="//{{getenv('RESOURCE_PATH')}}/img/headimg.png" alt="profile"><p class="name">{{ $user->name }}</p></div>
                         <ul class="reward-list">
-                            <p class="text-center">暂无标签</p>
+                            <p class="text-center">Did not get rewarded!</p>
                             {{--<li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
                             <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
                             <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>--}}
@@ -60,7 +60,7 @@
                 <p class="title">Recommended friends</p>
                 <ul class="friends">
                     @if(count($friends)===0)
-                        <p>No recommendation of friends, recommend it</p>
+                        <p>No recommendation of friends.</p>
                         @else
                         @foreach($friends as $friend)
                             <li><img src="//{{getenv('RESOURCE_PATH')}}/img/headimg.png" alt=""><p>{{ $friend->name }}</p></li>

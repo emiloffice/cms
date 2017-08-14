@@ -1,9 +1,9 @@
 {
-  "/js/app.js": "/js/app.c360924e6082903b1c7c.js",
-  "/css/app.css": "/css/app.2e12ef42f72f9eab3b44.css",
-  "/css/login.css": "/css/login.2e12ef42f72f9eab3b44.css",
-  "/css/ambassador.css": "/css/ambassador.2e12ef42f72f9eab3b44.css",
-  "/css/footer.css": "/css/footer.2e12ef42f72f9eab3b44.css",
-  "/css/reg.css": "/css/reg.2e12ef42f72f9eab3b44.css",
-  "/css/uc.css": "/css/uc.2e12ef42f72f9eab3b44.css"
+  "/js/app.js": "/js/app.js",
+  "/css/app.css": "/css/app.css",
+  "/css/login.css": "/css/login.css",
+  "/css/ambassador.css": "/css/ambassador.css",
+  "/css/footer.css": "/css/footer.css",
+  "/css/reg.css": "/css/reg.css",
+  "/css/uc.css": "/css/uc.css"
 }

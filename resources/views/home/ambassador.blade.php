@@ -15,7 +15,7 @@
                 <div class="join-btn btn-area"><a href="{{ url('register') }}">Join the ambassador project</a></div>
                 @endif
             @else
-            <div class="join-btn btn-area"><a href="#">Join the community groups</a></div>
+            <div class="join-btn btn-area"><a href="https://discord.gg/3ECGtyR" target="_blank">Join the community groups</a></div>
         @endif
     </div>
     <div class="ambassador-rank">

@@ -188,4 +188,11 @@ class UserController extends Controller
             return 'false';
         }
     }
+    /*
+     *
+     * */
+    public function confirmEmail()
+    {
+        return view('home.confirmEmail');
+    }
 }

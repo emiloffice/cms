@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-<title>Multiverse Entertainment</title>
+<title>Multiverse Entertainment LLC</title>
 @endsection
 @section('content')
     <div id="banner" class="container-fluid" style="padding: 0px!important;">
