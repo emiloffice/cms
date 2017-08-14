@@ -26,7 +26,7 @@ class TwitterController extends Controller
     public function handleProviderCallback()
     {
         $user = Socialite::driver('twitter')->user();
-        $userModel = new User;
+        /*$userModel = new User;
         $userModel->name = $user->name;
         $userModel->email = 'test@multiverseinc.com';
         $userModel->avatar = $user->avatar;
@@ -34,7 +34,7 @@ class TwitterController extends Controller
         $userModel->oauth_token = $user->token;
         $userModel->oauth_types = 'facebook';
         $userModel->password = bcrypt('123456');
-        $userModel->save();
+        $userModel->save();*/
         session(['OAUTH_INFO'=>$user]);
         redirect('confirm-email');
     }
