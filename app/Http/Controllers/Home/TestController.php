@@ -9,6 +9,10 @@ class TestController extends Controller
 {
     public function index()
     {
+        /*$email = new EmailController();
+        $email->confirm();
+        print_r($email->confirm());*/
         return view('test.index');
     }
+
 }

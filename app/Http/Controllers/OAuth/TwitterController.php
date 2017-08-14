@@ -39,7 +39,5 @@ class TwitterController extends Controller
         $userModel->oauth_types = 'facebook';
         $userModel->password = bcrypt('123456');
         $userModel->save();
-        dd($userModel->id);
-        dd($user);
     }
 }

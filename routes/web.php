@@ -56,6 +56,9 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->any('user/register', 'UserController@register');
     $router->any('register', 'UserController@register');
     $router->any('confirm-email', 'UserController@confirmEmail');
+//    $router->any('send-confirm-email', 'UserController@sendConfirmEmail');
+    $router->any('send-email', 'UserController@sendConfirmEmail');
+    $router->any('verify-email', 'UserController@verifyUserEmail');
 
     $router->any('*', 'HomeController@index');
 });
@@ -64,6 +67,7 @@ Route::group(['prefix' => 'test','namespace' => 'Home'],function ($router)
 {
     $router->get('', 'TestController@index');
 });
+// 三方登录
 Route::group(['prefix' => 'OAuth','namespace' => 'OAuth'],function ($router)
 {
     $router->get('facebook-login', 'FacebookController@login');

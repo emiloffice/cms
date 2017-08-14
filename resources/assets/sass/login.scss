@@ -32,8 +32,23 @@
       border: $input-border;
       padding: 0 10px;
     }
+    .default-input-min{
+      width: 70%;
+      background: none;
+      border: $input-border;
+      padding: 0 10px;
+      margin-right: 20px;
+    }
     p {
       color: #ffffff;
+    }
+    .btn-send{
+      display: inline-block;
+      width: 90px;
+      height: inherit;
+      background: #ffffff;
+      text-align: center;
+      cursor: pointer;
     }
     .login-href {
       color: #ff00d8;;

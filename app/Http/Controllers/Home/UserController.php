@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
+use Postmark\PostmarkClient;
 use function Sodium\increment;
 
 class UserController extends Controller
@@ -193,6 +194,34 @@ class UserController extends Controller
      * */
     public function confirmEmail()
     {
+        $email = 'emil@multiverseinc.com';
+//        $res = $this->sendConfirmEmail($email);
+
         return view('home.confirmEmail');
+    }
+    public function sendConfirmEmail(Request $request)
+    {
+        $client = new PostmarkClient('dd3a9434-fae6-4fe4-a67c-e3579d36c637');
+        // Send an email:
+        $code = $this->referralCode('1','','8');
+        session(['EMAIL_CONFIRM_CODE'=>$code]);
+        $sendResult = $client->sendEmail(
+            "emil@multiverseinc.com",
+             $request->email,
+            "Multiverse Entertainment LLC",
+            "This is your registration code：".$code
+        );
+        return json_encode($sendResult);
+    }
+    public function verifyUserEmail(Request $request){
+
+        $code = session('EMAIL_CONFIRM_CODE');
+        if ($code === $request->code){
+            return 'success';
+        }else{
+            return 'error';
+
+        }
+
     }
 }
