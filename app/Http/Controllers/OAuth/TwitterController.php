@@ -30,14 +30,23 @@ class TwitterController extends Controller
         $userModel->name = $user->name;
         if ($user->email!==''){
             $userModel->email = $user->email;
+            $userModel->avatar = $user->avatar;
+            $userModel->avatar_original = $user->avatar_original;
+            $userModel->oauth_token = $user->token;
+            $userModel->oauth_types = 'facebook';
+            $userModel->password = bcrypt('123456');
+            $userModel->save();
+            redirect('user-center');
         }else{
-            $userModel->email = 'null';
+            $userModel->email = 'none';
+            $userModel->avatar = $user->avatar;
+            $userModel->avatar_original = $user->avatar_original;
+            $userModel->oauth_token = $user->token;
+            $userModel->oauth_types = 'facebook';
+            $userModel->password = bcrypt('123456');
+            $userModel->save();
+            redirect('confirm-email');
         }
-        $userModel->avatar = $user->avatar;
-        $userModel->avatar_original = $user->avatar_original;
-        $userModel->oauth_token = $user->token;
-        $userModel->oauth_types = 'facebook';
-        $userModel->password = bcrypt('123456');
-        $userModel->save();
+
     }
 }

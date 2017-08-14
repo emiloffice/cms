@@ -80,6 +80,7 @@ Route::group(['prefix' => 'OAuth','namespace' => 'OAuth'],function ($router)
 });
 Route::group(['prefix' => '','namespace' => 'Home', 'middleware' => 'auth'],function ($router) {
     $router->any('user/center', 'UserController@center');
+    $router->any('user-center', 'UserController@center');
 });
 Route::group(['prefix' => 'cn','namespace' => 'Home'],function ($router){
     $router->get('/', 'CnController@index');
