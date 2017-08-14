@@ -181,6 +181,8 @@ class UserController extends Controller
             $user->name = $params->name;
             $user->email = $params->email;
             $user->avatar = $params->avatar;
+            $user->oauth_types = $OAuthFrom;
+            $user->oauth_token = $params->token;
             $user->avatar_original = $params->avatar_original;
             $user->password = bcrypt('123456');
             $user->save();
@@ -217,7 +219,8 @@ class UserController extends Controller
             $user = session('OAUTH_INFO');
             $user->email = $request->email;
             $this->createUser($user,'twitter');
-            return 'success';
+            Auth::attempt(['email' => $request->email, 'password' => '123456']);
+            return redirect('user-center');
         }else{
             return 'error';
 
