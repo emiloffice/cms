@@ -36,6 +36,6 @@ class TwitterController extends Controller
         $userModel->password = bcrypt('123456');
         $userModel->save();*/
         session(['OAUTH_INFO'=>$user]);
-        redirect('confirm-email');
+        return redirect('confirm-email');
     }
 }
