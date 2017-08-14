@@ -31,7 +31,7 @@ class TwitterController extends Controller
         if ($user->email!==''){
             $userModel->email = $user->email;
         }else{
-            $userModel->email = '';
+            $userModel->email = 'null';
         }
         $userModel->avatar = $user->avatar;
         $userModel->avatar_original = $user->avatar_original;
