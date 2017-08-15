@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\DB;
 use Postmark\PostmarkClient;
 use function Sodium\increment;
 
@@ -76,7 +77,7 @@ class UserController extends Controller
             }
             $Point->referral_code = $this->referralCode(1);//生成的自己的推荐码数
             $Point->game_id = '1';//默认seekingdawn为1
-            $Point->points = 10;//默认seekingdawn为1
+            $Point->points = 0;//默认seekingdawn为1
             $Point->points_level = 1;//初始等级为1
             $Point->save();
             return redirect('confirm-login');
@@ -215,6 +216,17 @@ class UserController extends Controller
             return view('home.confirmEmail');
         }
     }
+    public function OAuthConfirmEmail()
+    {
+        $user = session('USER_INFO');
+        if($user->email!==''||$user->email!==null){
+            $email = $user->email;
+            return view('home.confirmEmail',compact('email'));
+        }
+        else {
+            return view('home.OauthConfirmEmail');
+        }
+    }
     public function sendConfirmEmail(Request $request)
     {
         $client = new PostmarkClient('dd3a9434-fae6-4fe4-a67c-e3579d36c637');
@@ -229,7 +241,7 @@ class UserController extends Controller
         );
         return json_encode($sendResult);
     }
-    public function verifyUserEmail(Request $request){
+    public function OauthVerifyUserEmail(Request $request){
 
         $code = session('EMAIL_CONFIRM_CODE');
         if ($code === $request->code){
@@ -238,6 +250,25 @@ class UserController extends Controller
 //            dd($user);
             $this->createUser($user,'twitter');
             Auth::attempt(['email' => $request->email, 'password' => '123456']);
+            return redirect('user-center');
+        }else{
+            return 'error';
+
+        }
+
+    }
+    public function defaultVerifyUserEmail(Request $request){
+
+        $code = session('EMAIL_CONFIRM_CODE');
+        if ($code === $request->code){
+            $email = $request->email;
+            $user = User::where('email',$email)->get();
+            if ($user!==''||$user!==null){
+                $point = Point::where('user_id', $user->id);
+                $point->points = '10';
+                $point->save();
+                Auth::attempt(['email'=>$email]);
+            }
             return redirect('user-center');
         }else{
             return 'error';

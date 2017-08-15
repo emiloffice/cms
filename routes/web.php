@@ -55,10 +55,12 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->any('user/logout', 'UserController@logout');
     $router->any('user/register', 'UserController@register');
     $router->any('register', 'UserController@register');
+    $router->any('confirm-email', 'UserController@OAuthConfirmEmail');
     $router->any('confirm-email', 'UserController@confirmEmail');
-//    $router->any('send-confirm-email', 'UserController@sendConfirmEmail');
+    $router->any('verify-email-default', 'UserController@confirmEmail');
     $router->any('send-email', 'UserController@sendConfirmEmail');
-    $router->any('verify-email', 'UserController@verifyUserEmail');
+    $router->any('verify-email-oauth', 'UserController@OauthVerifyUserEmail');
+    $router->any('verify-email-default', 'UserController@defaultVerifyUserEmail');
 
     $router->any('*', 'HomeController@index');
 });

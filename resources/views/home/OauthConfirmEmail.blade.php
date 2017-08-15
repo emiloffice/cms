@@ -23,7 +23,7 @@
 </div>
 <div class="login-content">
     <div class="container">
-        <form action="{{ url('verify-email-default') }}" class="panel" method="POST">
+        <form action="{{ url('verify-email') }}" class="panel" method="POST">
             {{--{!! csrf_field() !!}--}}
             {{ csrf_field() }}
             <div class="login-input-group">
