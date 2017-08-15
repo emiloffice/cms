@@ -55,7 +55,7 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->any('user/logout', 'UserController@logout');
     $router->any('user/register', 'UserController@register');
     $router->any('register', 'UserController@register');
-    $router->any('confirm-email', 'UserController@OAuthConfirmEmail');
+    $router->any('oauth-confirm-email', 'UserController@OAuthConfirmEmail');
     $router->any('confirm-email', 'UserController@confirmEmail');
     $router->any('verify-email-default', 'UserController@confirmEmail');
     $router->any('send-email', 'UserController@sendConfirmEmail');

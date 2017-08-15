@@ -80,7 +80,7 @@ class UserController extends Controller
             $Point->points = 0;//默认seekingdawn为1
             $Point->points_level = 1;//初始等级为1
             $Point->save();
-            return redirect('confirm-login');
+            return redirect('confirm-email');
         }
         if ($request->isMethod('get')){
             $code = $request->code;
