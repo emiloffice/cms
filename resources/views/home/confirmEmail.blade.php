@@ -28,7 +28,7 @@
             {{ csrf_field() }}
             <div class="login-input-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" class="default-input-min">
+                <input type="email" id="email" name="email" class="default-input-min" value="{{ $email }}">
                 <span onclick="sendCode()" class="btn-send">send</span>
             </div>
             <div class="login-input-group">

@@ -27,6 +27,6 @@ class TwitterController extends Controller
     {
         $user = Socialite::driver('twitter')->user();
         session(['OAUTH_INFO'=>$user]);
-        return redirect('confirm-email');
+        return redirect('oauth-confirm-email');
     }
 }

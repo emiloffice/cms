@@ -173,8 +173,11 @@ ul.loot-content-list{
 ul.loot-content-list li {
   list-style: none;
 }
+ul.loot-content-list li>p{
+  font-size: 18px;
+}
 ul.loot-content-list>li>p:last-of-type {
-  font-size: 0.18rem;
+  font-size: 0.16rem;
   color: #fff;
 }
 .ambassador-area{
@@ -221,6 +224,16 @@ ul.loot-content-list>li>p:last-of-type {
 .facebook-iframe{
   background: #000000;
   padding: 0.5rem 0;
+  .title{
+    font-size: 0.36rem;
+    line-height: 0.60rem;
+    color: #ffae00;
+    text-align: center;
+    padding: 0.64rem 0px;
+    font-family: prototype;
+    margin: 0 auto;
+    width: 6rem;
+  }
   .panel {
     background: url("img/facebook-panel-bg.png") center no-repeat;
     height:950px;

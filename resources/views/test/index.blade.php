@@ -5,6 +5,7 @@
 </head>
 <body>
     <button class="facebook-login" onclick="FB.login()">FB login</button>
+    <a href="http://www.multiverseinc.com/ambassador">ambassador</a>
 </body>
 <script>
     window.fbAsyncInit = function() {

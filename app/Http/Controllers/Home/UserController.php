@@ -220,7 +220,7 @@ class UserController extends Controller
     }
     public function OAuthConfirmEmail()
     {
-        $user = session('USER_INFO');
+        $user = session('OAUTH_INFO');
         if($user->email!==''||$user->email!==null){
             $email = $user->email;
             return view('home.confirmEmail',compact('email'));
@@ -239,7 +239,7 @@ class UserController extends Controller
             "emil@multiverseinc.com",
              $request->email,
             "Multiverse Entertainment LLC",
-            "This is your registration code：".$code
+            "Hello, This is your registration code：".$code
         );
         return json_encode($sendResult);
     }
@@ -249,7 +249,7 @@ class UserController extends Controller
         if ($code === $request->code){
             $user = session('OAUTH_INFO');
             $email = $user->email = $request->email;
-//            dd($user);
+            dd($user);
             $this->createUser($user,'twitter');
             Auth::attempt(['email' => $email, 'password' => '123456']);
             return redirect('user-center');
@@ -278,4 +278,23 @@ class UserController extends Controller
         }
 
     }
+    /*
+     * Object Array $params
+     * */
+    public function sendWelcomeEmail($params){
+        $client = new PostmarkClient("dd3a9434-fae6-4fe4-a67c-e3579d36c637");
+
+        // Send an email:
+        $sendResult = $client->sendEmailWithTemplate(
+        "emil@multiverseinc.com",
+         $params->to,
+        2870181,
+        [
+            "name" => $params->name,
+            "action_url" => "http://www.multiverseinc.com/confrim-user?token".$params->remeber_token,
+            "login_url" => "http://www.multiverseinc.com/login",
+            "username" => $params->name,
+            "support_email" => "contact@multiverseinc.com",
+        ]);
+}
 }

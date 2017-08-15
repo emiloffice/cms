@@ -117,6 +117,7 @@
     <div class="facebook-iframe">
         <div class="container">
             <div class=" panel">
+                <p class="title">LATEST NEWS  & DEVELOPMENT FROM MULTERVISE</p>
                 <div class="facebook">
                     <div class="fb-page"
                          data-href="https://www.facebook.com/MultiverseVR/"
