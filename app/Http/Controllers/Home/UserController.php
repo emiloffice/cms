@@ -186,9 +186,8 @@ class UserController extends Controller
             $user->avatar_original = $params->avatar_original;
             $user->password = bcrypt('123456');
             $user->save();
-            return $user->id;
             $Point = new Point;
-            $Point->user_id = $User->id;
+            $Point->user_id = $user->id;
             $Point->referral_code = $this->referralCode(1);//生成的自己的推荐码数
             $Point->from_referral_code = '123456';
             $Point->from_referral_id = '1';
@@ -196,6 +195,7 @@ class UserController extends Controller
             $Point->points = 10;//默认seekingdawn为1
             $Point->points_level = 1;//初始等级为1
             $Point->save();
+            return $user->id;
         }else {
             return 'false';
         }
