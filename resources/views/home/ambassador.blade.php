@@ -1,12 +1,26 @@
-@extends('layouts.master')
-@section('title')
-    <title>Multiverse • Ambassador Project</title>
-    @endsection
-@section('other')
-    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/ambassador.css') }}" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>Multiverse Entertainment LLC | Ambassador Project</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="Welcome to Multiverse Entertainment LLC, a professional virtual reality game development and publishing company.">
+    <meta name="DC.title" content="Home">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="EmilWong">
+    <link rel="shortcut icon" type="image/x-icon" href="//{{getenv('RESOURCE_PATH')}}/favicon.ico" media="screen" />
+    <link href="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/app.css') }}" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/footer.css') }}" rel="stylesheet">
-    @endsection
-@section('content')
+    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/ambassador.css') }}" rel="stylesheet">
+    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/reg.css') }}" rel="stylesheet">
+</head>
+    <div class="header">
+        <div class="container">
+            <div class="logo"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></div>
+        </div>
+    </div>
     <div class="banner ambassador-banner">
         @if($user == null || !isset($user))
                 @if(isset($code)&&$code!=='')
@@ -44,12 +58,12 @@
             <div class=" panel">
                 <div class="title"><span>LOOT</span></div>
                 <ul class="loot-list">
-                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/img/loot1.png" alt="loot"></li>
-                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/img/loot1.png" alt="loot"></li>
-                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/img/loot1.png" alt="loot"></li>
-                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/img/loot1.png" alt="loot"></li>
-                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/img/loot1.png" alt="loot"></li>
-                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/img/loot1.png" alt="loot"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Backpack.png" alt="backpacj"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Hat.png" alt="hat"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Signed Poster.png" alt="Signed Poster"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Standard Copy of “Seeking Dawn”.png" alt="loot"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/T-Shirt.png" alt="T-Shirt"></li>
+                    <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Thank you letter .png" alt="Thank you letter "></li>
                 </ul>
                 <div class="clearfix"></div>
                 <ul class="loot-content-list">
@@ -92,12 +106,39 @@
         </div>
 
     </div>
-
-    @endsection
-@section('other')
-@endsection
-@section('script')
-<script>
-
-</script>
-@endsection
+    <div class="facebook-iframe">
+        <div class="container">
+            <div class=" panel">
+                <div class="facebook">
+                    <div class="fb-page"
+                         data-href="https://www.facebook.com/MultiverseVR/"
+                         data-tabs="timeline" data-width="500" data-height="600"
+                         data-small-header="false" data-adapt-container-width="true"
+                         data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/MultiverseVR/" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/MultiverseVR/">Multiverse Entertainment</a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="am-footer">
+        <div class="container">
+            <div class="left">
+                <a href="#">Terms of Service</a>|<a href="#">Privacy Policy</a>
+                <p>Copyright © Multiverse Entertainment LLC</p>
+            </div>
+            <div class="right"></div>
+        </div>
+    </div>
+</body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/zh_CN/sdk.js#xfbml=1&version=v2.10&appId=334111223669076";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+</html>

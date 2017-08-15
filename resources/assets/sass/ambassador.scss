@@ -48,12 +48,15 @@ div#form-ambassador button[type="submit"]{
   margin-top: 0.2rem;
 }
 .ambassador-banner{
+  position: relative;
   height: 11rem !important;
   background: url(/img/am_banner_bg.png) center no-repeat;
   background-color: #000000;
   background-size: cover;
 }
 .ambassador-banner .btn-area{
+  position: absolute;
+  display: inline-block;
   font-size: 0.20rem;
   line-height: 0.45rem;
   height: 0.45rem;
@@ -61,9 +64,16 @@ div#form-ambassador button[type="submit"]{
   background: rgba(0, 0, 0, 0.5);
   border-radius: 0.1rem;
   margin-bottom: -0.8rem;
+  top: 6rem;
+  left: 50%;
+  margin-left: -126px;
+  color: #ffffff;
 }
 .join-btn.btn-area a {
   color: inherit;
+}
+.join-btn.btn-area a:visited,.join-btn.btn-area a:hover{
+  text-decoration: none;
 }
 .ambassador-rank{
   background: #000000;
@@ -71,7 +81,7 @@ div#form-ambassador button[type="submit"]{
 }
 .rank-area {
   background: url(/img/rank-bg.png) top center no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 8.76rem;
   width: 100%;
   max-width: 1200px;
@@ -94,7 +104,7 @@ div#form-ambassador button[type="submit"]{
   font-size: 0.24rem;
   color: #ffae00;
   font-weight: 300;
-  font-family: MicrosoftYaHei;
+  font-family: "Microsoft YaHei" !important;
   height: 0.96rem;
   line-height: 0.96rem;
 }
@@ -106,6 +116,7 @@ div#form-ambassador button[type="submit"]{
   height: 0.5rem;
   font-size: 0.16rem;
   color: #fff;
+  font-family: "Microsoft YaHei" !important;
 }
 .rank-table-body:last-of-type {
   border-top: 4px solid transparent;
@@ -125,7 +136,7 @@ div#form-ambassador button[type="submit"]{
 }
 .ambassador-loot .panel{
   background: url(/img/loot-panel-bg.png) top center no-repeat;
-  background-size: cover;
+  background-size: contain;
   height: 12.84rem;
   border-radius: 0.1rem;
 }
@@ -146,14 +157,21 @@ ul.loot-list {
   padding: 0.96rem 0;
   text-align: center;
 }
+ul.loot-list li{
+  list-style: none;
+}
 ul.loot-list li img{
+  height: 3rem;
   padding-bottom: 0.2rem;
 }
 ul.loot-content-list{
-  font-family: 'AdobeHeitiStd Regular';
+  font-family: "Microsoft YaHei" !important;
   font-size: 0.18rem;
   color: #ffae00;
   margin-top: 0.1rem;
+}
+ul.loot-content-list li {
+  list-style: none;
 }
 ul.loot-content-list>li>p:last-of-type {
   font-size: 0.18rem;
@@ -169,4 +187,32 @@ ul.loot-content-list>li>p:last-of-type {
 .ambassador-search {
   max-width: 4.0rem;
   margin: 0.3rem auto;
+}
+
+.header {
+  background: $theme-bg-black;
+  height: 1rem;
+  line-height: 1rem;
+}
+.am-footer {
+  padding: 0.45rem 0;
+  background-color: #000000;
+  color: #6a6a6a;
+  a {
+    color: inherit;
+  }
+}
+.facebook-iframe{
+  background: #000000;
+  padding: 0.5rem 0;
+  .panel {
+    background: url("img/facebook-panel-bg.png") center no-repeat;
+    height:950px;
+    background-size: contain;
+    .facebook{
+      width: 500px;
+      margin: 0 auto;
+      margin-top: 2.5rem;
+    }
+  }
 }
