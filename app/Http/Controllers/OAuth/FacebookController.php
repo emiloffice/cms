@@ -9,6 +9,7 @@ use Facebook\Exceptions\FacebookSDKException;
 use Facebook\Facebook;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 
 class FacebookController extends Controller
@@ -42,17 +43,23 @@ class FacebookController extends Controller
     public function handleProviderCallback()
     {
         $user = Socialite::driver('facebook')->user();
-        $userModel = new User;
-        $userModel->name = $user->name;
-        $userModel->email = $user->email;
-        $userModel->avatar = $user->avatar;
-        $userModel->avatar_original = $user->avatar_original;
-        $userModel->oauth_token = $user->token;
-        $userModel->oauth_types = 'facebook';
-        $userModel->password = bcrypt('123456');
-        $userModel->save();
-        dd($userModel->id);
-        dd($user);
+        $result = User::where('oauth_token', $user->token)->get();
+        if ($result->first()) {
+            Auth::attempt(['email'=>$result[0]->email, 'password'=>'123456']);
+            return redirect('user-center');
+        }else{
+            $userModel = new User;
+            $userModel->name = $user->name;
+            $userModel->email = $user->email;
+            $userModel->avatar = $user->avatar;
+            $userModel->avatar_original = $user->avatar_original;
+            $userModel->oauth_token = $user->token;
+            $userModel->oauth_types = 'facebook';
+            $userModel->password = bcrypt('123456');
+            $userModel->save();
+            Auth::attempt(['email'=>$userModel->email, 'password'=>'123456']);
+            return redirect('user-center');
+        }
     }
     public function login()
     {

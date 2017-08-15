@@ -249,7 +249,6 @@ class UserController extends Controller
         if ($code === $request->code){
             $user = session('OAUTH_INFO');
             $email = $user->email = $request->email;
-            dd($user);
             $this->createUser($user,'twitter');
             Auth::attempt(['email' => $email, 'password' => '123456']);
             return redirect('user-center');
