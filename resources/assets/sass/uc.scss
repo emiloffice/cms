@@ -1,16 +1,26 @@
 // Variables
 @import "variables";
 .uc-header{
+  background: $theme-bg-black;
+  height: 1rem;
+  line-height: 1rem;
   .logo{
     float: left;
   }
   .right{
     float: right;
+    >a {
+      text-decoration: none;
+      color: #ffffff;
+      font-size: 18px;
+      padding: 0 15px;
+      border-right: 3px solid #ffffff;
+    }
+    >a:last-of-type {
+      border-right: 0;
+    }
   }
-  .logout{
-    font-size: 18px;
-    color: #ffffff;
-  }
+
 }
 .uc-container {
   max-width: 8.2rem;
@@ -21,11 +31,15 @@
     margin-top: 0.1rem;
   }
 }
-.uc-header {
+/*.uc-header {
   background: $theme-bg-black;
   height: 1rem;
   line-height: 1rem;
-}
+  .right a{
+
+
+  }
+}*/
 .uc-content {
   background: url("img/uc-bg.png") no-repeat center;
   padding: 0.5rem 0;

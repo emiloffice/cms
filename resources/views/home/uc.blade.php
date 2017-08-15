@@ -19,7 +19,8 @@
     <div class="container">
         <div class="logo"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></div>
         <div class="right">
-            <a href="/logout" class="logout">logout</a>
+            <a href="{{url('ambassador')}}" class="">Home Page</a>
+            <a href="{{url('logout')}}" class="logout">Logout</a>
         </div>
     </div>
 </div>
@@ -31,7 +32,7 @@
                 <div class="main-table">
                     <div class="left">
                         {{--<div class=""></div>--}}
-                        <div class="">Security</div>
+                        <div class=""><a href="https://discord.gg/3ECGtyR" target="_blank">Join the community groups</a></div>
                         <div class="">
                             <p class="title">Quests</p>
                             <p>1. Gain 10 points for referring your first friend</p>

@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="login-input-group">
-                    <button class="login-btn-default btn-submit">Sign Up</button>
+                    <button class="login-btn-default btn-submit">Log In</button>
                     {{--<button class="login-btn-default btn-facebook">Logoin&Like</button>--}}
                     {{--<button class="btn-twitter login-btn-default">Login&Follow</button>--}}
                 </div>
