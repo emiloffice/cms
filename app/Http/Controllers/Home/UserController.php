@@ -189,10 +189,9 @@ class UserController extends Controller
             return $user->id;
             $Point = new Point;
             $Point->user_id = $User->id;
-            $Point->user_id = $User->id;
             $Point->referral_code = $this->referralCode(1);//生成的自己的推荐码数
             $Point->from_referral_code = '123456';
-            $Point->from_referral_code = '1';
+            $Point->from_referral_id = '1';
             $Point->game_id = '1';//默认seekingdawn为1
             $Point->points = 10;//默认seekingdawn为1
             $Point->points_level = 1;//初始等级为1
@@ -228,6 +227,7 @@ class UserController extends Controller
         if ($code === $request->code){
             $user = session('OAUTH_INFO');
             $user->email = $request->email;
+            dd($user);
             $this->createUser($user,'twitter');
             Auth::attempt(['email' => $request->email, 'password' => '123456']);
             return redirect('user-center');
