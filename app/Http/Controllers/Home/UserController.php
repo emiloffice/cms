@@ -262,14 +262,14 @@ class UserController extends Controller
         $code = session('EMAIL_CONFIRM_CODE');
         if ($code === $request->code){
             $email = $request->email;
-            $user = User::where('email',$email)->get();
-            if ($user!==''||$user!==null){
-                $point = Point::where('user_id', $user->id);
-                $point->points = '10';
-                $point->save();
-                Auth::attempt(['email'=>$email]);
+            $user = DB::table('users')->where('email',$email)->get();
+            if ($user[0]!==''||$user[0]!==null){
+                $user_id = $user[0]->id;
+                DB::update('update points set points = ? where user_id = ?',[10, $user_id]);
+//                Auth::attempt(['email'=>$email]);
+                return redirect('user-center');
             }
-            return redirect('user-center');
+            return redirect('confirm-email');
         }else{
             return 'error';
 
