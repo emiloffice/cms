@@ -207,7 +207,7 @@ class UserController extends Controller
     public function confirmEmail()
     {
         $user = session('USER_INFO');
-        if($user !==''||$user!==null){
+        if($user->email!==''||$user->email!==null){
             $email = $user->email;
             return view('home.confirmEmail',compact('email'));
         }
