@@ -15,6 +15,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 use Postmark\PostmarkClient;
 use function Sodium\increment;
 
@@ -64,6 +65,7 @@ class UserController extends Controller
             $User = new User;
             $User->name = $request->username;
             $User->password = bcrypt($request->password);
+            Session(['USER_PWD'=>$request->password]);
             $User->email = $request->email;
             $User->save();
             session(['USER_INFO'=>$User]);
@@ -266,7 +268,7 @@ class UserController extends Controller
             if ($user[0]!==''||$user[0]!==null){
                 $user_id = $user[0]->id;
                 DB::update('update points set points = ? where user_id = ?',[10, $user_id]);
-//                Auth::attempt(['email'=>$email]);
+                Auth::attempt(['email'=>$email, 'password'=> session('USER_PWD')]);
                 return redirect('user-center');
             }
             return redirect('confirm-email');
