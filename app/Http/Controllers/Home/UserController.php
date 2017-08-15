@@ -65,6 +65,7 @@ class UserController extends Controller
             $User->password = bcrypt($request->password);
             $User->email = $request->email;
             $User->save();
+            session(['USER_INFO'=>$User]);
             $Point = new Point;
             $Point->user_id = $User->id;
             $from_referral_id = Point::where('referral_code', $request->referral_code)->value('user_id');
@@ -78,7 +79,7 @@ class UserController extends Controller
             $Point->points = 10;//默认seekingdawn为1
             $Point->points_level = 1;//初始等级为1
             $Point->save();
-            return redirect('login');
+            return redirect('confirm-login');
         }
         if ($request->isMethod('get')){
             $code = $request->code;
@@ -205,7 +206,14 @@ class UserController extends Controller
      * */
     public function confirmEmail()
     {
-        return view('home.confirmEmail');
+        $user = session('USER_INFO');
+        if($user !==''||$user!==null){
+            $email = $user->email;
+            return view('home.confirmEmail',compact('email'));
+        }
+        else {
+            return view('home.confirmEmail');
+        }
     }
     public function sendConfirmEmail(Request $request)
     {
