@@ -59,8 +59,7 @@ class FacebookController extends Controller
             $userModel->password = bcrypt('123456');
             $userModel->save();
             Auth::attempt(['email'=>$userModel->email, 'password'=>'123456']);
-            print_r(Auth::user());
-//            return redirect('user-center');
+            return redirect('user-center');
         }
     }
     public function login()
