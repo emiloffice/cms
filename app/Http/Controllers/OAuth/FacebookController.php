@@ -47,7 +47,7 @@ class FacebookController extends Controller
         $res = DB::table('users')->where('oauth_token', $user->token)->orWhere('email', $user->email)->first();
         if ($res) {
             Auth::attempt(['email'=>$res->email, 'password'=>'123456']);
-            dd(Auth::user());
+            print_r(Auth::user());
 //            return redirect('user-center');
         }else{
             $userModel = new User;
@@ -60,7 +60,7 @@ class FacebookController extends Controller
             $userModel->password = bcrypt('123456');
             $userModel->save();
             Auth::attempt(['email'=>$userModel->email, 'password'=>'123456']);
-            dd(Auth::user());
+            print_r(Auth::user());
 //            return redirect('user-center');
         }
     }
