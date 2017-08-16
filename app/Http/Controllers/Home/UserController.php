@@ -226,7 +226,8 @@ class UserController extends Controller
         $res = DB::table('users')->where('oauth_token', $token)->orWhere('email', $email)->first();
         if ($res){
             Auth::attempt(['email'=>$email, 'password' => '123456']);
-            dd(Auth::user());
+            $u = Auth::user();
+            dd($u);
             return redirect('user-center');
         }else{
             if($user->email!==''||$user->email!==null){
