@@ -23,7 +23,7 @@
                 @if($user == null || !isset($user))
                     <a href="{{url('login')}}" class="logout">Sign in</a>
                     @else
-                    <a href="{{url('ambassador')}}" class="">My Profile</a>
+                    <a href="{{url('user-center')}}" class="">My Profile</a>
                     <a href="{{url('logout')}}" class="">Logout</a>
                 @endif
             </div>

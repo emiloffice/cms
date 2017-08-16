@@ -19,7 +19,7 @@
     <div class="container">
         <div class="logo"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></div>
         <div class="right">
-            <a href="{{url('user-center')}}" class="">Home Page</a>
+            <a href="{{url('ambassador')}}" class="">Home Page</a>
             <a href="{{url('logout')}}" class="logout">Logout</a>
         </div>
     </div>
