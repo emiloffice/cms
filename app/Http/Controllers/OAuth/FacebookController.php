@@ -44,7 +44,7 @@ class FacebookController extends Controller
     public function handleProviderCallback()
     {
         $user = Socialite::driver('facebook')->user();
-        $result = DB::table('users')->where('oauth_token', $user->token)->get();
+        $result = User::where('oauth_token', $user->token)->get();
         if ($result->first()) {
             Auth::attempt(['email'=>$result[0]->email, 'password'=>'123456']);
             return redirect('user-center');
@@ -59,7 +59,8 @@ class FacebookController extends Controller
             $userModel->password = bcrypt('123456');
             $userModel->save();
             Auth::attempt(['email'=>$userModel->email, 'password'=>'123456']);
-            return redirect('user-center');
+
+//            return redirect('user-center');
         }
     }
     public function login()
