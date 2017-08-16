@@ -51,7 +51,7 @@
                     <div class="right">
                         <div class="profile">
                             @if($user->avatar_original)
-                                <img src="{{ $user->avatar_original }}//{{getenv('RESOURCE_PATH')}}/img/headimg.png" alt="profile">
+                                <img src="{{ $user->avatar_original }}" alt="profile">
                                 @else
                                 <img src="//{{getenv('RESOURCE_PATH')}}/img/headimg.png" alt="profile">
                             @endif

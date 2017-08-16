@@ -15,6 +15,7 @@
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/footer.css') }}" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/ambassador.css') }}" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/reg.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_371115_i7q3yrjs84a38fr.css">
 </head>
     <div class="header">
         <div class="container">
@@ -52,7 +53,7 @@
 
                 @foreach($points as $p)
                 <div class="col-md-12 col-lg-12 rank-table-body">
-                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank">Tier {{ $p->points_level }}</div>
+                    <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4 rank"><span class="iconfont icon-zuanshi"></span> Tier {{ $p->points_level }}</div>
                     <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">{{ $p->name }}</div>
                     <div class="col-md-4 col-lg-4 col-xs-4 col-sm-4">{{ $p->points }}</div>
                 </div>
@@ -142,6 +143,7 @@
         </div>
     </div>
     <div id="fb-root"></div>
+    <script src="http://at.alicdn.com/t/font_371115_i7q3yrjs84a38fr.js"></script>
     <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;

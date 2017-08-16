@@ -264,6 +264,7 @@ class UserController extends Controller
             $user = session('OAUTH_INFO');
             $email = $user->email = $request->email;
             $this->createUser($user,'twitter');
+            Point::where('referral_code',$request->referral_code)->increment('points', 5);
             Auth::attempt(['email' => $email, 'password' => '123456']);
             return redirect('user-center');
         }else{

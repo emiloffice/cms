@@ -11,6 +11,7 @@
     <meta name="author" content="EmilWong">
     <link rel="shortcut icon" type="image/x-icon" href="//{{getenv('RESOURCE_PATH')}}/favicon.ico" media="screen" />
     <link href="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <link href="//{{getenv('RESOURCE_PATH')}}/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/app.css') }}" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/login.css') }}" rel="stylesheet">
 </head>
@@ -36,8 +37,8 @@
 
                 <div class="login-input-group">
                     <button class="login-btn-default btn-submit">Log In</button>
-                    {{--<button class="login-btn-default btn-facebook">Logoin&Like</button>--}}
-                    {{--<button class="btn-twitter login-btn-default">Login&Follow</button>--}}
+                    <a class="reg-btn-oauth" href="{{url('OAuth/facebook')}}"><p><i class="fa fa-facebook"></i> Log In</p></a>
+                    <a class="reg-btn-oauth" href="{{url('OAuth/twitter')}}"><p><i class="fa fa-twitter"></i> Log In</p></a>
                 </div>
             </form>
         </div>

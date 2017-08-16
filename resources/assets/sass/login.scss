@@ -39,7 +39,7 @@
       padding: 0 10px;
       margin-right: 20px;
     }
-    p {
+    >p{
       color: #ffffff;
     }
     .btn-send{
@@ -70,6 +70,26 @@
 }
 .login-btn-default:first-of-type{
   margin-left: 0;
+}
+.reg-btn-oauth {
+  display: inline-block;
+  width: 1.17rem;
+  height: 0.3rem;
+  line-height: 0.3rem;
+  text-align: center;
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+  margin-left: 9px;
+  cursor: pointer;
+}
+.reg-btn-oauth:link,.reg-btn-oauth:visited,.reg-btn-oauth:hover,.reg-btn-oauth:active{
+  color: initial;
+  text-decoration: none;
 }
 .btn-submit {
   background-color: #ffae00;
