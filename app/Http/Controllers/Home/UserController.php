@@ -221,13 +221,21 @@ class UserController extends Controller
     public function OAuthConfirmEmail()
     {
         $user = session('OAUTH_INFO');
-        if($user->email!==''||$user->email!==null){
-            $email = $user->email;
-            return view('home.OauthConfirmEmail',compact('email'));
+        $token = $user->token;
+        $email = $user->email;
+        $res = DB::table('users')->where('oauth_token', $token)->orWhere('email', $email)->first();
+        if ($res){
+            Auth::attempt(['email'=>$email, 'password' => '123456']);
+        }else{
+            if($user->email!==''||$user->email!==null){
+                $email = $user->email;
+                return view('home.OauthConfirmEmail',compact('email'));
+            }
+            else {
+                return view('home.OauthConfirmEmail');
+            }
         }
-        else {
-            return view('home.OauthConfirmEmail');
-        }
+
     }
     public function sendConfirmEmail(Request $request)
     {
