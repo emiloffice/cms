@@ -41,7 +41,7 @@
 
 .reg-btn-default {
   display: inline-block;
-  width: 1.18rem;
+  width: 1.17rem;
   height: 0.3rem;
   background-color: #bfbfbf;
   color: #000000;
@@ -54,7 +54,7 @@
 }
 .reg-btn-oauth {
   display: inline-block;
-  width: 1.18rem;
+  width: 1.17rem;
   height: 0.3rem;
   line-height: 0.3rem;
   text-align: center;
@@ -69,7 +69,7 @@
   cursor: pointer;
 }
 .reg-btn-oauth:link,.reg-btn-oauth:visited,.reg-btn-oauth:hover,.reg-btn-oauth:active{
-  color: initial;
+  color: #000000;
   text-decoration: none;
 }
 .reg-btn-default:first-of-type{
