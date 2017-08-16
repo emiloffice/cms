@@ -44,6 +44,7 @@ class FacebookController extends Controller
     public function handleProviderCallback()
     {
         $user = Socialite::driver('facebook')->user();
+        dd($user->token);
         $res = DB::table('users')->where('oauth_token', $user->token)->first();
         dd($res);
         if ($res) {
