@@ -223,7 +223,7 @@ class UserController extends Controller
         $user = session('OAUTH_INFO');
         if($user->email!==''||$user->email!==null){
             $email = $user->email;
-            return view('home.confirmEmail',compact('email'));
+            return view('home.OauthConfirmEmail',compact('email'));
         }
         else {
             return view('home.OauthConfirmEmail');
