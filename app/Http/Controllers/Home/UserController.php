@@ -33,7 +33,7 @@ class UserController extends Controller
     {
         if (Auth::attempt(['email' => $request->email, 'password'=> $request->password])){
 
-            return redirect('user/center');
+            return redirect('user-center');
         }
         return view('home.login');
     }
@@ -225,7 +225,7 @@ class UserController extends Controller
         $email = $user->email;
         $res = DB::table('users')->where('oauth_token', $token)->orWhere('email', $email)->first();
         if ($res){
-            Auth::attempt(['email'=>$email, 'password' => '123456']);
+            Auth::attempt(['email'=>$res->email, 'password' => '123456']);
             $u = Auth::user();
             dd($u);
             return redirect('user-center');
