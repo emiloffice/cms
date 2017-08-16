@@ -44,12 +44,19 @@
                         <div class="">
                             <p class="title">Invite friends</p>
                             <div><input type="text" value="{{ url('ambassador') }}/{{ $point->referral_code }}" readonly id="link"><button id="copy" class="refer" onclick="copy('link', 'copy')">Copy & Share</button></div>
-                            <p>The six digits "<span class="special-text">{{ $point->referral_code }}</span>" on the link are a referral code</span>
+                            <p>The six digits "<span class="special-text">{{ $point->referral_code }}</span>" on the link are a referral code</p>
                         </div>
                     </div>
 
                     <div class="right">
-                        <div class="profile"><img src="//{{getenv('RESOURCE_PATH')}}/img/headimg.png" alt="profile"><p class="name">{{ $user->name }}</p></div>
+                        <div class="profile">
+                            @if($user->avatar_original)
+                                <img src="{{ $user->avatar_original }}//{{getenv('RESOURCE_PATH')}}/img/headimg.png" alt="profile">
+                                @else
+                                <img src="//{{getenv('RESOURCE_PATH')}}/img/headimg.png" alt="profile">
+                            @endif
+                            <p class="name">{{ $user->name }}</p>
+                        </div>
                         <ul class="reward-list">
                             <p class="text-center">Did not get rewarded!</p>
                             {{--<li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
