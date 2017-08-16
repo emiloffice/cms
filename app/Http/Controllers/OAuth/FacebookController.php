@@ -45,8 +45,9 @@ class FacebookController extends Controller
     {
         $user = Socialite::driver('facebook')->user();
         $result = User::where('oauth_token', $user->token)->get();
-        dd($result->first());
-        if ($result->first()) {
+        $res = DB::table('user')->where('oauth_token', $user->token)->first();
+        dd($res);
+        if ($res) {
             Auth::attempt(['email'=>$result[0]->email, 'password'=>'123456']);
             dd(Auth::user());
 //            return redirect('user-center');
