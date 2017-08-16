@@ -43,9 +43,14 @@ class UserController extends Controller
         $user_id = $user->id;
         $game_id = 1;//默认为seekingdawnid
         $point = Point::where(['user_id'=>$user_id,'game_id'=>$game_id])->first();
-        $friends = Point::where('from_referral_code',$point->referral_code)
-            ->join('users', 'points.user_id', '=', 'users.id')
-            ->get();
+        if ($point->referral_code){
+            $friends = Point::where('from_referral_code',$point->referral_code)
+                ->join('users', 'points.user_id', '=', 'users.id')
+                ->get();
+        }else{
+            $friends = '';
+        }
+
         return view('home.uc', compact('user','point','friends'));
     }
     public function logout()
