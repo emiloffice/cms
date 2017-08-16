@@ -42,7 +42,7 @@ class UserController extends Controller
         $user = Auth::user();
         $user_id = $user->id;
         $game_id = 1;//默认为seekingdawnid
-        $point = Point::where(['user_id'=>$user_id,'game_id'=>$game_id])->first();
+        $point = DB::table('points')->where(['user_id'=>$user_id,'game_id'=>$game_id])->first();
         if ($point->referral_code){
             $friends = Point::where('from_referral_code',$point->referral_code)
                 ->join('users', 'points.user_id', '=', 'users.id')
