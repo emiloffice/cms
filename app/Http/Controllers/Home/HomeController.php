@@ -124,6 +124,7 @@ class HomeController extends Controller
 
     public function ambassadorCode($code)
     {
+        session(['FROM_REFERRAL_CODE'=>$code]);
         return view('home.ambassadorCode', compact('code'));
     }
     public function ambassadorSearch(Request $request)

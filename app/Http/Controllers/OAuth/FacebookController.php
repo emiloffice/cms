@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\OAuth;
 
 use app\Http\Controllers\Home\UserController;
+use App\Point;
 use App\User;
 use Facebook\Exceptions\FacebookResponseException;
 use Facebook\Exceptions\FacebookSDKException;
@@ -46,7 +47,7 @@ class FacebookController extends Controller
         $user = Socialite::driver('facebook')->user();
         $res = DB::table('users')->where('oauth_token', $user->token)->orWhere('email', $user->email)->first();
         if ($res) {
-            Auth::attempt(['email'=>$res->email, 'password'=>'123456']);
+            Auth::attempt(['email'=>$user->email, 'password'=>'123456']);
             return redirect('user-center');
         }else{
             $userModel = new User;
@@ -58,7 +59,24 @@ class FacebookController extends Controller
             $userModel->oauth_types = 'facebook';
             $userModel->password = bcrypt('123456');
             $userModel->save();
-            Auth::attempt(['email'=>$userModel->email, 'password'=>'123456']);
+            $point = new Point;
+            $point->user_id = $userModel->id;
+            $point->game_id = '1';
+            $point->referral_code = $this->referralCode(1);
+            $from_referral_code = session('FROM_REFERRAL_CODE');
+            $from_referral_id = '';
+            if ($from_referral_code){
+                $p = DB::table('points')->where('referral_code', $from_referral_code)->first();
+                if ($p){
+                    $from_referral_id = $p->user_id;
+                }
+            }
+            $point->from_referral_id = $from_referral_id;
+            $point->from_referral_code = $from_referral_code;
+            $point->points = 10;
+            $point->points_level = '1';
+            $point->save();
+            Auth::attempt(['email'=>$user->email, 'password'=>'123456']);
             return redirect('user-center');
         }
     }
@@ -166,5 +184,40 @@ class FacebookController extends Controller
     public function authInfo()
     {
         return 'auth-info';
+    }
+        /*
+     * @param int $no_of_codes//定义一个int类型的参数 用来确定生成多少个优惠码
+     * @param array $exclude_codes_array//定义一个exclude_codes_array类型的数组
+     * @param init $code_length //定义一个code_length的参数来确定优惠码的长度
+     * @return array//返回数组
+     * */
+    public function referralCode($no_of_codes, $exclude_codes_array='', $code_length = 6)
+    {
+        $characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        $promotion_codes = array();//这个数组用来接收生成的优惠码
+        for ($j = 0; $j < $no_of_codes; $j++){
+            $code = "";
+            for ($i = 0; $i < $code_length; $i++){
+                $code .= $characters[mt_rand(0, strlen($characters) - 1)];
+            }
+            //如果生成的6位随机数不在我们定义的$promotion_codes函数里
+            if (!in_array($code, $promotion_codes)){
+                if (is_array($exclude_codes_array)){
+                    if (!in_array($code, $exclude_codes_array)){//排除已经使用的优惠码数
+                        $promotion_codes[$j] = $code;//将新生成的优惠码赋值给promotion_codes数组
+                    }else{
+                        $j--;
+                    }
+                }else {
+                    $promotion_codes[$j] = $code;//将优惠码赋值给数组
+                }
+            }else{
+                $j--;
+            }
+        }
+        if ($no_of_codes = 1){
+            $promotion_codes = $promotion_codes[0];
+        }
+        return $promotion_codes;
     }
 }

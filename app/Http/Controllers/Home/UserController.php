@@ -198,8 +198,8 @@ class UserController extends Controller
             $Point = new Point;
             $Point->user_id = $user->id;
             $Point->referral_code = $this->referralCode(1);//生成的自己的推荐码数
-            $Point->from_referral_code = '123456';
-            $Point->from_referral_id = '1';
+            $Point->from_referral_code = '';
+            $Point->from_referral_id = '';
             $Point->game_id = '1';//默认seekingdawn为1
             $Point->points = 10;//默认seekingdawn为1
             $Point->points_level = 1;//初始等级为1
