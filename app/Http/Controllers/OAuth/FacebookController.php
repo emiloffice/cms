@@ -10,6 +10,7 @@ use Facebook\Facebook;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Laravel\Socialite\Facades\Socialite;
 
 class FacebookController extends Controller
@@ -43,7 +44,7 @@ class FacebookController extends Controller
     public function handleProviderCallback()
     {
         $user = Socialite::driver('facebook')->user();
-        $result = User::where('oauth_token', $user->token)->get();
+        $result = DB::table('users')->where('oauth_token', $user->token)->get();
         if ($result->first()) {
             Auth::attempt(['email'=>$result[0]->email, 'password'=>'123456']);
             return redirect('user-center');
