@@ -35,7 +35,11 @@ class UserController extends Controller
 
             return redirect('user-center');
         }
-        return view('home.login');
+        if ($this->is_mobile_request()){
+            return view('mobile.login');
+        } else {
+            return view('home.login');
+        }
     }
     public function center()
     {
@@ -94,7 +98,11 @@ class UserController extends Controller
         }
         if ($request->isMethod('get')){
             $code = $request->code;
-            return view('home.register', compact('code'));
+            if ($this->is_mobile_request()){
+                return view('mobile.register', compact('code'));
+            } else {
+                return view('home.register', compact('code'));
+            }
         }
     }
     /*
@@ -161,7 +169,11 @@ class UserController extends Controller
                 ->get();
             $point = Point::where('referral_code', $code)->first();
         }
+        if ($this->is_mobile_request()){
+            return view('mobile.ambassador', compact('points','user','code'));
+        } else{
             return view('home.ambassador', compact('points','user','code'));
+        }
     }
     /*
      * @param init $points

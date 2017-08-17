@@ -1,2 +1,13 @@
 // Variables
 @import "variables";
+footer,.footer {
+  padding: 0.45rem 0;
+  background-color: #000000;
+  color: #6a6a6a;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  a {
+    color: inherit;
+  }
+}
