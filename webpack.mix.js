@@ -16,7 +16,8 @@ mix.js('resources/assets/js/app.js', 'public/js')
     .sass('resources/assets/sass/ambassador.scss', 'public/css')
     .sass('resources/assets/sass/footer.scss', 'public/css')
     .sass('resources/assets/sass/reg.scss', 'public/css')
-    .sass('resources/assets/sass/uc.scss', 'public/css');
+    .sass('resources/assets/sass/uc.scss', 'public/css')
+    .sass('resources/assets/sass/mAmbassador.scss', 'public/css');
 if (mix.config.inProduction) {
     mix.version();
 }

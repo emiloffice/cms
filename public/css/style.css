@@ -880,9 +880,10 @@ nav ul.media-link>li{
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     background: url("https://s3-us-west-2.amazonaws.com/multiverseinc/img/creators_banner.jpg") no-repeat center;
     background-size: cover;
+    padding: 46px 15px;
 }
 .creators .content{
-    padding: 6rem 1.5rem;
+    /*padding: 6rem 1.5rem;*/
 }
 .creators .content .name{
     font-size: 14px;
