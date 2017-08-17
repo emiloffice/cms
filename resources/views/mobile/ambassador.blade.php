@@ -11,10 +11,8 @@
     <meta name="author" content="EmilWong">
     <link rel="shortcut icon" type="image/x-icon" href="//{{getenv('RESOURCE_PATH')}}/favicon.ico" media="screen" />
     <link href="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
-    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/app.css') }}" rel="stylesheet">
-    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/footer.css') }}" rel="stylesheet">
-    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/mAmbassador.css') }}" rel="stylesheet">
-    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/reg.css') }}" rel="stylesheet">
+    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/m.css') }}" rel="stylesheet">
+    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/m-am.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="http://at.alicdn.com/t/font_371115_i7q3yrjs84a38fr.css">
 </head>
 <div class="header">

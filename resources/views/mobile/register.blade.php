@@ -13,7 +13,6 @@
     <link href="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/m.css') }}" rel="stylesheet">
-    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/m-reg.css') }}" rel="stylesheet">
 </head>
 <body>
     <div class="header">
