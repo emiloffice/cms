@@ -50,8 +50,11 @@ class UserController extends Controller
         }else{
             $friends = '';
         }
-
-        return view('home.uc', compact('user','point','friends'));
+        if ($this->is_mobile_request()){
+            return view('mobile.uc', compact('user','point','friends'));
+        } else{
+            return view('home.uc', compact('user','point','friends'));
+        }
     }
     public function logout()
     {

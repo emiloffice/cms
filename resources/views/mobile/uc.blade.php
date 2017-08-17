@@ -11,11 +11,11 @@
     <meta name="author" content="EmilWong">
     <link rel="shortcut icon" type="image/x-icon" href="//{{getenv('RESOURCE_PATH')}}/favicon.ico" media="screen" />
     <link href="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
-    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/app.css') }}" rel="stylesheet">
-    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/uc.css') }}" rel="stylesheet">
+    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/m.css') }}" rel="stylesheet">
+    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/m-uc.css') }}" rel="stylesheet">
 </head>
 <body>
-<div class="uc-header">
+<div class="header">
     <div class="container">
         <div class="logo"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></div>
         <div class="right">
@@ -28,41 +28,38 @@
     <div class="container">
         <div action="#" class="panel">
             <div class="uc-container">
+                <div class="profile">
+                    @if($user->avatar_original)
+                        <img src="{{ $user->avatar_original }}" alt="profile">
+                    @else
+                        <img src="//{{getenv('RESOURCE_PATH')}}/img/headimg.png" alt="profile">
+                    @endif
+                    <p class="name">{{ $user->name }}</p>
+                </div>
+                <ul class="reward-list">
+                    <p class="text-center">Did not get rewarded!</p>
+                    {{--<li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
+                    <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
+                    <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>--}}
+                </ul>
                 <p class="title">Base information & friends</p>
                 <div class="main-table">
-                    <div class="left">
-                        {{--<div class=""></div>--}}
-                        <div class=""><a href="https://discord.gg/3ECGtyR" target="_blank">Join the community groups</a></div>
-                        <div class="">
-                            <p class="title">Quests</p>
-                            <p>1. Gain 10 points for referring your first friend</p>
-                            <p>2. Gain 5 points for liking our Facebook Page</p>
-                            <p>3. Gain 5 point for "following" our Facebook page</p>
-                            <p>4. Gain 5 points for joining our community group</p>
-                            <p>5. Gain 5 points for following our Twitter Page</p>
-                        </div>
-                        <div class="">
-                            <p class="title">Invite friends</p>
-                            <div><input type="text" value="{{ url('ambassador') }}/{{ $point->referral_code }}" readonly id="link"><button id="copy" class="refer" onclick="copy('link', 'copy')">Copy & Share</button></div>
-                            <p>The six digits "<span class="special-text">{{ $point->referral_code }}</span>" on the link are a referral code</p>
-                        </div>
+                    <div class=""><a href="https://discord.gg/3ECGtyR" target="_blank">Join the community groups</a></div>
+                    <div class="">
+                        <p class="title">Quests</p>
+                        <p>1. Gain 10 points for referring your first friend</p>
+                        <p>2. Gain 5 points for liking our Facebook Page</p>
+                        <p>3. Gain 5 point for "following" our Facebook page</p>
+                        <p>4. Gain 5 points for joining our community group</p>
+                        <p>5. Gain 5 points for following our Twitter Page</p>
                     </div>
-
-                    <div class="right">
-                        <div class="profile">
-                            @if($user->avatar_original)
-                                <img src="{{ $user->avatar_original }}" alt="profile">
-                                @else
-                                <img src="//{{getenv('RESOURCE_PATH')}}/img/headimg.png" alt="profile">
-                            @endif
-                            <p class="name">{{ $user->name }}</p>
+                    <div class="">
+                        <p class="title">Invite friends</p>
+                        <div>
+                        <input type="text" value="{{ url('ambassador') }}/{{ $point->referral_code }}" readonly id="link">
+                        <button id="copy" class="refer" onclick="copy('link', 'copy')">Copy</button>
                         </div>
-                        <ul class="reward-list">
-                            <p class="text-center">Did not get rewarded!</p>
-                            {{--<li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
-                            <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
-                            <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>--}}
-                        </ul>
+                        <p>The six digits "<span class="special-text">{{ $point->referral_code }}</span>" on the link are a referral code</p>
                     </div>
                 </div>
                 <p class="title">Recommended friends</p>
