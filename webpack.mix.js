@@ -19,7 +19,10 @@ mix.js('resources/assets/js/app.js', 'public/js')
     .sass('resources/assets/sass/uc.scss', 'public/css')
     .sass('resources/assets/sass/m-am.scss', 'public/css');
 mix.js('resources/assets/js/m.js', 'public/js')
-    .sass('resources/assets/sass/m.scss', 'public/css');
+    .sass('resources/assets/sass/m.scss', 'public/css')
+    .sass('resources/assets/sass/m-reg.scss', 'public/css')
+    .sass('resources/assets/sass/m-login.scss', 'public/css')
+    .sass('resources/assets/sass/m-uc.scss', 'public/css');
 if (mix.config.inProduction) {
     mix.version();
 }
