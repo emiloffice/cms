@@ -31,7 +31,8 @@
         </div>
     </div>
     <div class="banner ambassador-banner">
-        @if($user == null || !isset($user))
+        <div class="join-btn btn-area" onclick="join()">Join the community groups</div>
+        {{--@if($user == null || !isset($user))
                 @if(isset($code)&&$code!=='')
                 <div class="join-btn btn-area"><a href="{{ url('register') }}?code={{ $code }}">Join the ambassador project</a></div>
                 @else
@@ -39,7 +40,7 @@
                 @endif
             @else
             <div class="join-btn btn-area"><a href="https://discord.gg/3ECGtyR" target="_blank">Join the community groups</a></div>
-        @endif
+        @endif--}}
     </div>
     <div class="ambassador-rank">
         <div class="container">
@@ -144,6 +145,23 @@
     </div>
     <div id="fb-root"></div>
     <script src="http://at.alicdn.com/t/font_371115_i7q3yrjs84a38fr.js"></script>
+    <script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-3.2.1.js"></script>
+    <script src="//{{getenv('RESOURCE_PATH')}}/layer/v3.0.3/layer.js"></script>
+    <script>
+        function  join() {
+            layer.confirm('It looks like you do not have a login account？', {
+                btn: ['Log in','Sign up'], title: 'Message'
+            }, function(){
+                window.location.href = "{{ url('login', '', true) }}";
+            }, function(){
+                @if(isset($code))
+                    window.location.href = "{{ url('register', '' , true) }}?code={{$code}}";
+                    @else
+                    window.location.href = "{{ url('register', '' , true) }}";
+                @endif
+            });
+        }
+    </script>
     <script>(function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
