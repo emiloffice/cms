@@ -22,7 +22,7 @@
     @endif
     <div class="container contact-form">
         <h2 class="text-center">Got a question for us?</h2>
-        <form action="{{ url('contact', '',true) }}" class="" method="post">
+        <form action="{{ url('contact', '', true) }}" class="" method="post">
             {{ csrf_field() }}
             <div class="contact-input col-lg-6">
                 <div class="form-group">
@@ -87,7 +87,7 @@
     </div>--}}
     @endsection
 @section('other')
-    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCWrXFcigxn4wV3r1vKeX-k6GUorhCgQhY&sensor=false"></script>
+    <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyCWrXFcigxn4wV3r1vKeX-k6GUorhCgQhY&sensor=false"></script>
 @endsection
 @section('script')
 <script>
