@@ -15,7 +15,7 @@
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/footer.css') }}" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/ambassador.css') }}" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/reg.css') }}" rel="stylesheet">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_371115_i7q3yrjs84a38fr.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_371115_i7q3yrjs84a38fr.css">
 </head>
     <div class="header">
         <div class="container">
@@ -144,7 +144,7 @@
         </div>
     </div>
     <div id="fb-root"></div>
-    <script src="http://at.alicdn.com/t/font_371115_i7q3yrjs84a38fr.js"></script>
+    <script src="//at.alicdn.com/t/font_371115_i7q3yrjs84a38fr.js"></script>
     <script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-3.2.1.js"></script>
     <script src="//{{getenv('RESOURCE_PATH')}}/layer/v3.0.3/layer.js"></script>
     <script>
