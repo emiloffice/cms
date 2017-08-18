@@ -36,11 +36,11 @@
 
                 <div class="login-input-group">
                     <button class="login-btn-default btn-submit">Log In</button>
-                    <a class="reg-btn-oauth" href="{{url('OAuth/facebook')}}"><p><i class="fa fa-facebook"></i> Log In</p></a>
-                    <a class="reg-btn-oauth" href="{{url('OAuth/twitter')}}"><p><i class="fa fa-twitter"></i> Log In</p></a>
+                    <a class="reg-btn-oauth" href="{{url('OAuth/facebook', '', true)}}"><p><i class="fa fa-facebook"></i> Log In</p></a>
+                    <a class="reg-btn-oauth" href="{{url('OAuth/twitter', '', true)}}"><p><i class="fa fa-twitter"></i> Log In</p></a>
                 </div>
                 <div class="login-input-group">
-                    <p>If you have an account, <a href="{{ url('register') }}" class="login-href">sign up</a> now!</p>
+                    <p>If you have an account, <a href="{{ url('register', '',true) }}" class="login-href">sign up</a> now!</p>
                 </div>
             </form>
     </div>

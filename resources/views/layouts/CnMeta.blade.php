@@ -8,7 +8,7 @@
 @section('title')
     <title>Multiverse Entertainment LLC • 深圳摩登世纪科技有限公司</title>
 @show
-<link rel="shortcut icon" type="image/x-icon" href="{{ url('favicon.ico') }}" media="screen" />
+<link rel="shortcut icon" type="image/x-icon" href="{{ url('favicon.ico', '', true) }}" media="screen" />
 <link href="/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
 <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/style.css" rel="stylesheet">
