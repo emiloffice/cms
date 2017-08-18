@@ -20,7 +20,7 @@
             <li class="fl col-lg-3 col-md-3"><i class="iconfont icon-playstation"></i></li>
         </ul>
     </div>
-    <div class="clearfix"></div>
+    <span class="clearfix"></span>
 </div>
 <script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-3.2.1.js"></script>
 <script src="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/js/bootstrap.min.js"></script>
