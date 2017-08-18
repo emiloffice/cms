@@ -48,7 +48,7 @@
                 </p>
             <a class="contact" href="http://www.multiverseinc.com/contact">CONTACT</a>
         </div>
-
+        <div class="clearfix"></div>
     </div>
     <!--dev blog-->
     <div class="dev-blog container-fluid hidden">
