@@ -26,7 +26,7 @@
 </div>
 <div class="uc-content">
     <div class="container">
-        <div action="#" class="panel">
+        <div class="panel">
             <div class="uc-container">
                 <div class="profile">
                     @if($user->avatar_original)

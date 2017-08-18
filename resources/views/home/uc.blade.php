@@ -26,7 +26,7 @@
 </div>
 <div class="uc-content">
     <div class="container">
-        <div action="#" class="panel">
+        <div class="panel">
             <div class="uc-container">
                 <p class="title">Base information & friends</p>
                 <div class="main-table">
