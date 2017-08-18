@@ -22,7 +22,7 @@
         </div>
     </div>
     <div class="login-content">
-            <form action="{{ url('user/login') }}" class="panel" method="POST">
+            <form action="{{ url('login', true) }}" class="panel" method="POST">
                 {{--{!! csrf_field() !!}--}}
                 {{ csrf_field() }}
                 <div class="login-input-group">

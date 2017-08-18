@@ -24,7 +24,7 @@
     @endif
     <div class="container contact-form">
         <h2 class="text-center">有什么好的意见和建议?</h2>
-        <form action="{{ url('contact') }}" class="" method="post">
+        <form action="{{ url('contact', true) }}" class="" method="post">
             {{ csrf_field() }}
             <div class="contact-input col-lg-6">
                 <div class="form-group">

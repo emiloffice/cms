@@ -23,7 +23,7 @@
     </div>
     <div class="reg-content">
         <div class="container">
-            <form action="{{ url('user/register') }}" class="panel" method="POST">
+            <form action="{{ url('register', true) }}" class="panel" method="POST">
                 {{--{!! csrf_field() !!}--}}
                 {{ csrf_field() }}
                 <div class="reg-input-group">

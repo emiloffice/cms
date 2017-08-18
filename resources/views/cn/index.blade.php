@@ -81,7 +81,7 @@
     <div class="subscribe">
         <div class="content">
             <div class="title text-center">想要加入VR创新领域？</div>
-            <form action="{{ url('subscribe') }}" class="form_content" method="post">
+            <form action="{{ url('subscribe', true) }}" class="form_content" method="post">
                 <input type="email" class="email_input" placeholder="你的邮箱" name="email" id="email">
                 <button class="subscribe_btn" type="button" onclick="form_submit()">订阅</button>
             </form>
