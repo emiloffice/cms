@@ -45,11 +45,11 @@
                 </div>
                 <div class="reg-input-group">
                     <button class="reg-btn-default btn-submit">Register</button>
-                    <a class="reg-btn-oauth" href="{{url('OAuth/facebook')}}"><p><i class="fa fa-facebook"></i> Register</p></a>
-                    <a class="reg-btn-oauth" href="{{url('OAuth/twitter')}}"><p><i class="fa fa-twitter"></i> Register</p></a>
+                    <a class="reg-btn-oauth" href="{{ url('OAuth/facebook', '', true)}}"><p><i class="fa fa-facebook"></i> Register</p></a>
+                    <a class="reg-btn-oauth" href="{{ url('OAuth/twitter','', true) }}"><p><i class="fa fa-twitter"></i> Register</p></a>
                 </div>
                 <div class="reg-input-group">
-                    <p>Registered account, <a href="{{ url('login') }}" class="login-href">login</a> now!</p>
+                    <p>Registered account, <a href="{{ url('login', '', true) }}" class="login-href">login</a> now!</p>
                 </div>
             </form>
         </div>
