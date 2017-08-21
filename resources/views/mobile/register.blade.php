@@ -64,7 +64,6 @@
                 <a href="#">Terms of Service</a>|<a href="#">Privacy Policy</a>
                 <p>Copyright © Multiverse Entertainment LLC</p>
             </div>
-            <div class="right"></div>
         </div>
     </div>
 </body>
