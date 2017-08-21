@@ -68,9 +68,9 @@
 @endsection
 @section('script')
 <!--请在下方写此页面业务相关的脚本-->
-<script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
-<script type="text/javascript" src="lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
-<script type="text/javascript" src="lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/laypage/1.2/laypage.js"></script>
 <script type="text/javascript">
     $('#menu-admin').menuSelector(1);
 	/*管理员-角色-添加*/

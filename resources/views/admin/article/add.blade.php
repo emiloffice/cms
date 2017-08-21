@@ -112,7 +112,7 @@
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章内容：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <script id="editor" type="text/plain" style="width:100%;height:400px;" name="content"></script>
+                    <input id="editor" type="text/plain" style="width:100%;height:400px;" name="content">
                 </div>
             </div>
             <div class="row cl">
@@ -127,14 +127,14 @@
 @endsection
 @section('script')
     <!--请在下方写此页面业务相关的脚本-->
-    <script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
-    <script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script>
-    <script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
-    <script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
-    <script type="text/javascript" src="lib/webuploader/0.1.5/webuploader.min.js"></script>
-    <script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.config.js"></script>
-    <script type="text/javascript" src="lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
-    <script type="text/javascript" src="lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/webuploader/0.1.5/webuploader.min.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/ueditor/1.4.3/ueditor.config.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
     <script type="text/javascript">
         $(function(){
             $('.skin-minimal input').iCheck({
