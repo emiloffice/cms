@@ -134,6 +134,11 @@
 </div>
 <div class="am-footer">
     <div class="container">
+        <p class="social_media">
+            <a href="https://www.facebook.com/MultiverseVR"><i class="iconfont icon-facebookf"></i></a>
+            <a href="https://twitter.com/VRmultiverse"><i class="iconfont icon-twitter"></i></a>
+            <a href="https://discordapp.com/invite/3ECGtyR"><i class="iconfont icon-discord"></i></a>
+        </p>
         <div class="left">
             <a href="#">Terms of Service</a>|<a href="#">Privacy Policy</a>
             <p>Copyright © Multiverse Entertainment LLC</p>

@@ -13,6 +13,7 @@
     <link href="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/m.css') }}" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/m-uc.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_371115_i7q3yrjs84a38fr.css">
 </head>
 <body>
 <div class="header">
@@ -78,6 +79,12 @@
 </div>
 <div class="uc-footer">
     <div class="container">
+        <p class="social_media">
+            <a href="https://www.facebook.com/MultiverseVR"><i class="iconfont icon-facebookf"></i></a>
+            <a href="https://twitter.com/VRmultiverse"><i class="iconfont icon-twitter"></i></a>
+            <a href="https://discordapp.com/invite/3ECGtyR"><i class="iconfont icon-discord"></i></a>
+        </p>
+        </p>
         <div class="left">
             <a href="#">Terms of Service</a>|<a href="#">Privacy Policy</a>
             <p>Copyright © Multiverse Entertainment LLC</p>
@@ -111,4 +118,5 @@
         }
     }
 </script>
+<script src="http://at.alicdn.com/t/font_371115_i7q3yrjs84a38fr.js"></script>
 </html>
