@@ -15,7 +15,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Postmark\PostmarkClient;
 use function Sodium\increment;
@@ -34,7 +33,7 @@ class UserController extends Controller
     {
         if (Auth::attempt(['email' => $request->email, 'password'=> $request->password])){
 
-            return Redirect::secure_url('user-center');
+            return redirect('user-center');
         }
         if ($this->is_mobile_request()){
             return view('mobile.login');
@@ -64,7 +63,7 @@ class UserController extends Controller
     public function logout()
     {
         Auth::logout();
-        return Redirect::secure_url('login');
+        return redirect('login');
     }
 
     public function register(Request $request)
@@ -95,7 +94,7 @@ class UserController extends Controller
             $Point->points = 0;//默认seekingdawn为1
             $Point->points_level = 1;//初始等级为1
             $Point->save();
-            return Redirect::secure_url('confirm-email');
+            return redirect('confirm-email');
         }
         if ($request->isMethod('get')){
             $code = $request->code;
@@ -252,7 +251,7 @@ class UserController extends Controller
         $res = DB::table('users')->where('oauth_token', $token)->orWhere('email', $email)->first();
         if ($res){
             Auth::attempt(['email'=>$res->email, 'password' => '123456']);
-            return Redirect::secure_url('user-center');
+            return redirect('user-center');
         }else{
             if($user->email!==''||$user->email!==null){
                 $email = $user->email;
@@ -287,7 +286,7 @@ class UserController extends Controller
             $this->createUser($user,'twitter');
             Point::where('referral_code',$request->referral_code)->increment('points', 5);
             Auth::attempt(['email' => $email, 'password' => '123456']);
-            return Redirect::secure_url('user-center');
+            return redirect('user-center');
         }else{
             return 'error';
 
@@ -304,9 +303,9 @@ class UserController extends Controller
                 $user_id = $user[0]->id;
                 DB::update('update points set points = ? where user_id = ?',[10, $user_id]);
                 Auth::attempt(['email'=>$email, 'password'=> session('USER_PWD')]);
-                return Redirect::secure_url('user-center');
+                return redirect('user-center');
             }
-            return Redirect::secure_url('confirm-email');
+            return redirect('confirm-email');
         }else{
             return 'error';
 
