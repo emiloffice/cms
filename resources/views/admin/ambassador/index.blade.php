@@ -16,9 +16,11 @@
     </nav>
     <div class="Hui-article">
         <article class="cl pd-20">
+
             <div class="mt-20">
                 <table class="table table-border table-bordered table-bg table-hover table-sort">
                     <thead>
+
                     <tr class="text-c">
                         <th width="25"><input type="checkbox" name="" value=""></th>
                         <th width="80">ID</th>
