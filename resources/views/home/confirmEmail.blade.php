@@ -62,7 +62,7 @@
         var email = $('#email').val();
         if(email !== '') {
             $.ajax({
-                url:'//multiverseinc.com/send-email',
+                url:'/send-email',
                 type: 'POST',
                 dataType: 'JSON',
                 data: {email:email,_token:'{{ csrf_token() }}'},

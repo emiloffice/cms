@@ -62,7 +62,7 @@
         var email = $('#email').val();
         if(email !== '') {
             $.ajax({
-                url:'{{url('send-email', '', true)}}',
+                url:'/send-email',
                 type: 'POST',
                 dataType: 'JSON',
                 data: {email:email,_token:'{{ csrf_token() }}'},
