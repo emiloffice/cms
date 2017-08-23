@@ -32,7 +32,7 @@
                 <div class="main-table">
                     <div class="left">
                         {{--<div class=""></div>--}}
-                        <div class=""><a href="https://discord.gg/3ECGtyR" target="_blank">Join the community groups</a></div>
+                        <div class=""><a href="https://www.facebook.com/groups/seekingdawnna/" target="_blank">Join the community groups</a></div>
                         <div class="">
                             <p class="title">Quests</p>
                             <p>1. Gain 10 points for referring your first friend</p>
