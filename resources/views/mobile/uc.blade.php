@@ -50,7 +50,7 @@
                         <p class="title">Quests</p>
                         <p>1. Gain 10 points for referring your first friend</p>
                         <p>2. Gain 5 points for liking our Facebook Page</p>
-                        <p>3. Gain 5 point for "following" our Facebook page</p>
+                        <p>3. Gain 5 point for "joining" our Discord group</p>
                         <p>4. Gain 5 points for joining our community group</p>
                         <p>5. Gain 5 points for following our Twitter Page</p>
                     </div>

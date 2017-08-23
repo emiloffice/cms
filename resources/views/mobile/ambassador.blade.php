@@ -29,16 +29,11 @@
     </div>
 </div>
 <div class="banner ambassador-banner">
-    <div class="join-btn btn-area" onclick="join()">Join the community groups</div>
-    {{--@if($user == null || !isset($user))
-        @if(isset($code)&&$code!=='')
-            <div class="join-btn btn-area"><a href="{{ url('register') }}?code={{ $code }}">Join the ambassador project</a></div>
+    @if($user == null || !isset($user))
+        <div class="join-btn btn-area" onclick="join()">Join the community groups</div>
         @else
-            <div class="join-btn btn-area"><a href="{{ url('register') }}">Join the ambassador project</a></div>
-        @endif
-    @else
-        <div class="join-btn btn-area"><a href="https://discord.gg/3ECGtyR" target="_blank">Join the community groups</a></div>
-    @endif--}}
+        <div class="join-btn btn-area"><a href="https://www.facebook.com/groups/seekingdawnna/" target="_blank">Join the community groups</a></div>
+    @endif
 </div>
 <div class="ambassador-rank">
     <div class="container">

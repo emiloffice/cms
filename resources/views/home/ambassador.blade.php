@@ -34,7 +34,7 @@
         @if($user == null || !isset($user))
             <div class="join-btn btn-area" onclick="join()">Join the community groups</div>
             @else
-            <div class="join-btn btn-area"><a href="https://www.facebook.com/MultiverseVR/" target="_blank">Join the community groups</a></div>
+            <div class="join-btn btn-area"><a href="https://www.facebook.com/groups/seekingdawnna/" target="_blank">Join the community groups</a></div>
         @endif
     </div>
     <div class="ambassador-rank">
