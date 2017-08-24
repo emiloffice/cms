@@ -56,6 +56,7 @@
 </body>
 <script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-3.2.1.js"></script>
 <script src="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/js/bootstrap.js"></script>
+<script src="//{{getenv('RESOURCE_PATH')}}/layer/v3.0.3/layer.js"></script>
 <script>
 
     function sendCode(){

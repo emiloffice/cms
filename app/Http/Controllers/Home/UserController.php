@@ -74,11 +74,14 @@ class UserController extends Controller
                 'username' => 'required|max:50',
                 'password' => 'required|max:30|min:6'
             ]);
+            $email = $request->email;
+            $res = DB::table('users')->where('email',$email)->first();
+            dd($res);
             $User = new User;
             $User->name = $request->username;
             $User->password = bcrypt($request->password);
             Session(['USER_PWD'=>$request->password]);
-            $User->email = $request->email;
+            $User->email = $email;
             $User->save();
             session(['USER_INFO'=>$User]);
             $Point = new Point;
