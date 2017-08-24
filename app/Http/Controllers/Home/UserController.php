@@ -317,7 +317,8 @@ class UserController extends Controller
                 $user_id = $user[0]->id;
                 DB::update('update points set points = ? where user_id = ?',[10, $user_id]);
                 DB::update('update users set status = ? where id = ?',[1, $user_id]);
-                Point::where('referral_code',$request->session('FROM_REFERRAL_CODE'))->increment('points', 5);
+                DB::update('update ponits set points += ? where referral_code = ?',[5, $user_id]);
+                Point::where('referral_code',session('FROM_REFERRAL_CODE'))->increment('points', 5);
                 Auth::attempt(['email'=>$email, 'password'=> session('USER_PWD')]);
                 return redirect('user-center');
             }
