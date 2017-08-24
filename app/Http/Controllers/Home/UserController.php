@@ -33,8 +33,12 @@ class UserController extends Controller
     {
         if (Auth::attempt(['email' => $request->email, 'password'=> $request->password])){
             $user = Auth::user();
-            dd($user);
-            return redirect('user-center');
+            if($user->status=='0'){
+                $email = $user->email;
+                return view('confirmEmail',compact('email'));
+            }else{
+                return redirect('user-center');
+            }
         }
         if ($this->is_mobile_request()){
             return view('mobile.login');
@@ -92,9 +96,6 @@ class UserController extends Controller
                 $from_referral_id = Point::where('referral_code', $request->referral_code)->value('user_id');
                 $Point->from_referral_code = $request->referral_code;//提交的推荐码
                 $Point->from_referral_id = $from_referral_id;//提交的推荐人ID
-                if ($from_referral_id!== ''){
-                    Point::where('referral_code',$request->referral_code)->increment('points', 5);
-                }
                 $Point->referral_code = $this->referralCode(1);//生成的自己的推荐码数
                 $Point->game_id = '1';//默认seekingdawn为1
                 $Point->points = 0;//默认seekingdawn为1
@@ -167,6 +168,7 @@ class UserController extends Controller
     public function ambassadorCode($code)
     {
         if ($code){
+            session(['FROM_REFERRAL_CODE'=>$code]);
             $user = Auth::user();
             if ($user === ''){
                 $user = null;
@@ -313,6 +315,8 @@ class UserController extends Controller
             if ($user[0]!==''||$user[0]!==null){
                 $user_id = $user[0]->id;
                 DB::update('update points set points = ? where user_id = ?',[10, $user_id]);
+                DB::update('update users set status = ? where user_id = ?',[1, $user_id]);
+                Point::where('referral_code',$request->session('FROM_REFERRAL_CODE'))->increment('points', 5);
                 Auth::attempt(['email'=>$email, 'password'=> session('USER_PWD')]);
                 return redirect('user-center');
             }
