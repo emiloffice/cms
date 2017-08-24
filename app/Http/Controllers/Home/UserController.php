@@ -32,7 +32,8 @@ class UserController extends Controller
     public function login(Request $request)
     {
         if (Auth::attempt(['email' => $request->email, 'password'=> $request->password])){
-
+            $user = Auth::user();
+            dd($user);
             return redirect('user-center');
         }
         if ($this->is_mobile_request()){
@@ -76,28 +77,31 @@ class UserController extends Controller
             ]);
             $email = $request->email;
             $res = DB::table('users')->where('email',$email)->first();
-            dd($res);
-            $User = new User;
-            $User->name = $request->username;
-            $User->password = bcrypt($request->password);
-            Session(['USER_PWD'=>$request->password]);
-            $User->email = $email;
-            $User->save();
-            session(['USER_INFO'=>$User]);
-            $Point = new Point;
-            $Point->user_id = $User->id;
-            $from_referral_id = Point::where('referral_code', $request->referral_code)->value('user_id');
-            $Point->from_referral_code = $request->referral_code;//提交的推荐码
-            $Point->from_referral_id = $from_referral_id;//提交的推荐人ID
-            if ($from_referral_id!== ''){
-                Point::where('referral_code',$request->referral_code)->increment('points', 5);
+            if($res){
+
+            }else{
+                $User = new User;
+                $User->name = $request->username;
+                $User->password = bcrypt($request->password);
+                Session(['USER_PWD'=>$request->password]);
+                $User->email = $email;
+                $User->save();
+                session(['USER_INFO'=>$User]);
+                $Point = new Point;
+                $Point->user_id = $User->id;
+                $from_referral_id = Point::where('referral_code', $request->referral_code)->value('user_id');
+                $Point->from_referral_code = $request->referral_code;//提交的推荐码
+                $Point->from_referral_id = $from_referral_id;//提交的推荐人ID
+                if ($from_referral_id!== ''){
+                    Point::where('referral_code',$request->referral_code)->increment('points', 5);
+                }
+                $Point->referral_code = $this->referralCode(1);//生成的自己的推荐码数
+                $Point->game_id = '1';//默认seekingdawn为1
+                $Point->points = 0;//默认seekingdawn为1
+                $Point->points_level = 1;//初始等级为1
+                $Point->save();
+                return redirect('confirm-email');
             }
-            $Point->referral_code = $this->referralCode(1);//生成的自己的推荐码数
-            $Point->game_id = '1';//默认seekingdawn为1
-            $Point->points = 0;//默认seekingdawn为1
-            $Point->points_level = 1;//初始等级为1
-            $Point->save();
-            return redirect('confirm-email');
         }
         if ($request->isMethod('get')){
             $code = $request->code;
@@ -235,15 +239,19 @@ class UserController extends Controller
     /*
      *
      * */
-    public function confirmEmail()
+    public function confirmEmail(Request $request)
     {
-        $user = session('USER_INFO');
-        if($user->email!==''||$user->email!==null){
-            $email = $user->email;
+        if ($request->email){
             return view('home.confirmEmail',compact('email'));
-        }
-        else {
-            return view('home.confirmEmail');
+        }else{
+            $user = session('USER_INFO');
+            if($user->email!==''||$user->email!==null){
+                $email = $user->email;
+                return view('home.confirmEmail',compact('email'));
+            }
+            else {
+                return view('home.confirmEmail');
+            }
         }
     }
     public function OAuthConfirmEmail()
