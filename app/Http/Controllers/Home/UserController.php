@@ -34,8 +34,8 @@ class UserController extends Controller
         if (Auth::attempt(['email' => $request->email, 'password'=> $request->password])){
             $user = Auth::user();
             if($user->status=='0'){
-                $email = $user->email;
-                return redirect('confirm-email?email='.$email);
+                session(['CONFIRM_EMAIL'=>$user->email]);
+                return redirect('confirm-email');
             }else{
                 return redirect('user-center');
             }
@@ -243,7 +243,8 @@ class UserController extends Controller
      * */
     public function confirmEmail(Request $request)
     {
-        if ($request->email){
+        $email = session('CONFIRM_EMAIL');
+        if ($email){
             return view('home.confirmEmail',compact('email'));
         }else{
             $user = session('USER_INFO');
