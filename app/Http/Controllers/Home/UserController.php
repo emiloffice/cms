@@ -281,7 +281,7 @@ class UserController extends Controller
     {
         $client = new PostmarkClient('dd3a9434-fae6-4fe4-a67c-e3579d36c637');
         // Send an email:
-        $code = $this->referralCode('1','','8');
+        $code = $this->referralCode('1','','6');
         session(['EMAIL_CONFIRM_CODE'=>$code]);
         $sendResult = $client->sendEmail(
             "emil@multiverseinc.com",
@@ -316,7 +316,7 @@ class UserController extends Controller
             if ($user[0]!==''||$user[0]!==null){
                 $user_id = $user[0]->id;
                 DB::update('update points set points = ? where user_id = ?',[10, $user_id]);
-                DB::update('update users set status = ? where user_id = ?',[1, $user_id]);
+                DB::update('update users set status = ? where id = ?',[1, $user_id]);
                 Point::where('referral_code',$request->session('FROM_REFERRAL_CODE'))->increment('points', 5);
                 Auth::attempt(['email'=>$email, 'password'=> session('USER_PWD')]);
                 return redirect('user-center');
