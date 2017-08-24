@@ -35,7 +35,7 @@ class UserController extends Controller
             $user = Auth::user();
             if($user->status=='0'){
                 $email = $user->email;
-                return view('home.confirmEmail',compact('email'));
+                return redirect('confirm-email',compact('email'));
             }else{
                 return redirect('user-center');
             }
