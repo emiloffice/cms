@@ -22,14 +22,14 @@
                     <thead>
 
                     <tr class="text-c">
-                        <th width="25"><input type="checkbox" name="" value=""></th>
-                        <th width="80">ID</th>
-                        <th width="80">姓名</th>
-                        <th width="80">邮箱</th>
-                        <th width="80">代码</th>
-                        <th width="80">分享次数</th>
-                        <th width="120">备注</th>
-                        <th width="120">操作</th>
+                        <th width="20"><input type="checkbox" name="" value=""></th>
+                        <th width="40">ID</th>
+                        <th width="40">姓名(nick name)</th>
+                        <th width="80">邮箱(email)</th>
+                        <th width="80">代码(code)</th>
+                        <th width="80">分数(points)</th>
+                        <th width="80">备注(remark)</th>
+                        <th width="120">操作(manage)</th>
                         {{--<th width="120">操作</th>--}}
                     </tr>
                     </thead>
@@ -40,9 +40,9 @@
                         <td>{{$user->id}}</td>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
-                        <td>{{$user->ambassador_code}}</td>
-                        <td>{{$user->ambassador_times}}</td>
-                        <td>{{$user->message}}</td>
+                        <td>{{$user->referral_code}}</td>
+                        <td>{{$user->points}}</td>
+                        <td>{{$user->status}}</td>
                         <td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a>
                             <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
                             <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>

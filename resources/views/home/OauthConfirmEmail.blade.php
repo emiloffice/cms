@@ -67,10 +67,16 @@
                 dataType: 'JSON',
                 data: {email:email,_token:'{{ csrf_token() }}'},
                 success: function (res) {
-                    console.log(res)
+                    layer.msg('Sending, check your inbox', {
+                        icon: 16
+                        ,shade: 0.01
+                    });
                 },
                 error: function () {
-
+                    layer.msg('error, please try again later', {
+                        icon: 5
+                        ,shade: 0.01
+                    });
                 }
             });
         }else {
