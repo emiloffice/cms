@@ -21,16 +21,9 @@ use function Sodium\increment;
 
 class UserController extends Controller
 {
-    public function __construct()
-    {
-        /*if (Auth::check()){
-            redirect('user/center');
-        }else {
-            redirect('login');
-        }*/
-    }
     public function login(Request $request)
     {
+        $HTTPS_REQUEST = env('HTTPS_REQUEST');
         if (Auth::attempt(['email' => $request->email, 'password'=> $request->password])){
             $user = Auth::user();
             if($user->status=='0'){
@@ -41,17 +34,21 @@ class UserController extends Controller
             }
         }
         if ($this->is_mobile_request()){
-            return view('mobile.login');
+            return view('mobile.login', compact('HTTPS_REQUEST'));
         } else {
-            return view('home.login');
+            return view('home.login', compact('HTTPS_REQUEST'));
         }
     }
     public function center()
     {
+        $HTTPS_REQUEST = env('HTTPS_REQUEST');
         $user = Auth::user();
         $user_id = $user->id;
         $game_id = 1;//默认为seekingdawnid
         $point = DB::table('points')->where(['user_id'=>$user_id,'game_id'=>$game_id])->first();
+        $res = $this->ambassador_level($point->points);
+        $point->level = $res['level'];
+        $point->progress = $res['progress'];
         if ($point->referral_code){
             $friends = Point::where('from_referral_code',$point->referral_code)
                 ->join('users', 'points.user_id', '=', 'users.id')
@@ -60,9 +57,9 @@ class UserController extends Controller
             $friends = '';
         }
         if ($this->is_mobile_request()){
-            return view('mobile.uc', compact('user','point','friends'));
+            return view('mobile.uc', compact('user','point','friends','HTTPS_REQUEST'));
         } else{
-            return view('home.uc', compact('user','point','friends'));
+            return view('home.uc', compact('user','point','friends','HTTPS_REQUEST'));
         }
     }
     public function logout()
@@ -73,6 +70,7 @@ class UserController extends Controller
 
     public function register(Request $request)
     {
+        $HTTPS_REQUEST = env('HTTPS_REQUEST');
         if ($request->isMethod('post')){
             $this->validate($request, [
                 'email' => 'required|unique:users',
@@ -107,9 +105,9 @@ class UserController extends Controller
         if ($request->isMethod('get')){
             $code = $request->code;
             if ($this->is_mobile_request()){
-                return view('mobile.register', compact('code'));
+                return view('mobile.register', compact('code','HTTPS_REQUEST'));
             } else {
-                return view('home.register', compact('code'));
+                return view('home.register', compact('code','HTTPS_REQUEST'));
             }
         }
     }
@@ -151,7 +149,7 @@ class UserController extends Controller
 
     public function ambassador()
     {
-
+        $HTTPS_REQUEST = env('HTTPS_REQUEST');
         $user = Auth::user();
         if ($user === ''){
             $user = null;
@@ -160,13 +158,14 @@ class UserController extends Controller
             ->join('users', 'points.user_id', '=', 'users.id')
             ->get();
         if($this->is_mobile_request()){
-            return view('mobile.ambassador', compact('points','user'));
+            return view('mobile.ambassador', compact('points','user','HTTPS_REQUEST'));
         }else{
-            return view('home.ambassador', compact('points','user'));
+            return view('home.ambassador', compact('points','user','HTTPS_REQUEST'));
         }
     }
     public function ambassadorCode($code)
     {
+        $HTTPS_REQUEST = env('HTTPS_REQUEST');
         if ($code){
             session(['FROM_REFERRAL_CODE'=>$code]);
             $user = Auth::user();
@@ -179,9 +178,9 @@ class UserController extends Controller
             $point = Point::where('referral_code', $code)->first();
         }
         if ($this->is_mobile_request()){
-            return view('mobile.ambassador', compact('points','user','code'));
+            return view('mobile.ambassador', compact('points','user','code','HTTPS_REQUEST'));
         } else{
-            return view('home.ambassador', compact('points','user','code'));
+            return view('home.ambassador', compact('points','user','code','HTTPS_REQUEST'));
         }
     }
     /*
@@ -243,6 +242,7 @@ class UserController extends Controller
      * */
     public function confirmEmail(Request $request)
     {
+        $HTTPS_REQUEST = env('HTTPS_REQUEST');
         $email = session('CONFIRM_EMAIL');
         if ($email){
             return view('home.confirmEmail',compact('email'));
@@ -250,10 +250,10 @@ class UserController extends Controller
             $user = session('USER_INFO');
             if($user->email!==''||$user->email!==null){
                 $email = $user->email;
-                return view('home.confirmEmail',compact('email'));
+                return view('home.confirmEmail',compact('email','HTTPS_REQUEST'));
             }
             else {
-                return view('home.confirmEmail');
+                return view('home.confirmEmail',compact('HTTPS_REQUEST'));
             }
         }
     }
@@ -269,10 +269,10 @@ class UserController extends Controller
         }else{
             if($user->email!==''||$user->email!==null){
                 $email = $user->email;
-                return view('home.OauthConfirmEmail',compact('email'));
+                return view('home.OauthConfirmEmail',compact('email','HTTPS_REQUEST'));
             }
             else {
-                return view('home.OauthConfirmEmail');
+                return view('home.OauthConfirmEmail', compact('HTTPS_REQUEST'));
             }
         }
 
@@ -291,8 +291,9 @@ class UserController extends Controller
         );
         return json_encode($sendResult);
     }
-    public function OauthVerifyUserEmail(Request $request){
-
+    public function OauthVerifyUserEmail(Request $request)
+    {
+        $HTTPS_REQUEST = env('HTTPS_REQUEST');
         $code = session('EMAIL_CONFIRM_CODE');
         if ($code === $request->code){
             $user = session('OAUTH_INFO');
@@ -307,8 +308,9 @@ class UserController extends Controller
         }
 
     }
-    public function defaultVerifyUserEmail(Request $request){
-
+    public function defaultVerifyUserEmail(Request $request)
+    {
+        $HTTPS_REQUEST = env('HTTPS_REQUEST');
         $code = session('EMAIL_CONFIRM_CODE');
         if ($code === $request->code){
             $email = $request->email;
@@ -387,5 +389,39 @@ class UserController extends Controller
             return true;
         else
             return false;
+    }
+    // 积分进度条
+    /*
+     * $points
+     * */
+    public function ambassador_level($points){
+        $res = '';
+        if (0<= $points && $points < 100){
+            $res['level'] = 1;
+            $res['progress'] = (round(($points)/100 ,2))*100 . "%";
+        } else if(100<= $points && $points < 200){
+            $res['level'] = 2;
+            $res['progress'] = (round(($points-100)/100 ,2))*100 . "%";
+        } else if(200<= $points && $points < 300){
+            $res['level'] = 3;
+            $res['progress'] = (round(($points-200)/100 ,2))*100 . "%";
+        } else if(300<= $points && $points < 400){
+            $res['level'] = 4;
+            $res['progress'] = (round(($points-300)/100 ,2))*100 . "%";
+        } else if(400<= $points && $points < 500){
+            $res['level'] = 5;
+            $res['progress'] = (round(($points-400)/100 ,2))*100 . "%";
+        } else if(500<= $points && $points < 700){
+            $res['level'] = 6;
+            $res['progress'] = (round(($points-500)/200 ,2))*100 . "%";
+        } else if(700<= $points && $points < 800){
+            $res['level'] = 7;
+            $res['progress'] = (round(($points-700)/100 ,2))*100 . "%";
+        } else if(800<= $points){
+            $res['level'] = '8 (Ultimate Pirize)';
+            $res['progress'] = '100%';
+        }
+        return $res;
+
     }
 }

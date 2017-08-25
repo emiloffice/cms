@@ -56,9 +56,18 @@
                                 <img src="//{{getenv('RESOURCE_PATH')}}/img/headimg.png" alt="profile">
                             @endif
                             <p class="name">{{ $user->name }}</p>
+                            <div class="am_level">
+                                <p class="level">Tier {{ $point->level }}</p>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                         <ul class="reward-list">
                             <p class="text-center">Did not get rewarded!</p>
+
                             {{--<li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
                             <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
                             <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>--}}
