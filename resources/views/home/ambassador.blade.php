@@ -73,40 +73,42 @@
                 <div class="clearfix"></div>
                 <ul class="loot-content-list">
                     <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <p>10 Referrals (100 Points） = Tier 1</p>
+                        <p>Tier 1：0 Point ≤ Your Points < 100Points</p>
                         <p>Thank you letter + “Seeking Dawn” Key-chain</p>
                     </li>
                     <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <p>20 Referrals (200 Points）  = Tier 2</p>
+                        <p>Tier 2： 100Points ≤ Your Points < 200Points </p>
                         <p>Tier 1 Prizes + 11x17 Signed Poster by developer or Freeman</p>
                     </li>
                     <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <p>30 Referrals  (300 Points） = Tier 3</p>
+                        <p>Tier 3： 200Points ≤ Your Points < 300Points</p>
                         <p> Tier 1 + Tier 2 Prizes + “Seeking Dawn” T-Shirt</p>
                     </li>
                     <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <p>40 Referrals (400 Points） = Tier 4 </p>
+                        <p>Tier 4： 300Points ≤ Your Points < 400Points</p>
                         <p>Tier 1 + Tier 2 Prizes +“Seeking Dawn” Backpack</p>
                     </li>
                     <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <p>50 Referrals  (500 Points）  = Tier 5</p>
+                        <p>Tier 5： 400Points ≤ Your Points < 500Points </p>
                         <p>Tier 1 + Tier 2 + T-Shirt + Backpack + Hat</p>
                     </li>
                     <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <p>70 Referrals (700 Points）  = Tier 6 </p>
+                        <p>Tier 6： 500Points ≤ Your Points < 600Points </p>
                         <p>In-Game item named after them + Standard Copy of “Seeking Dawn”</p>
                     </li>
                     <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <p>80 Referrals (800 Points）  = Tier 7 </p>
+                        <p>Tier 6： 500Points ≤ Your Points < 600Points </p>
                         <p>Tier 6 + In-game cosmetic + Signed Poster + Backpack + T-Shirt]</p>
                     </li>
                     <li class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <p>100 Referrals (1000 Points）  = Tier 8 (Ultimate Prize)</p>
+                        <p>Tier 8： 700Points ≤ Your Points < 800Points  <span class="special">(Ultimate Prize)</span></p>
                         <p>Tier 7 + signed Hat + Early Access / head-start + Character named
                             after you in-game + Meet & Greet with Staff/Dev Team</p>
                     </li>
+
                 </ul>
                 <div class="clearfix"></div>
+                <p style="padding-left: 40px;padding-top: 40px;">(*Instruction: 100Points=10Referrals、200Points=20Referrals、300Points=30Referrals   and so on)</p>
             </div>
         </div>
 

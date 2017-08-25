@@ -155,7 +155,7 @@ div#form-ambassador button[type="submit"]{
   line-height: 100%;
 }
 ul.loot-list {
-  padding: 0.96rem 0;
+  padding: 0.6rem 0;
   text-align: center;
 }
 ul.loot-list li{
@@ -170,16 +170,23 @@ ul.loot-content-list{
   font-size: 0.18rem;
   color: #ffae00;
   margin-top: 0.1rem;
+  li>p:first-of-type{
+    margin-bottom: 5px;
+  }
 }
 ul.loot-content-list li {
   list-style: none;
 }
 ul.loot-content-list li>p{
   font-size: 18px;
+  .special{
+    color: #ff00d8;
+  }
 }
 ul.loot-content-list>li>p:last-of-type {
   font-size: 0.16rem;
   color: #fff;
+
 }
 .ambassador-area{
   margin: 0 auto;

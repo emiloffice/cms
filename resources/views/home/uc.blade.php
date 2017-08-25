@@ -28,13 +28,13 @@
     <div class="container">
         <div class="panel">
             <div class="uc-container">
-                <p class="title">Base information & friends</p>
+                <p class="title"><span class="line"></span>Base information & friends</p>
                 <div class="main-table">
                     <div class="left">
                         {{--<div class=""></div>--}}
                         <div class=""><a href="https://www.facebook.com/groups/seekingdawnna/" target="_blank">Join the community groups</a></div>
                         <div class="">
-                            <p class="title">Quests</p>
+                            <p class="title" style="padding-top: 10px">Quests</p>
                             <p>1. Gain 10 points for referring your first friend</p>
                             <p>2. Gain 5 points for liking our Facebook Page</p>
                             <p>3. Gain 5 point for "joining" our Discord group</p>
@@ -42,9 +42,9 @@
                             <p>5. Gain 5 points for following our Twitter Page</p>
                         </div>
                         <div class="">
-                            <p class="title">Invite friends</p>
+                            <p class="title" style="padding-top: 10px">Invite friends</p>
                             <div><input type="text" value="{{ url('ambassador') }}/{{ $point->referral_code }}" readonly id="link"><button id="copy" class="refer" onclick="copy('link', 'copy')">Copy & Share</button></div>
-                            <p>The six digits "<span class="special-text">{{ $point->referral_code }}</span>" on the link are a referral code</p>
+                            <p style="padding-top: 10px">The six digits "<span class="special-text">{{ $point->referral_code }}</span>" on the link are a referral code</p>
                         </div>
                     </div>
 
@@ -74,7 +74,7 @@
                         </ul>
                     </div>
                 </div>
-                <p class="title">Recommended friends</p>
+                <p class="title"><span class="line"></span>Recommended friends</p>
                 <ul class="friends">
                     @if(count($friends)===0)
                         <p>No recommendation of friends.</p>
