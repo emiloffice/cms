@@ -30,22 +30,36 @@
                         <th width="80">分数(points)</th>
                         <th width="80">备注(remark)</th>
                         <th width="120">操作(manage)</th>
-                        {{--<th width="120">操作</th>--}}
                     </tr>
                     </thead>
                     <tbody>
                     @foreach($users as $user)
                     <tr class="text-c">
                         <td><input type="checkbox" value="" name=""></td>
-                        <td>{{$user->id}}</td>
+                        <td>{{$user->user_id}}</td>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->referral_code}}</td>
                         <td>{{$user->points}}</td>
                         <td>{{$user->status}}</td>
-                        <td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_stop(this,'10001')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a>
-                            <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','article-add','10001')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
-                            <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'10001')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+                        <td class="f-14 td-manage">
+                            @if($user->fb_status===1)
+                                @else
+                                <a style="text-decoration:none" onClick="add_points(this, '{{$user->user_id}}','facebook')" href="javascript:;" title="liking facebook"><i class="fa fa-facebook"></i></a>
+                            @endif
+                            @if($user->twitter_status===1)
+                                @else
+                                    <a style="text-decoration:none" class="ml-5" onClick="add_points(this, '{{$user->user_id}}','twitter')" href="javascript:;" title="following Twitter Page"><i class="fa fa-twitter"></i></a>
+                            @endif
+                            @if($user->group_status===1)
+                                @else
+                                    <a style="text-decoration:none" class="ml-5" onClick="add_points(this, '{{$user->user_id}}','group')" href="javascript:;" title="joining our community group"><i class="fa fa-group"></i></a>
+                            @endif
+                            @if($user->discord_status===1)
+                                @else
+                                    <a style="text-decoration:none" class="ml-5" onClick="add_points(this, '{{$user->user_id}}','discord')" href="javascript:;" title="joining our discord group"><i class="fa fa-group"></i></a>
+                            @endif
+                        </td>
                     </tr>
                     @endforeach
                     </tbody>
@@ -61,6 +75,7 @@
     <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/My97DatePicker/4.8/WdatePicker.js"></script>
     <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/laypage/1.2/laypage.js"></script>
+
     <script type="text/javascript">
         $('#menu-ambassador').menuSelector(1);
         $('.table-sort').dataTable({
@@ -152,6 +167,30 @@
             $(obj).parents("tr").find(".td-status")('<span class="label label-default radius">待审核</span>');
             $(obj).parents("tr").find(".td-manage")("");
             layer.msg('已提交申请，耐心等待审核!', {icon: 1,time:2000});
+        }
+        /*加分*/
+        function add_points(obj,uid,cate){
+            console.log(obj)
+            $.ajax({
+                type: 'POST',
+                url: '/admin/add-points',
+                dataType: 'json',
+                data: { uid:uid, cate:cate, _token:'{{ csrf_token() }}'},
+                success: function(res){
+                    if(res.status=='success'){
+                        layer.msg('Successful operation!', {icon: 1,time:2000});
+                        $(obj).remove();
+                    }else{
+                        layer.msg(res.msg, {icon: 5,time:2000});
+                    }
+                },
+                error:function() {
+                    layer.msg('Error operation!', {icon: 5,time:2000});
+                },
+            });
+/*            $(obj).parents("tr").find(".td-status")('<span class="label label-default radius">待审核</span>');
+            $(obj).parents("tr").find(".td-manage")("");*/
+
         }
     </script>
     <!--/请在上方写此页面业务相关的脚本-->

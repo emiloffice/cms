@@ -69,6 +69,7 @@ class FacebookController extends Controller
                 $p = DB::table('points')->where('referral_code', $from_referral_code)->first();
                 if ($p){
                     $from_referral_id = $p->user_id;
+                    DB::update('update points set points = points + ? where referral_code = ?',[10, session('FROM_REFERRAL_CODE')]);
                 }
             }
             $point->from_referral_id = $from_referral_id;

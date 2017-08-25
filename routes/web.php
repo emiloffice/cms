@@ -132,6 +132,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     //消息列表
     $router->get('message-list','MessageController@index');
     $router->get('ambassador-list','AmbassadorController@index');
+    $router->post('add-points','AmbassadorController@addPoints');
     $router->get('subscribes-list','SubscribeController@index');
 });
 

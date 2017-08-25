@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="//{{getenv('RESOURCE_PATH')}}/lib/Hui-iconfont/1.0.8/iconfont.css" />
     <link rel="stylesheet" type="text/css" href="//{{getenv('RESOURCE_PATH')}}/static/h-ui.admin/skin/default/skin.css" id="skin" />
     <link rel="stylesheet" type="text/css" href="//{{getenv('RESOURCE_PATH')}}/static/h-ui.admin/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="//{{getenv('RESOURCE_PATH')}}/font-awesome/css/font-awesome.css" />
     <!--[if IE 6]>
     <script type="text/javascript" src="http://lib.h-ui.net/DD_belatedPNG_0.0.8a-min.js" ></script>
     <script>DD_belatedPNG.fix('*');</script>
