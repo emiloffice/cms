@@ -22,7 +22,12 @@
             <div class="logo"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></div>
             <div class="right">
                 @if($user == null || !isset($user))
-                    <a href="{{url('login', '', true)}}" class="logout">Sign in</a>
+                    <a href="{{url('login', '', true)}}" class="logout">Log in</a>
+                    @if(isset($code))
+                        <a href="{{url('register', '', true)}}?code={{$code}}" class="logout">Sign up</a>
+                        @else
+                        <a href="{{url('register', '', true)}}" class="logout">Sign up</a>
+                    @endif
                     @else
                     <a href="{{url('user-center', '', true)}}" class="">My Profile</a>
                     <a href="{{url('logout', '', true)}}" class="">Logout</a>
