@@ -154,7 +154,7 @@ class UserController extends Controller
         if ($user === ''){
             $user = null;
         }
-        $points = Point::where([])->orderBy('points','desc')->take(10)
+        $points = Point::where('status','1')->orderBy('points','desc')->take(10)
             ->join('users', 'points.user_id', '=', 'users.id')
             ->get();
         if($this->is_mobile_request()){
