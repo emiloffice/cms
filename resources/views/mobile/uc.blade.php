@@ -43,7 +43,7 @@
                     <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
                     <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>--}}
                 </ul>
-                <p class="title">Base information & friends</p>
+                <p class="title">Welcome home, track your progress here!</p>
                 <div class="main-table">
                     <div class=""><a href="https://www.facebook.com/groups/seekingdawnna/" target="_blank">Join the community groups</a></div>
                     <div class="">

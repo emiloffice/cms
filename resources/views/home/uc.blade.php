@@ -28,7 +28,7 @@
     <div class="container">
         <div class="panel">
             <div class="uc-container">
-                <p class="title"><span class="line"></span>Base information & friends</p>
+                <p class="title"><span class="line"></span>Welcome home, track your progress here!</p>
                 <div class="main-table">
                     <div class="left">
                         {{--<div class=""></div>--}}
