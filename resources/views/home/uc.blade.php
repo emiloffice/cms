@@ -66,7 +66,7 @@
 
                         </div>
                         <ul class="reward-list">
-                            <p class="text-center">Did not get rewarded!</p>
+                            <p class="text-center">Have not earned rewards yet.</p>
 
                             {{--<li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
                             <li><img src="//{{getenv('RESOURCE_PATH')}}/img/game1.png" alt=""></li>
