@@ -79,6 +79,8 @@ Route::group(['prefix' => 'OAuth','namespace' => 'OAuth'],function ($router)
     $router->get('facebook-auth-info', 'FacebookController@authInfo');
     $router->get('twitter', 'TwitterController@redirectToProvider');
     $router->get('twitter-callback', 'TwitterController@handleProviderCallback');
+    $router->get('cancel_auth', 'FacebookController@cancel_auth');
+    https://www.multiverseinc.com/OAuth/cancel_auth
 });
 Route::group(['prefix' => '','namespace' => 'Home', 'middleware' => 'auth'],function ($router) {
     $router->any('user/center', 'UserController@center');

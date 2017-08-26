@@ -26,7 +26,7 @@ class TwitterController extends Controller
     public function handleProviderCallback(Request $request)
     {
         if (!$request->has('code') || $request->has('denied')) {
-            return redirect('/login');
+            return redirect('login');
         }else{
             $user = Socialite::driver('twitter')->user();
             session(['OAUTH_INFO'=>$user]);

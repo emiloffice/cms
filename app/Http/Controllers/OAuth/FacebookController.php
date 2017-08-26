@@ -45,7 +45,7 @@ class FacebookController extends Controller
     public function handleProviderCallback(Request $request)
     {
         if (!$request->has('code') || $request->has('denied')) {
-            return redirect('/login');
+            return redirect('login');
         }{
             $user = Socialite::driver('facebook')->user();
             $res = DB::table('users')->where('oauth_token', $user->token)->orWhere('email', $user->email)->first();
@@ -226,5 +226,10 @@ class FacebookController extends Controller
             $promotion_codes = $promotion_codes[0];
         }
         return $promotion_codes;
+    }
+
+    public function cancel_auth()
+    {
+        return redirect('login');
     }
 }
