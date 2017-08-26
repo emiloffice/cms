@@ -3,10 +3,10 @@
 
     <div class="menu_dropdown bk_2">
         <dl id="menu-ambassador">
-            <dt><i class="Hui-iconfont">&#xe616;</i> 大使计划<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dt><i class="Hui-iconfont">&#xe616;</i> 大使计划(ambassador project)<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>
                 <ul>
-                    <li><a href="{{ url('admin/ambassador-list') }}" title="ambassador">计划管理</a></li>
+                    <li><a href="{{ url('admin/ambassador-list') }}" title="ambassador project manage">计划管理(manage)</a></li>
                 </ul>
             </dd>
         </dl>

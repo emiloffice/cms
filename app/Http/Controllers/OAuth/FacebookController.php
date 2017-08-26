@@ -57,6 +57,7 @@ class FacebookController extends Controller
             $userModel->avatar_original = $user->avatar_original;
             $userModel->oauth_token = $user->token;
             $userModel->oauth_types = 'facebook';
+            $userModel->status = '1';
             $userModel->password = bcrypt('123456');
             $userModel->save();
             $point = new Point;
