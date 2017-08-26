@@ -54,10 +54,11 @@
   }
 }*/
 .uc-content {
-  background: url("img/uc-bg.png") no-repeat center;
+  background-color: rgba(0,0,0,.95);
+  background: url("images/uc-bg.jpg") no-repeat center;
   padding: 0.5rem 0;
   .panel {
-    background: url(/images/uc-panel-bg.png?c01c961…) no-repeat center;
+    background: url(images/uc-panel-bg.png) no-repeat center;
     min-height: 7.15rem;
     max-width: 9.05rem;
     width: 95%;

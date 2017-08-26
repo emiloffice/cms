@@ -31,11 +31,11 @@
         </div>
     </div>
     <div class="banner ambassador-banner">
-        @if($user == null || !isset($user))
+        {{--@if($user == null || !isset($user))
             <div class="join-btn btn-area" onclick="join()">Join the community groups</div>
             @else
             <div class="join-btn btn-area"><a href="https://www.facebook.com/groups/seekingdawnna/" target="_blank">Join the community groups</a></div>
-        @endif
+        @endif--}}
     </div>
     <div class="ambassador-rank">
         <div class="container">
@@ -62,7 +62,11 @@
         <div class="container">
             <div class=" panel">
                 <div class="title"><span>LOOT</span></div>
-                <ul class="loot-list">
+                <div class="text-center" style="margin-top: 50px;">
+                    <img src="/images/loot_logo.png" alt="" class="loot-logo" style="width: 90%;">
+                    <img src="/images/loot.png" alt="" class="loot" style="width: 90%;margin-top: 45px;">
+                </div>
+                {{--<ul class="loot-list">
                     <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Backpack.png" alt="backpacj"></li>
                     <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Hat.png" alt="hat"></li>
                     <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Signed Poster.png" alt="Signed Poster"></li>
@@ -108,7 +112,7 @@
 
                 </ul>
                 <div class="clearfix"></div>
-                <p style="padding-left: 40px;padding-top: 40px;">(*Instruction: 100Points=10Referrals、200Points=20Referrals、300Points=30Referrals   and so on)</p>
+                <p style="padding-left: 40px;padding-top: 40px;">(*Instruction: 100Points=10Referrals、200Points=20Referrals、300Points=30Referrals   and so on)</p>--}}
             </div>
         </div>
 

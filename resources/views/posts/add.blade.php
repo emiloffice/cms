@@ -105,7 +105,7 @@
                     <div class="uploader-thum-container">
                         <div id="fileList" class="uploader-list"></div>
                         <div id="filePicker">选择图片</div>
-                        <button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>
+                        {{--<button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>--}}
                     </div>
                 </div>
                 <input type="hidden" name="thumb" value="" id="thumb_path">
@@ -113,7 +113,7 @@
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章内容：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <script id="editor" type="text/plain" style="width:100%;height:400px;" name="content"></script>
+                    @include('vendor.wangeditor.initialize', ['id' => '#PickEditor'])
                 </div>
             </div>
             <div class="row cl">
@@ -136,6 +136,17 @@
     <script type="text/javascript" src="/lib/ueditor/1.4.3/ueditor.config.js"></script>
     <script type="text/javascript" src="/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
     <script type="text/javascript" src="/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+    {{--<script type="text/javascript" src="/editor/release/wangEditor.min.js"></script>--}}
+   {{-- <script type="text/javascript">
+        var E = window.wangEditor
+        var editor = new E('#content')
+        editor.customConfig.uploadFileName = 'files'
+        editor.customConfig.uploadImgServer = '/admin/uploads'
+        editor.customConfig.uploadImgParams = {
+            '_token': '{{ csrf_token() }}'   // 属性值会自动进行 encode ，此处无需 encode
+        }
+        editor.create()
+    </script>--}}
     <script type="text/javascript">
         $(function(){
             $('.skin-minimal input').iCheck({
@@ -249,7 +260,6 @@
                 }
             });
 
-            var ue = UE.getEditor('editor');
 
         });
     </script>
