@@ -146,7 +146,7 @@
 <script src="//{{getenv('RESOURCE_PATH')}}/layer/v3.0.3/layer.js"></script>
 <script>
     function  join() {
-        layer.confirm('It looks like you do not have a login account？', {
+        layer.confirm('Log in to your Multiverse account, or sign up now!', {
             btn: ['Log in','Sign up'], title: 'Message'
         }, function(){
             window.location.href = "{{ url('login', '', true) }}";
