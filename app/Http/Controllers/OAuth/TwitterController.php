@@ -23,10 +23,14 @@ class TwitterController extends Controller
      *
      * @return Response
      */
-    public function handleProviderCallback()
+    public function handleProviderCallback(Request $request)
     {
-        $user = Socialite::driver('twitter')->user();
-        session(['OAUTH_INFO'=>$user]);
-        return redirect('oauth-confirm-email');
+        if (!$request->has('code') || $request->has('denied')) {
+            return redirect('/login');
+        }else{
+            $user = Socialite::driver('twitter')->user();
+            session(['OAUTH_INFO'=>$user]);
+            return redirect('oauth-confirm-email');
+        }
     }
 }

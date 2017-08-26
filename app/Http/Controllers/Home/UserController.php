@@ -398,28 +398,28 @@ class UserController extends Controller
         $res = '';
         if (0<= $points && $points < 100){
             $res['level'] = 1;
-            $res['progress'] = (round(($points)/100 ,2))*100 . "%";
+            $res['progress'] = (round(($points)/100 ,2))*100;
         } else if(100<= $points && $points < 200){
             $res['level'] = 2;
-            $res['progress'] = (round(($points-100)/100 ,2))*100 . "%";
+            $res['progress'] = (round(($points-100)/100 ,2))*100;
         } else if(200<= $points && $points < 300){
             $res['level'] = 3;
-            $res['progress'] = (round(($points-200)/100 ,2))*100 . "%";
+            $res['progress'] = (round(($points-200)/100 ,2))*100;
         } else if(300<= $points && $points < 400){
             $res['level'] = 4;
-            $res['progress'] = (round(($points-300)/100 ,2))*100 . "%";
+            $res['progress'] = (round(($points-300)/100 ,2))*100;
         } else if(400<= $points && $points < 500){
             $res['level'] = 5;
-            $res['progress'] = (round(($points-400)/100 ,2))*100 . "%";
+            $res['progress'] = (round(($points-400)/100 ,2))*100;
         } else if(500<= $points && $points < 700){
             $res['level'] = 6;
-            $res['progress'] = (round(($points-500)/200 ,2))*100 . "%";
+            $res['progress'] = (round(($points-500)/200 ,2))*100;
         } else if(700<= $points && $points < 800){
             $res['level'] = 7;
-            $res['progress'] = (round(($points-700)/100 ,2))*100 . "%";
+            $res['progress'] = (round(($points-700)/100 ,2))*100;
         } else if(800<= $points){
             $res['level'] = '8 (Ultimate Pirize)';
-            $res['progress'] = '100%';
+            $res['progress'] = '100';
         }
         return $res;
 
