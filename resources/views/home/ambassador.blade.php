@@ -66,7 +66,7 @@
     <div class="ambassador-loot">
         <div class="container">
             <div class=" panel">
-                <div class="title"><span>LOOT</span></div>
+                <div class="title"><span>REWARDS</span></div>
                 <div class="text-center" style="margin-top: 50px;">
                     <img src="//{{getenv('RESOURCE_PATH')}}/images/loot_logo.png" alt="" class="loot-logo" style="width: 90%;">
                     <img src="//{{getenv('RESOURCE_PATH')}}/images/loot.png" alt="" class="loot" style="width: 90%;margin-top: 45px;">

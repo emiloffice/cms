@@ -59,7 +59,7 @@
 <div class="ambassador-loot">
     <div class="container">
         <div class="m-panel">
-            <div class="title">LOOT</div>
+            <div class="title">REWARDS</div>
             <ul class="loot-list">
                 <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Backpack.png" alt="backpacj"></li>
                 <li class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Hat.png" alt="hat"></li>
@@ -146,7 +146,7 @@
 <script src="//{{getenv('RESOURCE_PATH')}}/layer/v3.0.3/layer.js"></script>
 <script>
     function  join() {
-        layer.confirm('Log in to your Multiverse account, or sign up now!', {
+        layer.confirm('Login to your existing Multiverse account or sign up today!', {
             btn: ['Log in','Sign up'], title: 'Message'
         }, function(){
             window.location.href = "{{ url('login', '', true) }}";

@@ -18,7 +18,7 @@
 <body>
     <div class="reg-header">
         <div class="container">
-            <div class="logo"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></div>
+            <div class="logo"><a href="{{url('ambassador')}}"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></a></div>
         </div>
     </div>
     <div class="reg-content">
