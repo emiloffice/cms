@@ -27,11 +27,11 @@
                 {{--{!! csrf_field() !!}--}}
                 {{ csrf_field() }}
                 <div class="login-input-group">
-                    <label for="email">Email</label>
+                    <label for="email"><i class="required">*</i>Email</label>
                     <input type="text" id="email" name="email">
                 </div>
                 <div class="login-input-group">
-                    <label for="password">Password</label>
+                    <label for="password"><i class="required">*</i>Password</label>
                     <input type="password" id="password" name="password">
                 </div>
 
@@ -41,7 +41,7 @@
                     <a class="reg-btn-oauth" href="{{url('OAuth/twitter', '',  $HTTPS_REQUEST)}}"><p><i class="fa fa-twitter"></i> Log In</p></a>
                 </div>
                 <div class="login-input-group">
-                    <p>If you don't have an account, <a href="{{ url('register', '',  $HTTPS_REQUEST) }}" class="login-href">sign up</a> now!</p>
+                    <p>if you don't have an account, <a href="{{ url('register', '',  $HTTPS_REQUEST) }}" class="login-href">sign up</a> today!</p>
                 </div>
             </form>
         </div>

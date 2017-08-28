@@ -17,6 +17,10 @@ p {
 .fl {
   float: left;
 }
+.required{
+  color: red;
+  padding-right: 3px;
+}
 // Variables
 @import "variables";
 // header
