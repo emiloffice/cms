@@ -17,7 +17,7 @@
 </head>
 <div class="header">
     <div class="container">
-        <div class="logo"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></div>
+        <div class="logo"><a href="{{url('ambassador','',true)}}"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></a></div>
         <div class="right">
             @if($user == null || !isset($user))
                 <a href="{{url('login')}}" class="logout">Sign up</a>

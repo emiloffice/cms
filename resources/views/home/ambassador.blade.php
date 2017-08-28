@@ -19,13 +19,13 @@
 </head>
     <div class="header">
         <div class="container">
-            <div class="logo"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></div>
+            <div class="logo"><a href="{{url('ambassador','',true)}}"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></a></div>
             <div class="right">
                 @if($user == null || !isset($user))
                     @if(isset($code))
-                        <a href="{{url('register', '', true)}}?code={{$code}}" class="logout">Join ambassador program</a>
+                        <a href="{{url('register', '', true)}}?code={{$code}}" class="logout">Join our ambassador program</a>
                     @else
-                        <a href="{{url('register', '', true)}}" class="logout">Join ambassador program</a>
+                        <a href="{{url('register', '', true)}}" class="logout">Join our ambassador program</a>
                     @endif
                         <a href="{{url('login', '', true)}}" class="logout">Log in</a>
                 @else
