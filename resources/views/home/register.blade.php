@@ -31,7 +31,7 @@
                 <label for="username"><i class="required">*</i>Username</label>
 
                 @if ($errors->has('username'))
-                    <input type="text" id="username" name="username" onclick="tips('username', 'username')">
+                    <input type="text" id="username" name="username" onclick="tips('{{$errors->get('username')}}', 'username')" class="error-input">
                     @else
                     <input type="text" id="username" name="username">
                 @endif
@@ -39,16 +39,28 @@
             </div>
             <div class="reg-input-group">
                 <label for="email"><i class="required">*</i>Email</label>
-                <input type="text" id="email" name="email">
+                @if ($errors->has('email'))
+                    <input type="text" id="email" name="email" onclick="tips('{{$errors->get('email')}}', 'email')" class="error-input">
+                    @else
+                    <input type="text" id="email" name="email">
+                @endif
             </div>
             <div class="reg-input-group">
                 <label for="password"><i class="required">*</i>Password</label>
-                <input type="password" id="password" name="password">
+                @if ($errors->has('password'))
+                    <input type="text" id="password" name="password" onclick="tips('{{$errors->get('password')}}', 'password')" class="error-input">
+                    @else
+                    <input type="password" id="password" name="password">
+                @endif
             </div>
 
             <div class="reg-input-group">
                 <label for="referralCode">Referral Code</label>
-                <input type="text" id="referralCode" name="referral_code" value="{{ $code }}" placeholder="Not required">
+                @if ($errors->has('referral_code'))
+                    <input type="text" id="referralCode" name="referral_code" onclick="tips('{{$errors->get('referral_code')}}', 'referralCode')" class="error-input">
+                    @else
+                    <input type="text" id="referralCode" name="referral_code" value="{{ $code }}" placeholder="Not required">
+                @endif
             </div>
             <div class="reg-input-group">
                     <button class="reg-btn-default btn-submit">Sign up</button>
@@ -77,7 +89,7 @@
 <script>
     function tips(content,copybtnid){
         var cpb = document.getElementById(copybtnid);
-        $(cpb).tooltip({title:"copiedsadsadsadsasadsasaddsasadasd!", placement: "right", trigger: "manual"});
+        $(cpb).tooltip({title:content, placement: "right", trigger: "manual"});
         $(cpb).click(function () {
             $(cpb).tooltip('show');
         })
