@@ -23,22 +23,19 @@
     </div>
     <div class="reg-content">
         <div class="container">
-            @if(count($errors)>0)
-                @foreach($errors->all() as $value)
-                    <script>
-                        layer.msg('{{$value}}', {
-                            icon: 5
-                            ,shade: 0.01
-                        });
-                    </script>
-                 @endforeach
-             @endif
         <form action="{{ url('register', '', true) }}" class="panel" method="POST">
             {{--{!! csrf_field() !!}--}}
             {{ csrf_field() }}
+
             <div class="reg-input-group">
                 <label for="username"><i class="required">*</i>Username</label>
-                <input type="text" id="username" name="username">
+
+                @if ($errors->has('username'))
+                    <input type="text" id="username" name="username" onclick="tips('username', 'username')">
+                    @else
+                    <input type="text" id="username" name="username">
+                @endif
+
             </div>
             <div class="reg-input-group">
                 <label for="email"><i class="required">*</i>Email</label>
@@ -73,5 +70,18 @@
 <div class="right"></div>
 </div>
 </div>
+
 </body>
+<script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-3.2.1.js"></script>
+<script src="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/js/bootstrap.js"></script>
+<script>
+    function tips(content,copybtnid){
+        var cpb = document.getElementById(copybtnid);
+        $(cpb).tooltip({title:"copiedsadsadsadsasadsasaddsasadasd!", placement: "right", trigger: "manual"});
+        $(cpb).click(function () {
+            $(cpb).tooltip('show');
+        })
+        cpb.onmouseout=function(){$(cpb).tooltip('destroy')};
+    }
+</script>
 </html>
