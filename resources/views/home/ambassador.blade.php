@@ -68,8 +68,8 @@
             <div class=" panel">
                 <div class="title"><span>LOOT</span></div>
                 <div class="text-center" style="margin-top: 50px;">
-                    <img src="/images/loot_logo.png" alt="" class="loot-logo" style="width: 90%;">
-                    <img src="/images/loot.png" alt="" class="loot" style="width: 90%;margin-top: 45px;">
+                    <img src="//{{getenv('RESOURCE_PATH')}}/images/loot_logo.png" alt="" class="loot-logo" style="width: 90%;">
+                    <img src="//{{getenv('RESOURCE_PATH')}}/images/loot.png" alt="" class="loot" style="width: 90%;margin-top: 45px;">
                 </div>
                 {{--<ul class="loot-list">
                     <li class="col-xs-12 col-sm-12 col-md-4 col-lg-4"><img src="//{{getenv('RESOURCE_PATH')}}/images/Backpack.png" alt="backpacj"></li>
