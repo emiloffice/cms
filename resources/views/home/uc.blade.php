@@ -43,7 +43,7 @@
                                 <p>2. Gain 5 points for liking our Facebook Page</p>
                             @endif
                             @if($point->discord_status===1)
-                                <p class="line-throught">3. Gain 5 point for "joining" our Discord group</p>
+                                <p class="line-throught">3. Gain 5 point for joining our Discord group</p>
                                 @else
                                 <p>3. Gain 5 point for joining our Discord group</p>
                             @endif
