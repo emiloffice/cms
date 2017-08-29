@@ -28,11 +28,27 @@
                 {{ csrf_field() }}
                 <div class="login-input-group">
                     <label for="email"><i class="required">*</i>Email</label>
-                    <input type="email" id="email" name="email">
+                    @if($errors->has('email'))
+                        @foreach($errors->get('email') as $message)
+                            <input type="email" id="email" name="email" class="error-input" onclick="tips('{{$message}}', 'email')" value="{{ old('email') }}">
+                        @endforeach
+                    @elseif(isset($res))
+                        <input type="password" id="password" name="password" onclick="tips('{{$res}}','password')" class="error-input" >
+                        @else
+                        <input type="email" id="email" name="email" value="{{ old('email') }}">
+                    @endif
                 </div>
                 <div class="login-input-group">
                     <label for="password"><i class="required">*</i>Password</label>
-                    <input type="password" id="password" name="password">
+                    @if($errors->has('password'))
+                        @foreach($errors->get('password') as $message)
+                            <input type="password" id="password" name="password" onclick="tips('{{$message}}','password')" class="error-input" >
+                            @endforeach
+                    @elseif(isset($res))
+                        <input type="password" id="password" name="password" onclick="tips('{{$res}}','password')" class="error-input" >
+                        @else
+                        <input type="password" id="password" name="password">
+                    @endif
                 </div>
 
                 <div class="login-input-group">
@@ -56,22 +72,15 @@
         </div>
     </div>
 </body>
+<script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-3.2.1.js"></script>
+<script src="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/js/bootstrap.js"></script>
 <script>
-    window.fbAsyncInit = function() {
-        FB.init({
-            appId      : '334111223669076',
-            xfbml      : true,
-            version    : 'v2.10'
-        });
-        FB.AppEvents.logPageView();
-    };
-
-    (function(d, s, id){
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/sdk.js";
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+    function tips(content,copybtnid){
+        var cpb = document.getElementById(copybtnid);
+        $(cpb).tooltip({title: content, placement: "right", trigger: "manual"});
+        $(cpb).tooltip('show');
+        cpb.onfocus=function(){$(cpb).removeClass('error-input')};
+        cpb.onmouseout=function(){$(cpb).tooltip('destroy')};
+    }
 </script>
 </html>

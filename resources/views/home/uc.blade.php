@@ -13,14 +13,15 @@
     <link href="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/app.css') }}" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/uc.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//{{getenv('RESOURCE_PATH')}}/font-awesome/css/font-awesome.css" />
 </head>
 <body>
 <div class="uc-header">
     <div class="container">
         <div class="logo"><img src="//{{getenv('RESOURCE_PATH')}}/img/logo.png" alt="logo"></div>
         <div class="right">
-            <a href="{{url('ambassador', '', true)}}" class="">Home Page</a>
-            <a href="{{url('logout', '', true)}}" class="logout">Logout</a>
+            <a href="{{url('ambassador', '', $HTTPS_REQUEST)}}" class="">Home Page</a>
+            <a href="{{url('logout', '', $HTTPS_REQUEST)}}" class="logout">Logout</a>
         </div>
     </div>
 </div>
@@ -36,15 +37,32 @@
                         <div class="">
                             <p class="title" style="padding-top: 10px">Quests</p>
                             <p>1. Gain 10 points for referring your first friend</p>
-                            <p>2. Gain 5 points for liking our Facebook Page</p>
-                            <p>3. Gain 5 point for "joining" our Discord group</p>
-                            <p>4. Gain 5 points for joining our community group</p>
-                            <p>5. Gain 5 points for following our Twitter Page</p>
+                            @if($point->fb_status===1)
+                                <p class="line-throught">2. Gain 5 points for liking our Facebook Page</p>
+                                @else
+                                <p>2. Gain 5 points for liking our Facebook Page</p>
+                            @endif
+                            @if($point->discord_status===1)
+                                <p class="line-throught">3. Gain 5 point for "joining" our Discord group</p>
+                                @else
+                                <p>3. Gain 5 point for joining our Discord group</p>
+                            @endif
+                            @if($point->group_status===1)
+                                <p class="line-throught">>4. Gain 5 points for joining our community group</p>
+                                @else
+                                <p>4. Gain 5 points for joining our community group</p>
+
+                            @endif
+                            @if($point->twitter_status===1)
+                                <p class="line-throught">>5. Gain 5 points for following our Twitter Page</p>
+                            @else
+                                <p>5. Gain 5 points for following our Twitter Page</p>
+                            @endif
                         </div>
                         <div class="">
                             <p class="title" style="padding-top: 10px">Invite friends</p>
                             <div><input type="text" value="{{ url('ambassador') }}/{{ $point->referral_code }}" readonly id="link"><button id="copy" class="refer" onclick="copy('link', 'copy')">Copy & Share</button></div>
-                            <p style="padding-top: 10px">The six digits "<span class="special-text">{{ $point->referral_code }}</span>" on the link are a referral code</p>
+                            <p style="padding-top: 10px">This six digit code"<span class="special-text">{{ $point->referral_code }}</span>"at the end of your referral link represents your referral code</p>
                         </div>
                     </div>
 
@@ -77,7 +95,7 @@
                 <p class="title"><span class="line"></span>Recommended friends</p>
                 <ul class="friends">
                     @if(count($friends)===0)
-                        <p>No recommendation of friends.</p>
+                        <p>No recommended friends at this time!</p>
                         @else
                         @foreach($friends as $friend)
                             <li><img src="//{{getenv('RESOURCE_PATH')}}/img/headimg.png" alt=""><p>{{ $friend->name }}</p></li>
@@ -85,6 +103,7 @@
                     @endif
                 </ul>
             </div>
+            <div class="rank">Rank: {{ $rank }}</div>
         </div>
     </div>
 </div>

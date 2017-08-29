@@ -23,25 +23,41 @@
         </div>
     </div>
     <div class="login-content">
-            <form action="{{ url('login', '', true) }}" class="panel" method="POST">
+            <form action="{{ url('login', '', $HTTPS_REQUEST) }}" class="panel" method="POST">
                 {{--{!! csrf_field() !!}--}}
                 {{ csrf_field() }}
                 <div class="login-input-group">
                     <label for="email"><i class="required">*</i>Email</label>
-                    <input type="email" id="email" name="email">
+                    @if($errors->has('email'))
+                        @foreach($errors->get('email') as $message)
+                            <input type="email" id="email" name="email" class="error-input" onclick="tips('{{$message}}', 'email')" value="{{ old('email') }}">
+                        @endforeach
+                    @elseif(isset($res))
+                        <input type="password" id="password" name="password" onclick="tips('{{$res}}','password')" class="error-input" >
+                    @else
+                        <input type="email" id="email" name="email" value="{{ old('email') }}">
+                    @endif
                 </div>
                 <div class="login-input-group">
                     <label for="password"><i class="required">*</i>Password</label>
-                    <input type="password" id="password" name="password">
+                    @if($errors->has('password'))
+                        @foreach($errors->get('password') as $message)
+                            <input type="password" id="password" name="password" onclick="tips('{{$message}}','password')" class="error-input" >
+                        @endforeach
+                    @elseif(isset($res))
+                        <input type="password" id="password" name="password" onclick="tips('{{$res}}','password')" class="error-input" >
+                    @else
+                        <input type="password" id="password" name="password">
+                    @endif
                 </div>
 
                 <div class="login-input-group">
                     <button class="login-btn-default btn-submit">Log In</button>
-                    <a class="reg-btn-oauth" href="{{url('OAuth/facebook', '', true)}}"><p><i class="fa fa-facebook"></i> Log In</p></a>
-                    <a class="reg-btn-oauth" href="{{url('OAuth/twitter', '', true)}}"><p><i class="fa fa-twitter"></i> Log In</p></a>
+                    <a class="reg-btn-oauth" href="{{url('OAuth/facebook', '',  $HTTPS_REQUEST)}}"><p><i class="fa fa-facebook"></i> Log In</p></a>
+                    <a class="reg-btn-oauth" href="{{url('OAuth/twitter', '',  $HTTPS_REQUEST)}}"><p><i class="fa fa-twitter"></i> Log In</p></a>
                 </div>
                 <div class="login-input-group">
-                    <p>If you haven't an account, <a href="{{ url('register', '',true) }}" class="login-href">sign up</a> today!</p>
+                    <p>if you don't have an account, <a href="{{ url('register', '',  $HTTPS_REQUEST) }}" class="login-href">sign up</a> today!</p>
                 </div>
             </form>
     </div>
@@ -60,4 +76,15 @@
     </div>
 </body>
 <script src="http://at.alicdn.com/t/font_371115_i7q3yrjs84a38fr.js"></script>
+<script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-3.2.1.js"></script>
+<script src="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/js/bootstrap.js"></script>
+<script>
+    function tips(content,copybtnid){
+        var cpb = document.getElementById(copybtnid);
+        $(cpb).tooltip({title: content, placement: "top", trigger: "manual"});
+        $(cpb).tooltip('show');
+        cpb.onfocus=function(){$(cpb).removeClass('error-input')};
+        cpb.onmouseout=function(){$(cpb).tooltip('destroy')};
+    }
+</script>
 </html>

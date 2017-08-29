@@ -22,7 +22,11 @@ p {
   padding-right: 3px;
 }
 .error-input{
-  border: 1px solid #FF0000;
+  border: 1px solid #FF0000!important;
+}
+.line-throught{
+  text-decoration: line-through;
+  color: #eeeeee;
 }
 // Variables
 @import "variables";

@@ -15,6 +15,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Postmark\PostmarkClient;
 use function Sodium\increment;
@@ -24,19 +25,34 @@ class UserController extends Controller
     public function login(Request $request)
     {
         $HTTPS_REQUEST = env('HTTPS_REQUEST');
-        if (Auth::attempt(['email' => $request->email, 'password'=> $request->password])){
-            $user = Auth::user();
-            if($user->status=='0'){
-                session(['CONFIRM_EMAIL'=>$user->email]);
-                return redirect('confirm-email');
+        if ($request->isMethod('post')){
+            $this->validate($request, [
+                'email' => 'required|exists:users,email',
+                'password' => 'required|digits_between:6,30'
+            ]);
+
+            if (Auth::attempt(['email' => $request->email, 'password'=> $request->password])){
+                $user = Auth::user();
+                if($user->status=='0'){
+                    session(['CONFIRM_EMAIL'=>$user->email]);
+                    return redirect('confirm-email');
+                }else{
+                    return redirect('user-center');
+                }
             }else{
-                return redirect('user-center');
+                $res = 'Email or password is wrong';
+                if ($this->is_mobile_request()){
+                    return view('mobile.login', compact('HTTPS_REQUEST','res'));
+                } else {
+                    return view('home.login', compact('HTTPS_REQUEST','res'));
+                }
             }
-        }
-        if ($this->is_mobile_request()){
-            return view('mobile.login', compact('HTTPS_REQUEST'));
-        } else {
-            return view('home.login', compact('HTTPS_REQUEST'));
+        }else{
+            if ($this->is_mobile_request()){
+                return view('mobile.login', compact('HTTPS_REQUEST'));
+            } else {
+                return view('home.login', compact('HTTPS_REQUEST'));
+            }
         }
     }
     public function center()
@@ -49,6 +65,13 @@ class UserController extends Controller
         $res = $this->ambassador_level($point->points);
         $point->level = $res['level'];
         $point->progress = $res['progress'];
+        $ranks = DB::table('points')->where([])->orderBy('points','esc')->get();
+        $rank = '';
+        for ($i=0;$i<count($ranks);$i++) {
+            if ($ranks[$i]->user_id == $user_id){
+                $rank =  $i+1;
+            }
+        }
         if ($point->referral_code){
             $friends = Point::where('from_referral_code',$point->referral_code)
                 ->join('users', 'points.user_id', '=', 'users.id')
@@ -57,14 +80,16 @@ class UserController extends Controller
             $friends = '';
         }
         if ($this->is_mobile_request()){
-            return view('mobile.uc', compact('user','point','friends','HTTPS_REQUEST'));
+            return view('mobile.uc', compact('user','point','friends','HTTPS_REQUEST', 'rank'));
         } else{
-            return view('home.uc', compact('user','point','friends','HTTPS_REQUEST'));
+            return view('home.uc', compact('user','point','friends','HTTPS_REQUEST','rank'));
         }
     }
     public function logout()
     {
-        Auth::logout();
+        if(Auth::check()){
+            Auth::logout();
+        }
         return redirect('login');
     }
 
@@ -74,8 +99,8 @@ class UserController extends Controller
         if ($request->isMethod('post')){
             $this->validate($request, [
                 'email' => 'required|unique:users',
-                'username' => 'required|max:50',
-                'password' => 'required|max:30|min:6'
+                'username' => 'required|max:50|min:4',
+                'password' => 'required|digits_between:6,30'
             ]);
             $email = $request->email;
             $res = DB::table('users')->where('email',$email)->first();
@@ -245,7 +270,7 @@ class UserController extends Controller
         $HTTPS_REQUEST = env('HTTPS_REQUEST');
         $email = session('CONFIRM_EMAIL');
         if ($email){
-            return view('home.confirmEmail',compact('email'));
+            return view('home.confirmEmail',compact('email','HTTPS_REQUEST'));
         }else{
             $user = session('USER_INFO');
             if($user->email!==''||$user->email!==null){
@@ -260,6 +285,7 @@ class UserController extends Controller
     public function OAuthConfirmEmail()
     {
         $user = session('OAUTH_INFO');
+        $HTTPS_REQUEST = env('HTTPS_REQUEST');
         $token = $user->token;
         $email = $user->email;
         $res = DB::table('users')->where('oauth_token', $token)->orWhere('email', $email)->first();

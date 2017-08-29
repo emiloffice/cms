@@ -27,6 +27,7 @@
   width: 90%;
   margin: 0 auto;
   color: #ffffff;
+
   >.title {
     margin-top: 15px;
     line-height: 14px;
@@ -41,6 +42,13 @@
     color: #ffae00;
     background: #ffae00;
     margin-right: 5px;
+  }
+  .rank{
+    position: absolute;
+    bottom: 10px;
+    right: 50px;
+    color: #ffffff;
+    font-size: 18px;
   }
 
 }
@@ -57,6 +65,7 @@
   background-color: rgba(0,0,0,.95);
   background: url(images/uc-bg.jpg) no-repeat center;
   padding: 0.5rem 0;
+
   .panel {
     background: url(images/uc-panel-bg.png) no-repeat center;
     min-height: 7.15rem;
@@ -65,7 +74,14 @@
     margin: 0 auto;
     background-size: cover;
     padding-top: 1.38rem;
-
+    position: relative;
+    .rank{
+      position: absolute;
+      bottom: 10px;
+      right: 50px;
+      color: #ffffff;
+      font-size: 18px;
+    }
   }
 }
 .uc-footer {

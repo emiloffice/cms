@@ -74,6 +74,7 @@
                     @endif
                 </ul>
             </div>
+            <div class="rank">Rank: {{ $rank }}</div>
         </div>
     </div>
 </div>

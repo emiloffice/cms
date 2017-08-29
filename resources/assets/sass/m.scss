@@ -18,6 +18,13 @@ p {
   color: red;
   padding-right: 3px;
 }
+.error-input{
+  border: 1px solid red!important;
+}
+.line-throught{
+  text-decoration: line-through;
+  color: #eeeeee;
+}
 // Variables
 @import "variables";
 // header part
