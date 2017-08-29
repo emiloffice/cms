@@ -33,7 +33,7 @@
                             <input type="email" id="email" name="email" class="error-input" onclick="tips('{{$message}}', 'email')" value="{{ old('email') }}">
                         @endforeach
                     @elseif(isset($res))
-                        <input type="password" id="password" name="password" onclick="tips('{{$res}}','password')" class="error-input" >
+                        <input type="email" id="email" name="email" onclick="tips('{{$res}}','email')" class="error-input" >
                     @else
                         <input type="email" id="email" name="email" value="{{ old('email') }}">
                     @endif
