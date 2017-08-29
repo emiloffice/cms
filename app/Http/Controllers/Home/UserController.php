@@ -263,6 +263,7 @@ class UserController extends Controller
         $token = $user->token;
         $email = $user->email;
         $res = DB::table('users')->where('oauth_token', $token)->orWhere('email', $email)->first();
+
         if ($res){
             Auth::attempt(['email'=>$res->email, 'password' => '123456']);
             return redirect('user-center');
@@ -295,6 +296,10 @@ class UserController extends Controller
     {
         $HTTPS_REQUEST = env('HTTPS_REQUEST');
         $code = session('EMAIL_CONFIRM_CODE');
+        $this->validate($request, [
+            'email' => 'required|unique:users|email',
+            'code' => 'required|digits_between:4,6',
+        ]);
         if ($code === $request->code){
             $user = session('OAUTH_INFO');
             $email = $user->email = $request->email;

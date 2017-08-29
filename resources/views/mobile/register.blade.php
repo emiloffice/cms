@@ -32,7 +32,7 @@
                 </div>
                 <div class="reg-input-group">
                     <label for="email"><i class="required">*</i>Email</label>
-                    <input type="text" id="email" name="email">
+                    <input type="email" id="email" name="email">
                 </div>
                 <div class="reg-input-group">
                     <label for="password"><i class="required">*</i>Password</label>

@@ -28,12 +28,20 @@
             {{ csrf_field() }}
             <div class="login-input-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" class="default-input-min">
+                @if($errors->has('email'))
+                    <input type="email" id="email" name="email" class="default-input-min error-input">
+                    @else
+                    <input type="email" id="email" name="email" class="default-input-min">
+                @endif
                 <span onclick="sendCode()" class="btn-send">send</span>
             </div>
             <div class="login-input-group">
                 <label for="password">Verification code</label>
-                <input type="text" id="code" name="code">
+                @if($errors->has('email'))
+                    <input type="text" id="code" name="code" class="error-input">
+                    @else
+                    <input type="text" id="code" name="code" class="">
+                @endif
             </div>
 
             <div class="login-input-group">
