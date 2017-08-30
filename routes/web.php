@@ -72,15 +72,14 @@ Route::group(['prefix' => 'test','namespace' => 'Home'],function ($router)
 // 三方登录
 Route::group(['prefix' => 'OAuth','namespace' => 'OAuth'],function ($router)
 {
-    $router->get('facebook-login', 'FacebookController@login');
-    $router->get('facebook', 'FacebookController@redirectToProvider');
+//    $router->get('facebook-login', 'FacebookController@login');
 //    $router->get('facebook-callback', 'FacebookController@callback');
+    $router->get('facebook', 'FacebookController@redirectToProvider');
     $router->get('facebook-callback', 'FacebookController@handleProviderCallback');
-    $router->get('facebook-auth-info', 'FacebookController@authInfo');
+    $router->get('facebook-get-short-token', 'FacebookController@getShortToken');
     $router->get('twitter', 'TwitterController@redirectToProvider');
     $router->get('twitter-callback', 'TwitterController@handleProviderCallback');
     $router->get('cancel_auth', 'FacebookController@cancel_auth');
-    https://www.multiverseinc.com/OAuth/cancel_auth
 });
 Route::group(['prefix' => '','namespace' => 'Home', 'middleware' => 'auth'],function ($router) {
     $router->any('user/center', 'UserController@center');
