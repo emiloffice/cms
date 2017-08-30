@@ -30,10 +30,10 @@
                 <label for="email">Email</label>
                 @if($errors->has('email'))
                     @foreach($errors->get('email') as $message)
-                        <input type="email" id="email" name="email" class="default-input-min error-input" onclick="tips('{{$message}}', 'email')" value="{{ $email }}">
+                        <input type="email" id="email" name="email" class="default-input-min error-input" onclick="tips('{{$message}}', 'email')" value="{{ $email }}" readonly>
                     @endforeach
                 @else
-                    <input type="email" id="email" name="email" class="default-input-min" value="{{ $email }}">
+                    <input type="email" id="email" name="email" class="default-input-min" value="{{ $email }}" readonly>
                 @endif
                     <span onclick="sendCode()" class="btn-send">send</span>
             </div>

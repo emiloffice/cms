@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
+use Validator;
 use Postmark\PostmarkClient;
 use function Sodium\increment;
 
@@ -26,25 +27,28 @@ class UserController extends Controller
     {
         $HTTPS_REQUEST = env('HTTPS_REQUEST');
         if ($request->isMethod('post')){
-            $this->validate($request, [
+            $validator = Validator::make($request->all(), [
                 'email' => 'required|exists:users,email',
                 'password' => 'required|min:6|max:30'
             ]);
-            if ($this->validate())
-            if (Auth::attempt(['email' => $request->email, 'password'=> $request->password])){
-                $user = Auth::user();
-                if($user->status=='0'){
-                    session(['CONFIRM_EMAIL'=>$user->email]);
-                    return redirect('confirm-email');
-                }else{
-                    return redirect('user-center');
-                }
+            if ($validator->fails()){
+                return Redirect::back()->withErrors($validator)->withInput();
             }else{
-                $res = 'Email or password is wrong';
-                if ($this->is_mobile_request()){
-                    return view('mobile.login', compact('HTTPS_REQUEST','res'));
-                } else {
-                    return view('home.login', compact('HTTPS_REQUEST','res'));
+                if (Auth::attempt(['email' => $request->email, 'password'=> $request->password])){
+                    $user = Auth::user();
+                    if($user->status=='0'){
+                        session(['CONFIRM_EMAIL'=>$user->email]);
+                        return redirect('confirm-email');
+                    }else{
+                        return redirect('user-center');
+                    }
+                }else{
+                    $res = 'Email or password is wrong';
+                    if ($this->is_mobile_request()){
+                        return view('mobile.login', compact('HTTPS_REQUEST','res'));
+                    } else {
+                        return view('home.login', compact('HTTPS_REQUEST','res'));
+                    }
                 }
             }
         }else{
@@ -97,35 +101,41 @@ class UserController extends Controller
     {
         $HTTPS_REQUEST = env('HTTPS_REQUEST');
         if ($request->isMethod('post')){
-            $this->validate($request, [
+            $validator = Validator::make($request->all(), [
                 'email' => 'required|unique:users',
                 'username' => 'required|max:50|min:4',
                 'password' => 'required|min:6|max:30'
             ]);
-            $email = $request->email;
-            $res = DB::table('users')->where('email',$email)->first();
-            if($res){
-
+            if ($validator->fails()){
+                return Redirect::back()->withErrors($validator)->withInput();
             }else{
-                $User = new User;
-                $User->name = $request->username;
-                $User->password = bcrypt($request->password);
-                Session(['USER_PWD'=>$request->password]);
-                $User->email = $email;
-                $User->save();
-                session(['USER_INFO'=>$User]);
-                $Point = new Point;
-                $Point->user_id = $User->id;
-                $from_referral_id = Point::where('referral_code', $request->referral_code)->value('user_id');
-                $Point->from_referral_code = $request->referral_code;//提交的推荐码
-                $Point->from_referral_id = $from_referral_id;//提交的推荐人ID
-                $Point->referral_code = $this->referralCode(1);//生成的自己的推荐码数
-                $Point->game_id = '1';//默认seekingdawn为1
-                $Point->points = 0;//默认seekingdawn为1
-                $Point->points_level = 1;//初始等级为1
-                $Point->save();
-                return redirect('confirm-email');
+                $email = $request->email;
+                $res = DB::table('users')->where('email',$email)->first();
+                if($res){
+                    $validator->errors()->add('email', 'The email has been registered!');
+                    return Redirect::back()->withErrors($validator)->withInput();
+                }else{
+                    $User = new User;
+                    $User->name = $request->username;
+                    $User->password = bcrypt($request->password);
+                    Session(['USER_PWD'=>$request->password]);
+                    $User->email = $email;
+                    $User->save();
+                    session(['USER_INFO'=>$User]);
+                    $Point = new Point;
+                    $Point->user_id = $User->id;
+                    $from_referral_id = Point::where('referral_code', $request->referral_code)->value('user_id');
+                    $Point->from_referral_code = $request->referral_code;//提交的推荐码
+                    $Point->from_referral_id = $from_referral_id;//提交的推荐人ID
+                    $Point->referral_code = $this->referralCode(1);//生成的自己的推荐码数
+                    $Point->game_id = '1';//默认seekingdawn为1
+                    $Point->points = 0;//默认seekingdawn为1
+                    $Point->points_level = 1;//初始等级为1
+                    $Point->save();
+                    return redirect('confirm-email');
+                }
             }
+
         }
         if ($request->isMethod('get')){
             $code = $request->code;
@@ -322,46 +332,57 @@ class UserController extends Controller
     {
         $HTTPS_REQUEST = env('HTTPS_REQUEST');
         $code = session('EMAIL_CONFIRM_CODE');
-        $this->validate($request, [
+        $validator = Validator::make($request->all(), [
             'email' => 'required|unique:users|email',
             'code' => 'required|min:4|max:6',
         ]);
-        if ($code === $request->code){
-            $user = session('OAUTH_INFO');
-            $email = $user->email = $request->email;
-            $this->createUser($user,'twitter');
-            Point::where('referral_code',$request->referral_code)->increment('points', 10);
-            Auth::attempt(['email' => $email, 'password' => '123456']);
-            return redirect('user-center');
+        if ($validator->fails()){
+            return Redirect::back()->withErrors($validator)->withInput();
         }else{
-            return Redirect::back()->withInput()->with('codeError','The Verification code you entered is incorrect ！');
+            if ($code === $request->code){
+                $user = session('OAUTH_INFO');
+                $email = $user->email = $request->email;
+                $this->createUser($user,'twitter');
+                Point::where('referral_code',$request->referral_code)->increment('points', 10);
+                Auth::attempt(['email' => $email, 'password' => '123456']);
+                return redirect('user-center');
+            }else{
+                return Redirect::back()->withInput()->with('codeError','The Verification code you entered is incorrect ！');
 
+            }
         }
-
     }
     public function defaultVerifyUserEmail(Request $request)
     {
         $HTTPS_REQUEST = env('HTTPS_REQUEST');
         $code = session('EMAIL_CONFIRM_CODE');
-        if ($code === $request->code){
-            $email = $request->email;
-            $user = DB::table('users')->where('email',$email)->get();
-            if ($user[0]!==''||$user[0]!==null){
-                $user_id = $user[0]->id;
-                DB::update('update points set points = ? where user_id = ?',[10, $user_id]);
-                DB::update('update users set status = ? where id = ?',[1, $user_id]);
-                if (DB::table('points')->where('referral_code', session('FROM_REFERRAL_CODE'))->first()){
-                    DB::update('update points set points = points + ? where referral_code = ?',[10, session('FROM_REFERRAL_CODE')]);
-                }
-                Auth::attempt(['email'=>$email, 'password'=> session('USER_PWD')]);
-                return redirect('user-center');
-            }
-            return redirect('confirm-email');
+        print_r($code);
+        print_r($request->code);
+        $validator = Validator::make($request->all(),[
+           'code' => 'required|min:4|max:6',
+        ]);
+        if ($validator->fails()){
+            return Redirect::back()->withInput()->withErrors($validator);
         }else{
-            return Redirect::back()->withInput()->with('codeError','The Verification code you entered is incorrect ！');
-
+            if ($code === $request->code){
+                $email = $request->email;
+                $user = DB::table('users')->where('email',$email)->get();
+                if ($user[0]!==''||$user[0]!==null){
+                    $user_id = $user[0]->id;
+                    DB::update('update points set points = ? where user_id = ?',[10, $user_id]);
+                    DB::update('update users set status = ? where id = ?',[1, $user_id]);
+                    if (DB::table('points')->where('referral_code', session('FROM_REFERRAL_CODE'))->first()){
+                        DB::update('update points set points = points + ? where referral_code = ?',[10, session('FROM_REFERRAL_CODE')]);
+                    }
+                    Auth::attempt(['email'=>$email, 'password'=> session('USER_PWD')]);
+                    return redirect('user-center');
+                }
+                return redirect('confirm-email');
+            }else{
+                $validator->errors()->add('code', 'The Verification code you entered is incorrect ！');
+                return Redirect::back()->withInput()->withErrors($validator);
+            }
         }
-
     }
     /*
      * Object Array $params

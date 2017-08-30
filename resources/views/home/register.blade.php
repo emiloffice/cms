@@ -74,7 +74,7 @@
                 <a class="reg-btn-oauth" href="{{ url('OAuth/twitter','', true) }}"><p><i class="fa fa-twitter"></i> Sign up</p></a>
             </div>
             <div class="reg-input-group">
-                <p>Have an account already? <a href="{{ url('login', '', true) }}" class="login-href">Login</a> now!</p>
+                <p>Have an account already? <a href="{{ url('login', '', $HTTPS_REQUEST) }}" class="login-href">Login</a> now!</p>
             </div>
         </form>
         </div>
