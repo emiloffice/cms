@@ -28,12 +28,26 @@
             {{ csrf_field() }}
             <div class="login-input-group">
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" class="default-input-min" value="{{ $email }}">
-                <span onclick="sendCode()" class="btn-send">send</span>
+                @if($errors->has('email'))
+                    @foreach($errors->get('email') as $message)
+                        <input type="email" id="email" name="email" class="default-input-min error-input" onclick="tips('{{$message}}', 'email')" value="{{ $email }}">
+                    @endforeach
+                @else
+                    <input type="email" id="email" name="email" class="default-input-min" value="{{ $email }}">
+                @endif
+                    <span onclick="sendCode()" class="btn-send">send</span>
             </div>
             <div class="login-input-group">
-                <label for="password">Verification code</label>
-                <input type="text" id="code" name="code">
+                <label for="code">Verification code</label>
+                @if($errors->has('code'))
+                    @foreach($errors->get('code') as $message)
+                        <input type="text" id="code" name="code" class="error-input" onclick="tips('{{$message}}','code')" >
+                    @endforeach
+                    @elseif(isset($codeError))
+                    <input type="text" id="code" name="code" class="error-input" onclick="tips('{{$codeError}}','code')" >
+                    @else
+                    <input type="text" id="code" name="code">
+                @endif
             </div>
 
             <div class="login-input-group">
@@ -83,6 +97,13 @@
         }else {
 
         }
+    }
+    function tips(content,copybtnid){
+        var cpb = document.getElementById(copybtnid);
+        $(cpb).tooltip({title: content, placement: "right", trigger: "manual"});
+        $(cpb).tooltip('show');
+        cpb.onfocus=function(){$(cpb).removeClass('error-input')};
+        cpb.onmouseout=function(){$(cpb).tooltip('destroy')};
     }
 </script>
 </html>

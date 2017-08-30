@@ -334,7 +334,7 @@ class UserController extends Controller
             Auth::attempt(['email' => $email, 'password' => '123456']);
             return redirect('user-center');
         }else{
-            return 'error';
+            return Redirect::back()->withInput()->with('codeError','The Verification code you entered is incorrect ！');
 
         }
 
@@ -358,7 +358,7 @@ class UserController extends Controller
             }
             return redirect('confirm-email');
         }else{
-            return 'error';
+            return Redirect::back()->withInput()->with('codeError','The Verification code you entered is incorrect ！');
 
         }
 
