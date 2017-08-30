@@ -356,8 +356,6 @@ class UserController extends Controller
     {
         $HTTPS_REQUEST = env('HTTPS_REQUEST');
         $code = session('EMAIL_CONFIRM_CODE');
-        print_r($code);
-        print_r($request->code);
         $validator = Validator::make($request->all(),[
            'code' => 'required|min:4|max:6',
         ]);
