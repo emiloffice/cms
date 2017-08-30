@@ -35,7 +35,11 @@ class FacebookController extends Controller
      */
     public function redirectToProvider()
     {
-        return Socialite::driver('facebook')->redirect();
+        if ($user = Socialite::driver('facebook')->user()){
+            dd($user);
+        }else{
+            return Socialite::driver('facebook')->redirect();
+        }
     }
 
     public function getShortToken()

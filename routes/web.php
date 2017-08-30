@@ -72,10 +72,10 @@ Route::group(['prefix' => 'test','namespace' => 'Home'],function ($router)
 // 三方登录
 Route::group(['prefix' => 'OAuth','namespace' => 'OAuth'],function ($router)
 {
-/*    $router->get('facebook', 'FacebookController@redirectToProvider');
-    $router->get('facebook-callback', 'FacebookController@handleProviderCallback');*/
-    $router->get('facebook', 'FacebookController@login');
-    $router->get('facebook-callback', 'FacebookController@callback');
+    $router->get('facebook', 'FacebookController@redirectToProvider');
+    $router->get('facebook-callback', 'FacebookController@handleProviderCallback');
+   /* $router->get('facebook', 'FacebookController@login');
+    $router->get('facebook-callback', 'FacebookController@callback');*/
     $router->get('facebook-get-short-token', 'FacebookController@getShortToken');
     $router->get('twitter', 'TwitterController@redirectToProvider');
     $router->get('twitter-callback', 'TwitterController@handleProviderCallback');
