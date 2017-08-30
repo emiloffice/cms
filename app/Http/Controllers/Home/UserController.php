@@ -256,6 +256,7 @@ class UserController extends Controller
             $user->oauth_types = $OAuthFrom;
             $user->oauth_token = $params->token;
             $user->avatar_original = $params->avatar_original;
+            $user->status = '1';
             $user->password = bcrypt('123456');
             $user->save();
             $Point = new Point;
