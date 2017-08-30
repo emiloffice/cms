@@ -323,8 +323,8 @@ class UserController extends Controller
         $sendResult = $client->sendEmail(
             "emil@multiverseinc.com",
              $request->email,
-            "Multiverse Entertainment LLC",
-            "Hello, This is your registration code：".$code
+            $code.", Verification code from Multiverse Entertainment LLC ",
+            "Hello, This is your sign up verification code：".$code
         );
         return json_encode($sendResult);
     }
