@@ -28,7 +28,7 @@ class UserController extends Controller
         if ($request->isMethod('post')){
             $this->validate($request, [
                 'email' => 'required|exists:users,email',
-                'password' => 'required|digits_between:6,30'
+                'password' => 'required|min:6|max:30'
             ]);
 
             if (Auth::attempt(['email' => $request->email, 'password'=> $request->password])){
@@ -100,7 +100,7 @@ class UserController extends Controller
             $this->validate($request, [
                 'email' => 'required|unique:users',
                 'username' => 'required|max:50|min:4',
-                'password' => 'required|digits_between:6,30'
+                'password' => 'required|min:6|max:30'
             ]);
             $email = $request->email;
             $res = DB::table('users')->where('email',$email)->first();
@@ -324,7 +324,7 @@ class UserController extends Controller
         $code = session('EMAIL_CONFIRM_CODE');
         $this->validate($request, [
             'email' => 'required|unique:users|email',
-            'code' => 'required|digits_between:4,6',
+            'code' => 'required|min:4|max:6',
         ]);
         if ($code === $request->code){
             $user = session('OAUTH_INFO');
