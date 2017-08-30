@@ -49,52 +49,47 @@ class FacebookController extends Controller
      */
     public function handleProviderCallback(Request $request)
     {
-        if (!$request->has('code') || $request->has('denied')) {
-            dd($request->code);
-//            return redirect('login');
-        }{
-            if($user = Socialite::driver('facebook')->user()){
-                $res = DB::table('users')->where('oauth_token', $user->token)->orWhere('email', $user->email)->first();
-                if ($res) {
-                    Auth::attempt(['email'=>$user->email, 'password'=>'123456']);
-                    return redirect('user-center');
-                }else{
-                    $userModel = new User;
-                    $userModel->name = $user->name;
-                    $userModel->email = $user->email;
-                    $userModel->avatar = $user->avatar;
-                    $userModel->avatar_original = $user->avatar_original;
-                    $userModel->oauth_token = $user->token;
-                    $userModel->oauth_types = 'facebook';
-                    $userModel->status = '1';
-                    $userModel->password = bcrypt('123456');
-                    $userModel->save();
-                    $point = new Point;
-                    $point->user_id = $userModel->id;
-                    $point->game_id = '1';
-                    $point->referral_code = $this->referralCode(1);
-                    $from_referral_code = session('FROM_REFERRAL_CODE');
-                    $from_referral_id = '';
-                    if ($from_referral_code){
-                        $p = DB::table('points')->where('referral_code', $from_referral_code)->first();
-                        if ($p){
-                            $from_referral_id = $p->user_id;
-                            DB::update('update points set points = points + ? where referral_code = ?',[10, session('FROM_REFERRAL_CODE')]);
-                        }
-                    }
-                    $point->from_referral_id = $from_referral_id;
-                    $point->from_referral_code = $from_referral_code;
-                    $point->points = 10;
-                    $point->points_level = '1';
-                    $point->save();
-                    Auth::attempt(['email'=>$user->email, 'password'=>'123456']);
-                    return redirect('user-center');
-                }
+        if($user = Socialite::driver('facebook')->user()){
+            $res = DB::table('users')->where('oauth_token', $user->token)->orWhere('email', $user->email)->first();
+            if ($res) {
+                Auth::attempt(['email'=>$user->email, 'password'=>'123456']);
+                return redirect('user-center');
             }else{
-                return redirect('login');
+                $userModel = new User;
+                $userModel->name = $user->name;
+                $userModel->email = $user->email;
+                $userModel->avatar = $user->avatar;
+                $userModel->avatar_original = $user->avatar_original;
+                $userModel->oauth_token = $user->token;
+                $userModel->oauth_types = 'facebook';
+                $userModel->status = '1';
+                $userModel->password = bcrypt('123456');
+                $userModel->save();
+                $point = new Point;
+                $point->user_id = $userModel->id;
+                $point->game_id = '1';
+                $point->referral_code = $this->referralCode(1);
+                $from_referral_code = session('FROM_REFERRAL_CODE');
+                $from_referral_id = '';
+                if ($from_referral_code){
+                    $p = DB::table('points')->where('referral_code', $from_referral_code)->first();
+                    if ($p){
+                        $from_referral_id = $p->user_id;
+                        DB::update('update points set points = points + ? where referral_code = ?',[10, session('FROM_REFERRAL_CODE')]);
+                    }
+                }
+                $point->from_referral_id = $from_referral_id;
+                $point->from_referral_code = $from_referral_code;
+                $point->points = 10;
+                $point->points_level = '1';
+                $point->save();
+                Auth::attempt(['email'=>$user->email, 'password'=>'123456']);
+                return redirect('user-center');
             }
-
+        }else{
+            return redirect('login');
         }
+
 
     }
     public function login()

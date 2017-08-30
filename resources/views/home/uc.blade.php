@@ -60,9 +60,9 @@
                             @endif
                         </div>
                         <div class="">
-                            <p class="title" style="padding-top: 10px">Invite friends</p>
+                            <p class="title" >Invite friends</p>
                             <div><input type="text" value="{{ url('ambassador') }}/{{ $point->referral_code }}" readonly id="link"><button id="copy" class="refer" onclick="copy('link', 'copy')">Copy & Share</button></div>
-                            <p style="padding-top: 10px">This six digit code"<span class="special-text">{{ $point->referral_code }}</span>"at the end of your referral link represents your referral code</p>
+                            <p style="padding-top: 5px">This six digit code"<span class="special-text">{{ $point->referral_code }}</span>"at the end of your referral link represents your referral code</p>
                         </div>
                     </div>
 
