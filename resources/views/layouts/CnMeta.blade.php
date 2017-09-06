@@ -12,13 +12,14 @@
 <link href="/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
 <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
 <link href="/css/style.css" rel="stylesheet">
+<link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/footer.css') }}" rel="stylesheet">
 @section('meta')
 
 @show
 <!--[if IE 7]>
 <link href="/font-awesome/css/font-awesome-ie7.min.css" rel="stylesheet">
 <![endif]-->
-
+<link rel="stylesheet" href="//at.alicdn.com/t/font_inqu00dwnxfos9k9.css">
 <!-- Google Analytics for www.multiverseinc.com -->
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
