@@ -1,12 +1,12 @@
 // Variables
 @import "variables";
 .uc-content {
-  background: url("images/uc-bg-m.jpg") no-repeat center;
+  background: url("/images/uc-bg-m.jpg") no-repeat center;
   padding: 0.5rem 0;
   margin-top: 0.6rem;
   .panel {
     position: relative;
-    background: url(images/uc-panel-bg-m.png) no-repeat center;
+    background: url(/images/uc-panel-bg-m.png) no-repeat center;
     max-height: 14rem;
     max-width: 9.05rem;
     width: 95%;

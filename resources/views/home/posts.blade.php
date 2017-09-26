@@ -14,7 +14,7 @@
     <link href="//{{getenv('RESOURCE_PATH')}}/font-awesome/css/font-awesome-ie7.min.css" rel="stylesheet">
     <![endif]-->
     <script src="//at.alicdn.com/t/font_inqu00dwnxfos9k9.js"></script>
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_inqu00dwnxfos9k9.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_371115_i7q3yrjs84a38fr.css">
     <!-- Google Analytics for www.multiverseinc.com -->
     <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
