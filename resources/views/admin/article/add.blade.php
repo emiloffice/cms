@@ -1,5 +1,6 @@
 @extends('layouts.adminMaster')
 @section('content')
+
     <article class="page-container">
         <form class="form form-horizontal" id="form-article-add">
             <div class="row cl">
@@ -154,7 +155,7 @@
                 swf: 'lib/webuploader/0.1.5/Uploader.swf',
 
                 // 文件接收服务端。
-                server: '{{ URL('upload') }}',
+                server: '{{ URL('upload','',false) }}',
 
                 // 选择文件的按钮。可选。
                 // 内部根据当前运行是创建，可能是input元素，也可能是flash.

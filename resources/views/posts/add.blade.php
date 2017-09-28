@@ -136,8 +136,8 @@
     <script type="text/javascript" src="/lib/ueditor/1.4.3/ueditor.config.js"></script>
     <script type="text/javascript" src="/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
     <script type="text/javascript" src="/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
-    {{--<script type="text/javascript" src="/editor/release/wangEditor.min.js"></script>--}}
-   {{-- <script type="text/javascript">
+    <script type="text/javascript" src="/editor/release/wangEditor.min.js"></script>
+    <script type="text/javascript">
         var E = window.wangEditor
         var editor = new E('#content')
         editor.customConfig.uploadFileName = 'files'
@@ -146,7 +146,7 @@
             '_token': '{{ csrf_token() }}'   // 属性值会自动进行 encode ，此处无需 encode
         }
         editor.create()
-    </script>--}}
+    </script>
     <script type="text/javascript">
         $(function(){
             $('.skin-minimal input').iCheck({

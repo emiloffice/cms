@@ -46,6 +46,7 @@ return [
         'client_id' => 'rbdWaYXk6o0gn41ikLDJ9bj2V',
         'client_secret' => '8ZHGBK9W3d1YLv9P1dNDBqNDeYOmO0DrppwCiLdsGBbqSvuCZ3',
         'redirect' => 'https://www.multiverseinc.com/OAuth/twitter-callback',
-    ]
+    ],
+
 
 ];

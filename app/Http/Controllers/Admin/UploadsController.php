@@ -19,10 +19,10 @@ class UploadsController extends Controller
                 $type = $file->getClientMimeType();//MimeType
                 $realPath = $file->getRealPath();//临时绝对路径
                 $fileName = date('YmdHis').uniqid().'.'.$ext;
-                $bool = Storage::disk('uploads')->put($fileName, file_get_contents($realPath));
+                $bool = Storage::disk('s3')->put($fileName, file_get_contents($realPath));
                 $res['status'] = "success";
                 $res['code'] = '0';
-                $res['filepath'] = $fileName;
+                $res['filepath'] = 'https://upload.multiverseinc.com/'.$fileName;
                 $res = json_encode($res);
 //                dd($res);
                 return $res;
