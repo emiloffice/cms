@@ -211,6 +211,10 @@ class HomeController extends Controller
     {
         $posts = Post::latest()->get();
         if($request->isMethod('post')){
+            $this->validate(request(), [
+                'param'=>'ipv4',
+                'from'=>'required'
+            ]);
             return json_encode($posts);
         }
         return view('home.posts', compact('posts'));
