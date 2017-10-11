@@ -22,7 +22,9 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->get('home', 'HomeController@home');
     $router->get('isCN', 'HomeController@isCN');
     $router->get('about', 'HomeController@about');
+    $router->post('posts/{post}','HomeController@show');//显示某篇文章
     $router->get('posts/{post}','HomeController@show');//显示某篇文章
+    $router->post('posts','HomeController@posts');//显示某篇文章
     $router->get('posts','HomeController@posts');//显示某篇文章
     $router->get('comingsoon', 'HomeController@comingsoon');
     $router->get('company', 'HomeController@company');

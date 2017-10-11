@@ -207,9 +207,12 @@ class HomeController extends Controller
     {
         return view('home.values');
     }
-    public function posts()
+    public function posts(Request $request)
     {
         $posts = Post::latest()->get();
+        if($request->isMethod('post')){
+            return json_encode($posts);
+        }
         return view('home.posts', compact('posts'));
     }
     public function Show(Post $post)
