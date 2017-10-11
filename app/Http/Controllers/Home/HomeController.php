@@ -219,8 +219,11 @@ class HomeController extends Controller
         }
         return view('home.posts', compact('posts'));
     }
-    public function Show(Post $post)
+    public function Show(Post $post,Request $request)
     {
+        if ($request->isMethod('post')){
+            return json_encode($post);
+        }
         return view('home.show', compact('post'));
     }
     public function Subscribe(Request $request){
