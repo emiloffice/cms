@@ -12,7 +12,7 @@ class VerifyCsrfToken extends BaseVerifier
      *
      * @var array
      */
-    private $openRoutes = ['test/url', 'subscribe'];
+    private $openRoutes = ['test/url', 'subscribe','posts'];
     protected $except = [
         //
     ];
