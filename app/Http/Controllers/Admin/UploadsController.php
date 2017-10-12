@@ -22,7 +22,7 @@ class UploadsController extends Controller
                 $bool = Storage::disk('s3')->put($fileName, file_get_contents($realPath));
                 $res['status'] = "success";
                 $res['code'] = '0';
-                $res['filepath'] = 'https://upload.multiverseinc.com/'.$fileName;
+                $res['filepath'] = 'http://upload.multiverseinc.com/'.$fileName;
                 $res = json_encode($res);
 //                dd($res);
                 return $res;

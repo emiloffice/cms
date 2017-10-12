@@ -15,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         Schema::defaultStringLength(191);
-        if (getenv('HTTPS_REQUEST')){
+        if (env('HTTPS_REQUEST')==true){
             \URL::forceScheme('https');
         }else{
             \URL::forceScheme('http');

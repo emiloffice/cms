@@ -180,7 +180,6 @@ return [
         App\Providers\RouteServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-        Douyasi\WangEditor\EditorServiceProvider::class,
     ],
 
     /*

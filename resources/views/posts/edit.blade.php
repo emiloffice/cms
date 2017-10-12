@@ -104,25 +104,32 @@
                 <div class="formControls col-xs-8 col-sm-9">
                     <div class="uploader-thum-container">
                         <div id="fileList" class="uploader-list">
-                            <div class="pic-box" ><img src="{{url('uploads')}}/{{ $post->thumb }}" style="width: 200px;height: 200px;"></div>
+                            <div class="pic-box" >
+
+                                @if($post->thumb!==''||$post!==null)
+                                    <img src="{{ $post->thumb }}" style="width: 200px;height: 200px;" alt="{{ $post->thumb }}">
+                                    @else
+                                    <img>
+                                @endif
+                            </div>
                         </div>
                         <div id="filePicker">选择图片</div>
-                        <button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>
+                        {{--<button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>--}}
                     </div>
                 </div>
             </div>
             <input type="hidden" name="thumb">
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章内容：</label>
-                <div class="formControls col-xs-8 col-sm-9">
-                    <script id="editor" type="text/plain" style="width:100%;height:400px;" name="content">{!! $post->content !!}</script>
+                <div class="formControls col-xs-8 col-sm-9" >
+                    <div id="content"></div>
+                    <input type="hidden" name="content" value="">
                 </div>
-                <input type="hidden" name="thumb" value="" id="thumb_path">
             </div>
             <div class="row cl">
                 <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
-                    <button onClick="article_save_submit();" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
-                    <button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
+                    <button onClick="" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
+                    {{--<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>--}}
                     <button onClick="removeIframe();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
                 </div>
             </div>
@@ -139,8 +146,76 @@
     <script type="text/javascript" src="/lib/ueditor/1.4.3/ueditor.config.js"></script>
     <script type="text/javascript" src="/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
     <script type="text/javascript" src="/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" src="/editor/release/wangEditor.min.js"></script>
     <script type="text/javascript">
+        var E = window.wangEditor
+        var editor2 = new E('#content')
+        editor2.customConfig.uploadImgServer = '{{ url('admin/upload') }}'
+        editor2.customConfig.uploadImgMaxSize = 3 * 1024 * 1024
+        editor2.customConfig.uploadFileName = 'file'
+        editor2.customConfig.uploadImgHeaders = {
+            'Accept' : 'multipart/form-data',
+        }
+        editor2.customConfig.uploadImgParams = {
+            _token: '{{csrf_token()}}'   // 属性值会自动进行 encode ，此处无需 encode
+        }
+
+        editor2.customConfig.uploadImgHooks = {
+            before: function (xhr, editor, file) {
+                // 图片上传之前触发
+                // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，files 是选择的图片文件
+
+                // 如果返回的结果是 {prevent: true, msg: 'xxxx'} 则表示用户放弃上传
+                // return {
+                //     prevent: true,
+                //     msg: '放弃上传'
+                // }
+            },
+            success: function (xhr, editor, result) {
+                // 图片上传并返回结果，图片插入成功之后触发
+                imgUrl = result.filepath
+                // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+            },
+            fail: function (xhr, editor, result) {
+                // 图片上传并返回结果，但图片插入错误时触发
+                // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，result 是服务器端返回的结果
+            },
+            error: function (xhr, editor) {
+                // 图片上传出错时触发
+                // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象
+            },
+            timeout: function (xhr, editor) {
+                // 图片上传超时时触发
+                // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象
+            },
+
+            // 如果服务器端返回的不是 {errno:0, data: [...]} 这种格式，可使用该配置
+            // （但是，服务器端返回的必须是一个 JSON 格式字符串！！！否则会报错）
+            customInsert: function (insertImg, result, editor) {
+                // 图片上传并返回结果，自定义插入图片的事件（而不是编辑器自动插入图片！！！）
+                // insertImg 是插入图片的函数，editor 是编辑器对象，result 是服务器端返回的结果
+
+                // 举例：假如上传图片成功后，服务器端返回的是 {url:'....'} 这种格式，即可这样插入图片：
+                var url = result.filepath
+                insertImg(url)
+
+                // result 必须是一个 JSON 格式字符串！！！否则报错
+            }
+        }
+        editor2.customConfig.onchange = function (html) {
+            // html 即变化之后的内容
+            //console.log(html)
+            $("input[name='content']").val(html);
+        }
+        editor2.create()
+        editor2.txt.text('{!! $post->content !!}')
+
         $(function(){
+            var content = $('#contents');
+            window.article_save_submit = function() {
+                content = editor2.$textElem[0].innerHTML;
+                console.log(content)
+            }
             $('.skin-minimal input').iCheck({
                 checkboxClass: 'icheckbox-blue',
                 radioClass: 'iradio-blue',
@@ -249,7 +324,6 @@
                 }
             });
 
-            var ue = UE.getEditor('editor');
         });
     </script>
     <!--/请在上方写此页面业务相关的脚本-->

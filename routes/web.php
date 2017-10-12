@@ -130,6 +130,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('system-log','SystemController@log');//日志
     //文件上传
     $router->post('upload', 'UploadsController@upload');
+    $router->post('upload/{_token}', 'UploadsController@upload');
     $router->put('upload', 'UploadsController@upload');
     $router->get('upload', 'UploadsController@upload');
     //多文件上传
