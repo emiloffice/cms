@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Point;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -11,7 +12,8 @@ class AmbassadorController extends Controller
 {
     public function index()
     {
-        $users = DB::table('users')->join('points','users.id','=','points.user_id')->get();
+        $users = User::with('point')->where('status',1)->get();
+       // echo ($users);
         return view('admin.ambassador.index',compact('users'));
     }
     /*
@@ -22,19 +24,19 @@ class AmbassadorController extends Controller
     {
         $uid = $request->uid;
         $cate = $request->cate;
-        $res = DB::table('points')->where('user_id', $uid)->first();
+        $res = Point::where('user_id',$uid)->first();
         if ($res!==''){
             if($cate == 'facebook' && $res->fb_status ===0){
-                DB::update('update points set points = points + ? , fb_status = ? where user_id = ?',[5, 1,$uid]);
+                DB::connection('mysql_user')->update('update points set points = points + ? , fb_status = ? where user_id = ?',[5, 1,$uid]);
                 return ['status'=>'success', 'msg'=>"Successful operation"];
             } elseif($cate == 'twitter' && $res->twitter_status ===0){
-                DB::update('update points set points = points + ? , twitter_status = ? where user_id = ?',[5, 1,$uid]);
+                DB::connection('mysql_user')->update('update points set points = points + ? , twitter_status = ? where user_id = ?',[5, 1,$uid]);
                 return ['status'=>'success', 'msg'=>"Successful operation"];
             } elseif ($cate == 'discord' && $res->discord_status ===0){
-                DB::update('update points set points = points + ? , discord_status = ? where user_id = ?',[5, 1,$uid]);
+                DB::connection('mysql_user')->update('update points set points = points + ? , discord_status = ? where user_id = ?',[5, 1,$uid]);
                 return ['status'=>'success', 'msg'=>"Successful operation"];
             } elseif ($cate == 'group' && $res->group_status ===0){
-                DB::update('update points set points = points + ? , group_status = ? where user_id = ?',[5, 1,$uid]);
+                DB::connection('mysql_user')->update('update points set points = points + ? , group_status = ? where user_id = ?',[5, 1,$uid]);
                 return ['status'=>'success', 'msg'=>"Successful operation"];
             }
         }else{

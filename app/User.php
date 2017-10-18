@@ -27,4 +27,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    /**
+     * 获得拥有此电话的用户。
+     */
+    public function point()
+    {
+        return $this->hasOne('App\Point');
+    }
 }

@@ -36,28 +36,29 @@
                     @foreach($users as $user)
                     <tr class="text-c">
                         <td><input type="checkbox" value="" name=""></td>
-                        <td>{{$user->user_id}}</td>
+                        <td>{{$user->point->user_id}}</td>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
-                        <td>{{$user->referral_code}}</td>
-                        <td>{{$user->points}}</td>
+                        <td>{{$user->point->referral_code}}</td>
+                        <td>{{$user->point->points}}</td>
+                        {{--<td>{{$user->point->fb_status}}</td>--}}
                         <td>{{$user->status}}</td>
                         <td class="f-14 td-manage">
-                            @if($user->fb_status===1)
+                            @if($user['point']['fb_status']=='1')
                                 @else
-                                <a style="text-decoration:none" onClick="add_points(this, '{{$user->user_id}}','facebook')" href="javascript:;" title="liking facebook"><i class="fa fa-facebook"></i></a>
+                                <a style="text-decoration:none" onClick="add_points(this, '{{$user->point->user_id}}','facebook')" href="javascript:;" title="liking facebook"><i class="fa fa-facebook"></i></a>
                             @endif
-                            @if($user->twitter_status===1)
+                            @if($user['point']['twitter_status']=='1')
                                 @else
-                                    <a style="text-decoration:none" class="ml-5" onClick="add_points(this, '{{$user->user_id}}','twitter')" href="javascript:;" title="following Twitter Page"><i class="fa fa-twitter"></i></a>
+                                    <a style="text-decoration:none" class="ml-5" onClick="add_points(this, '{{$user->point->user_id}}','twitter')" href="javascript:;" title="following Twitter Page"><i class="fa fa-twitter"></i></a>
                             @endif
-                            @if($user->group_status===1)
+                            @if($user['point']['group_status']=='1')
                                 @else
-                                    <a style="text-decoration:none" class="ml-5" onClick="add_points(this, '{{$user->user_id}}','group')" href="javascript:;" title="joining our community group"><i class="fa fa-group"></i></a>
+                                    <a style="text-decoration:none" class="ml-5" onClick="add_points(this, '{{$user->point->user_id}}','group')" href="javascript:;" title="joining our community group"><i class="fa fa-group"></i></a>
                             @endif
-                            @if($user->discord_status===1)
+                            @if($user['point']['discord_status']=='1')
                                 @else
-                                    <a style="text-decoration:none" class="ml-5" onClick="add_points(this, '{{$user->user_id}}','discord')" href="javascript:;" title="joining our discord group"><i class="fa fa-group"></i></a>
+                                    <a style="text-decoration:none" class="ml-5" onClick="add_points(this, '{{$user->point->user_id}}','discord')" href="javascript:;" title="joining our discord group"><i class="fa fa-group"></i></a>
                             @endif
                         </td>
                     </tr>
