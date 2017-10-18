@@ -1,17 +1,4 @@
 {
-  "/js/app.js": "/js/app.ae6be72f14e9a85093cf.js",
-  "/css/app.css": "/css/app.2b7c697962899e610a78.css",
-  "/css/login.css": "/css/login.2b7c697962899e610a78.css",
-  "/css/ambassador.css": "/css/ambassador.2b7c697962899e610a78.css",
-  "/css/footer.css": "/css/footer.2b7c697962899e610a78.css",
-  "/css/reg.css": "/css/reg.2b7c697962899e610a78.css",
-  "/css/uc.css": "/css/uc.2b7c697962899e610a78.css",
-  "/css/post.css": "/css/post.2b7c697962899e610a78.css",
-  "/css/m-am.css": "/css/m-am.2b7c697962899e610a78.css",
-  "/css/m.css": "/css/m.2b7c697962899e610a78.css",
-  "/css/m-reg.css": "/css/m-reg.2b7c697962899e610a78.css",
-  "/css/m-login.css": "/css/m-login.2b7c697962899e610a78.css",
-  "/css/m-post.css": "/css/m-post.2b7c697962899e610a78.css",
-  "/css/m-uc.css": "/css/m-uc.2b7c697962899e610a78.css",
-  "/js/m.js": "/js/m.d41d8cd98f00b204e980.js"
+  "/js/app.js": "/js/app.js",
+  "/css/app.css": "/css/app.css"
 }

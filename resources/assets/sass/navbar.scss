@@ -1,0 +1,29 @@
+// Variables
+@import "variables";
+.nav-bar{
+  position: fixed;
+  width: 100%;
+  top:0;
+  left: 0;
+  height: 120px;
+  line-height: 120px;
+
+  .logo{
+    float: left;
+    height: 120px;
+    img{
+      width: 180px;
+      height: 30px;
+      padding-top: 40px;
+      float: left;
+    }
+  }
+  .menu{
+    float: right;
+    li{
+      list-style: none;
+      float: left;
+      padding-left: 60px;
+    }
+  }
+}

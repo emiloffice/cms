@@ -14,8 +14,9 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $posts = Post::latest()->take(3)->get();
-        return view('home.index', compact('posts'));
+//        $posts = Post::latest()->take(3)->get();
+        return view('index');
+        return view('index', compact('posts'));
         /*$rst = $this->isCN();
         if ($rst=='1'){
             return view('cn.index', compact('posts'));

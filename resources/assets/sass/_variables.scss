@@ -45,8 +45,18 @@ $border-style: 1px solid #00ffff;
 $special-text: #ff00d8;
 
 html {font-size: 100px}
-body {font-size: 0.14rem;}
+body {font-size: 0.14rem;padding: 0;margin: 0}
+*{
 
+}
+
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
+.container-fluid{
+  width: 100%;
+}
 p{
   font-size:14px;
   font-size:0.14rem;
