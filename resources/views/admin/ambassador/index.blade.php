@@ -34,13 +34,13 @@
                     </thead>
                     <tbody>
                     @foreach($users as $user)
-                    <tr class="text-c">
+                    <tr class="text-c" id="{{$user->point->user_id}}">
                         <td><input type="checkbox" value="" name=""></td>
                         <td>{{$user->point->user_id}}</td>
                         <td>{{$user->name}}</td>
                         <td>{{$user->email}}</td>
                         <td>{{$user->point->referral_code}}</td>
-                        <td>{{$user->point->points}}</td>
+                        <td class="point">{{$user->point->points}}</td>
                         {{--<td>{{$user->point->fb_status}}</td>--}}
                         <td>{{$user->status}}</td>
                         <td class="f-14 td-manage">
@@ -171,8 +171,12 @@
         }
         /*加分*/
         function add_points(obj,uid,cate){
-            console.log(obj)
-            $.ajax({
+
+            var e = document.getElementById(uid)
+            var pe = e.getElementsByClassName('point')
+            var point = pe[0].innerText
+
+           $.ajax({
                 type: 'POST',
                 url: '/admin/add-points',
                 dataType: 'json',
@@ -180,6 +184,8 @@
                 success: function(res){
                     if(res.status=='success'){
                         layer.msg('Successful operation!', {icon: 1,time:2000});
+                        point = parseInt(point) + 5
+                        pe[0].innerText = point
                         $(obj).remove();
                     }else{
                         layer.msg(res.msg, {icon: 5,time:2000});
@@ -189,8 +195,6 @@
                     layer.msg('Error operation!', {icon: 5,time:2000});
                 },
             });
-/*            $(obj).parents("tr").find(".td-status")('<span class="label label-default radius">待审核</span>');
-            $(obj).parents("tr").find(".td-manage")("");*/
 
         }
     </script>
