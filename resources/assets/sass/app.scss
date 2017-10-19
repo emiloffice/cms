@@ -117,6 +117,10 @@ $container-lg:                 $container-large-desktop !default;
 @import "mixins";
 // grid
 @import "grid";
+// job
+@import "job";
+// work
+@import "work";
 // Variables
 @import "navbar";
 // Footer
@@ -147,7 +151,7 @@ p {
 #app{
   background-color: #000;
   background-image: url("/images/bg.jpg");
-  height: 1000px;
+  min-height: 1000px;
 }
 .required{
   color: red;
@@ -167,3 +171,35 @@ a{
   text-decoration: none;
   color: inherit;
 }
+.DEVELOPMENT_HISTORY {
+  font-size: 26px;
+  font-family: "Haettenschweiler";
+  color: rgb(255, 255, 255);
+  line-height: 1;
+  text-align: left;
+  -moz-transform: matrix( 2.96942157531276,0,0,3.09942629463008,0,0);
+  -webkit-transform: matrix( 2.96942157531276,0,0,3.09942629463008,0,0);
+  -ms-transform: matrix( 2.96942157531276,0,0,3.09942629463008,0,0);
+  position: absolute;
+  left: 8375.923px;
+  top: 1906.967px;
+  z-index: 440;
+}
+
+@font-face {
+  font-family: 'Title';
+  src: url("/fonts/HATTEN.eot");
+  src: url("/fonts/HATTEN.eot?#iefix") format("embedded-opentype"), url("/fonts/HATTEN.woff") format("woff"), url("/fonts/HATTEN.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.title{
+  font-family: "Haettenschweiler";
+  font-size: 76px;
+  line-height: 90px;
+  z-index: 9;
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  opacity: 0.1;
+}
+

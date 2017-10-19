@@ -1,0 +1,25 @@
+.work{
+  .about{
+    div{
+      div{
+        height: 300px;
+        font-size: 18px;
+        p{
+          font-size: 20px;
+          font-weight: bolder;
+          padding: 5px 0;
+        }
+        span{
+          font-size: 18px;
+          line-height: 25px;
+        }
+        img{
+          width: 100%;
+        }
+      }
+    }
+    ul>li{
+      margin: 40px 0;
+    }
+  }
+}

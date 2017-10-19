@@ -1,7 +1,11 @@
 footer,footer{
+
   >div{
-    height: 200px;
-    padding: 100px 0;
+    height: 100px;
+    padding: 50px 0;
+  }
+  .copyright p{
+    line-height: 50px;
   }
   .media-link{
     font-size: 32px;
@@ -18,10 +22,14 @@ footer,footer{
   }
   .partner{
     font-size: 32px;
+    color: #999999;
     *{
-      margin: 0 17px;
+      margin: 0 20px;
       width: 32px;
       text-align: center;
+      height: 36px;
+      fill: rgb(153, 153, 153);
+      color: #999999;
     }
   }
 }

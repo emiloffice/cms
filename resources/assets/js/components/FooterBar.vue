@@ -1,12 +1,12 @@
 <template>
     <footer class="footer container">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 padding copyright">
             <p><a href="https://www.multiverseinc.com/legal/tos">Terms of Service</a> |
                 <a href="https://www.multiverseinc.com/legal/privacy">Privacy Policy</a></p>
             <p><a href="https://www.multiverseinc.com">Copyright © Multiverse Entertainment LLC</a>
             </p>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 padding">
             <div class="media-link">
                 <a href="https://www.facebook.com/MultiverseVR"><i class="fa fa-facebook "></i></a>
                 <a href="https://twitter.com/VRmultiverse"><i class="fa fa-twitter "></i></a>

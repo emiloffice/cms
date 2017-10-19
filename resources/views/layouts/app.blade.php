@@ -12,6 +12,7 @@
 
     <!-- Styles -->
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('fonts/iconfont/iconfont.css') }}">
     <!-- Scripts -->
     <script>

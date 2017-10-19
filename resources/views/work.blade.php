@@ -2,6 +2,6 @@
 @section('content')
     @if ($agent->isMobile())
     @else
-        <Job></Job>
+        <work></work>
     @endif
 @endsection

@@ -25,6 +25,11 @@ class HomeController extends Controller
             return view('home.index', compact('posts'));
         }*/
     }
+    public function work()
+    {
+        return view('work');
+
+    }
     public function ipInfo(){
         $ip = $this->getIP();
         $url="http://ip.taobao.com/service/getIpInfo.php?ip=".$ip;

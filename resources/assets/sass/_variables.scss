@@ -49,10 +49,14 @@ body {font-size: 0.14rem;padding: 0;margin: 0}
 *{
 
 }
-
+.padding{
+  padding-left: 0;
+  padding-right: 0;
+}
 .container{
-  width: 1200px;
+  width: 1400px;
   margin: 0 auto;
+  padding: 0;
 }
 .container-fluid{
   width: 100%;

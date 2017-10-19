@@ -13,7 +13,9 @@ require('./bootstrap');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('Index', require('./pages/Index.vue'));
+Vue.component('Index', require('./pages/Index'));
+Vue.component('Job', require('./pages/Job'));
+Vue.component('Work', require('./pages/Work'));
 
 const app = new Vue({
     el: '#app'
