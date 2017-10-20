@@ -22,4 +22,34 @@
       margin: 40px 0;
     }
   }
+  .history{
+    margin-top: 105px;
+    margin-bottom: 105px;
+    height: 575px;
+    position: relative;
+    .dev_history{
+      position: absolute;
+      top:0;
+      left: 0;
+    }
+    .awards{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+
+  }
+  .awards_list{
+    li{
+      text-align: center;
+      vertical-align: middle;
+      height: 160px;
+      .pic{
+        //display: table;
+        height: 110px;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+  }
 }

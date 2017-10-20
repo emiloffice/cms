@@ -16,6 +16,11 @@ require('./bootstrap');
 Vue.component('Index', require('./pages/Index'));
 Vue.component('Job', require('./pages/Job'));
 Vue.component('Work', require('./pages/Work'));
+Vue.component('Contact', require('./pages/Contact'));
+Vue.component('About', require('./pages/about'));
+Vue.component('Game', require('./pages/Game'));
+Vue.component('Show', require('./pages/Show'));
+Vue.component('New', require('./pages/New'));
 
 const app = new Vue({
     el: '#app'

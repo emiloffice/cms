@@ -80,7 +80,11 @@ class HomeController extends Controller
 
     public function about()
     {
-        return view('home.about');
+        return view('about');
+    }
+    public function news_show()
+    {
+        return view('show');
     }
     public function comingsoon()
     {
@@ -157,7 +161,7 @@ class HomeController extends Controller
             Message::create(request(['name', 'organization', 'email', 'phone', 'message']));
             return redirect('contact')->with('message', 'Success, Thank you for your message!');
         }else{
-            return view('home.contact');
+            return view('contact');
         }
     }
     public function dreamflight()
@@ -176,9 +180,9 @@ class HomeController extends Controller
     {
         return view('home.legal');
     }
-    public function ourgames()
+    public function game()
     {
-        return view('home.ourgames');
+        return view('game');
     }
     public function press()
     {

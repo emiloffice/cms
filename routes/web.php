@@ -19,6 +19,12 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->get('', 'HomeController@index');
     $router->get('index', 'HomeController@home');
     $router->get('work', 'HomeController@work');
+    $router->get('contact', 'HomeController@contact');
+    $router->get('about', 'HomeController@about');
+    $router->get('game', 'HomeController@game');
+    $router->get('show', 'HomeController@news_show');
+
+
 
     $router->get('test', 'HomeController@test');
     $router->get('home', 'HomeController@home');

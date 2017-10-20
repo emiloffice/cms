@@ -39,13 +39,17 @@
             </div>
         </div>
         <div class="history container">
-            <P class="title">
-                DEVELOPMENT
-            </P>
-            <P class="title">
-                HISTORY
-            </P>
+            <p class="dev_history"><img src="/images/history.png" alt=""></p>
+            <p class="awards"><img src="/images/awards.png" alt=""></p>
         </div>
+        <ul class="awards_list container">
+            <li class="col-lg-2 col-md-2 col-lg-offset-1 col-md-offset-1">
+                <div class="pic"><img src="/images/unity.png" alt="unity"></div><p>Unity特邀演讲嘉宾</p></li>
+            <li class="col-lg-2 col-md-2"><div class="pic"><img src="/images/intel.png" alt="intel"></div><p>Intel 全球唯一MR合作伙伴</p></li>
+            <li class="col-lg-2 col-md-2"><div class="pic"><img src="/images/gdc.png" alt="gdc" style="margin-top: 15px"></div><p>GDC VRDC 特邀专家顾问</p></li>
+            <li class="col-lg-2 col-md-2"><div class="pic"><img src="/images/tuoluo.png" alt="tuoluo"></div><p>第一届金陀螺奖最受期待VR游戏</p></li>
+            <li class="col-lg-2 col-md-2"><div class="pic"><img src="/images/gad.png" alt="gad"></div><p>腾讯GAD&HTC VIVIE 最佳视觉游戏</p></li>
+        </ul>
         <footer-bar></footer-bar>
     </div>
 </template>
