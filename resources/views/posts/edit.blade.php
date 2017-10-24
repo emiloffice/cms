@@ -211,15 +211,15 @@
         }
         editor2.create()
         editor2.txt.html('{!! $post->content !!}')
-        $()
+        var con = '{!! $post->content !!}'
+        con = addSlashes(con)
+        $('input[name="content"]').val(con);
         function addSlashes (str) {
             return str.replace(/[\\"']/g, '\\$&');
 
         }
         $(function(){
 
-            var content = $('input[name=\'content\']').valid('{!! $post->content !!}');
-            console.log(content)
             window.article_save_submit = function() {
                 content = editor2.$textElem[0].innerHTML;
                 console.log(content)
