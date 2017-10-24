@@ -193,12 +193,16 @@
                 // result 必须是一个 JSON 格式字符串！！！否则报错
             }
         }
-        editor2.customConfig.onchange = function (html) {
+        editor2.customConfig.onchange = function (formatText,html) {
             // html 即变化之后的内容
-            //console.log(html)
-            $("input[name='content']").val(html);
+            var content = addSlashes(html)
+            $("input[name='content']").val(content);
         }
         editor2.create()
+        function addSlashes (str) {
+            return str.replace(/[\\"']/g, '\\$&');
+
+        }
         $(function(){
             $('.skin-minimal input').iCheck({
                 checkboxClass: 'icheckbox-blue',
