@@ -151,7 +151,7 @@
         var E = window.wangEditor
         var editor2 = new E('#content')
         editor2.customConfig.uploadImgServer = '{{ url('admin/upload') }}'
-        editor2.customConfig.uploadImgMaxSize = 3 * 1024 * 1024
+        editor2.customConfig.uploadImgMaxSize = 5 * 1024 * 1024
         editor2.customConfig.uploadFileName = 'file'
         editor2.customConfig.uploadImgHeaders = {
             'Accept' : 'multipart/form-data',
