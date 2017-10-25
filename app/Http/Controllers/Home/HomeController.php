@@ -25,6 +25,11 @@ class HomeController extends Controller
             return view('home.index', compact('posts'));
         }*/
     }
+
+    public function fullpage()
+    {
+        return view('fullpage');
+    }
     public function work()
     {
         return view('work');

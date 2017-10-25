@@ -11,7 +11,6 @@
 |
 */
 use App\Task;
-
 Auth::routes();
 
 Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
@@ -23,6 +22,7 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->get('about', 'HomeController@about');
     $router->get('game', 'HomeController@game');
     $router->get('show', 'HomeController@news_show');
+    $router->get('page', 'HomeController@fullpage');
 
 
 

@@ -4,9 +4,11 @@
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
+import Vue from 'vue';
+import Fullpage from './fullpage';
 
 require('./bootstrap');
-
+Vue.use(Fullpage)
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -21,6 +23,7 @@ Vue.component('About', require('./pages/about'));
 Vue.component('Game', require('./pages/Game'));
 Vue.component('Show', require('./pages/Show'));
 Vue.component('New', require('./pages/New'));
+Vue.component('Fullpage', require('./pages/Fullpage'));
 
 const app = new Vue({
     el: '#app'

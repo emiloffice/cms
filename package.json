@@ -21,6 +21,8 @@
     "vue-router": "^2.4.0"
   },
   "dependencies": {
+    "animate.css": "^3.5.2",
+    "fullpage-vue": "^1.4.1",
     "wangeditor": "^3.0.10"
   }
 }

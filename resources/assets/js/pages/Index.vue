@@ -11,6 +11,7 @@
     export default {
         mounted() {
             console.log('Index Pages mounted.')
+            console.log(this.$msg)
         },
         components:{
             NavBar, FooterBar
