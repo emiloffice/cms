@@ -23087,6 +23087,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -44140,7 +44141,7 @@ module.exports = Component.exports
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "container-fluid"
-  }, [_c('nav-bar'), _vm._v(" "), _c('footer-bar')], 1)
+  }, [_c('nav-bar'), _vm._v("\n    sad\n    "), _c('footer-bar')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {

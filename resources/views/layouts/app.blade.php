@@ -22,7 +22,7 @@
     </script>
 </head>
 <body>
-    <div id="app">
+    <div id="app" @yield('class-name')>
         @yield('content')
     </div>
 

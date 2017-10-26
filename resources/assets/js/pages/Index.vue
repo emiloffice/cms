@@ -1,6 +1,7 @@
 <template>
     <div class="container-fluid">
         <nav-bar></nav-bar>
+        sad
         <footer-bar></footer-bar>
     </div>
 </template>

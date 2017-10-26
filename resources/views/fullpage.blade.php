@@ -15,17 +15,21 @@
         .section{
             background: url("/images/bg.jpg") no-repeat center;
         }
-        #section0 img,
-        #section1 img{
+        .section p{
+            color: #999999;
+        }
+        #section0 img{
             width: 100%;
         }
-        #section2 img{
-            margin: 20px 0 0 52px;
-        }
-        #section3 img{
-            bottom: 0px;
+        #section1 img{
             position: absolute;
-            margin-left: -420px;
+            top: 10px;
+            left: 10px;
+        }
+        #section2 img{
+            position: absolute;
+            top: 30px;
+            left: 10%;
         }
         .intro p{
             width: 50%;
@@ -65,19 +69,21 @@
 </head>
 <body>
 
+{{--
 <ul id="menu">
     <li data-menuanchor="firstPage"><a href="#firstPage">First slide</a></li>
     <li data-menuanchor="secondPage"><a href="#secondPage">Second slide</a></li>
     <li data-menuanchor="3rdPage"><a href="#3rdPage">Third slide</a></li>
     <li data-menuanchor="4thpage"><a href="#4thpage">Fourth slide</a></li>
 </ul>
+--}}
 
 
 <div id="fullpage">
     <div class="section " id="section0">
         <img src="/images/index-banner.png" alt="">
     </div>
-    <div class="section active" id="section1">
+    {{--<div class="section active" id="section1">
         <div class="slide">
             <div class="intro">
 
@@ -102,12 +108,26 @@
                 <p>Working in modern and old browsers too! IE 8 users don't have the fault of using that horrible browser! Lets give them a chance to see your site in a proper way!</p>
             </div>
         </div>
+    </div>--}}
+    <div class="section" id="section1">
+        <img src="/images/released-games.png" alt="RELEASED GAMES">
+        <ul class="game-list">
+            <li>
+                <div class="thumb"></div>
+                <div class="play_btn" onclick="play_video()"></div>
+            </li>
+        </ul>
+        <div class="intro">
+
+        </div>
     </div>
     <div class="section" id="section2">
-        <div class="intro">
-            <h1>Example</h1>
-            <p>HTML markup example to define 4 sections.</p>
-        </div>
+        <img src="/images/about-us.png" alt="ABOUT US">
+        <p><span class="title">我们的愿景</span>
+            我们希望能够成为世界顶尖的游戏开发商，做出能够风靡世界的3A游
+            戏，为中国游戏的崛起做出努力。</p>
+        <p><span class="title">我们的价值观</span>
+            我们的价值观是做好玩的游戏，至始至终以游戏性为目的去研发游戏，做顶尖的和精品的游戏。</p>
     </div>
     <div class="section" id="section3">
         <div class="intro">
