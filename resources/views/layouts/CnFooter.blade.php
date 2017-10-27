@@ -48,7 +48,7 @@
     <div class="left fl col-sm-12 col-md-4">
         <div class="text"><p><a href="http://www.multiverseinc.com/legal/tos/">服务条款</a>|<a href="http://www.multiverseinc.com/legal/privacy/" target="_blank">隐私政策</a></p></div>
         <div class="text" style=""><p>Copyright © 深圳摩登世纪科技有限公司</p></div>
-        <div class="text"><p>Record: <a href="http://www.miibeian.gov.cn/" target="_blank">粤ICP备16110936-1</a></p></div>
+        <div class="text"><p>备案号: <a href="http://www.miibeian.gov.cn/" target="_blank">粤ICP备17134275-1</a></p></div>
     </div>
     <div class="center fl col-md-4 hidden-sm hidden-xs">
         <ul class="social-link">
