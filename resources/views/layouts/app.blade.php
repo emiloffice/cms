@@ -3,8 +3,11 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    @if ($agent->isMobile())
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0;">
+    @else
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    @endif
     <!-- CSRF Token -->
     <meta name="csrf-token" content="//{{getenv('RESOURCE_PATH')}}{{ csrf_token() }}">
 
@@ -12,8 +15,10 @@
 
     <!-- Styles -->
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/app.css') }}" rel="stylesheet">
+    <link href="//{{getenv('RESOURCE_PATH')}}/css/animate.css" rel="stylesheet">
     <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="{{ asset('fonts/iconfont/iconfont.css') }}">
+    @yield('head-extend')
     <!-- Scripts -->
     <script>
         window.Laravel = {!! json_encode([
@@ -29,5 +34,6 @@
     <!-- Scripts -->
     <script src="//{{getenv('RESOURCE_PATH')}}{{ mix('/js/app.js') }}"></script>
     <script src="/fonts/iconfont/iconfont.js"></script>
+    @yield('foot-extend')
 </body>
 </html>

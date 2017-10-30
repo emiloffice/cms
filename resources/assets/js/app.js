@@ -9,6 +9,7 @@ import Fullpage from './fullpage';
 
 require('./bootstrap');
 Vue.use(Fullpage)
+import animate from 'animate.css'
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -22,9 +23,12 @@ Vue.component('Contact', require('./pages/Contact'));
 Vue.component('About', require('./pages/about'));
 Vue.component('Game', require('./pages/Game'));
 Vue.component('Show', require('./pages/Show'));
-Vue.component('New', require('./pages/New'));
+Vue.component('News', require('./pages/News'));
 Vue.component('Fullpage', require('./pages/Fullpage'));
 
+
+// mobile
+Vue.component('MWork', require('./pages/m/Work'));
 const app = new Vue({
     el: '#app'
 });

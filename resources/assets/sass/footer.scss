@@ -33,3 +33,26 @@ footer,footer{
     }
   }
 }
+#app.mobile{
+  .container{
+    width: 95%;
+  }
+  footer,.footer{
+    font-size: 100px;
+    text-align: center;
+    .media-link,.partner{
+      text-align: center;
+    }
+    >div{
+      padding: 10px 0;
+    }
+  }
+  footer .media-link *, footer .media-link * {
+    margin: 0 3%;
+    width: 32px;
+  }
+  footer .partner *, footer .partner * {
+    margin: 0 3%;
+  }
+}
+

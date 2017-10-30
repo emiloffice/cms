@@ -21,6 +21,7 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->get('contact', 'HomeController@contact');
     $router->get('about', 'HomeController@about');
     $router->get('game', 'HomeController@game');
+    $router->get('news', 'HomeController@news');
     $router->get('show', 'HomeController@news_show');
     $router->get('page', 'HomeController@fullpage');
 

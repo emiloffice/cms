@@ -87,6 +87,10 @@ class HomeController extends Controller
     {
         return view('about');
     }
+    public function news()
+    {
+        return view('news');
+    }
     public function news_show()
     {
         return view('show');

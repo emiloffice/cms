@@ -120,17 +120,21 @@ $container-lg:                 $container-large-desktop !default;
 @import "navbar";
 // Footer
 @import "footer";
+// Index
+@import "index";
 // job
 @import "job";
 // work
 @import "work";
+// news
+@import "news";
 // game
 @import "game";
 // contact
 @import "contact";
 
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+//@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
 html {
   font-size: 100px;
