@@ -345,3 +345,13 @@ a{
   width: 15px;
   border: 1px solid inherit;
 }
+
+.mobile-page{
+  min-height: 400px;
+  margin-top: 73px;
+  .banner{
+    img{
+      width: 100%;
+    }
+  }
+}

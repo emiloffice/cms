@@ -35,7 +35,7 @@ footer,footer{
 }
 #app.mobile{
   .container{
-    width: 95%;
+    width: 90%;
   }
   footer,.footer{
     font-size: 100px;
@@ -48,11 +48,14 @@ footer,footer{
     }
   }
   footer .media-link *, footer .media-link * {
-    margin: 0 3%;
-    width: 32px;
+    margin: 0 2%;
+    width: 20px;
+    font-size: 20px;
   }
   footer .partner *, footer .partner * {
-    margin: 0 3%;
+    margin: 0 2%;
+    width: 20px;
+    height: 20px;
   }
 }
 
