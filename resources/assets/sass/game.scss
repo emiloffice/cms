@@ -44,3 +44,68 @@
     margin-left: 15px;
   }
 }
+#app.mobile{
+  .game_list{
+    li{
+      width: auto;
+      margin: 5% 0;
+      .left{
+        width: 50%;
+        height: 320px;
+      }
+      .right{
+        position: relative;
+        width: calc(50% - 20px);
+        padding: 10px;
+        height: 300px;;
+        .name{
+          font-size: 14px;
+        }
+        .des{
+          height: 220px;
+          font-size: 12px;
+          overflow: hidden;
+        }
+        a{
+          bottom: 10px;
+          right: 10px;
+        }
+      }
+    }
+  }
+}
+#app.mobile{
+  .game_list{
+    li{
+      background-color: rgba(0, 0, 0, 0);
+      box-shadow:none;
+      text-align: center;
+      .cover{
+        display: block;
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+      }
+      .des{
+        position: relative;
+        border: 1px solid #999999;
+        height: 125px;
+        overflow: hidden;
+        padding: 10px;
+        text-align: left;
+        margin-top: 20px;
+      }
+      .des::after {
+        content:"...";
+        font-weight:bold;
+        position:absolute;
+        bottom:0;
+        right:0;
+        padding:0px 10px 10px 10px;
+      }
+      .more{
+
+      }
+    }
+  }
+}

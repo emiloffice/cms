@@ -23,6 +23,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "fullpage-vue": "^1.4.1",
+    "vue-directive-touch": "^1.0.9",
     "wangeditor": "^3.0.10"
   }
 }

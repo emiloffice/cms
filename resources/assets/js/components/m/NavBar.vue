@@ -1,7 +1,7 @@
 <template>
     <nav class="m-nav-bar" v-bind:class="{ active:isActive }">
         <div class="container">
-            <img src="/images/m-logo.png" alt="Multiverse logo" class="logo" v-on:click="navigation">
+            <a href="/"><img src="/images/m-logo.png" alt="Multiverse logo" class="logo"></a>
             <a href="#" class="nav_trigger"  v-on:click="navigation"><span class="nav_icon"></span></a>
         </div>
         <transition name="bounce" v-if="isActive">

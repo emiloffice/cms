@@ -48,3 +48,13 @@
   left: 5px;
   margin-top: -5px;
 }
+#app.mobile{
+  .news{
+    column-count: 1;
+    min-height: 400px;
+    li{
+      height: auto;
+      margin: 30px 0;
+    }
+  }
+}

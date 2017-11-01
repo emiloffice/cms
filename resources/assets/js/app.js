@@ -6,9 +6,10 @@
  */
 import Vue from 'vue';
 import Fullpage from './fullpage';
-
+import touch from 'vue-directive-touch';
 require('./bootstrap');
-Vue.use(Fullpage)
+Vue.use(Fullpage);
+Vue.use(touch);
 import animate from 'animate.css'
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,6 +30,12 @@ Vue.component('Fullpage', require('./pages/Fullpage'));
 
 // mobile
 Vue.component('MWork', require('./pages/m/Work'));
+Vue.component('MAbout', require('./pages/m/About'));
+Vue.component('MGame', require('./pages/m/Game'));
+Vue.component('MContact', require('./pages/m/Contact'));
+Vue.component('MJob', require('./pages/m/Job'));
+Vue.component('MNews', require('./pages/m/News'));
+Vue.component('MIndex', require('./pages/m/Index'));
 const app = new Vue({
     el: '#app'
 });

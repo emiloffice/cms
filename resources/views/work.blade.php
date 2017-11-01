@@ -2,7 +2,6 @@
 @section('class-name')
     @if ($agent->isMobile())
     class="mobile"
-    @else
     @endif
 @endsection
 @section('content')

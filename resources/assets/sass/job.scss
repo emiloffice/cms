@@ -32,3 +32,35 @@
     }
   }
 }
+#app.mobile{
+  .job-page{
+    background-image: none;
+    div.top{
+      >*{
+        padding-top: 30px;
+      }
+    }
+    div.bottom{
+      >*{
+        padding-top: 30px;
+      }
+    }
+    div.top div:nth-of-type(odd)>* {
+      padding-left: 0;
+    }
+    div.top div:nth-of-type(even)>* {
+      padding-left: 30%;
+    }
+    div.bottom div:nth-of-type(odd)>* {
+      padding-left: 30%;
+    }
+    div.bottom div:nth-of-type(even)>* {
+      padding-left: 0;
+    }
+    div.top,div.bottom div{
+      img{
+        width: 70%;
+      }
+    }
+  }
+}

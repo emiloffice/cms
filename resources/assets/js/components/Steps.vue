@@ -1,5 +1,5 @@
 <template>
-    <ul class="steps" style="height: 140px;overflow: hidden;" v-on:touchmove="test()">
+    <ul class="steps" style="height: 140px;overflow: hidden;"  v-touch:left ="left" v-touch:right ="right">
         <li style="transform:translate(0,99px)">
             <div class="step"></div>
             <div class="des"></div>
@@ -16,6 +16,7 @@
             <div class="step"></div>
             <div class="des"></div>
         </li>
+
     </ul>
 </template>
 
@@ -26,15 +27,20 @@
         },
         data(){
             return{
-                isActive: false
+                isActive: false,
+                CoordinateX: 0,
+                CoordinateY: 99,
             }
         },
         methods: {
             navigation(){
                 this.isActive === true ? this.isActive = false : this.isActive = true
             },
-            test(){
-                alert('touchmove')
+            left: function (){
+                alert('left')
+            },
+            right: function () {
+                alert('right')
             }
         }
     }

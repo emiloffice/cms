@@ -1,17 +1,24 @@
 @extends('layouts.app')
-@section('head-extend')
-    <link rel="stylesheet" type="text/css" href="/fullpage/jquery.fullPage.css" />
+@if ($agent->isMobile())
+    @section('class-name')
+        class="mobile"
     @endsection
-@section('class-name')
-    class="fullpage"
+@else
+    @section('head-extend')
+        <link rel="stylesheet" type="text/css" href="/fullpage/jquery.fullPage.css" />
     @endsection
+    @section('class-name')
+        class="fullpage"
+    @endsection
+@endif
 @section('content')
     @if ($agent->isMobile())
-        <Index></Index>
+        <m-index></m-index>
     @else
         <Index></Index>
     @endif
 @endsection
+@if ($agent->isMobile())
 @section('foot-extend')
     <script src="/js/jquery-3.2.1.js"></script>
     <script src="/js/jquery-ui.js"></script>
@@ -28,3 +35,4 @@
         });
     </script>
     @endsection
+@endif

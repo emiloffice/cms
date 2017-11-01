@@ -132,7 +132,8 @@ $container-lg:                 $container-large-desktop !default;
 @import "game";
 // contact
 @import "contact";
-
+// about
+@import "about";
 // Fonts
 //@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
@@ -353,5 +354,13 @@ a{
     img{
       width: 100%;
     }
+  }
+}
+#app.mobile{
+  p{
+    font-size: 14px;
+    font-size: 0.14rem;
+    line-height: 1.5em;
+    color: #999999;
   }
 }

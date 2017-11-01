@@ -3,13 +3,13 @@
         <nav-bar></nav-bar>
         <div class="banner ">
             <div style="text-align: center">
-                <img src="/images/job_banner.png" alt="" style="max-width: 1600px;width: 90%;">
+                <img src="/images/m_job_banner.png" alt="" style="max-width: 1600px;width: 90%;">
             </div>
         </div>
         <div class="job-page container">
             <div class="top">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <img src="/images/job1.png" alt="">
+                    <img src="/images/m_job1.png" alt="">
                     <p>
                         一家充满神秘并且其乐无穷的跨国游戏公司正向您开启光明的大门<br/>
                         我们允许你可以自己做产品经理！<br/>
@@ -19,7 +19,7 @@
                     </p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <img src="/images/job3.png" alt="">
+                    <img src="/images/m_job2.png" alt="">
                     <p>
                         吃不完的零食！（啊？）<br/>
                         喝不完的饮料！（什么？）<br/>
@@ -30,7 +30,7 @@
                     </p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-                    <img src="/images/job2.png" alt="">
+                    <img src="/images/m_job3.png" alt="">
                     <P>
                         如果您牛到以下程度：<br>
                         ·3年以上游戏相关经验；<br>
@@ -45,7 +45,7 @@
             </div>
             <div class="bottom">
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <img src="/images/job4.png" alt="">
+                    <img src="/images/m_job4.png" alt="">
                     <p>
                         我们需要您到碗里来：<br>
                         ·自主决定工作方法<br>
@@ -55,7 +55,7 @@
                     </p>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <img src="/images/job5.png" alt="">
+                    <img src="/images/m_job5.png" alt="">
                     <p>
                         人生路上的老斯基说：骚年郎，不要错过好机会喔！<br>
                         如有意，请将您的个人资料发送至<br>
@@ -72,8 +72,8 @@
 </template>
 
 <script>
-    import NavBar from '../components/NavBar'
-    import FooterBar from '../components/FooterBar'
+    import NavBar from '../../components/m/NavBar'
+    import FooterBar from '../../components/FooterBar'
     export default {
         mounted() {
             console.log('Index Pages mounted.')
@@ -84,4 +84,3 @@
     }
 
 </script>
-}
