@@ -45,7 +45,17 @@ footer,footer{
       text-align: center;
     }
     >div{
-      padding: 10px 0;
+      padding: 0;
+      margin: 10px 0;
+      height: 75px;
+    }
+    .copyright{
+      display: table;
+      p{
+        display: table-cell;
+        vertical-align: middle;
+        line-height: 2.5em;
+      }
     }
   }
   footer .media-link *, footer .media-link * {

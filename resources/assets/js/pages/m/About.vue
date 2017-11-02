@@ -80,7 +80,7 @@ E3期间，《Seeking Dawn》成为了英特尔战展前发布会上唯一MR合�
 
 <script>
     import NavBar from '../../components/m/NavBar'
-    import FooterBar from '../../components/FooterBar'
+    import FooterBar from '../../components/m/FooterBar'
     export default {
         mounted() {
             console.log('Index Pages mounted.')

@@ -5,7 +5,7 @@
             <img src="/images/m_index_banner.png" alt="" style="width: 100%">
         </div>
         <p class="title"></p>
-        <ul class="game_list container">
+        <ul class="game_list container index">
             <li>
                 <img src="/images/m_seekingdawn_thumb.png" alt="seekingdawn cover" style="" class="cover">
                 <p class="des">Seeking Dawn是由Multiverse制作的大型科幻RPG类VR游戏，游戏具有丰富的合成玩法和生存元素，
@@ -14,7 +14,7 @@
                 <a href="#" class="more"><img src="/images/m_more.png" alt=""></a>
             </li>
         </ul>
-        <div class="about">
+        <div class="about index">
             <img src="/images/m_about_us.png" alt="ABOUT US" style="width: 100%">
             <div class="des container">
                 <p class="title">我们的愿景</p>
@@ -55,7 +55,7 @@
 
 <script>
     import NavBar from '../../components/m/NavBar'
-    import FooterBar from '../../components/FooterBar'
+    import FooterBar from '../../components/m/FooterBar'
     export default {
         mounted() {
             console.log('Index Pages mounted.')

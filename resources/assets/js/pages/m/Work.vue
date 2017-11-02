@@ -32,7 +32,7 @@
 
 <script>
     import NavBar from '../../components/m/NavBar'
-    import FooterBar from '../../components/FooterBar'
+    import FooterBar from '../../components/m/FooterBar'
     import Banner from '../../components/Banner'
     import Steps from '../../components/Steps'
     export default {

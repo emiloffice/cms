@@ -54,7 +54,7 @@
 
 <script>
     import NavBar from '../../components/m/NavBar'
-    import FooterBar from '../../components/FooterBar'
+    import FooterBar from '../../components/m/FooterBar'
     export default {
         mounted() {
             console.log('Index Pages mounted.')

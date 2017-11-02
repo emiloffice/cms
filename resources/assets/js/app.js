@@ -5,10 +5,10 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 import Vue from 'vue';
-import Fullpage from './fullpage';
+// import Fullpage from './fullpage';
 import touch from 'vue-directive-touch';
 require('./bootstrap');
-Vue.use(Fullpage);
+// Vue.use(Fullpage);
 Vue.use(touch);
 import animate from 'animate.css'
 /**

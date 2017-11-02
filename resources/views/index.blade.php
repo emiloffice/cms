@@ -19,6 +19,7 @@
     @endif
 @endsection
 @if ($agent->isMobile())
+@else
 @section('foot-extend')
     <script src="/js/jquery-3.2.1.js"></script>
     <script src="/js/jquery-ui.js"></script>
