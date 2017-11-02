@@ -77,23 +77,32 @@
   }
 }
 .steps{
-  .step{
-    position: relative;
-    width: 100px;
-    height: 33px;
-    border:1px solid red;
-    border-top:none;
-    border-left: none;
-
+  position: relative;
+  li{
+    position: absolute;
   }
-  .step:after{
-    position:absolute;
-    content: "";
-    width: 10px;
-    height: 10px;
-    top:-5px;
-    right:-5px;
-    background-color: red;
-  }
+   .step{
+     position: relative;
+     width: 100px;
+     height: 33px;
+     border:1px solid red;
+     border-top:none;
+     border-left: none;
+    .time{
+      position: absolute;
+    }
+    .des{
+      position: absolute;
+    }
+   }
+   .step:after{
+     position:absolute;
+     content: "";
+     width: 10px;
+     height: 10px;
+     top:-5px;
+     right:-5px;
+     background-color: red;
+   }
 
-}
+ }
