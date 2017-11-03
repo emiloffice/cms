@@ -16,25 +16,25 @@
                     </li>
                     <li>
                         <div class="thumb">
-                            <img src="/images/seekingdawn_thumb.png" alt="seekingdawn">
+                            <img src="/images/DOTR.png" alt="seekingdawn">
                         </div>
                         <div class="play_btn" onclick="play_video()"></div>
                     </li>
                     <li>
                         <div class="thumb">
-                            <img src="/images/seekingdawn_thumb.png" alt="seekingdawn">
+                            <img src="/images/yzcy.png" alt="seekingdawn">
                         </div>
                         <div class="play_btn" onclick="play_video()"></div>
                     </li>
                     <li>
                         <div class="thumb">
-                            <img src="/images/seekingdawn_thumb.png" alt="seekingdawn">
+                            <img src="/images/tg.png" alt="seekingdawn">
                         </div>
                         <div class="play_btn" onclick="play_video()"></div>
                     </li>
                     <li>
                         <div class="thumb">
-                            <img src="/images/seekingdawn_thumb.png" alt="seekingdawn">
+                            <img src="/images/dream-flight.png" alt="seekingdawn">
                         </div>
                         <div class="play_btn" onclick="play_video()"></div>
                     </li>
