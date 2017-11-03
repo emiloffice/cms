@@ -63,34 +63,44 @@
             <div class="section" id="news">
                 <ul class="news-list container">
                     <li>
+                        <a href="http://mp.weixin.qq.com/s/To8yixNKIxgCHUXyf9cEGg" target="_blank">
                         <div class="thumb">
                             <img src="/images/new1-thumb.png" alt="">
                             <p class="news-title">最刺激的星际吃鸡</p>
                         </div>
+                        </a>
                     </li>
                     <li>
+                        <a href="http://mp.weixin.qq.com/s/Lw1RwyTeaphVUSiXntVsYg" target="_blank">
                         <div class="thumb">
                             <img src="/images/new2-thumb.png" alt="">
                             <p class="news-title">新款GearVR要来了，你期待吗？</p>
                         </div>
+                        </a>
                     </li>
                     <li>
+                        <a href="https://mp.weixin.qq.com/s/KMvlWJNm0uHCet4cqiynEA" target="_blank">
                         <div class="thumb">
                             <img src="/images/new3-thumb.png" alt="">
                             <p class="news-title">《寻找黎明》荣获GAD最佳视觉奖  超美画面抢先放送</p>
                         </div>
+                        </a>
                     </li>
                     <li>
+                        <a href="http://mp.weixin.qq.com/s/srXc6XZkTQOUoRyi6mjYxg" target="_blank">
                         <div class="thumb">
                             <img src="/images/new4-thumb.png" alt="">
                             <p class="news-title">在Vision Summit上 Multiverse到底分享了什么经验？</p>
                         </div>
+                        </a>
                     </li>
                     <li>
+                        <a href="http://mp.weixin.qq.com/s/lyTZj5ySbWCq_nIQVDYzBA" target="_blank">
                         <div class="thumb">
                             <img src="/images/new5-thumb.png" alt="">
                             <p class="news-title">独家专访Multiverse范威洋</p>
                         </div>
+                        </a>
                     </li>
                 </ul>
                 <footer-bar></footer-bar>
