@@ -109,17 +109,34 @@
     }
   }
   .game_list.index{
-    .cover.img{
-      width: 60%;
+    .slide{
+      img.cover{
+        width: 225px;
+        margin: 0 auto;
+        display: block;
+      }
+      .des{
+        position: relative;
+        border: 1px solid #999999;
+        height: 125px;
+        overflow: hidden;
+        padding: 10px;
+        text-align: left;
+        margin-top: 20px;
+        width: calc(100% - 23px);
+      }
+      .des::after{
+        padding:0 0 10px 10px;
+      }
+      .more{
+        img{
+          width: 50px;
+          margin: 0 auto;
+          display: block;
+        }
+      }
     }
-    .des{
-      height:100px;
-    }
-    .des::after{
-      padding:0 0 10px 10px;
-    }
-    .more{
-      img{width: 50px;}
-    }
+
   }
+
 }

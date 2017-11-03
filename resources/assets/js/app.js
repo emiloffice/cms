@@ -7,9 +7,11 @@
 import Vue from 'vue';
 // import Fullpage from './fullpage';
 import touch from 'vue-directive-touch';
+import VueAgile from 'vue-agile'
 require('./bootstrap');
 // Vue.use(Fullpage);
 Vue.use(touch);
+Vue.use(VueAgile);
 import animate from 'animate.css'
 /**
  * Next, we will create a fresh Vue application instance and attach it to
