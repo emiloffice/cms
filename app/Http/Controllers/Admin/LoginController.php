@@ -29,7 +29,7 @@ class LoginController extends Controller
      */
     public function showLoginForm()
     {
-        return view('admin.login.index');
+        return view('admin.login');
     }
     /**
      * 自定义认证驱动
