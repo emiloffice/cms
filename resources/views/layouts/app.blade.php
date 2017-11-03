@@ -16,8 +16,8 @@
     <!-- Styles -->
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/app.css') }}" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}/css/animate.css" rel="stylesheet">
-    <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('fonts/iconfont/iconfont.css') }}">
+    <link href="//{{getenv('RESOURCE_PATH')}}/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//{{getenv('RESOURCE_PATH')}}/fonts/iconfont/iconfont.css">
     @yield('head-extend')
     <!-- Scripts -->
     <script>
@@ -33,7 +33,7 @@
 
     <!-- Scripts -->
     <script src="//{{getenv('RESOURCE_PATH')}}{{ mix('/js/app.js') }}"></script>
-    <script src="/fonts/iconfont/iconfont.js"></script>
+    <script src="//{{getenv('RESOURCE_PATH')}}/fonts/iconfont/iconfont.js"></script>
     @yield('foot-extend')
 </body>
 </html>
