@@ -46,7 +46,8 @@
                 <a href="/url"><i class="lozenge"></i><span>MORE</span></a>
             </div>
         </div>
-        <ul class="news container">
+        <img src="/images/new_title.png" alt="">
+        <ul class="news container" style="padding-top: 0;">
             <li>
                 <a href="http://mp.weixin.qq.com/s/To8yixNKIxgCHUXyf9cEGg" target="_blank">
                     <div class="thumb"><img src="/images/new1-thumb.png" alt=""></div>

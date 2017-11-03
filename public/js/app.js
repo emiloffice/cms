@@ -24634,6 +24634,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 
 
@@ -48256,7 +48257,12 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "src": "/images/m_more.png",
       "alt": ""
     }
-  })])])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('footer-bar')], 1)
+  })])])]), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('img', {
+    attrs: {
+      "src": "/images/new_title.png",
+      "alt": ""
+    }
+  }), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('footer-bar')], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "banner"
@@ -48302,7 +48308,10 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }), _c('span', [_vm._v("MORE")])])])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('ul', {
-    staticClass: "news container"
+    staticClass: "news container",
+    staticStyle: {
+      "padding-top": "0"
+    }
   }, [_c('li', [_c('a', {
     attrs: {
       "href": "http://mp.weixin.qq.com/s/To8yixNKIxgCHUXyf9cEGg",
