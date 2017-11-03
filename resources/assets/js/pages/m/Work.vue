@@ -17,8 +17,9 @@
             </div>
             <div class="history">
                 <img src="/images/m_history_title.png" alt="" style="width: 63%;padding-left: 5%">
+                <Steps ></Steps>
             </div>
-            <Steps ></Steps>
+
             <img src="/images/m_awards_title.png" alt="" style="width: 90%;margin: 50px auto;display:block">
             <div class="awards container">
                 <img src="/images/m_award.png" alt="title" style="width: 100%;">

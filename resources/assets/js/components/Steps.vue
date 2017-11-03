@@ -1,5 +1,5 @@
 <template>
-    <ul class="steps" style="height: 140px;overflow: hidden;"  v-touch:left ="left" v-touch:right ="right" >
+    <ul class="steps" style=""  v-touch:left ="left" v-touch:right ="right" >
         <li  v-for="(step, index) in steps" :style="step.style">
             <div class="step"><p class="time">{{step.time}}</p><p class="des">{{step.des}}</p></div>
         </li>
@@ -41,26 +41,31 @@
                 this.isActive === true ? this.isActive = false : this.isActive = true
             },
             left: function (){
-                alert('left')
-                this.postionB = this.postionB - 33
-                this.postionL = this.postionL - 100
                 let _this = this
-                this.steps.map(function (v,k) {
-                    v.style = 'bottom:'+ (_this.postionB+33*k) + 'px;left:'+(_this.postionL+ 100*k)+'px'
-                })
+                this.stepIndex++
+                if( this.stepIndex<=this.steps.length-3){
+                    this.postionB = this.postionB - 33
+                    this.postionL = this.postionL - 100
+
+                    this.steps.map(function (v,k) {
+                        v.style = 'bottom:'+ (_this.postionB+33*k) + 'px;left:'+(_this.postionL+ 100*k)+'px'
+                    })
+                }
+
             },
             right: function () {
-                alert('right')
                 this.postionB = this.postionB + 33
                 this.postionL = this.postionL + 100
                 let _this = this
-                this.steps.map(function (v,k) {
-                    v.style = 'bottom:'+ (_this.postionB+33*k) + 'px;left:'+(_this.postionL+ 100*k)+'px'
-                })
+                this.stepIndex--
+                if (this.stepIndex>0){
+                    this.steps.map(function (v,k) {
+                        v.style = 'bottom:'+ (_this.postionB+33*k) + 'px;left:'+(_this.postionL+ 100*k)+'px'
+                    })
+                }
+
             },
             changePosition(){
-                alert('change Data')
-                alert(this.CoordinateX)
             }
         },
         computed:{

@@ -23334,27 +23334,29 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
         },
 
         left: function left() {
-            alert('left');
-            this.postionB = this.postionB - 33;
-            this.postionL = this.postionL - 100;
             var _this = this;
-            this.steps.map(function (v, k) {
-                v.style = 'bottom:' + (_this.postionB + 33 * k) + 'px;left:' + (_this.postionL + 100 * k) + 'px';
-            });
+            this.stepIndex++;
+            if (this.stepIndex <= this.steps.length - 3) {
+                this.postionB = this.postionB - 33;
+                this.postionL = this.postionL - 100;
+
+                this.steps.map(function (v, k) {
+                    v.style = 'bottom:' + (_this.postionB + 33 * k) + 'px;left:' + (_this.postionL + 100 * k) + 'px';
+                });
+            }
         },
         right: function right() {
-            alert('right');
             this.postionB = this.postionB + 33;
             this.postionL = this.postionL + 100;
             var _this = this;
-            this.steps.map(function (v, k) {
-                v.style = 'bottom:' + (_this.postionB + 33 * k) + 'px;left:' + (_this.postionL + 100 * k) + 'px';
-            });
+            this.stepIndex--;
+            if (this.stepIndex > 0) {
+                this.steps.map(function (v, k) {
+                    v.style = 'bottom:' + (_this.postionB + 33 * k) + 'px;left:' + (_this.postionL + 100 * k) + 'px';
+                });
+            }
         },
-        changePosition: function changePosition() {
-            alert('change Data');
-            alert(this.CoordinateX);
-        }
+        changePosition: function changePosition() {}
     },
     computed: {
         changeStyle: {
@@ -24690,6 +24692,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Banner___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_Banner__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Steps__ = __webpack_require__(72);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_Steps___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_Steps__);
+//
 //
 //
 //
@@ -46291,7 +46294,18 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "m-work"
   }, [_c('nav-bar'), _vm._v(" "), _c('div', {
     staticClass: "mobile-page"
-  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _c('Steps'), _vm._v(" "), _c('img', {
+  }, [_vm._m(0), _vm._v(" "), _vm._m(1), _vm._v(" "), _c('div', {
+    staticClass: "history"
+  }, [_c('img', {
+    staticStyle: {
+      "width": "63%",
+      "padding-left": "5%"
+    },
+    attrs: {
+      "src": "/images/m_history_title.png",
+      "alt": ""
+    }
+  }), _vm._v(" "), _c('Steps')], 1), _vm._v(" "), _c('img', {
     staticStyle: {
       "width": "90%",
       "margin": "50px auto",
@@ -46301,7 +46315,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "src": "/images/m_awards_title.png",
       "alt": ""
     }
-  }), _vm._v(" "), _vm._m(3)], 1), _vm._v(" "), _c('footer-bar')], 1)
+  }), _vm._v(" "), _vm._m(2)]), _vm._v(" "), _c('footer-bar')], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "banner"
@@ -46336,19 +46350,6 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     },
     attrs: {
       "src": "images/m_work_2.png",
-      "alt": ""
-    }
-  })])
-},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "history"
-  }, [_c('img', {
-    staticStyle: {
-      "width": "63%",
-      "padding-left": "5%"
-    },
-    attrs: {
-      "src": "/images/m_history_title.png",
       "alt": ""
     }
   })])
@@ -46392,11 +46393,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       expression: "right",
       arg: "right"
     }],
-    staticClass: "steps",
-    staticStyle: {
-      "height": "140px",
-      "overflow": "hidden"
-    }
+    staticClass: "steps"
   }, _vm._l((_vm.steps), function(step, index) {
     return _c('li', {
       style: (step.style)
