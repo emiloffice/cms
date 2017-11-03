@@ -21,8 +21,8 @@
 @if ($agent->isMobile())
 @else
 @section('foot-extend')
-    <script src="/js/jquery-3.2.1.js"></script>
-    <script src="/js/jquery-ui.js"></script>
+    <script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-3.2.1.js"></script>
+    <script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-ui.js"></script>
 
     <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/fullpage/jquery.fullPage.js"></script>
     <script type="text/javascript">

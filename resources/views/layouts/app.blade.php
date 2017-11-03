@@ -34,6 +34,7 @@
     <!-- Scripts -->
     <script src="//{{getenv('RESOURCE_PATH')}}{{ mix('/js/app.js') }}"></script>
     <script src="//{{getenv('RESOURCE_PATH')}}/fonts/iconfont/iconfont.js"></script>
-    @yield('foot-extend')
+
 </body>
+@yield('foot-extend')
 </html>
