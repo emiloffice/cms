@@ -5,7 +5,21 @@
             <img src="/images/m_index_banner.png" alt="" style="width: 100%">
         </div>
         <p class="title"></p>
-        <ul class="game_list container index">
+        <ul class="game_list container index"  v-touch:left ="left" v-touch:right ="right" >
+            <li>
+                <img src="/images/m_seekingdawn_thumb.png" alt="seekingdawn cover" style="" class="cover">
+                <p class="des">Seeking Dawn是由Multiverse制作的大型科幻RPG类VR游戏，游戏具有丰富的合成玩法和生存元素，
+                    带你进入身临其境的外星人“死亡世界”。
+                    如何利用好各种各样的道具和建筑在游戏中生存下去，并且一步步去探索揭开这个神秘星球的真面目。</p>
+                <a href="#" class="more"><img src="/images/m_more.png" alt=""></a>
+            </li>
+            <li>
+                <img src="/images/m_seekingdawn_thumb.png" alt="seekingdawn cover" style="" class="cover">
+                <p class="des">Seeking Dawn是由Multiverse制作的大型科幻RPG类VR游戏，游戏具有丰富的合成玩法和生存元素，
+                    带你进入身临其境的外星人“死亡世界”。
+                    如何利用好各种各样的道具和建筑在游戏中生存下去，并且一步步去探索揭开这个神秘星球的真面目。</p>
+                <a href="#" class="more"><img src="/images/m_more.png" alt=""></a>
+            </li>
             <li>
                 <img src="/images/m_seekingdawn_thumb.png" alt="seekingdawn cover" style="" class="cover">
                 <p class="des">Seeking Dawn是由Multiverse制作的大型科幻RPG类VR游戏，游戏具有丰富的合成玩法和生存元素，
@@ -63,7 +77,19 @@
         },
         components:{
             NavBar, FooterBar
-        }
+        },
+        methods: {
+            navigation(){
+                this.isActive === true ? this.isActive = false : this.isActive = true
+            },
+            left: function (){
+                alert('left')
+            },
+            right: function () {
+                alert('right')
+
+            }
+        },
     }
 
 </script>

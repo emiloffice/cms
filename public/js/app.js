@@ -24487,6 +24487,20 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -24498,6 +24512,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
     components: {
         NavBar: __WEBPACK_IMPORTED_MODULE_0__components_m_NavBar___default.a, FooterBar: __WEBPACK_IMPORTED_MODULE_1__components_m_FooterBar___default.a
+    },
+    methods: {
+        navigation: function navigation() {
+            this.isActive === true ? this.isActive = false : this.isActive = true;
+        },
+
+        left: function left() {
+            alert('left');
+        },
+        right: function right() {
+            alert('right');
+        }
     }
 });
 
@@ -47674,7 +47700,22 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     staticClass: "container-fluid"
   }, [_c('nav-bar'), _vm._v(" "), _vm._m(0), _vm._v(" "), _c('p', {
     staticClass: "title"
-  }), _vm._v(" "), _vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3), _vm._v(" "), _c('footer-bar')], 1)
+  }), _vm._v(" "), _c('ul', {
+    directives: [{
+      name: "touch",
+      rawName: "v-touch:left",
+      value: (_vm.left),
+      expression: "left",
+      arg: "left"
+    }, {
+      name: "touch",
+      rawName: "v-touch:right",
+      value: (_vm.right),
+      expression: "right",
+      arg: "right"
+    }],
+    staticClass: "game_list container index"
+  }, [_vm._m(1), _vm._v(" "), _vm._m(2), _vm._v(" "), _vm._m(3)]), _vm._v(" "), _vm._m(4), _vm._v(" "), _vm._m(5), _vm._v(" "), _c('footer-bar')], 1)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "banner"
@@ -47688,9 +47729,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     }
   })])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('ul', {
-    staticClass: "game_list container index"
-  }, [_c('li', [_c('img', {
+  return _c('li', [_c('img', {
     staticClass: "cover",
     attrs: {
       "src": "/images/m_seekingdawn_thumb.png",
@@ -47708,7 +47747,47 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
       "src": "/images/m_more.png",
       "alt": ""
     }
-  })])])])
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('li', [_c('img', {
+    staticClass: "cover",
+    attrs: {
+      "src": "/images/m_seekingdawn_thumb.png",
+      "alt": "seekingdawn cover"
+    }
+  }), _vm._v(" "), _c('p', {
+    staticClass: "des"
+  }, [_vm._v("Seeking Dawn是由Multiverse制作的大型科幻RPG类VR游戏，游戏具有丰富的合成玩法和生存元素，\n                带你进入身临其境的外星人“死亡世界”。\n                如何利用好各种各样的道具和建筑在游戏中生存下去，并且一步步去探索揭开这个神秘星球的真面目。")]), _vm._v(" "), _c('a', {
+    staticClass: "more",
+    attrs: {
+      "href": "#"
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": "/images/m_more.png",
+      "alt": ""
+    }
+  })])])
+},function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('li', [_c('img', {
+    staticClass: "cover",
+    attrs: {
+      "src": "/images/m_seekingdawn_thumb.png",
+      "alt": "seekingdawn cover"
+    }
+  }), _vm._v(" "), _c('p', {
+    staticClass: "des"
+  }, [_vm._v("Seeking Dawn是由Multiverse制作的大型科幻RPG类VR游戏，游戏具有丰富的合成玩法和生存元素，\n                带你进入身临其境的外星人“死亡世界”。\n                如何利用好各种各样的道具和建筑在游戏中生存下去，并且一步步去探索揭开这个神秘星球的真面目。")]), _vm._v(" "), _c('a', {
+    staticClass: "more",
+    attrs: {
+      "href": "#"
+    }
+  }, [_c('img', {
+    attrs: {
+      "src": "/images/m_more.png",
+      "alt": ""
+    }
+  })])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
     staticClass: "about index"
