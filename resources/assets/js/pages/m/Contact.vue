@@ -21,7 +21,7 @@
                 <li><p><i class=""></i><a href="https://linkedin.com/company/multiverse-entertainment">linkedin.com/company/multiverse-entertainment</a></p></li>
             </ul>
         </div>
-        <form class="contact_form container">
+        <form class="contact_form container" method="post" action="/contact">
             <p><img src="/images/question.png" alt="" style="width:100%"></p>
             <div class="input-group fl">
                 <label for="name">姓名</label>

@@ -48046,7 +48046,11 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   }, [_vm._v("linkedin.com/company/multiverse-entertainment")])])])])])
 },function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('form', {
-    staticClass: "contact_form container"
+    staticClass: "contact_form container",
+    attrs: {
+      "method": "post",
+      "action": "/contact"
+    }
   }, [_c('p', [_c('img', {
     staticStyle: {
       "width": "100%"
