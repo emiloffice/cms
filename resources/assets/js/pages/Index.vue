@@ -43,16 +43,13 @@
 
                 </div>
             </div>
-            <div class="section" id="about">
+            <div class="section" id="about" style="">
                 <div class="left">
                 <img src="/images/about-us.png" alt="ABOUT US" class="title">
                 <div class="des" v-html="$t('index_view.about_des')">
 
                 </div>
 
-                </div>
-                <div class="right">
-                    <img src="/images/monster.png" alt="monster">
                 </div>
             </div>
             <div class="section" id="news">
