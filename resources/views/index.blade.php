@@ -5,7 +5,7 @@
     @endsection
 @else
     @section('head-extend')
-        <link rel="stylesheet" type="text/css" href="//{{getenv('RESOURCE_PATH')}}/js/jquery.fullPage.css" />
+        <link rel="stylesheet" type="text/css" href="//{{getenv('RESOURCE_PATH')}}/fullPage/fullPage.css" />
     @endsection
     @section('class-name')
         class="fullpage"
@@ -23,8 +23,7 @@
 @section('foot-extend')
     <script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-3.2.1.js"></script>
     <script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-ui.js"></script>
-
-    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/js/jquery.fullPage.js"></script>
+    <script src="//{{getenv('RESOURCE_PATH')}}/fullPage/jquery.fullPage.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
