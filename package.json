@@ -21,6 +21,7 @@
     "vue-router": "^2.4.0"
   },
   "dependencies": {
+    "vue-i18n": "^7.3.2",
     "wangeditor": "^3.0.10"
   }
 }
