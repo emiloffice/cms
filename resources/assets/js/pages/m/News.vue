@@ -2,6 +2,7 @@
     <div class="container-fluid">
         <nav-bar></nav-bar>
         <ul class="news container">
+            <img src="/images/m_news_title.png" alt="NEWS">
             <li>
                 <a href="http://mp.weixin.qq.com/s/To8yixNKIxgCHUXyf9cEGg" target="_blank">
                     <div class="thumb"><img src="/images/new1-thumb.png" alt=""></div>

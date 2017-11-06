@@ -1,7 +1,7 @@
 .contact_info{
   height: 400px;
   p{
-    font-size: 24px;
+    font-size: 20px;
     line-height: 40px;
   }
   ul{
@@ -13,6 +13,10 @@
     border-right: none;
     text-indent: 130px;
   }
+  /*i.icon.iconfont{
+    display: table-cell;
+    vertical-align: middle;
+  }*/
 }
 
 #app.mobile{

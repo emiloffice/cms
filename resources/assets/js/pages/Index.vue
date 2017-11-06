@@ -46,13 +46,8 @@
             <div class="section" id="about">
                 <div class="left">
                 <img src="/images/about-us.png" alt="ABOUT US" class="title">
-                <div class="des">
-                    <p class="title">我们的愿景</p>
-                    <p>我们希望能够成为世界顶尖的游戏开发商，做出能够风靡世界的3A游<br/>
-                        戏，为中国游戏的崛起做出努力。</p>
-                    <p class="title">我们的价值观</p>
-                    <p>我们的价值观是做好玩的游戏，至始至终以游戏性为目的去研发游戏<br/>
-                        ，做顶尖的和精品的游戏。</p>
+                <div class="des" v-html="$t('index_view.about_des')">
+
                 </div>
 
                 </div>
@@ -116,8 +111,10 @@
 
     export default {
         created() {
-            this.locale = localStorage.getItem('language') // 从 localStorage 中获取语言状态
-            this.$i18n.locale = localStorage.getItem('language')
+            console.log('lang:'+ this.$i18n.locale)
+            /*this.locale = localStorage.getItem('language') // 从 localStorage 中获取语言状态
+
+            this.$i18n.locale = localStorage.getItem('language')*/
         },
         mounted() {
             console.log('Index Pages mounted.')
@@ -137,7 +134,9 @@
         color: #999999;
     }
     #section0 img{
-        width: 100%;
+        display: block;
+        width: 85%;
+        margin: 0 auto;
     }
     #section1>img{
 

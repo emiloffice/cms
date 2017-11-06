@@ -3,24 +3,24 @@
         <nav-bar></nav-bar>
         <div class="banner ">
             <div style="text-align: center">
-                <img src="/images/game_banner.png" alt="" style="max-width: 1600px;width: 90%;">
+                <img src="/images/game_banner.png" alt="" style="max-width: 1600px;width: 90%;height: 800px;object-fit: contain;">
             </div>
         </div>
         <ul class="game_list container">
-            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12" v-for=" list in $t('games')">
                 <div class="left fl">
-                    <img src="/images/thumb1.png" alt="">
+                    <img :src="list.cover" :alt="list.cover_alt">
                     <span class="play_btn" v-on="play_video()"></span>
                 </div>
                 <div class="right fl">
-                    <p class="name"> 《寻求黎明》</p>
+                    <p class="name"> {{list.name}}</p>
                     <p class="des">
-                        Seeking Dawn是由Multiverse制作的大型科幻RPG类VR游戏，游戏具有丰富的合成玩法和生存元素，带你进入身临其境的外星人“死亡世界”。如何利用好各种各样的道具和建筑在游戏中生存下去，并且一步步去探索揭开这个神秘星球的真面目。
+                        {{list.des}}
                     </p>
-                    <a href="">官方网站</a>
+                    <a :href="list.link">{{$t('game_page.link_name')}}</a>
                 </div>
             </li>
-            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            <!--<li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="left fl">
                     <img src="/images/thumb2.png" alt="">
                 </div>
@@ -29,8 +29,8 @@
                     <p class="des">《圣域纷争》是由深圳火花幻境研发，Multiverse发行的一款塔防类VR游戏。玩家需要在游戏中扮演一名孤胆英雄，利用好陷阱和道具面对敌人，通过陷阱阻止他们前行守护最后的圣域。</p>
                     <a href="">官方网站</a>
                 </div>
-            </li>
-            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+            </li>-->
+            <!--<li class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <div class="left fl">
                     <img src="/images/thumb3.png" alt="">
                 </div>
@@ -61,7 +61,7 @@
                     <p class="des">《银河穿梭VR》是一款VR跑酷类游戏，玩家仿佛星际穿梭一般，穿越了时空的界限，在充满次世代的音乐背景中极速飞行!富含科幻感的时空隧道内，你需要高度集中注意力，紧盯着路径上的红点，随时躲避前方的障碍物。</p>
                     <a href="">官方网站</a>
                 </div>
-            </li>
+            </li>-->
         </ul>
         <footer-bar></footer-bar>
     </div>

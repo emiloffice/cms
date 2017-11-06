@@ -9,10 +9,10 @@
         <div class="contact_info container">
             <p><img src="/images/m_contact_title.png" alt="" style="width:100%"></p>
             <ul class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <li><p><i class=""></i><a href="mailto:contact@multiverseinc.com">常规交流：contact@multiverseinc.com</a></p></li>
-                <li><p><i class=""></i><a  href="mailto:bo.liu@multiverseinc.com">公共关系：bo.liu@multiverseinc.com</a></p></li>
-                <li><p><i class=""></i><a  href="mailto:lilian.chen@multiverseinc.com">英才招聘：lilian.chen@multiverseinc.com</a></p></li>
-                <li><p><i class=""></i><a  href="mailto:chenjun.li@multiverseinc.com">商务合作：chenjun.li@multiverseinc.com</a></p></li>
+                <li><p><i class=""></i><a href="mailto:contact@multiverseinc.com">{{$t("contact_view.Regular")}}：contact@multiverseinc.com</a></p></li>
+                <li><p><i class=""></i><a  href="mailto:bo.liu@multiverseinc.com">{{$t("contact_view.Public")}}：bo.liu@multiverseinc.com</a></p></li>
+                <li><p><i class=""></i><a  href="mailto:lilian.chen@multiverseinc.com">{{$t("contact_view.Human")}}：lilian.chen@multiverseinc.com</a></p></li>
+                <li><p><i class=""></i><a  href="mailto:chenjun.li@multiverseinc.com">{{$t("contact_view.Business")}}：chenjun.li@multiverseinc.com</a></p></li>
             </ul>
             <ul class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <li><p><i class=""></i><a href="https://facebook.com/MultiverseVR">facebook.com/MultiverseVR</a></p></li>
@@ -24,28 +24,28 @@
         <form class="contact_form container" method="post" action="/contact">
             <p><img src="/images/question.png" alt="" style="width:100%"></p>
             <div class="input-group fl">
-                <label for="name">姓名</label>
+                <label for="name">{{$t("input.name.label")}}</label>
                 <input type="text" name="name" id="name" class="input md">
             </div>
             <div class="input-group fr">
-                <label for="company">公司</label>
+                <label for="company">{{$t("input.company.label")}}</label>
                 <input type="text" name="company" id="company" class="input md">
             </div>
             <div class="input-group fl">
-                <label for="email">Email</label>
+                <label for="email">{{$t("input.email.label")}}</label>
                 <input type="text" name="email" id="email" class="input md">
             </div>
             <div class="input-group fr">
-                <label for="mobile">手机</label>
+                <label for="mobile">{{$t("input.mobile.label")}}</label>
                 <input type="text" name="mobile" id="mobile" class="input md">
             </div>
             <div class="input-group fl">
-                <label for="content" style="vertical-align: top;">内容</label>
+                <label for="content" style="vertical-align: top;">{{$t("input.content.label")}}</label>
                 <textarea type="text" name="content" id="content" ></textarea>
             </div>
             <div class="clearfix"></div>
             <div class="input-group tc">
-                <input type="submit" class="submit" value="发送">
+                <input type="submit" class="submit" :value="$t('input.send')">
             </div>
         </form>
         <footer-bar></footer-bar>

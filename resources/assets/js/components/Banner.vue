@@ -1,6 +1,6 @@
 <template>
         <ul class="banner">
-            <li><img src="/images/work_banner.png" alt=""></li>
+            <li style="    text-align: center;"><img src="/images/work_banner.png" alt=""></li>
         </ul>
 </template>
 

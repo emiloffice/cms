@@ -16,8 +16,11 @@ Vue.use(touch);
 Vue.use(VueAgile);
 import animate from 'animate.css'
 Vue.use(Lang)
+localStorage.getItem('language')==null | localStorage.getItem('language')==''?localStorage.setItem('language','zh-CN'):true
+
 const i18n = new Lang({
-    local: localStorage.getItem('language'),
+    // local: localStorage.getItem('language'),
+    local: 'zh-CN',
     messages: {
         "zh-CN": zhCN, //中文语言包
         "en-US": enUS, //英文语言包

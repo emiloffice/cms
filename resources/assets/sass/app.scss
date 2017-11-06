@@ -154,6 +154,7 @@ p {
   font-size: 0.16rem;
   line-height: 25px;
   color: #999999;
+  font-family: "Microsoft YaHei";
 }
 .fl {
   float: left;
@@ -186,7 +187,8 @@ a{
 }
 .DEVELOPMENT_HISTORY {
   font-size: 26px;
-  font-family: "Haettenschweiler";
+  //font-family: "Haettenschweiler";
+  font-family: "Microsoft YaHei";
   color: rgb(255, 255, 255);
   line-height: 1;
   text-align: left;
@@ -208,12 +210,12 @@ a{
 }
 .title{
   font-family: "Haettenschweiler";
-  font-size: 76px;
+  font-size: 40px;
   line-height: 90px;
   z-index: 9;
   color: rgba(144, 144, 144, 0.8);
   position: relative;
-  opacity: 0.25;
+  text-transform: uppercase;
 }
 
 .input-group{
@@ -366,4 +368,7 @@ a{
   .banner{
     margin-top: 73px;
   }
+}
+.red{
+  color: red;
 }
