@@ -113,7 +113,12 @@
 <script>
     import NavBar from '../components/NavBar'
     import FooterBar from '../components/FooterBar'
+
     export default {
+        created() {
+            this.locale = localStorage.getItem('language') // 从 localStorage 中获取语言状态
+            this.$i18n.locale = localStorage.getItem('language')
+        },
         mounted() {
             console.log('Index Pages mounted.')
             console.log(this.$msg)

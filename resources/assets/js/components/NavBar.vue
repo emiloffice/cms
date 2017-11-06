@@ -10,6 +10,8 @@
                 <li><a href="news">新闻</a></li>
                 <li><a href="jobs">招聘</a></li>
                 <li><a href="contact">联系我们</a></li>
+                <li><a v-on:click="switchLang('en-US')" class="" v-if="lang==='zh-CN'">EN</a>
+                    <a v-on:click="switchLang('zh-CN')" class="" v-if="lang==='en-US'">中文</a></li>
             </ul>
         </div>
     </nav>
@@ -19,6 +21,21 @@
     export default {
         mounted() {
             console.log('NavBar Component mounted.')
+        },
+        methods:{
+            switchLang(e){
+                let lang = this.$parent.locale
+                if (e ==='en-US'){
+                    this.$parent.locale = this.$i18n.locale = 'en-US'
+                    this.lang = 'en-US'
+                    localStorage.setItem('language', 'en-US')
+                }
+                if(e === 'zh-CN'){
+                    this.$parent.locale = this.$i18n.locale = 'zh-CN'
+                    localStorage.setItem('language', 'zh-CN')
+                    this.lang = 'zh-CN'
+                }
+            }
         }
     }
 </script>

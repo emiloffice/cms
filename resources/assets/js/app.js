@@ -5,14 +5,24 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 import Vue from 'vue';
-// import Fullpage from './fullpage';
 import touch from 'vue-directive-touch';
 import VueAgile from 'vue-agile'
+import Lang from 'vue-i18n';
+import  enUS from  './lang/en_US.js'
+import  zhCN from  './lang/zh_CN.js'
 require('./bootstrap');
-// Vue.use(Fullpage);
+
 Vue.use(touch);
 Vue.use(VueAgile);
 import animate from 'animate.css'
+Vue.use(Lang)
+const i18n = new Lang({
+    local: localStorage.getItem('language'),
+    messages: {
+        "zh-CN": zhCN, //中文语言包
+        "en-US": enUS, //英文语言包
+    }
+});
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
@@ -39,5 +49,6 @@ Vue.component('MJob', require('./pages/m/Job'));
 Vue.component('MNews', require('./pages/m/News'));
 Vue.component('MIndex', require('./pages/m/Index'));
 const app = new Vue({
+    i18n,
     el: '#app'
 });
