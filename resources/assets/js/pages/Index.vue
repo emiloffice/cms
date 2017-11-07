@@ -12,15 +12,13 @@
                         <div class="thumb">
                             <img :src="list.cover" :alt="list.cover_alt" class="cover">
 
-                            <div class="play_btn" onclick="play_video()" style="position: absolute;top: 50%;left: 50%;margin-top: -32px;margin-left: -32px;"></div>
+                            <div class="play_btn" @click="play_video(list.video)" style="position: absolute;top: 50%;left: 50%;margin-top: -32px;margin-left: -32px;"></div>
                         </div>
                         <a :href="list.link" class="more"><img src="/images/more.png" alt=""></a>
                         <div class="des">{{list.des}}</div>
                     </li>
                 </ul>
-                <div class="intro">
 
-                </div>
             </div>
             <div class="section" id="about" style="">
                 <div class="left">
@@ -41,49 +39,19 @@
                         </div>
                         </a>
                     </li>
-                    <!--<li>
-                        <a href="http://mp.weixin.qq.com/s/Lw1RwyTeaphVUSiXntVsYg" target="_blank">
-                        <div class="thumb">
-                            <img src="/images/new2-thumb.png" alt="">
-                            <p class="news-title">新款GearVR要来了，你期待吗？</p>
-                        </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://mp.weixin.qq.com/s/KMvlWJNm0uHCet4cqiynEA" target="_blank">
-                        <div class="thumb">
-                            <img src="/images/new3-thumb.png" alt="">
-                            <p class="news-title">《寻找黎明》荣获GAD最佳视觉奖  超美画面抢先放送</p>
-                        </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://mp.weixin.qq.com/s/srXc6XZkTQOUoRyi6mjYxg" target="_blank">
-                        <div class="thumb">
-                            <img src="/images/new4-thumb.png" alt="">
-                            <p class="news-title">在Vision Summit上 Multiverse到底分享了什么经验？</p>
-                        </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://mp.weixin.qq.com/s/lyTZj5ySbWCq_nIQVDYzBA" target="_blank">
-                        <div class="thumb">
-                            <img src="/images/new5-thumb.png" alt="">
-                            <p class="news-title">独家专访Multiverse范威洋</p>
-                        </div>
-                        </a>
-                    </li>-->
                 </ul>
                 <footer-bar></footer-bar>
             </div>
 
         </div>
+        <videos  :videoSrc="videoSrc" v-if="videoIsShow"></videos>
     </div>
 </template>
 
 <script>
     import NavBar from '../components/NavBar'
     import FooterBar from '../components/FooterBar'
+    import Videos from '../components/Video'
 
     export default {
         created() {
@@ -96,8 +64,19 @@
             console.log('Index Pages mounted.')
             console.log(this.$msg)
         },
+        data(){
+          return{
+              videoIsShow: false,
+              videoSrc:''
+          }
+        },
         components:{
-            NavBar, FooterBar
+            NavBar, FooterBar, Videos
+        },
+        methods:{
+            play_video(e){
+                e==""|e==null?this.videoIsShow = false:this.videoIsShow=true,this.videoSrc = e
+            }
         }
     }
 

@@ -18,39 +18,12 @@
             </div>
         </div>
         <ul class="news container" style="padding-top: 0;">
-            <li>
-                <a href="http://mp.weixin.qq.com/s/To8yixNKIxgCHUXyf9cEGg" target="_blank">
-                    <div class="thumb"><img src="/images/new1-thumb.png" alt=""></div>
+            <li v-for="(list, index) in $t('news')" v-if="index<5">
+                <a :href="list.link" target="_blank">
+                    <div class="thumb"><img :src="list.cover" alt=""></div>
                     <p class="des">
-                        <span class="news-title">最刺激的星际吃鸡 </span>
-                        <span class="create-at">2017.08.31</span>
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a href="http://mp.weixin.qq.com/s/srXc6XZkTQOUoRyi6mjYxg" target="_blank">
-                    <div class="thumb"><img src="/images/new2.png" alt=""></div>
-                    <p class="des">
-                        <span class="news-title">在Vision Summit上 Multiverse到底分享了什么经验？</span>
-                        <span class="create-at">2017.06.05</span>
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a href="http://mp.weixin.qq.com/s/Lw1RwyTeaphVUSiXntVsYg" target="_blank">
-                    <div class="thumb"><img src="/images/new3.png" alt=""></div>
-                    <p class="des">
-                        <span class="news-title">新款GearVR要来了，你期待吗？</span>
-                        <span class="create-at">2017.08.31</span>
-                    </p>
-                </a>
-            </li>
-            <li>
-                <a href="https://mp.weixin.qq.com/s/KMvlWJNm0uHCet4cqiynEA" target="_blank">
-                    <div class="thumb"><img src="/images/new4.png" alt=""></div>
-                    <p class="des">
-                        <span class="news-title">《寻找黎明》荣获GAD最佳视觉奖  超美画面抢先放送</span>
-                        <span class="create-at">2017.08.31</span>
+                        <span class="news-title">{{list.title}} </span>
+                        <span class="create-at">{{list.created_at}}</span>
                     </p>
                 </a>
             </li>
