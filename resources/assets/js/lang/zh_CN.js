@@ -124,4 +124,11 @@ export default {
         {time:'2017.6',des:'公司获得数千万 美金A轮融资',style:""},
     ],
     job_banner_src:'/images/job_banner.png',
+    awards:[
+        {name:"Unity特邀演讲嘉宾",cover:"/images/unity.png"},
+        {name:"Intel 全球唯一MR合作伙伴",cover:"/images/intel.png"},
+        {name:"GDC VRDC 特邀专家顾问",cover:"/images/gdc.png"},
+        {name:"第一届金陀螺奖最受期待VR游戏",cover:"/images/tuoluo.png"},
+        {name:"腾讯GAD&HTC VIVIE 最佳视觉游戏",cover:"/images/gad.png"},
+    ]
 }

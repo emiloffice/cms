@@ -8,33 +8,11 @@
             <div class="section" id="section1">
                 <img src="/images/released-games.png" class="title" alt="RELEASED GAMES" style="position: absolute;top: 10px;left: 10px;">
                 <ul class="game-list">
-                    <li>
+                    <li v-for="list in $t('games')">
                         <div class="thumb">
-                            <img src="/images/seekingdawn_thumb.png" alt="seekingdawn">
-                        </div>
-                        <div class="play_btn" onclick="play_video()"></div>
-                    </li>
-                    <li>
-                        <div class="thumb">
-                            <img src="/images/DOTR.png" alt="seekingdawn">
-                        </div>
-                        <div class="play_btn" onclick="play_video()"></div>
-                    </li>
-                    <li>
-                        <div class="thumb">
-                            <img src="/images/yzcy.png" alt="seekingdawn">
-                        </div>
-                        <div class="play_btn" onclick="play_video()"></div>
-                    </li>
-                    <li>
-                        <div class="thumb">
-                            <img src="/images/tg.png" alt="seekingdawn">
-                        </div>
-                        <div class="play_btn" onclick="play_video()"></div>
-                    </li>
-                    <li>
-                        <div class="thumb">
-                            <img src="/images/dream-flight.png" alt="seekingdawn">
+                            <img :src="list.cover" :alt="list.cover_alt" class="cover">
+                            <a href="#" class="more"><img src="/images/more.png" alt=""></a>
+                            <div class="des">{{list.des}}</div>
                         </div>
                         <div class="play_btn" onclick="play_video()"></div>
                     </li>

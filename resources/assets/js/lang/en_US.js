@@ -109,4 +109,11 @@ export default {
         {time:'2017.6',des:'公司获得数千万 美金A轮融资',style:""},
     ],
     job_banner_src:'/images/job_banner_en.png',
+    awards:[
+        {name:"Vision Summit 2017 Speakers",cover:"/images/unity.png"},
+        {name:"Partner of Intel MR",cover:"/images/intel.png"},
+        {name:"Consultant of GDC VRDC",cover:"/images/gdc.png"},
+        {name:"Youxituoluo.com - the Most Anticipated VR Game Award 2017",cover:"/images/tuoluo.png"},
+        {name:"Tencent GAD&HTC VIVE the Best Vision Award 2017",cover:"/images/gad.png"},
+    ]
 }
