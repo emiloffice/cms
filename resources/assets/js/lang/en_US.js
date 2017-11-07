@@ -115,5 +115,12 @@ export default {
         {name:"Consultant of GDC VRDC",cover:"/images/gdc.png"},
         {name:"Youxituoluo.com - the Most Anticipated VR Game Award 2017",cover:"/images/tuoluo.png"},
         {name:"Tencent GAD&HTC VIVE the Best Vision Award 2017",cover:"/images/gad.png"},
+    ],
+    news:[
+        {title:"E3 2017: Hands-On With Ambitious Sci-Fi Shooter Seeking Dawn",cover:"https://cdn.uploadvr.com/wp-content/uploads/bfi_thumb/SeekingDawn-1000x563-na2im0bobxbplr3vg0futf5i6feg1fawjl26ey9c72.jpg",link:"https://uploadvr.com/e3-2017-hands-sci-fi-shooter-seeking-dawn/",created_at:"JUNE 19TH, 2017"},
+        {title:"Seeking Dawn Looks Like A Hugely Ambitious VR Shooter",cover:"https://cdn.uploadvr.com/wp-content/uploads/bfi_thumb/Seeking-Dawn-1000x563-n7xffffjnqqy4gzmpcctozy0ic7w3u3qzx95r0qpku.jpg",link:"https://uploadvr.com/seeking-dawn-looks-like-hugely-ambitious-vr-shooter/",created_at:"MAY 2ND, 2017"},
+        {title:"One Of The Largest VR Action Survival Games: Seeking Dawn",cover:"https://www.vrfocus.com/wp-content/uploads/2017/06/2-1130x580.jpg",link:"https://www.vrfocus.com/2017/06/one-of-the-largest-vr-action-survival-games-seeking-dawn/",created_at:"Jun 19, 2017"},
     ]
+
+
 }

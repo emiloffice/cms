@@ -130,5 +130,21 @@ export default {
         {name:"GDC VRDC 特邀专家顾问",cover:"/images/gdc.png"},
         {name:"第一届金陀螺奖最受期待VR游戏",cover:"/images/tuoluo.png"},
         {name:"腾讯GAD&HTC VIVIE 最佳视觉游戏",cover:"/images/gad.png"},
+    ],
+    news:[
+        {title:"最刺激的星际吃鸡",cover:"/images/new1-thumb.png",link:"http://mp.weixin.qq.com/s/To8yixNKIxgCHUXyf9cEGg",created_at:"2017.08.31"},
+        {title:"在Vision Summit上 Multiverse到底分享了什么经验？",cover:"/images/new2.png",link:"http://mp.weixin.qq.com/s/srXc6XZkTQOUoRyi6mjYxg",created_at:"2017.06.05"},
+        {title:"新款GearVR要来了，你期待吗？",cover:"/images/new3.png",link:"http://mp.weixin.qq.com/s/Lw1RwyTeaphVUSiXntVsYg",created_at:"2017.08.31"},
+        {title:"《寻找黎明》荣获GAD最佳视觉奖  超美画面抢先放送",cover:"/images/new4.png",link:"http://mp.weixin.qq.com/s/KMvlWJNm0uHCet4cqiynEA",created_at:"2017.08.31"},
+        {title:"独家专访Multiverse范威洋",cover:"/images/new5.png",link:"http://mp.weixin.qq.com/s/lyTZj5ySbWCq_nIQVDYzBA",created_at:"2017.08.31"},
+        {title:"《寻找黎明》荣获最佳视觉奖的背后 开发大饼吐槽中",cover:"/images/new6.png",link:"http://mp.weixin.qq.com/s/czv-i_shg6B9CfyBfKBBGg",created_at:"2017.08.31"},
+        {title:"与微软谷歌同台！Multiverse在Vision......",cover:"/images/new7.png",link:"http://mp.weixin.qq.com/s/oEGNhDhPQ1X37by05lHkqg",created_at:"2017.08.31"},
+        {title:"《梦幻风之旅》迎更新内容 圣诞彩蛋炫丽登场 ",cover:"/images/new8.png",link:"http://mp.weixin.qq.com/s/FP_aIb0Qg1vVbtykRhFclA",created_at:"2017.08.31"},
+        {title:"扯淡系列、VR游戏最重要的是什么？",cover:"/images/new9.png",link:"http://mp.weixin.qq.com/s/ORuDZ3V5I_ieyobAdfic9w",created_at:"2017.08.31"},
+        {title:"HTC生态大会 《寻找黎明》在这里",cover:"/images/new10.png",link:"http://mp.weixin.qq.com/s/JGWQKRMlIipqSCwzZIph6A",created_at:"2017.08.31"},
+        {title:"VR|Multiverse最新科幻大作，《Seeking Dawn》震撼来袭！",cover:"/images/new11.png",link:"http://mp.weixin.qq.com/s/c2zIflVsfzS7qRdOhPfpsQ",created_at:"2017.08.31"},
+        {title:"Multiverse干货分享|如何制作好的VR内容 ",cover:"/images/new12.png",link:"http://mp.weixin.qq.com/s/j0WGJrwqdfHEYjx0VJ8cGA",created_at:"2017.08.31"},
+        {title:"99%的人没有机会体验！你想不想过那1%的生活！",cover:"/images/new13.png",link:"http://mp.weixin.qq.com/s/mrIgYuRNn2jyGf8piCWYVA",created_at:"2016.11.25"},
+
     ]
 }

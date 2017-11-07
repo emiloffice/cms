@@ -14,7 +14,7 @@
 
                             <div class="play_btn" onclick="play_video()" style="position: absolute;top: 50%;left: 50%;margin-top: -32px;margin-left: -32px;"></div>
                         </div>
-                        <a href="#" class="more"><img src="/images/more.png" alt=""></a>
+                        <a :href="list.link" class="more"><img src="/images/more.png" alt=""></a>
                         <div class="des">{{list.des}}</div>
                     </li>
                 </ul>
@@ -33,15 +33,15 @@
             </div>
             <div class="section" id="news">
                 <ul class="news-list container">
-                    <li>
-                        <a href="http://mp.weixin.qq.com/s/To8yixNKIxgCHUXyf9cEGg" target="_blank">
+                    <li v-for="(list, index) in $t('news')" v-if="index<3">
+                        <a :href="list.link" target="_blank">
                         <div class="thumb">
-                            <img src="/images/new1-thumb.png" alt="">
-                            <p class="news-title">最刺激的星际吃鸡</p>
+                            <img :src="list.cover" alt="">
+                            <p class="news-title">{{list.title}}</p>
                         </div>
                         </a>
                     </li>
-                    <li>
+                    <!--<li>
                         <a href="http://mp.weixin.qq.com/s/Lw1RwyTeaphVUSiXntVsYg" target="_blank">
                         <div class="thumb">
                             <img src="/images/new2-thumb.png" alt="">
@@ -72,7 +72,7 @@
                             <p class="news-title">独家专访Multiverse范威洋</p>
                         </div>
                         </a>
-                    </li>
+                    </li>-->
                 </ul>
                 <footer-bar></footer-bar>
             </div>
