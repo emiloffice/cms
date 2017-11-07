@@ -48,6 +48,10 @@
         position: fixed;
         top: 20px;
         right: 20px;
-        color: #ffffff;
+        width: 20px;
+        height: 20px;
+        display: block;
+        color: #fff;
+        cursor: pointer;
     }
 </style>
