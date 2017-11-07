@@ -11,10 +11,11 @@
                     <li v-for="list in $t('games')">
                         <div class="thumb">
                             <img :src="list.cover" :alt="list.cover_alt" class="cover">
-                            <a href="#" class="more"><img src="/images/more.png" alt=""></a>
-                            <div class="des">{{list.des}}</div>
+
+                            <div class="play_btn" onclick="play_video()" style="position: absolute;top: 50%;left: 50%;margin-top: -32px;margin-left: -32px;"></div>
                         </div>
-                        <div class="play_btn" onclick="play_video()"></div>
+                        <a href="#" class="more"><img src="/images/more.png" alt=""></a>
+                        <div class="des">{{list.des}}</div>
                     </li>
                 </ul>
                 <div class="intro">
