@@ -40,7 +40,8 @@
         data(){
             return {
                 videoIsShow: false,
-                videoSrc:''
+                videoSrc:'',
+                navIndex:2
             }
         },
         methods:{

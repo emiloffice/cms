@@ -78,11 +78,18 @@
     import NavBar from '../components/NavBar'
     import FooterBar from '../components/FooterBar'
     export default {
+        created() {
+        },
         mounted() {
             console.log('Index Pages mounted.')
         },
         components:{
             NavBar, FooterBar
+        },
+        data(){
+            return{
+                navIndex: 1
+            }
         }
     }
 

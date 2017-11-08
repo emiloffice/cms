@@ -27,6 +27,9 @@
       float: left;
       padding-left: 60px;
     }
+    li.active,li:hover{
+      color: #ff0101;
+    }
   }
 }
 .m-nav-bar{

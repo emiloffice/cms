@@ -63,6 +63,11 @@
         },
         components:{
             NavBar, FooterBar, Banner
+        },
+        data(){
+            return{
+                navIndex: 3
+            }
         }
     }
 </script>

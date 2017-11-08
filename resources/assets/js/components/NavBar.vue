@@ -4,7 +4,7 @@
             <a href="/" class="logo"><img src="/images/logo.png" alt="Multiverse logo"></a>
 
             <ul class="menu" >
-                <li v-for="(m ,index) in $t('nav.menu')" v-on:click="navActive(index)" :class="m.isActive"><a :href="m.link">{{m.name}}</a></li>
+                <li v-for="(m ,index) in $t('nav.menu')" v-on:click="navActive(index)" v-bind:class="{ active: index + 1 == navIndex}"><a :href="m.link">{{m.name}}</a></li>
                 <li><a v-on:click="switchLang('en-US')" class="" v-if="this.$i18n.locale==='zh-CN'">EN</a>
                     <a v-on:click="switchLang('zh-CN')" class="" v-if="this.$i18n.locale==='en-US'">中文</a></li>
             </ul>
@@ -17,6 +17,8 @@
         mounted() {
             console.log('NavBar Component mounted.')
             console.log('language:'+this.$i18n.locale)
+            console.log('navIndex:'+this.navIndex)
+            this.$i18n.locale = localStorage.getItem('language')
         },
         methods:{
             switchLang(e){
@@ -33,12 +35,17 @@
                 }
             },
             navActive(e){
-                this.navIndex = e
+                window.localStorage.setItem('navIndex', e+1)
             }
         },
         data(){
             return{
-                navIndex:"",
+                navIndex:this.$parent.navIndex,
+
+            }
+        },
+        computed:{
+            classObject(e){
 
             }
         }

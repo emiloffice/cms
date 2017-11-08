@@ -55,14 +55,12 @@
 
     export default {
         created() {
-            console.log('lang:'+ this.$i18n.locale)
-            /*this.locale = localStorage.getItem('language') // 从 localStorage 中获取语言状态
-
-            this.$i18n.locale = localStorage.getItem('language')*/
+            localStorage.setItem('navIndex','0')
         },
         mounted() {
             console.log('Index Pages mounted.')
-            console.log(this.$msg)
+            this.$i18n.locale = localStorage.getItem('language')
+
         },
         data(){
           return{
