@@ -30,6 +30,7 @@
                 </div>
             </div>
             <div class="section" id="news">
+                <div class="container"><img src="/images/new_title.png" alt="" style="margin-top: 110px"></div>
                 <ul class="news-list container">
                     <li v-for="(list, index) in $t('news')" v-if="index<3">
                         <a :href="list.link" target="_blank">
@@ -42,7 +43,6 @@
                 </ul>
                 <footer-bar></footer-bar>
             </div>
-
         </div>
         <videos  :videoSrc="videoSrc" v-if="videoIsShow"></videos>
     </div>

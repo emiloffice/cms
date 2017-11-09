@@ -106,7 +106,10 @@ $container-large-desktop:      (1140px + $grid-gutter-width) !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
 
-// ###
+//
+$font-family: Microsoft YaHei;
+
+
 
 // Variables
 @import "normalize";
@@ -186,21 +189,6 @@ a{
   text-decoration: none;
   color: inherit;
 }
-.DEVELOPMENT_HISTORY {
-  font-size: 26px;
-  //font-family: "Haettenschweiler";
-  font-family: "Microsoft YaHei";
-  color: rgb(255, 255, 255);
-  line-height: 1;
-  text-align: left;
-  -moz-transform: matrix( 2.96942157531276,0,0,3.09942629463008,0,0);
-  -webkit-transform: matrix( 2.96942157531276,0,0,3.09942629463008,0,0);
-  -ms-transform: matrix( 2.96942157531276,0,0,3.09942629463008,0,0);
-  position: absolute;
-  left: 8375.923px;
-  top: 1906.967px;
-  z-index: 440;
-}
 
 @font-face {
   font-family: 'Title';
@@ -229,6 +217,10 @@ a{
   label{
     width: 100px;
     display: inline-block;
+    .icon.iconfont{
+      font-size: 20px;
+      padding: 0 5px;
+    }
   }
   .error{
     color: red;

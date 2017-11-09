@@ -1,11 +1,9 @@
 .news{
-  padding-top: 150px;
   min-height: 800px;
-  column-count: 2;
-  column-gap:0;
   li{
     position: relative;
-    //height: 335px;
+    float: left;
+    width: 50%;
     .thumb{
       img{
         width: 100%;
@@ -33,10 +31,14 @@
   }
 }
 .news-title{
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bolder;
   padding-left: 20px;
-
+  width: calc(100% - 155px);
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .news-title:before {
   content: "";

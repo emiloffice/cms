@@ -1,10 +1,11 @@
 <template>
     <div class="container-fluid">
         <nav-bar></nav-bar>
-        <div class="banner ">
+        <div class="banner " style="position: relative">
             <div style="text-align: center">
                 <img :src="$t('job_banner_src')" alt="" style="max-width: 1600px;width: 90%;">
             </div>
+            <a class="red" style="position: absolute;top: 75%;left: 8%;">indeed</a>
         </div>
         <div class="job-page container">
             <div class="top">

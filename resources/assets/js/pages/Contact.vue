@@ -6,6 +6,7 @@
                 <img src="/images/contact_banner.png" alt="" style="max-width: 1600px;width: 90%;">
                 <img src="/images/contact_banner_title.png" alt="">
             </div>
+
         </div>
         <div class="contact_info container">
             <p><img src="/images/contact.png" alt=""></p>

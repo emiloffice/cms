@@ -1,9 +1,8 @@
 <template>
     <div class="container-fluid">
         <nav-bar></nav-bar>
-
+        <div class="container"><img src="/images/new_title.png" alt="" style="margin-top: 110px"></div>
         <ul class="news container">
-            <img src="/images/new_title.png" alt="">
             <li v-for="n in $t('news')">
                 <a :href="n.link" target="_blank">
                     <div class="thumb"><img :src="n.cover" alt=""></div>
