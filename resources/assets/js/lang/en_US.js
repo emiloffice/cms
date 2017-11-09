@@ -4,7 +4,7 @@ export default {
         menu:[
             {name:"about us",link: '/about',isActive:false},
             {name:"games", link: '/game',isActive:false},
-            {name:"career", link: '/work',isActive:false},
+            {name:"careers", link: '/work',isActive:false},
             {name:"news", link: '/news',isActive:false},
             {name:"join us", link: '/jobs',isActive:false},
             {name:"contact", link: '/contact',isActive:false}
