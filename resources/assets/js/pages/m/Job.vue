@@ -10,7 +10,7 @@
                 <p>如果您，是一位明星级别的
                     unity3d开发工程师、游戏原画设计师、游戏策划师、游戏市场推广策划师。
                     停下您的脚步别走开！盯住您的目光别移开！暴风雨前的宁静</p>
-                <a href="https://www.indeed.com/cmp/Multiverse-Entertainment" class="red" target="_blank">indeed</a>
+                <a href="https://www.indeed.com/cmp/Multiverse-Entertainment" class="red" target="_blank"><i class="fa fa-external-link"></i>indeed</a>
             </div>
         </div>
         <div class="job-page container">
