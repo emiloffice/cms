@@ -116,3 +116,6 @@
 .m-nav-bar.active .nav_icon{
   transform: rotate(90deg);
 }
+.m-nav-bar.active .menu li.active a{
+  color: red;
+}

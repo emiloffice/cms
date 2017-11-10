@@ -26,6 +26,11 @@
         },
         components:{
             NavBar, FooterBar
+        },
+        data(){
+            return{
+                navIndex: 4
+            }
         }
     }
 

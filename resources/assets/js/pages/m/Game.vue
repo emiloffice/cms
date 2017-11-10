@@ -39,7 +39,12 @@
             play_video(){
 
             }
-        }
+        },
+        data(){
+            return {
+                navIndex:2
+            }
+        },
     }
 
 </script>

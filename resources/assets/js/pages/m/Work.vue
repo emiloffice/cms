@@ -45,6 +45,7 @@
         },
         data(){
             return{
+                navIndex: 3
             }
         },
     }
