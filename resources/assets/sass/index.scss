@@ -43,13 +43,7 @@
         height: 90%;
         z-index:9;
       }
-      img.cover:hover {
-        position:relative;
-        -webkit-transform: scale(1.2);
-        transform: scale(1.2);
-        box-shadow: 0px 22px 28.81px 14.19px rgba(0, 0, 0, 0.35);
-        z-index:10;
-      }
+
       .play_btn{
         display: none;
       }
@@ -65,6 +59,13 @@
         .play_btn{
           display: block!important;
           z-index: 10;
+        }
+        img.cover {
+          position:relative;
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+          box-shadow: 0px 22px 28.81px 14.19px rgba(0, 0, 0, 0.35);
+          z-index:10;
         }
       }
     }
