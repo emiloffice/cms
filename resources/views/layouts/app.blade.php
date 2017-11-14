@@ -14,6 +14,7 @@
     <title>Multiverse Entertainment LLC</title>
 
     <!-- Styles -->
+    <link rel="shortcut icon" type="image/x-icon" href="//{{getenv('RESOURCE_PATH')}}/favicon.ico" media="screen" />
     <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/app.css') }}" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}/css/animate.css" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}/css/font-awesome.min.css" rel="stylesheet">
