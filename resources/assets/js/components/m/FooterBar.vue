@@ -8,22 +8,22 @@
                 <a href="https://www.instagram.com/vrmultiverse/"><i class="fa fa-instagram "></i></a>
             </div>
             <div class="partner">
-                <a href="#">
+                <a href="javascript:;">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-btn_game_vive"></use>
                     </svg>
                 </a>
-                <a href="#">
+                <a href="javascript:;">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-oculus"></use>
                     </svg>
                 </a>
-                <a href="#">
+                <a href="javascript:;">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-steam"></use>
                     </svg>
                 </a>
-                <a href="#">
+                <a href="javascript:;">
                     <svg class="icon" aria-hidden="true">
                         <use xlink:href="#icon-xbox"></use>
                     </svg>
