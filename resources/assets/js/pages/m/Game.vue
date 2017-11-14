@@ -10,7 +10,7 @@
             <li class="col-lg-6 col-md-6 col-sm-12 col-xs-12"  v-for="list in $t('games')">
                 <div class="left fl">
                     <img :src="list.cover" :alt="list.cover_alt">
-                    <span class="play_btn" v-on="play_video()"></span>
+                    <span class="play_btn" v-on="play_video()" v-if="list.isPlay"></span>
                 </div>
                 <div class="right fl">
                     <p class="name"> {{list.name}}</p>

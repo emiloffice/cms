@@ -24,7 +24,7 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->get('news', 'HomeController@news');
     $router->get('show', 'HomeController@news_show');
     $router->get('page', 'HomeController@fullpage');
-
+    $router->get('jobs', 'HomeController@jobs');
 
 
     $router->get('test', 'HomeController@test');
@@ -40,7 +40,7 @@ Route::group(['prefix' => '','namespace' => 'Home'],function ($router)
     $router->get('contact', 'HomeController@contact');
     $router->get('dreamflight', 'HomeController@dreamflight');
     $router->get('galactic', 'HomeController@galactic');
-    $router->get('jobs', 'HomeController@jobs');
+
     $router->get('legal/', 'HomeController@legal');
     $router->get('ourgames', 'HomeController@ourgames');
     $router->get('press', 'HomeController@press');

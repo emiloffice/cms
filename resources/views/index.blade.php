@@ -23,15 +23,19 @@
 @section('foot-extend')
     <script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-3.2.1.js"></script>
     <script src="//{{getenv('RESOURCE_PATH')}}/js/jquery-ui.js"></script>
-    <script src="//{{getenv('RESOURCE_PATH')}}/fullpage/jquery.fullpage.js"></script>
     <script src="//{{getenv('RESOURCE_PATH')}}/fullpage/scrolloverflow.js"></script>
+    <script src="//{{getenv('RESOURCE_PATH')}}/fullpage/jquery.fullpage.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
                 anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
                 menu: '#menu',
                 scrollingSpeed: 1000,
-                scrollOverflow: true
+                scrollOverflow: true,
+                scrollOverflowOptions: {
+                    click: true
+                }
             });
 
         });
