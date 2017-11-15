@@ -14,7 +14,7 @@
 
                             <div class="play_btn" @click="play_video(list.video)" style="position: absolute;top: 50%;left: 50%;margin-top: -32px;margin-left: -32px;" v-if="list.isPlay"></div>
                         </div>
-                        <a :href="list.link" class="more"><img src="/images/more.png" alt=""></a>
+                        <a :href="list.link" class="more" target="_blank" rel="nofollow"><img src="/images/more.png" alt=""></a>
                         <div class="des">{{list.des}}</div>
                     </li>
                 </ul>

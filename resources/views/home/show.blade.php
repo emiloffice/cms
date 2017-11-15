@@ -7,8 +7,7 @@
     <link href="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}/bootstrap/3.3.7/css/bootstrap-theme.css" rel="stylesheet">
     <link href="//{{getenv('RESOURCE_PATH')}}/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/post.css') }}" rel="stylesheet">
-    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/footer.css') }}" rel="stylesheet">
+    <link href="//{{getenv('RESOURCE_PATH')}}{{ mix('/css/app.css') }}" rel="stylesheet">
     {{--<link href="//{{getenv('RESOURCE_PATH')}}/css/style.css" rel="stylesheet">--}}
     <!--[if IE 7]>
     <link href="//{{getenv('RESOURCE_PATH')}}/font-awesome/css/font-awesome-ie7.min.css" rel="stylesheet">

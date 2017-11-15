@@ -1,17 +1,8 @@
 <template>
     <div class="container-fluid">
         <nav-bar></nav-bar>
-        <div class="page container">
-            <div class="left fl">
+        <div class="page container" id="content">
 
-            </div>
-            <ul class="right fl article_link_list">
-                <li class="active"><i class="anchor"></i><span>最刺激的星际吃鸡</span></li>
-                <li class=""><i class="anchor"></i><span>最刺激的星际吃鸡</span></li>
-                <li class=""><i class="anchor"></i><span>最刺激的星际吃鸡</span></li>
-                <li class=""><i class="anchor"></i><span>最刺激的星际吃鸡</span></li>
-                <li class=""><i class="anchor"></i><span>最刺激的星际吃鸡</span></li>
-            </ul>
         </div>
         <footer-bar></footer-bar>
     </div>

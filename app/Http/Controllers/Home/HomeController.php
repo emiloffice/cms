@@ -243,7 +243,7 @@ class HomeController extends Controller
         if ($request->isMethod('post')){
             return json_encode($post);
         }
-        return view('home.show', compact('post'));
+        return view('show', compact('post'));
     }
     public function Subscribe(Request $request){
         if($request->isMethod('post')||$request->isMethod('get')){
