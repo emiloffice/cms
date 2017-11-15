@@ -139,6 +139,21 @@
     <script type="text/javascript" src="/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
     <script type="text/javascript" src="/editor/release/wangEditor.min.js"></script>
     <script type="text/javascript">
+        function HTMLEncode(html) {
+            var temp = document.createElement("div");
+            (temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html);
+            var output = temp.innerHTML;
+            temp = null;
+            return output;
+        }
+
+        function HTMLDecode(text) {
+            var temp = document.createElement("div");
+            temp.innerHTML = text;
+            var output = temp.innerText || temp.textContent;
+            temp = null;
+            return output;
+        }
         var E = window.wangEditor
         var editor2 = new E('#content')
         editor2.customConfig.uploadImgServer = '{{ url('admin/upload') }}'
@@ -195,7 +210,6 @@
         }
         editor2.customConfig.onchange = function (html) {
             // html 即变化之后的内容
-            //console.log(html)
             $("input[name='content']").val(html);
         }
         editor2.create()

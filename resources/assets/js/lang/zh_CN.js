@@ -5,8 +5,8 @@ export default {
             {name:"关于我们",link: '/about'},
             {name:"游戏专区", link: '/game'},
             {name:"企业文化", link: '/work'},
-            {name:"新闻", link: '/news'},
-            {name:"招聘", link: '/jobs'},
+            {name:"新闻动态", link: '/news'},
+            {name:"英才招聘", link: '/jobs'},
             {name:"联系我们", link: '/contact'}
         ]
     },
@@ -14,22 +14,22 @@ export default {
         link_name:'官方网站'
     },
     games:[
-        {name:'《寻求黎明》',cover:"/images/seekingdawn.jpg",cover_alt:'寻求黎明', des:'Seeking Dawn是由Multiverse制作的大型科幻RPG类VR/PC游戏，游戏具有丰富的合成玩法和生存元素，带你进入身临其境的外星人“死亡世界”。 如何利用好各种各样的道具和建筑在游戏中生存下去，并且一步步去探索揭开这个神秘星球的真面目。',link:'http://www.seekingdawnvr.com/',video:"http://player.youku.com/embed/XMjc1MTgwNTYxMg==",isPlay:true},
-        {name:'《梦幻风之旅》',cover:'/images/thumb4.png',cover_alt:'梦幻风之旅', des:'《梦幻风之旅》Dream Flight是一款让你尽情享受充满梦幻虚拟世界的美丽游戏。驾驶着纸飞机的小姑娘，穿越充满魔力的梦幻世界，寻找失散的同伴。不需要手柄，也没有血腥的厮杀，Dream Flight让你彻底陶醉在充满艺术感的视听盛宴中。。',link:'https://www.oculus.com/experiences/gear-vr/1013248532088752/',video:"http://player.youku.com/embed/XMjEyMjIzMzAzMg==",isPlay:true},
+        {name:'《寻求黎明》',cover:"/images/seekingdawn.jpg",cover_alt:'寻求黎明', des:'Seeking Dawn是由Multiverse制作的大型科幻RPG类VR/PC游戏，游戏具有丰富的合成玩法和生存元素，带你进入身临其境的外星死亡世界。 玩家需要利用好各种各样的道具和建造系统在游戏中生存下去，并且一步步去探索揭开这个神秘星球的真面目。',link:'http://www.seekingdawnvr.com/',video:"http://player.youku.com/embed/XMjc1MTgwNTYxMg==",isPlay:true},
+        {name:'《梦幻风之旅》',cover:'/images/thumb4.png',cover_alt:'梦幻风之旅', des:'《梦幻风之旅》Dream Flight是一款让你尽情享受充满梦幻虚拟世界的美丽游戏。驾驶着纸飞机的小姑娘，穿越充满魔力的梦幻世界，寻找失散的同伴。不需要手柄，也没有血腥的厮杀，Dream Flight让你彻底陶醉在充满艺术感的视听盛宴中。',link:'https://www.oculus.com/experiences/gear-vr/1013248532088752/',video:"http://player.youku.com/embed/XMjEyMjIzMzAzMg==",isPlay:true},
         {name:'《特工22号：越狱》',cover:'/images/thumb2.png',cover_alt:'特工22号：越狱', des:'《特工22号:越狱》是一款VR密室逃脱游戏，22号特工身陷牢笼，不过这显然不是22号第一次经历越狱，找寻一切可能用得上的道具做好出逃准备吧，当然你也得避开一些危险。作为一款带有探索解密性质的VR游戏，这款游戏上手容易，操作简单，解密难度逐渐增强，非常适合喜欢解密探索元素的玩家。如果较长时间没有解锁关卡，游戏中即可获得提示线索，让轻度玩家也能愉快畅玩。《特工22:越狱》由法国团队XXII开发，Multiverse发行。',link:'http://store.steampowered.com/app/538050/The_baron_got_you_again/',video:"http://player.youku.com/embed/XMzEzOTAyNzQ2NA==",isPlay:true},
         {name:'《圣域纷争》',cover:'/images/thumb3.jpg',cover_alt:'圣域纷争', des:'《圣域纷争》是由深圳火花幻境研发，Multiverse发行的一款塔防类VR游戏。玩家需要在游戏中扮演一名孤胆英雄，利用好陷阱和道具面对敌人，通过陷阱阻止他们前行守护最后的圣域。',link:'http://store.steampowered.com/app/638900/Defenders_of_the_Realm_VR/',video:"http://player.youku.com/embed/XMjc5ODE0MTg3Ng==",isPlay:true},
-        {name:'《银河穿梭VR》',cover:'/images/thumb5.jpg',cover_alt:'银河穿梭VR', des:'《银河穿梭VR》是一款VR跑酷类游戏，玩家仿佛星际穿梭一般，穿越了时空的界限，在充满次世代的音乐背景中极速飞行!富含科幻感的时空隧道内，你需要高度集中注意力，紧盯着路径上的红点，随时躲避前方的障碍物。',link:'https://play.google.com/store/apps/details?id=com.multiverse.galaxyrush&hl=en',video:"",isPlay:false},
+        {name:'《银河穿梭VR》',cover:'/images/thumb5.jpg',cover_alt:'银河穿梭VR', des:'《银河穿梭VR》是一款VR跑酷类游戏，玩家仿佛星际穿梭一般，穿越了时空的界限，在充满次世代的音乐背景中极速飞行！富含科幻感的时空隧道内，你需要高度集中注意力，紧盯着路径上的红点，随时躲避前方的障碍物。',link:'https://play.google.com/store/apps/details?id=com.multiverse.galaxyrush&hl=en',video:"",isPlay:false},
     ],
     work_view:{
         env_title:"公司环境、氛围",
         env_des:"Multiverse是一家高效且有趣的跨国游戏公司，在这里，你将感受到亲切、严谨以及无阶层的办公环境。任何有趣的想法你都可以大胆的提出来，并且只要你能流畅的陈述出它的利弊，或许你将是下一个项目的负责人。",
-        culture_title:"企业文化",
+        culture_title:"公司文化",
         culture_des:"Multiverse以游戏为核心，以研发为驱动，以发行为目标，以给玩家带来有趣且好玩的游戏为宗旨正在行动着。",
         hardware_title:"优越的硬件设备",
         hardware_des:"作为一个互联网游戏公司，优越的硬件自然是不可缺少。对于不同的职位的需求，我们将提供不同的硬件以满足工作需求。但是作为一家游戏爱好者聚集的公司，我们能够保证的是所有人都能流畅的去体验目前的热门作品。",
         history_img:"/images/history_bg.png",
         vision_title:"我们的愿景",
-        vision_des:"我们希望能够成为世界顶尖的游戏商，做出能够风靡世界的3A游戏，为每个玩家带来有趣且好玩的游戏，让每个玩家都能享受游戏的乐趣。",
+        vision_des:"我们希望能够成为世界顶尖的游戏开发商和发行商，做出能够风靡世界的3A游戏。为中国游戏的崛起做出努力，为世界游戏行业锦上添花。",
         value_title:"我们的价值观",
         value_des:"我们希望能够恪守谦卑与诚实，扎实的在游戏研发和发行的道路上一步步耕耘，最终实现我们的愿景。"
     },
@@ -60,13 +60,13 @@ export default {
         "                        ·研发多款充满挑战却又乐趣无穷的新项目<br>"},
         {img_src:"/images/job5.png", des:"                        人生路上的老斯基说：骚年郎，不要错过好机会喔！<br>\n" +
         "                        如有意，请将您的个人资料发送至<br>\n" +
-        "                        招聘邮箱：contact @multiverseinc.com<br>\n" +
+        "                        招聘邮箱：careers@multiverseinc.com<br>\n" +
         "                        电话：0755-86564169<br>\n" +
         "\n" +
         "                        MULTIVERSE 欢迎您的加入！"}
     ],
     contact_view:{
-        Regular:"常规交流",
+        Regular:"沟通交流",
         Public:"公共关系",
         Human:"英才招聘",
         Business:"商务合作",

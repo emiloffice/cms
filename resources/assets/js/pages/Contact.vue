@@ -13,13 +13,13 @@
             <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <li><p><a href="mailto:contact@multiverseinc.com"><i class="icon iconfont">&#xe632;</i>{{$t("contact_view.Regular")}}：contact@multiverseinc.com</a></p></li>
                 <li><p><a  href="mailto:bo.liu@multiverseinc.com"><i class="icon iconfont">&#xe61f;</i>{{$t("contact_view.Public")}}：bo.liu@multiverseinc.com</a></p></li>
-                <li><p><a  href="mailto:lilian.chen@multiverseinc.com"><i class="icon iconfont">&#xe6dc;</i>{{$t("contact_view.Human")}}：careers@multiverseinc.com</a></p></li>
+                <li><p><a  href="mailto:careers@multiverseinc.com"><i class="icon iconfont">&#xe6dc;</i>{{$t("contact_view.Human")}}：careers@multiverseinc.com</a></p></li>
                 <li><p><a  href="mailto:chenjun.li@multiverseinc.com"><i class="icon iconfont">&#xe640;</i>{{$t("contact_view.Business")}}：chenjun.li@multiverseinc.com</a></p></li>
             </ul>
             <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <li><p><i class="icon iconfont">&#xe66e;</i><a href="https://facebook.com/MultiverseVR">facebook.com/MultiverseVR</a></p></li>
                 <li><p><i class="icon iconfont">&#xec9c;</i><a href="https://twitter.com/VRmultiverse">twitter.com/VRmultiverse</a></p></li>
-                <li><p><i class="icon iconfont">&#xe605;</i><a href="https://instagram.com//MultiverseVR">instagram.com//MultiverseVR</a></p></li>
+                <li><p><i class="icon iconfont">&#xe605;</i><a href="https://www.instagram.com/vrmultiverse/">instagram.com/vrmultiverse</a></p></li>
                 <li><p><i class="icon iconfont">&#xe64b;</i><a href="https://linkedin.com/company/multiverse-entertainment">linkedin.com/company/multiverse-entertainment</a></p></li>
             </ul>
         </div>

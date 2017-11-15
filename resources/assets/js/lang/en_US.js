@@ -53,7 +53,7 @@ export default {
         "Developing interesting and challenging games<br>"},
         {img_src:"/images/job5.png", des:"Brothers and sisters, don’t miss your chance~<br>" +
         "Contact Multiverse!<br>" +
-        "Email contact @multiverseinc.com<br>" +
+        "Email careers@multiverseinc.com<br>" +
         "Phone 0755-86564169 <br>"},
     ],
     contact_view:{

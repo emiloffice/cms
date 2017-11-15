@@ -29,10 +29,15 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $('#fullpage').fullpage({
-                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage'],
+                anchors: ['1st', '2st', '3st', '4st'],
                 menu: '#menu',
+                navigation: true,
+                navigationPosition: 'left',
+                navigationColor:'#999999',
+                navigationTooltips: ['HOME', 'GAMES', 'ABOUT US', 'NEWS'],
                 scrollingSpeed: 1000,
                 scrollOverflow: true,
+                lazyLoading: true,
                 scrollOverflowOptions: {
                     click: true
                 }
