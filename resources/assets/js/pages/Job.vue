@@ -5,7 +5,7 @@
             <div style="text-align: center">
                 <img :src="$t('job_banner_src')" alt="" style="max-width: 1600px;width: 90%;">
             </div>
-            <a class="red" style="position: absolute;top: 75%;left: 8%;"><i class="fa fa-external-link"></i>indeed</a>
+            <a class="red" style="position: absolute;top: 75%;left: 8%; " :href="$t('careers_link.href')" target="_blank"><i class="fa fa-external-link" style="margin-right:5px"></i>{{ $t('careers_link.title')}}</a>
         </div>
         <div class="job-page container">
             <div class="top">

@@ -1,8 +1,11 @@
 <template>
     <div class="container-fluid">
         <nav-bar></nav-bar>
-        <div class="page container" id="content">
 
+        <div class="page container">
+            <h2 class="text-center">{{ post.title}}</h2>
+            <p class="text-center">{{ post.updated_at}}</p>
+            <div  id="content"></div>
         </div>
         <footer-bar></footer-bar>
     </div>
@@ -14,9 +17,18 @@
     export default {
         mounted() {
             console.log('Index Pages mounted.')
+            this.post = eval('('+ this.posts +')')
         },
         components:{
             NavBar, FooterBar
+        },
+        props:[
+            'posts'
+        ],
+        data(){
+            return {
+                post:''
+            }
         }
     }
 

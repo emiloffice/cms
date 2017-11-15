@@ -13,7 +13,7 @@
             <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <li><p><a href="mailto:contact@multiverseinc.com"><i class="icon iconfont">&#xe632;</i>{{$t("contact_view.Regular")}}：contact@multiverseinc.com</a></p></li>
                 <li><p><a  href="mailto:bo.liu@multiverseinc.com"><i class="icon iconfont">&#xe61f;</i>{{$t("contact_view.Public")}}：bo.liu@multiverseinc.com</a></p></li>
-                <li><p><a  href="mailto:lilian.chen@multiverseinc.com"><i class="icon iconfont">&#xe6dc;</i>{{$t("contact_view.Human")}}：lilian.chen@multiverseinc.com</a></p></li>
+                <li><p><a  href="mailto:lilian.chen@multiverseinc.com"><i class="icon iconfont">&#xe6dc;</i>{{$t("contact_view.Human")}}：careers@multiverseinc.com</a></p></li>
                 <li><p><a  href="mailto:chenjun.li@multiverseinc.com"><i class="icon iconfont">&#xe640;</i>{{$t("contact_view.Business")}}：chenjun.li@multiverseinc.com</a></p></li>
             </ul>
             <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -43,7 +43,7 @@
             </div>
             <div class="input-group fl">
                 <label for="content" style="vertical-align: top;"><i class="icon iconfont">&#xe686;</i>{{$t("input.content.label")}}</label>
-                <textarea type="text" name="content" id="content" ></textarea>
+                <textarea type="text" name="content" ></textarea>
             </div>
             <div class="clearfix"></div>
             <div class="input-group tc">

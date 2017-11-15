@@ -371,3 +371,17 @@ a{
   background: url(/images/play_btn.png) no-repeat center;
   cursor: pointer;
 }
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.text-left{
+  text-align: left;
+}
+#content{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 920px;
+}

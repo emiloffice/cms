@@ -10,8 +10,8 @@
     @endif
     <!-- CSRF Token -->
     <meta name="csrf-token" content="//{{getenv('RESOURCE_PATH')}}{{ csrf_token() }}">
-
-    <title>Multiverse Entertainment LLC</title>
+    @yield('keywords')
+    <title>@yield('title','Multiverse Entertainment LLC')</title>
 
     <!-- Styles -->
     <link rel="shortcut icon" type="image/x-icon" href="//{{getenv('RESOURCE_PATH')}}/favicon.ico" media="screen" />

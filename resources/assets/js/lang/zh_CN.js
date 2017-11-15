@@ -146,5 +146,9 @@ export default {
         {title:"Multiverse干货分享|如何制作好的VR内容 ",cover:"/images/new12.png",link:"http://mp.weixin.qq.com/s/j0WGJrwqdfHEYjx0VJ8cGA",created_at:"2017.08.31"},
         {title:"99%的人没有机会体验！你想不想过那1%的生活！",cover:"/images/new13.png",link:"http://mp.weixin.qq.com/s/mrIgYuRNn2jyGf8piCWYVA",created_at:"2016.11.25"},
 
-    ]
+    ],
+    careers_link:{
+        title:"招聘",
+        href:"http://jobs.51job.com/all/co3968690.html"
+    }
 }

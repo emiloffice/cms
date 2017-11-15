@@ -120,7 +120,10 @@ export default {
         {title:"E3 2017: Hands-On With Ambitious Sci-Fi Shooter Seeking Dawn",cover:"http://www.seekingdawnvr.com/images/screenshot/thumb_12.png",link:"https://uploadvr.com/e3-2017-hands-sci-fi-shooter-seeking-dawn/",created_at:"JUNE 19TH, 2017"},
         {title:"Seeking Dawn Looks Like A Hugely Ambitious VR Shooter",cover:"https://cdn.uploadvr.com/wp-content/uploads/bfi_thumb/Seeking-Dawn-1000x563-n7xffffjnqqy4gzmpcctozy0ic7w3u3qzx95r0qpku.jpg",link:"https://uploadvr.com/seeking-dawn-looks-like-hugely-ambitious-vr-shooter/",created_at:"MAY 2ND, 2017"},
         {title:"One Of The Largest VR Action Survival Games: Seeking Dawn",cover:"https://www.vrfocus.com/wp-content/uploads/2017/06/2-1130x580.jpg",link:"https://www.vrfocus.com/2017/06/one-of-the-largest-vr-action-survival-games-seeking-dawn/",created_at:"Jun 19, 2017"},
-    ]
-
+    ],
+    careers_link:{
+        title:"Indeed",
+        href:"https://www.indeed.com/cmp/Multiverse-Entertainment"
+    }
 
 }
