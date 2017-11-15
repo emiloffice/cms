@@ -43,7 +43,7 @@
             </div>
             <div class="input-group fl">
                 <label for="content" style="vertical-align: top;"><i class="icon iconfont">&#xe686;</i>{{$t("input.content.label")}}</label>
-                <textarea type="text" name="content" ></textarea>
+                <textarea type="text" name="content" id="content" ></textarea>
             </div>
             <div class="clearfix"></div>
             <div class="input-group tc">

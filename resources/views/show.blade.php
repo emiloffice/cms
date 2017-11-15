@@ -13,7 +13,7 @@
 @section('foot-extend')
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#content').html('{!! $post->content !!}')
+            $('#post-content').html('{!! $post->content !!}')
         });
     </script>
 @endsection
