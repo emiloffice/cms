@@ -11,9 +11,4 @@
     @endif
 @endsection
 @section('foot-extend')
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#post-content').html('{!! $post->content !!}')
-        });
-    </script>
 @endsection

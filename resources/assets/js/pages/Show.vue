@@ -5,7 +5,7 @@
         <div class="page container">
             <h2 class="text-center">{{ post.title}}</h2>
             <p class="text-center">{{ post.updated_at}}</p>
-            <div  id="post-content"></div>
+            <div  id="post-content" v-html="post.content"></div>
         </div>
         <footer-bar></footer-bar>
     </div>
