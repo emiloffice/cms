@@ -38,23 +38,23 @@
             <ul class="container">
                 <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tc">
                     <div class="img"><img src="/images/press_upload.png" alt=""></div>
-                    <p>“One of the most visually<br>
-                        compelling experiences”</p>
+                    <p>'One of the most visually<br>
+                        compelling experiences'</p>
                     <a href=""><img src="/images/more.png" alt="href"></a>
                 </li>
                 <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tc">
                     <div class="img"><img src="/images/press_2.png" alt=""></div>
-                    <p>“One of the most<br>
+                    <p>'One of the most<br>
                         anticipated games of the<br>
-                        year”</p>
+                        year'</p>
                     <a href=""><img src="/images/more.png" alt="href"></a>
                 </li>
                 <li class="col-lg-4 col-md-4 col-sm-4 col-xs-12 tc">
                     <div class="img"><img src="/images/press_oculus.png" alt=""></div>
                     <p>
-                        “One of the most<br>
+                        'One of the most<br>
                         breathtaking experiences<br>
-                        we have ever seen”<br>
+                        we have ever seen'<br>
                     </p>
                     <a href=""><img src="/images/more.png" alt="href"></a>
                 </li>

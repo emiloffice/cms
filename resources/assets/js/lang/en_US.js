@@ -14,50 +14,30 @@ export default {
         link_name:'website'
     },
     games:[
-        {name:'<Seeking Dawn>',cover:"/images/seekingdawn.jpg",cover_alt:'SeekingDawn', des:'Seeking Dawn is an expansive science fiction PC/VR game of action and survival developed by Multiverse, which is set on a sprawling planet of dangerous creatures and alien mysteries. Stranded with limited resources, you must venture out to scavenge for supplies, craft weapons and equipment for protection, and decipher strange discoveries as you traverse the planet.',link:'http://www.seekingdawnvr.com',video:"https://www.youtube.com/embed/MgEUGNsFIPA",isPlay:true},
-        {name:'<Reveries: Dream Flight>',cover:'/images/thumb4.png',cover_alt:'Reveries: Dream Flight', des:'‘Reveries: Dream Flight’ is a music game that allows you to enjoy a fancy virtual world. The character, a little girl, flies a paper plane in order to look for her lost friend in a magic dream world. Players don’t need to use a controller, and the world has neither violence or blood, only melodic music and beautiful scenes.',link:'https://www.oculus.com/experiences/gear-vr/1013248532088752/',video:"https://www.youtube.com/embed/FCF0ggTFT5o",isPlay:true},
-        {name:'<Agent 22: Jailbreak>',cover:'/images/thumb2_en.jpg',cover_alt:'Agent 22: Jailbreak', des:'‘Agent22: Jailbreak’ is a VR escape room game. Agent22 was put in jail but it’s not his first time to escape. Look for everything useful and get away from all of the dangerous situations you may face. As a puzzle game, this game is easy to start playing with its simple controls, while the difficulty will increase as more level are unlocked. If you are trapped for a long time, hints will show up to aid you. ‘Agent22: Jailbreak’ is developed by French studio XXII and is published by Multiverse.',link:'http://store.steampowered.com/app/538050/The_baron_got_you_again/',video:"",isPlay:false},
-        {name:'<Defenders of the Realm>',cover:'/images/thumb3.jpg',cover_alt:'Defenders of the Realm', des:'‘Defenders of the Realm’ is a base defence game developed by Sparkvr from Shenzhen China. In this game players will take the role of a tough hero and defeat enemies by crafting traps and other tools, all in order to protect the realm.',link:'http://store.steampowered.com/app/638900/Defenders_of_the_Realm_VR/',video:"https://www.youtube.com/embed/7_fc66hinBU",isPlay:true},
-        {name:'<Galactic Rush VR>',cover:'/images/thumb5_en.jpg',cover_alt:'Galactic Rush VR', des:'‘Galactic Rush VR’ is a parkour game set in the bounds of the galaxy. In this game, players feel like experiencing interstellar travel with next-generation background music. Remember to pay attention to signs in the space-time tunnel and dodge the barriers.',link:'https://play.google.com/store/apps/details?id=com.multiverse.galaxyrush&hl=en',video:"",isPlay:false},
+        {name:'<Seeking Dawn>',cover:"/images/seekingdawn.jpg",cover_alt:'SeekingDawn', des:'A vastly large sandbox-style sci-fi game for PC with VR support. Seeking Dawn is a survival RPG game with elements of action/adventure, and crafting. The game is set on a sprawling planet containing dangerous creatures and extraterrestrial mysteries. Stranded, the player and his team will have to scavenge for dwindling resources, explore the open world, craft powerful tools and equipment, and so much more!',link:'http://www.seekingdawnvr.com',video:"https://www.youtube.com/embed/MgEUGNsFIPA",isPlay:true},
+        {name:'<Reveries: Dream Flight>',cover:'/images/thumb4.png',cover_alt:'Reveries: Dream Flight', des:'This game is a melodic fantasy game that allows you to enjoy soothing sounds and visuals, as you explore in full virtual reality. The main character, a little girl, flies a paper plane with the hopes that she can find her lost friend, in this mysterious dream world that she has stumbled upon. The game doesn\'t require the use of a controller, and throughout the entire gameplay, you will can expect to not encounter any violence, making it a perfect game for a younger audience as it assists with calming them down, while also providing a truly immersive, unique experience. ',link:'https://www.oculus.com/experiences/gear-vr/1013248532088752/',video:"https://www.youtube.com/embed/FCF0ggTFT5o",isPlay:true},
+        {name:'<The Baron Got You Again/Agent 22: Jailbreak>',cover:'/images/thumb2_en.jpg',cover_alt:'Agent 22: Jailbreak', des:'\'The Baron Got You Again\' (Agent 22: Jailbreak) is a VR escape room game. The main character, Agent 22, is put in jail for unknown reasons and is tasked with trying to break free and escape. From the jail cell to the final push to escape, you will find objects along the way that assist with solving the puzzles to get escape from jail. While the game has simple controls, making it easy to start, the difficulty will increase the deeper into the jail or closer to escaping from it you get.',link:'http://store.steampowered.com/app/538050/The_baron_got_you_again/',video:"",isPlay:false},
+        {name:'<Defenders of the Realm>',cover:'/images/thumb3.jpg',cover_alt:'Defenders of the Realm', des:'This game is a base defense game developed by the talented creators over at SparkVR from Shenzhen, China. In this game players are to take on the role of a fantasy hero whose goal is to defend the castle at all costs. You will defeat hordes of enemies, craft powerful traps, and more all in the name of the realm! ',link:'http://store.steampowered.com/app/638900/Defenders_of_the_Realm_VR/',video:"https://www.youtube.com/embed/7_fc66hinBU",isPlay:true},
+        {name:'<Galactic Rush VR>',cover:'/images/thumb5_en.jpg',cover_alt:'Galactic Rush VR', des:'A parkour game set in the distant and mysterious bounds of the galaxy. In this VR title, players experience interstellar travel in an immersive world surrounded by the highest quality visuals and sounds. Paying attention to signs in the space-time tunnels as you progress will be the key to your success in this game!',link:'https://play.google.com/store/apps/details?id=com.multiverse.galaxyrush&hl=en',video:"",isPlay:false},
     ],
     work_view:{
         env_title:"ATMOSPHERE",
-        env_des:"A company full of mystery and fun, opening doors of opportunity for everyone.",
+        env_des:"A company full of enthusiasm and excitement. An encouraging environment built on understanding and an open will to learn new things! ",
         culture_title:"CULTURE",
-        culture_des:"Multiverse emphasizes game mechanics and gameplay, focusing on the development of top tier games, and we never slow our pace. ",
+        culture_des:"We are gamers at heart, and try to play as many different games as possible as to help widen our creative abilities when it comes to developing gameplay mechanics, stories and more!",
         hardware_title:"HARDWARE",
-        hardware_des:"Being an IT company, advanced hardware is necessary, meaning each of our positions is equipped with different levels of hardware. Considering that Multiverse is a union of game fans, all members are able to experience games they like in the office.",
+        hardware_des:"Our office is equipped with state-of-the-art technology that rivals those of triple-A studios. While we are new, we are supported by companies that provide us with all the tools we need for success and innovation. ",
         history_img:"/images/history_bg_en.png",
     },
     job_view:[
-        {img_src:"/images/job1.png", des:"A company full of mystery and fun, opening doors of opportunity for everyone\n" +
-        "You are allowed to be your own product manager!<br>" +
-        "You are allowed to decide your own technique architecture and method!<br>" +
-        "You voice will be listened to without limitation!<br>" +
-        "You will enjoy your work~<br>"},
-        {img_src:"/images/job3.png", des:"Plenty of refreshments! (What?)<br>" +
-        "Friendly work environment! (wow!)<br>" +
-        "Great benefits! (Really?) <br>" +
-        "Extended vacations! (Cool~)<br>" +
-        "Promising promotion opportunities without office politics (WTF?)<br>"},
-        {img_src:"/images/job2.png", des:"If you are talented enough:<br>" +
-        "Over 3 years of game experience<br>" +
-        "An openness to experiencing the entirety of a project<br>" +
-        "Willing to learn, diligent, and having team spirit<br>" +
-        "What are you waiting for?<br>" +
-        "This is a turning point of your life!<br>" +
-        "Come here, you are wanted~<br>"},
-        {img_src:"/images/job4.png", des:"Finding your way to work<br>" +
-        "Sparing time to learn new techniques<br>" +
-        "Improving communication with team member <br>" +
-        "Developing interesting and challenging games<br>"},
-        {img_src:"/images/job5.png", des:"Brothers and sisters, don’t miss your chance~<br>" +
-        "Contact Multiverse!<br>" +
-        "Email careers@multiverseinc.com<br>" +
-        "Phone 0755-86564169 <br>"},
+        {img_src:"/images/job1.png", des:"A company full of excitement and enthusiasm. We present a transparent experience that provides a clear path to self development. We give you the freedom and responsibility to work at your own pace and be your own product manager. Here at Multiverse, you are allowed to create your own approach to completing projects by their deadlines through personal techniques and methods. Your voice will be heard here, as clear communication is highly regarded!"},
+        {img_src:"/images/job3.png", des:"Fully stocked kitchen with in-office refreshments, friendly work environment, great work benefits, extended vacations, supportive career building opportunities!"},
+        {img_src:"/images/job2.png", des:"Talented individuals with 3+ years of professional gaming experience and a willingness to learn new things, flexibility, and long-term commitment. You are wanted! "},
+        {img_src:"/images/job4.png", des:"A team-spirited person who can spare time to learn new techniques when presented the opportunity, while also keeping clear communication. And above all, a passion for gaming!"},
+        {img_src:"/images/job5.png", des:"Think you have what it takes? Check out our latest job listings and feel free to reach out to us if you have further questions!<br>Email: careers@multiverseinc.com<br>Phone: 0755-86564169"},
     ],
     contact_view:{
-        Regular:"Regular Contact",
+        Regular:"Communication",
         Public:"Public Relations",
         Human:"Human Resources",
         Business:"Business Cooperation",
@@ -90,15 +70,14 @@ export default {
         send:'send'
     },
     about_view:{
-        intro:"Multiverse is a professional game publisher and top game content provider, aiming to bridge the gap between the Orient and Western game markets. Core members of our development team graduated from well-known universities such as Stanford, Carnegie Mellon and the University of Toulouse. We also have members with backgrounds with WeVR, Disney, Riot, CJ E&M, Forgame, SGN and other great game and VR companies. Our last game ‘Reveries: Dream Flight’ gained the highest marks among Chinese VR games, and our current project ‘Seeking Dawn’ won the Tencent GAD&HTC VIVE Best Vision Award in 2017.",
-        story:"Multiverse was founded in March of 2016, in Shenzhen, China. At the beginning, our early work ‘Reveries: Dream Flight’ gained the highest marks among Chinese VR games. Through our time in the industry we have published wildly successful games, while also working to build our truly talented team. Through hard work, sweat, and yes, tears, we are finally on the verge of releasing a new well-crafted game, ‘Seeking Dawn’, which won the Tencent GAD&HTC VIVE Best Vision Award in 2017. During development, we were invited by Unity to give an address speech at the Vision VR/AR Summit 2017. In addition, ‘Seeking Dawn’ was the unique demonstrated game of the Intel MR presentation. When we participated at E3, ‘Seeking Dawn’ was one of the most eye-catching games and attracted plenty of media attention.<br/>\n" +
-        "In the future, we will not forget our primary aspiration, and will keep moving forward.\n",
+        intro:"Multiverse Entertainment is a professional game studio and publisher. We develop triple-A titles and publish various different kinds of games. Our aim is to provide world-class gaming experience for our players, whether it is something we develop with our own hands, or publish on behalf of another developer. We strive to always release quality games with unique gameplay mechanics that assist with immersing the players into our captivating, story-rich titles.<br>Our development team, combined has around 10 years of professional game development experience. They come from studios such as WeVR, Disney, Riot Games, CJ E&M, Forgame, SGN, and many other great studios.<br>Our most recently released game, \'Reveries: Dream Flight\', acquired the highest possible score among Chinese VR games. In addition, \'Seeking Dawn\', the game we are currently developing, was recognized by one of the world's largest gaming companies Tencent and was awarded the GAD & HTC Vive \'Best Vision 2017\' award.",
+        story:"Multiverse Entertainment was founded in March of 2016, in the beautiful city of Shenzhen, China. In the beginning we worked on developing \'Reveries: Dream Flight\'. A game that gained the highest possible score amongst Chinese VR games upon release.<br>Through our time developing games, we also expanded on our publishing sector. Publishing successful games both in China and globally on various platforms. During this time we also worked on growing our team and expanding our talents in preparation for our triple-A title \'Seeking Dawn\', which is currently still in development but has already won the prestigious \'GAD & HTC Vive Best Vision 2017\' award by one of the world's largest gaming companies, Tencent.<br>Soon after receiving this award, we were contacted by Unity to become special guests and speakers at the Unity VR/AR Summit 2017. We used this opportunity to give the world a first look at the game we were developing, \'Seeking Dawn\'.",
     },
     index_view:{
-        about_des:"                    <p class=\"title\">Our Expectation</p>\n" +
-           "                    <p>We expect to be a world-class top game company that can produce popular 3A games that players desire, and we work contribute positively to the game industry, particularly through Chinese games.<br/></p>\n" +
-           "                    <p class=\"title\">Our Attitude and Values</p>\n" +
-           "                    <p>Our attitude is to develop interesting competitive games, focusing on game mechanics from beginning to end. We base our values on three key elements. We work creatively alongside brilliant minds. We work efficiently and diligently while keeping quality content our main focus and priority. And we enjoy the work we are doing.</p>\n",
+        about_des:"                    <p class=\"title\">Expectation</p>\n" +
+           "                    <p>We strive to be a world-class game studio! Our goal is to produce popular triple-A titles that gamers desire while also making positive contributions to the game industry as a whole. How we plan on reaching our goals is through the development of truly unique games that are immersive, compelling, and captivating for our players. <br/></p>\n" +
+           "                    <p class=\"title\">Attitude and Values</p>\n" +
+           "                    <p>We focus heavily on innovating technology and content, on players\' game experience, on our dreams of game.</p>\n",
     },
     steps:[
         {time:'2016.3',des:'公司在深圳成立 ',style:""},
@@ -117,9 +96,11 @@ export default {
         {name:"Tencent GAD&HTC VIVE the Best Vision Award 2017",cover:"/images/gad.png"},
     ],
     news:[
-        {title:"E3 2017: Hands-On With Ambitious Sci-Fi Shooter Seeking Dawn",cover:"http://www.seekingdawnvr.com/images/screenshot/thumb_12.png",link:"https://uploadvr.com/e3-2017-hands-sci-fi-shooter-seeking-dawn/",created_at:"JUNE 19TH, 2017"},
-        {title:"Seeking Dawn Looks Like A Hugely Ambitious VR Shooter",cover:"https://cdn.uploadvr.com/wp-content/uploads/bfi_thumb/Seeking-Dawn-1000x563-n7xffffjnqqy4gzmpcctozy0ic7w3u3qzx95r0qpku.jpg",link:"https://uploadvr.com/seeking-dawn-looks-like-hugely-ambitious-vr-shooter/",created_at:"MAY 2ND, 2017"},
+        {title:"SEEKING DAWN AIMS TO BE ONE OF THE LARGEST VR GAMES YET",cover:"https://www.gamecrate.com/sites/default/files/field/image/seeking-dawn-vr-grassland.jpg",link:"https://www.gamecrate.com/seeking-dawn-aims-be-one-largest-vr-games-yet/16570",created_at:"MAY 2ND, 2017"},
         {title:"One Of The Largest VR Action Survival Games: Seeking Dawn",cover:"https://www.vrfocus.com/wp-content/uploads/2017/06/2-1130x580.jpg",link:"https://www.vrfocus.com/2017/06/one-of-the-largest-vr-action-survival-games-seeking-dawn/",created_at:"Jun 19, 2017"},
+        // {title:"Seeking Dawn Looks Like A Hugely Ambitious VR Shooter",cover:"https://cdn.uploadvr.com/wp-content/uploads/bfi_thumb/Seeking-Dawn-1000x563-n7xffffjnqqy4gzmpcctozy0ic7w3u3qzx95r0qpku.jpg",link:"https://uploadvr.com/seeking-dawn-looks-like-hugely-ambitious-vr-shooter/",created_at:"MAY 2ND, 2017"},
+        {title:"E3 2017: Hands-On With Ambitious Sci-Fi Shooter Seeking Dawn",cover:"http://www.seekingdawnvr.com/images/screenshot/thumb_12.png",link:"https://uploadvr.com/e3-2017-hands-sci-fi-shooter-seeking-dawn/",created_at:"JUNE 19TH, 2017"},
+        {title:"Seeking Dawn Might Be The VR RPG Shooter That We\'ve All Been Waiting For",cover:"http://vrthegamers.com/wp-content/uploads/2017/05/seeking-dawn-header-1170x658.png",link:"http://vrthegamers.com/seeking-dawn-might-vr-rpg-shooter-weve-waiting/#.Wg7BWIyCyHt",created_at:"MAY 2ND, 2017"},
     ],
     careers_link:{
         title:"Indeed",
