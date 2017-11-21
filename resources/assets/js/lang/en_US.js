@@ -39,8 +39,11 @@ export default {
     contact_view:{
         Regular:"Communication",
         Public:"Public Relations",
+        Public_email:"f.ferreira@multiverseinc.com",
+        mailto_Public_email:"mailto:f.ferreira@multiverseinc.com",
         Human:"Human Resources",
         Business:"Business Cooperation",
+
     },
     input: {
         name:{
@@ -74,10 +77,10 @@ export default {
         story:"Multiverse Entertainment was founded in March of 2016, in the beautiful city of Shenzhen, China. In the beginning we worked on developing \'Reveries: Dream Flight\'. A game that gained the highest possible score amongst Chinese VR games upon release.<br>Through our time developing games, we also expanded on our publishing sector. Publishing successful games both in China and globally on various platforms. During this time we also worked on growing our team and expanding our talents in preparation for our triple-A title \'Seeking Dawn\', which is currently still in development but has already won the prestigious \'GAD & HTC Vive Best Vision 2017\' award by one of the world's largest gaming companies, Tencent.<br>Soon after receiving this award, we were contacted by Unity to become special guests and speakers at the Unity VR/AR Summit 2017. We used this opportunity to give the world a first look at the game we were developing, \'Seeking Dawn\'.",
     },
     index_view:{
-        about_des:"                    <p class=\"title\">Expectation</p>\n" +
-           "                    <p>We strive to be a world-class game studio! Our goal is to produce popular triple-A titles that gamers desire while also making positive contributions to the game industry as a whole. How we plan on reaching our goals is through the development of truly unique games that are immersive, compelling, and captivating for our players. <br/></p>\n" +
-           "                    <p class=\"title\">Attitude and Values</p>\n" +
-           "                    <p>We focus heavily on innovating technology and content, on players\' game experience, on our dreams of game.</p>\n",
+        about_des:"                    <p class=\"title\">MISSION</p>\n" +
+           "                    <p>We strive to be a world-class game studio! Our goal is to continuously create games that are both fresh and fun, while also making positive contributions to the game industry. We dedicate ourselves to the development of truly unique games that are immersive, compelling, and captivating for our players.<br/></p>\n" +
+           "                    <p class=\"title\">VALUES</p>\n" +
+           "                    <p>We value innovation, fostering a creative and open environment, and focusing on \"fun\"!</p>\n",
     },
     steps:[
         {time:'2016.3',des:'公司在深圳成立 ',style:""},

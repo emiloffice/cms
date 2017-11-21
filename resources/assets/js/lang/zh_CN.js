@@ -70,6 +70,8 @@ export default {
     contact_view:{
         Regular:"沟通交流",
         Public:"公共关系",
+        Public_email:"bo.liu@multiverseinc.com",
+        mailto_Public_email:"mailto:bo.liu@multiverseinc.com",
         Human:"英才招聘",
         Business:"商务合作",
     },

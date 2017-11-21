@@ -10,7 +10,7 @@
             <p><img src="/images/m_contact_title.png" alt="" style="width:100%"></p>
             <ul class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                 <li><p><i class=""></i><a href="mailto:contact@multiverseinc.com"><i class="icon iconfont">&#xe632;</i>{{$t("contact_view.Regular")}}：contact@multiverseinc.com</a></p></li>
-                <li><p><i class=""></i><a  href="mailto:bo.liu@multiverseinc.com"><i class="icon iconfont">&#xe61f;</i>{{$t("contact_view.Public")}}：bo.liu@multiverseinc.com</a></p></li>
+                <li><p><i class=""></i><a  :href="$t('contact_view.Public_email')"><i class="icon iconfont">&#xe61f;</i>{{$t("contact_view.Public")}}：{{$t("contact_view.Public_email")}}</a></p></li>
                 <li><p><i class=""></i><a  href="mailto:lilian.chen@multiverseinc.com"><i class="icon iconfont">&#xe6dc;</i>{{$t("contact_view.Human")}}：lilian.chen@multiverseinc.com</a></p></li>
                 <li><p><i class=""></i><a  href="mailto:chenjun.li@multiverseinc.com"><i class="icon iconfont">&#xe640;</i>{{$t("contact_view.Business")}}：chenjun.li@multiverseinc.com</a></p></li>
             </ul>

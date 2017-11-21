@@ -12,7 +12,7 @@
             <p><img src="/images/contact.png" alt=""></p>
             <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <li><p><a href="mailto:contact@multiverseinc.com"><i class="icon iconfont">&#xe632;</i>{{$t("contact_view.Regular")}}：contact@multiverseinc.com</a></p></li>
-                <li><p><a  href="mailto:bo.liu@multiverseinc.com"><i class="icon iconfont">&#xe61f;</i>{{$t("contact_view.Public")}}：bo.liu@multiverseinc.com</a></p></li>
+                <li><p><a :href="$t('contact_view.mailto_Public_email')"><i class="icon iconfont">&#xe61f;</i>{{$t("contact_view.Public")}}：{{$t("contact_view.Public_email")}}</a></p></li>
                 <li><p><a  href="mailto:careers@multiverseinc.com"><i class="icon iconfont">&#xe6dc;</i>{{$t("contact_view.Human")}}：careers@multiverseinc.com</a></p></li>
                 <li><p><a  href="mailto:chenjun.li@multiverseinc.com"><i class="icon iconfont">&#xe640;</i>{{$t("contact_view.Business")}}：chenjun.li@multiverseinc.com</a></p></li>
             </ul>
@@ -27,7 +27,7 @@
             <p><img src="/images/question.png" alt=""></p>
             <div class="input-group fl">
                 <label for="name"><i class="icon iconfont">&#xe609;</i>{{$t("input.name.label")}}</label>
-                <input type="text" name="name" id="name" class="input md">
+                <input type="text" name="name" <id></id>="name" class="input md">
             </div>
             <div class="input-group fr">
                 <label for="company"><i class="icon iconfont">&#xe61e;</i>{{$t("input.company.label")}}</label>
