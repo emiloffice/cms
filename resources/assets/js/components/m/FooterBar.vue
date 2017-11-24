@@ -33,7 +33,8 @@
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 padding copyright">
             <p><a href="https://www.multiverseinc.com/legal/tos">Terms of Service</a> |
                 <a href="https://www.multiverseinc.com/legal/privacy">Privacy Policy</a><br/>
-                <a href="https://www.multiverseinc.com">Copyright © Multiverse Entertainment LLC</a>
+                <a href="https://www.multiverseinc.com">Copyright © Multiverse Entertainment LLC</a><br>
+                <a href="http://www.miitbeian.gov.cn" v-if="this.$i18n.locale==='zh-CN'">ICP:粤ICP备17134275号-1</a>
             </p>
         </div>
 
