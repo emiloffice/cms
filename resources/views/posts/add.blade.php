@@ -157,7 +157,7 @@
         var E = window.wangEditor
         var editor2 = new E('#content')
         editor2.customConfig.uploadImgServer = '{{ url('admin/upload') }}'
-        editor2.customConfig.uploadImgMaxSize = 3 * 1024 * 1024
+        editor2.customConfig.uploadImgMaxSize = 5 * 1024 * 1024
         editor2.customConfig.uploadFileName = 'file'
         editor2.customConfig.uploadImgHeaders = {
             'Accept' : 'multipart/form-data',
@@ -208,11 +208,20 @@
                 // result 必须是一个 JSON 格式字符串！！！否则报错
             }
         }
-        editor2.customConfig.onchange = function (html) {
+        editor2.customConfig.onchange = function (formatText,html) {
             // html 即变化之后的内容
+<<<<<<< HEAD
             $("input[name='content']").val(html);
+=======
+            var content = addSlashes(html)
+            $("input[name='content']").val(content);
+>>>>>>> 6b83d40470861b80a24226f51283978028507607
         }
         editor2.create()
+        function addSlashes (str) {
+            return str.replace(/[\\"']/g, '\\$&');
+
+        }
         $(function(){
             $('.skin-minimal input').iCheck({
                 checkboxClass: 'icheckbox-blue',

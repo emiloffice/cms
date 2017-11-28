@@ -151,13 +151,13 @@
         var E = window.wangEditor
         var editor2 = new E('#content')
         editor2.customConfig.uploadImgServer = '{{ url('admin/upload') }}'
-        editor2.customConfig.uploadImgMaxSize = 3 * 1024 * 1024
+        editor2.customConfig.uploadImgMaxSize = 5 * 1024 * 1024
         editor2.customConfig.uploadFileName = 'file'
         editor2.customConfig.uploadImgHeaders = {
             'Accept' : 'multipart/form-data',
         }
         editor2.customConfig.uploadImgParams = {
-            _token: '{{csrf_token()}}'   // 属性值会自动进行 encode ，此处无需 encode
+            {{--_token: '{{csrf_token()}}'   // 属性值会自动进行 encode ，此处无需 encode--}}
         }
 
         editor2.customConfig.uploadImgHooks = {
@@ -204,14 +204,26 @@
         }
         editor2.customConfig.onchange = function (html) {
             // html 即变化之后的内容
-            //console.log(html)
-            $("input[name='content']").val(html);
+
+            var content = addSlashes(html)
+            console.log(content)
+            $("input[name='content']").val(content);
         }
         editor2.create()
+<<<<<<< HEAD
         editor2.txt.html(`{!! $post->content !!}`)
+=======
+        editor2.txt.html('{!! $post->content !!}')
+        var con = '{!! $post->content !!}'
+        con = addSlashes(con)
+        $('input[name="content"]').val(con);
+        function addSlashes (str) {
+            return str.replace(/[\\"']/g, '\\$&');
+>>>>>>> 6b83d40470861b80a24226f51283978028507607
 
+        }
         $(function(){
-            var content = $('#contents');
+
             window.article_save_submit = function() {
                 content = editor2.$textElem[0].innerHTML;
                 console.log(content)
