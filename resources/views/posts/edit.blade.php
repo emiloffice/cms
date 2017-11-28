@@ -208,7 +208,7 @@
             $("input[name='content']").val(html);
         }
         editor2.create()
-        editor2.txt.text('{!! $post->content !!}')
+        editor2.txt.html(`{!! $post->content !!}`)
 
         $(function(){
             var content = $('#contents');
