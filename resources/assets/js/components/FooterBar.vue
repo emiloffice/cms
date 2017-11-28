@@ -32,7 +32,7 @@
                 </a>
                 <a href="javascript:;">
                     <svg class="icon" aria-hidden="true">
-                        <use xlink:href="#icon-windows"></use>
+                        <use xlink:href="#icon-xbox"></use>
                     </svg>
                 </a>
             </div>

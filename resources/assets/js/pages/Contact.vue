@@ -27,7 +27,7 @@
             <p><img src="/images/question.png" alt=""></p>
             <div class="input-group fl">
                 <label for="name"><i class="icon iconfont">&#xe609;</i>{{$t("input.name.label")}}</label>
-                <input type="text" name="name" id="name" class="input md">
+                <input type="text" name="name" <id></id>="name" class="input md">
             </div>
             <div class="input-group fr">
                 <label for="company"><i class="icon iconfont">&#xe61e;</i>{{$t("input.company.label")}}</label>
