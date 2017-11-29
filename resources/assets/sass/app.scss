@@ -1,0 +1,387 @@
+// Body
+$body-bg: #f5f8fa;
+
+// Borders
+$laravel-border-color: darken($body-bg, 10%);
+$list-group-border: $laravel-border-color;
+$navbar-default-border: $laravel-border-color;
+$panel-default-border: $laravel-border-color;
+$panel-inner-border: $laravel-border-color;
+
+// Brands
+$brand-primary: #3097D1;
+$brand-info: #8eb4cb;
+$brand-success: #2ab27b;
+$brand-warning: #cbb956;
+$brand-danger: #bf5329;
+
+// Typography
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+$font-family-sans-serif: "Raleway", sans-serif;
+$font-size-base: 14px;
+$line-height-base: 1.6;
+$text-color: #636b6f;
+
+// Navbar
+$navbar-default-bg: #fff;
+
+// Buttons
+$btn-default-color: $text-color;
+
+// Inputs
+$input-border: lighten($text-color, 40%);
+$input-border-focus: lighten($brand-primary, 25%);
+$input-color-placeholder: lighten($text-color, 30%);
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs:                  480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min:              $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone:               $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet:              $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md:                  992px !default;
+$screen-md-min:              $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop:             $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg:                  1200px !default;
+$screen-lg-min:              $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop:          $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+$screen-sm-max:              ($screen-md-min - 1) !default;
+$screen-md-max:              ($screen-lg-min - 1) !default;
+
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns:              12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width:         30px !default;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint:     $screen-sm-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet:             (720px + $grid-gutter-width) !default;
+//** For `$screen-sm-min` and up.
+$container-sm:                 $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop:            (940px + $grid-gutter-width) !default;
+//** For `$screen-md-min` and up.
+$container-md:                 $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+//** For `$screen-lg-min` and up.
+$container-lg:                 $container-large-desktop !default;
+
+//
+$font-family: Microsoft YaHei;
+
+
+
+// Variables
+@import "normalize";
+// Variables
+@import "variables";
+// mixins
+@import "mixins";
+// grid
+@import "grid";
+// navbar
+@import "navbar";
+// Footer
+@import "footer";
+// Index
+@import "index";
+// job
+@import "job";
+// work
+@import "work";
+// news
+@import "news";
+// game
+@import "game";
+// contact
+@import "contact";
+// about
+@import "about";
+// Fonts
+//@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+html {
+  font-size: 100px;
+}
+
+body {
+  font-size: 0.16rem;
+  color: #999999;
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei";
+}
+p {
+  font-size: 16px;
+  font-size: 0.16rem;
+  line-height: 25px;
+  color: #999999;
+  font-family: "Microsoft YaHei";
+}
+.fl {
+  float: left;
+}
+.fr{
+  float: right;
+}
+#app{
+  background-color: #000;
+  background-image: url("/images/bg.jpg");
+  //min-height: 1000px;
+}
+.required{
+  color: red;
+  padding-right: 3px;
+}
+.error-input{
+  border: 1px solid #FF0000!important;
+}
+.line-throught{
+  text-decoration: line-through;
+  color: #eeeeee;
+}
+ul,li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+@font-face {
+  font-family: 'Title';
+  src: url("/fonts/HATTEN.eot");
+  src: url("/fonts/HATTEN.eot?#iefix") format("embedded-opentype"), url("/fonts/HATTEN.woff") format("woff"), url("/fonts/HATTEN.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+.title{
+  font-family: "Haettenschweiler";
+  font-size: 40px;
+  line-height: 90px;
+  z-index: 9;
+  color: rgba(144, 144, 144, 0.8);
+  position: relative;
+  text-transform: uppercase;
+}
+
+.input-group{
+  margin: 20px 0;
+  .input{
+    border: 1px solid #999999;
+    font-size: 24px;
+    background: none;
+  }
+  label{
+    width: 100px;
+    display: inline-block;
+    .icon.iconfont{
+      font-size: 20px;
+      padding: 0 5px;
+    }
+  }
+  .error{
+    color: red;
+    border: 1px solid red;
+  }
+  .md{
+    width: 540px;
+    height: 50px;
+
+  }
+  .input:nth-of-type(even){
+    padding-left: 100px;
+  }
+  .sm{
+
+  }
+  .lg{
+
+  }
+  textarea{
+    width: 1290px;
+    height: 120px;
+    border: 1px solid #999999;
+    background: none;
+  }
+  .submit{
+    font-size: 24px;
+    padding:10px 35px;
+    border:none;
+    border-radius:5px;
+    background-color: #999999;
+  }
+}
+.clearfix{
+  clear:both;
+}
+.tc{
+  text-align: center;
+}
+.tr{
+  text-align: right;
+}
+.tl{
+  text-align: left;
+}
+.page{
+  margin-top: 150px;
+  min-height: 600px;
+  .left{
+    min-height: 500px;
+    background-color: rgb(17, 17, 17);
+    box-shadow: 0px 15px 24.96px 7.04px rgba(0, 0, 0, 0.35);
+    max-width: 1000px;
+    width: 71%;
+  }
+  .right{
+
+  }
+  .article_link_list{
+    width: calc(29% - 60px);
+    max-width: 400px;
+    padding: 30px;
+    li.active{
+      color: red;
+      .anchor{
+        border: 1px solid red;
+      }
+      .anchor::after{
+        background-color: red;
+      }
+    }
+    li{
+      margin: 20px 0;
+      .anchor{
+        margin: 0 20px;
+        height: 16px;
+        width: 16px;
+        position: relative;
+        border-radius: 10px;
+        display: inline-block;
+        border: 1px solid #999999;
+      }
+      .anchor:after{
+        content: '';
+        height: 10px;
+        width: 10px;
+        border-radius: 5px;
+        position: absolute;
+        top:3px;
+        left: 3px;
+        background-color: #999999;
+      }
+      span{
+        line-height: 32px;
+      }
+    }
+  }
+}
+.anchor{
+  height: 10px;
+  width: 10px;
+  background-color: inherit;
+  display: inline-block;
+}
+.anchor:after{
+  height: 15px;
+  width: 15px;
+  border: 1px solid inherit;
+}
+.anchor{
+  height: 10px;
+  width: 10px;
+  background-color: inherit;
+  display: inline-block;
+}
+.anchor:after{
+  height: 15px;
+  width: 15px;
+  border: 1px solid inherit;
+}
+
+.mobile-page{
+  min-height: 400px;
+  margin-top: 73px;
+  .banner{
+    img{
+      width: 100%;
+    }
+  }
+}
+#app.mobile{
+  p{
+    font-size: 14px;
+    font-size: 0.14rem;
+    line-height: 1.5em;
+    color: #999999;
+  }
+  .banner{
+    margin-top: 73px;
+  }
+}
+.red{
+  color: red;
+}
+.play_btn{
+  width: 64px;
+  height: 64px;
+  background: url(/images/play_btn.png) no-repeat center;
+  cursor: pointer;
+}
+.text-center{
+  text-align: center;
+}
+.text-right{
+  text-align: right;
+}
+.text-left{
+  text-align: left;
+}
+#post-content{
+  width: 90%;
+  margin: 0 auto;
+  max-width: 920px;
+}

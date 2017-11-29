@@ -1,0 +1,148 @@
+.game_list{
+  margin: 25px auto;
+  li{
+    margin: 50px 0;
+    width: calc( 50% - 15px);
+    background-color: rgb(17, 17, 17);
+    box-shadow: 0px 15px 24.96px 7.04px rgba(0, 0, 0, 0.35);
+    .left{
+      max-height: 540px;
+      max-width: 385px;
+      width: 50%;
+      overflow: hidden;
+      position: relative;
+      img{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+      }
+    }
+    .right{
+      position: relative;
+      width: calc(50% - 60px);
+      padding: 30px;
+      height: 400px;
+      .name{
+        font-size: 20px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+      .des{
+        font-size: 16px;
+        height: 320px;
+        overflow: hidden;
+      }
+      a{
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+      }
+    }
+
+  }
+  li:nth-of-type(odd){
+    margin-right: 15px;
+  }
+  li:nth-of-type(even){
+    margin-left: 15px;
+  }
+}
+#app.mobile{
+  .game_list{
+    li{
+      width: auto;
+      margin: 35px 0;
+      .left{
+        width: 50%;
+        height: 320px;
+      }
+      .right{
+        position: relative;
+        width: calc(50% - 20px);
+        padding: 10px;
+        height: 300px;;
+        .name{
+          font-size: 14px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        .des{
+          height: 220px;
+          font-size: 12px;
+          overflow: hidden;
+        }
+        a{
+          bottom: 0px;
+          right: 10px;
+        }
+      }
+    }
+  }
+}
+#app.mobile{
+  .game_list{
+    li{
+      background-color: rgba(0, 0, 0, 0);
+      box-shadow: 0px 15px 24.96px 7.04px rgba(0, 0, 0, 0.35);
+      text-align: center;
+      .cover{
+        display: block;
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
+      }
+      .des{
+        position: relative;
+        border: 1px solid #999999;
+        height: 120px;
+        overflow: hidden;
+        padding: 10px;
+        text-align: left;
+        margin-top: 20px;
+      }
+      /*.des::after {
+        content:"...";
+        font-weight:bold;
+        position:absolute;
+        bottom:0;
+        right:0;
+        padding:0 10px 10px 10px;
+      }*/
+      .more{
+
+      }
+    }
+  }
+  .game_list.index{
+    .slide{
+      img.cover{
+        width: 225px;
+        margin: 0 auto;
+        display: block;
+      }
+      .des{
+        position: relative;
+        border: 1px solid #999999;
+        height: 125px;
+        overflow: hidden;
+        padding: 10px;
+        text-align: left;
+        margin-top: 20px;
+        width: calc(100% - 23px);
+      }
+      .des::after{
+        padding:0 0 10px 10px;
+      }
+      .more{
+        img{
+          width: 50px;
+          margin: 0 auto;
+          display: block;
+        }
+      }
+    }
+
+  }
+
+}

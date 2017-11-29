@@ -1,0 +1,45 @@
+.contact_info{
+  height: 400px;
+  p{
+    font-size: 20px;
+    line-height: 40px;
+  }
+  ul{
+    margin: 50px 0;
+    border-right: 1px solid #999999;
+    width: calc(50% - 1px);
+  }
+  ul:last-of-type{
+    border-right: none;
+    text-indent: 130px;
+  }
+  .iconfont.icon{
+    padding: 0 5px;
+    font-size: 20px;
+  }
+}
+
+#app.mobile{
+  .contact_info{
+    ul{
+      margin: 20px 0;
+      border-right: 1px solid #999999;
+      width: 100%;
+      border-right: none;
+      text-indent: 0;
+    }
+  }
+  .input-group{
+    width: 100%;
+    .md{
+      width: 100%;
+    }
+    textarea{
+      width: 100%;
+    }
+    label {
+      display: inline-block;
+      margin: 10px 0;
+    }
+  }
+}
