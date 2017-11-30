@@ -20,7 +20,7 @@
                 <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
 				<select name="system_cate_id" class="select">
 					<option value="1">新闻资讯</option>
-					<option value="2">开发展日志</option>
+					<option value="2">开发者日志</option>
 				</select>
 				</span> </div>
             </div>
