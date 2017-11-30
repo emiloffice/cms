@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class PostsController extends Controller
 {
     public function index(){
-        $posts = Post::latest()->get();
+        $posts = Post::where('status',1)->latest()->get();
         return view('posts.index', compact('posts'));
     }
 
@@ -39,7 +39,7 @@ class PostsController extends Controller
     //文章列表
     public function _list()
     {
-
+        $posts = Post::where('status',1)->get();
         return view('posts.index', compact('posts'));
     }
 

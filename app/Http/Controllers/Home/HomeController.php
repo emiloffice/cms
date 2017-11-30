@@ -228,12 +228,14 @@ class HomeController extends Controller
     }
     public function posts(Request $request)
     {
-        $posts = Post::latest()->get();
+        $posts = Post::where('status',1)->latest()->get();
         if($request->isMethod('post')){
             $this->validate(request(), [
                 'param'=>'ipv4',
-                'from'=>'required'
+                'from'=>'required',
+                'cate'=>'required'
             ]);
+            $posts = Post::where('system_cate_id',$request->cate)->where('status',1)->get();
             return json_encode($posts);
         }
         return view('home.posts', compact('posts'));
