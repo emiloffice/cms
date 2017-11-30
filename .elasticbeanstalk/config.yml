@@ -1,4 +1,6 @@
 branch-defaults:
+  master:
+    environment: Sample-env
   test:
     environment: Sample-env
 environment-defaults:

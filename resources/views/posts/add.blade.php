@@ -19,21 +19,8 @@
                 <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>分类栏目：</label>
                 <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
 				<select name="system_cate_id" class="select">
-					<option value="0">全部栏目</option>
 					<option value="1">新闻资讯</option>
-					<option value="11">├行业动态</option>
-					<option value="12">├行业资讯</option>
-					<option value="13">├行业新闻</option>
-				</select>
-				</span> </div>
-            </div>
-            <div class="row cl">
-                <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文章类型：</label>
-                <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
-				<select name="posts_category" class="select">
-					<option value="0">全部类型</option>
-					<option value="1">帮助说明</option>
-					<option value="2">新闻资讯</option>
+                    <option value="2">开发者日志</option>
 				</select>
 				</span> </div>
             </div>
