@@ -89,7 +89,8 @@ class HomeController extends Controller
     }
     public function news()
     {
-        return view('news');
+        $posts = Post::where('status',1)->get();
+        return view('news', compact('posts'));
     }
     public function news_show()
     {

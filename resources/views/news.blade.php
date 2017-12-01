@@ -6,8 +6,8 @@
 @endsection
 @section('content')
     @if ($agent->isMobile())
-        <m-news></m-news>
+        <m-news posts="{{$posts}}"></m-news>
     @else
-        <news></news>
+        <news posts="{{$posts}}"></news>
     @endif
 @endsection
