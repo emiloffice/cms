@@ -19,8 +19,13 @@
                 <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>分类栏目：</label>
                 <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
 				<select name="system_cate_id" class="select">
-					<option value="1">新闻资讯</option>
+                    @if($post['system_cate_id']===1)
+					<option value="1" selected>新闻资讯</option>
 					<option value="2">开发者日志</option>
+                        @elseif($post['system_cate_id']===2)
+                        <option value="1">新闻资讯</option>
+                        <option value="2" selected>开发者日志</option>
+                        @endif
 				</select>
 				</span> </div>
             </div>
