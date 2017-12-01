@@ -3,8 +3,8 @@
         <nav-bar></nav-bar>
 
         <div class="page container">
-            <h2 class="text-center">{{ post.title}}</h2>
-            <p class="text-center">{{ post.updated_at}}</p>
+            <h2 class="text-center" style="margin: 30px 0">{{ post.title}}</h2>
+            <p class="text-center" style="margin: 30px 0">{{ post.updated_at}}</p>
             <div  id="post-content" v-html="post.content"></div>
         </div>
         <footer-bar></footer-bar>

@@ -17,7 +17,7 @@
         <ul class="news container" v-if="this.$i18n.locale==='zh-CN'" >
             <li  v-for="n in items" >
                 <a :href="/posts/+n.id" target="_blank">
-                    <div class="thumb"><img :src="n.thumb" alt="" v-if="n.thumb!==''"><img src="https://cdn.multiverseinc.com/img/post_cover.jpg" alt="" v-if="n.thumb==''"></div>
+                    <div class="thumb"><img src="https://cdn.multiverseinc.com/img/post_cover.jpg" alt="" v-if="n.thumb==''||n.thumb===null"><img :src="n.thumb" alt="" v-else></div>
                     <p class="des">
                         <span class="news-title">{{n.title}}</span>
                         <span class="create-at">{{n.created_at}}</span>

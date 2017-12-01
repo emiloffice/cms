@@ -89,7 +89,7 @@ class HomeController extends Controller
     }
     public function news()
     {
-        $posts = Post::where('status',1)->get();
+        $posts = Post::where('status',1)->where('system_cate_id','1')->get();
         return view('news', compact('posts'));
     }
     public function news_show()
