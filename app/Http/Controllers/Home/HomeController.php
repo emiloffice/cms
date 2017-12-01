@@ -238,7 +238,6 @@ class HomeController extends Controller
             ]);
             $posts = Post::where('system_cate_id',$request->cate)->where('status',1)->get();
             print_r(json_encode($posts));
-            return json_encode($posts);
 
         }
         return view('home.posts', compact('posts'));
@@ -246,7 +245,7 @@ class HomeController extends Controller
     public function Show(Post $post,Request $request)
     {
         if ($request->isMethod('post')){
-            return json_encode($post);
+            print_r(json_encode($post));
         }
         return view('show', compact('post'));
     }
