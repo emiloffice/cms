@@ -124,6 +124,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('add-menu', 'AdminController@addMenu');//菜单栏首页
     $router->get('article-list', 'PostsController@index');//文章列表
     $router->get('article-add', 'PostsController@create');//添加文章
+    $router->post('edit-post-status', 'PostsController@editStatus');//修改文章状态
     $router->post('article-store', 'PostsController@store');//添加文章
     $router->post('article-edit', 'PostsController@edit');//修改php文章
     $router->get('admin-login', 'AdminController@login');//后台登录
@@ -131,6 +132,8 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('admin-role-add', 'AdminController@roleAdd');//角色添加
     $router->get('admin-permission', 'AdminController@permission');//权限管理
     $router->get('admin-list', 'AdminController@_list');//权限管理
+
+
 
     //系统设置
     $router->get('system-base','SystemController@base');//基本设置
@@ -151,6 +154,7 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('ambassador-list','AmbassadorController@index');
     $router->post('add-points','AmbassadorController@addPoints');
     $router->get('subscribes-list','SubscribeController@index');
+
 });
 
 

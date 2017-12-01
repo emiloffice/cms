@@ -64,4 +64,19 @@ class PostsController extends Controller
     public function show(Post $post){
         return view('posts.show', compact('post'));
     }
+    //修改文章状态
+    public function editStatus(Request $request)
+    {
+        if ($request->isMethod('post')){
+            $this->validate(request(), [
+                'id' => 'required',
+                'status'=>'required|numeric',
+            ]);
+            $id = $request->id;
+            $status = $request->status;
+            $data['status'] = $status;
+            $res = DB::table('posts')->where('id',$id)->update($data);
+            dd($res);
+        }
+    }
 }

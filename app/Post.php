@@ -23,6 +23,7 @@ class Post extends Model
         'comment_end_date',
         'thumb',
         'content',
+        'status'
 
     ];
     public function up(){
