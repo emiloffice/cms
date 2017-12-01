@@ -106,7 +106,6 @@
                             <td class="td-status"></td>
                             <td class="f-14 td-manage"></td>
                         @endif
-                    </tr>
                     @endforeach
                     </tbody>
                 </table>
