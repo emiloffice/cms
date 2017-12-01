@@ -55,10 +55,16 @@
                     </thead>
                     <tbody>
                     @foreach($posts as $post)
-                    <tr class="text-c">
+                    <td class="text-c">
                         <td><input type="checkbox" value="" name=""></td>
                         <td>{{$post->id}}</td>
-                        <td class="text-l"><u style="cursor:pointer" class="text-primary" onClick="article_show('查看','{{ url('posts') }}','{{ $post->id }}')" title="查看">{{ $post->title }}</u></td>
+                        <td class="text-l">
+                        @if($post['system_cate_id']==1)
+                            <u style="cursor:pointer" class="text-primary" onClick="article_show('查看','{{ url('posts') }}','{{ $post->id }}')" title="查看">{{ $post->title }}</u>
+                            @elseif($post['system_cate_id']==2)
+                           <u style="cursor:pointer" class="text-primary" onClick="article_show('查看','http://www.seekingdawnvr.com/posts','{{ $post->id }}')" title="查看">{{ $post->title }}</u>
+                        @endif
+                        </td>
                         <td>{{ $post->system_cate_id }}</td>
                         <td>{{ $post->author }}</td>
                         <td>{{ $post->updated_at }}</td>
@@ -96,10 +102,10 @@
                                 <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','{{ url('admin/posts-edit') }}','{{ $post->id }}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
                                 <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'{{ $post->id }}')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
                             </td>
+                            @else
+                            <td class="td-status"></td>
+                            <td class="f-14 td-manage"></td>
                         @endif
-
-
-
                     </tr>
                     @endforeach
                     </tbody>
