@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 class PostsController extends Controller
 {
     public function index(){
-        $posts = Post::where('status',1)->latest()->get();
+        $posts = Post::latest()->get();
         return view('posts.index', compact('posts'));
     }
 
@@ -24,7 +24,7 @@ class PostsController extends Controller
         ]);
 //        dd(request());
 //        exit();
-        Post::create(request(['title', 'subtitle', 'system_cate_id', 'posts_category', 'sort', 'thumb', 'keyword', 'description', 'author','content']));
+        Post::create(request(['title', 'subtitle', 'system_cate_id', 'posts_category', 'sort', 'thumb', 'keyword', 'description', 'author','content','status']));
         return redirect('admin/posts');
     }
     //批量添加
@@ -39,7 +39,7 @@ class PostsController extends Controller
     //文章列表
     public function _list()
     {
-        $posts = Post::where('status',1)->get();
+        $posts = DB::table('posts')->get();
         return view('posts.index', compact('posts'));
     }
 

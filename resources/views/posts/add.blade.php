@@ -111,6 +111,7 @@
                     <button onClick="removeIframe();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
                 </div>
             </div>
+            <input type="hidden" value="0" name="status">
         </form>
     </article>
 @endsection
