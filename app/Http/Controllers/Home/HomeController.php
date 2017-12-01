@@ -237,7 +237,9 @@ class HomeController extends Controller
                 'cate'=>'required'
             ]);
             $posts = Post::where('system_cate_id',$request->cate)->where('status',1)->get();
+            print_r(json_encode($posts));
             return json_encode($posts);
+
         }
         return view('home.posts', compact('posts'));
     }
