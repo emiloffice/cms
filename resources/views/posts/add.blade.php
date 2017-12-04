@@ -32,7 +32,6 @@
                 <label class="form-label col-xs-4 col-sm-2">文章摘要：</label>
                 <div class="formControls col-xs-8 col-sm-9">
                     <textarea name="description" cols="" rows="" class="textarea description"  placeholder="说点什么...最少输入30个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" maxlength="190"></textarea>
-                    <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
                 </div>
             </div>
             <div class="row cl">
