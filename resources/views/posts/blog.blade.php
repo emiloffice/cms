@@ -34,7 +34,7 @@
             <div class="cl pd-5 bg-1 bk-gray mt-20">
 				<span class="l">
 				{{--<a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="Hui-iconfont">&#xe6e2;</i> 批量删除</a>--}}
-				<a class="btn btn-primary radius" data-title="添加资讯" _href="article-add" onclick="article_add('添加资讯','article-add')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加资讯</a>
+				<a class="btn btn-primary radius" data-title="添加日志" _href="devblog-add" onclick="article_add('添加日志','blog-add')" href="javascript:;"><i class="Hui-iconfont">&#xe600;</i> 添加日志</a>
 				</span>
                 <span class="r">共有数据：<strong>{{ count($posts) }}</strong> 条</span>
             </div>
@@ -75,7 +75,7 @@
                                     <span class="label label-success radius">已发布</span>
                             </td>
                             <td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_stop(this,'{{ $post->id }}')" href="javascript:;" title="下架"><i class="Hui-iconfont">&#xe6de;</i></a>
-                                <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','{{ url('admin/posts-edit') }}','{{ $post->id }}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+                                <a style="text-decoration:none" class="ml-5" onClick="article_edit('日志编辑','{{ url('admin/blog-edit') }}','{{ $post->id }}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
                                 <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'{{ $post->id }}')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
                             </td>
                         @elseif($post['status']==0)
@@ -83,7 +83,7 @@
                                 <span class="label label-error radius">未发布</span>
                             </td>
                             <td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_start(this,'{{ $post->id }}')" href="javascript:;" title="发布"><i class="Hui-iconfont">&#xe603;</i></a>
-                                <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','{{ url('admin/posts-edit') }}','{{ $post->id }}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+                                <a style="text-decoration:none" class="ml-5" onClick="article_edit('日志编辑','{{ url('admin/blog-edit') }}','{{ $post->id }}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
                                 <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'{{ $post->id }}')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
                             </td>
                         @elseif($post['status']==4)
@@ -91,7 +91,7 @@
                                 <span class="label label-error radius">已下架</span>
                             </td>
                             <td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_start(this,'{{ $post->id }}')" href="javascript:;" title="重新发布"><i class="Hui-iconfont">&#xe6dc;</i></a>
-                                <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','{{ url('admin/posts-edit') }}','{{ $post->id }}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+                                <a style="text-decoration:none" class="ml-5" onClick="article_edit('日志编辑','{{ url('admin/blog-edit') }}','{{ $post->id }}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
                                 <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'{{ $post->id }}')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
                             </td>
                         @elseif($post['status']==9)
@@ -99,7 +99,7 @@
                                 <span class="label label-error radius">已删除</span>
                             </td>
                             <td class="f-14 td-manage"><a style="text-decoration:none" onClick="article_shenqing(this,'{{ $post->id }}')" href="javascript:;" title="恢复"><i class="Hui-iconfont">&#xe615;</i></a>
-                                <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','{{ url('admin/posts-edit') }}','{{ $post->id }}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
+                                <a style="text-decoration:none" class="ml-5" onClick="article_edit('日志编辑','{{ url('admin/blog-edit') }}','{{ $post->id }}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
                                 <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'{{ $post->id }}')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
                             </td>
                             @else
@@ -127,7 +127,7 @@
                 'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content')
             }
         });
-        $('#menu-article').menuSelector(1);
+        $('#menu-devblog').menuSelector(1);
         $('.table-sort').dataTable({
             "aaSorting": [[ 1, "desc" ]],//默认第几个排序
             "bStateSave": true,//状态保存

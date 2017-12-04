@@ -114,19 +114,26 @@ Route::group(['prefix' => 'admin','namespace' => 'Admin'],function ($router)
     $router->get('index', 'AdminController@index');
 
     $router->get('posts','PostsController@index');//文章页
+    $router->get('blogs','PostsController@blogList');//日志页
     $router->get('posts/create','PostsController@create');//创建文章
+    $router->get('posts/create','PostsController@create');//创建日志
     $router->post('posts','PostsController@store');//保存文章
     $router->get('posts/{post}','PostsController@show');//后台显示某篇文章
     $router->get('posts-edit/{post}','PostsController@edit');//编辑某篇文章
+    $router->get('blog-edit/{post}','PostsController@blogEdit');//编辑某篇文章
     $router->post('posts-update/{id}','PostsController@update');//更新某篇文章
+    $router->post('blogs-update/{id}','PostsController@blogUpdate');//更新某篇日志
     $router->get('/', 'AdminController@index');//后台首页
     $router->get('menu', 'AdminController@menu');//菜单栏首页
     $router->get('add-menu', 'AdminController@addMenu');//菜单栏首页
     $router->get('article-list', 'PostsController@index');//文章列表
+    $router->get('blog-list', 'PostsController@blogList');//日志列表
     $router->get('article-add', 'PostsController@create');//添加文章
+    $router->get('blog-add', 'PostsController@blogCreate');//添加文章
     $router->post('edit-post-status', 'PostsController@editStatus');//修改文章状态
     $router->post('article-store', 'PostsController@store');//添加文章
     $router->post('article-edit', 'PostsController@edit');//修改php文章
+    $router->post('blog-edit', 'PostsController@devEdit');//修改php文章
     $router->get('admin-login', 'AdminController@login');//后台登录
     $router->get('admin-role', 'AdminController@role');//角色管理
     $router->get('admin-role-add', 'AdminController@roleAdd');//角色添加

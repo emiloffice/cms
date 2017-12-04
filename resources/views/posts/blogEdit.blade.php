@@ -1,68 +1,77 @@
 @extends('layouts.adminMaster')
 @section('content')
     <article class="page-container">
-        <form class="form form-horizontal" id="form-article-add" action="{{url('admin/article-store', '',env('HTTPS_REQUEST'))}}" method="post" enctype="multipart/form-data">
+        <form class="form form-horizontal" id="form-article-add" action="{{url('admin/blogs-update')}}/{{$post->id}}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="_token"         value="{{csrf_token()}}"/>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文章标题：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="" placeholder="" id="" name="title">
+                    <input type="text" class="input-text" value="{{ $post->title }}" placeholder="" id="" name="title">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">简略标题：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="" placeholder="" id="" name="subtitle">
+                    <input type="text" class="input-text" value="{{ $post->subtitle }}" placeholder="" id="" name="subtitle">
                 </div>
             </div>
-            <input type="hidden" name="system_cate_id" value="1">
+            <input type="hidden" name="system_cate_id" value="2">
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">排序值：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="0" placeholder="" id="" name="sort">
+                    <input type="text" class="input-text" value="{{ $post->sort }}" placeholder="" id="" name="sort">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">关键词：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="" placeholder="" id="" name="keyword">
+                    <input type="text" class="input-text" value="{{ $post->keyword }}" placeholder="" id="" name="keyword">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章摘要：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <textarea name="description" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,200)"></textarea>
+                    <textarea name="description" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,200)">{{ $post->description }}</textarea>
                     <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章作者：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="0" placeholder="" id="" name="author">
+                    <input type="text" class="input-text" value="{{ $post->author }}" placeholder="" id="" name="author">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章来源：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" class="input-text" value="0" placeholder="" id="" name="source">
+                    <input type="text" class="input-text" value="{{ $post->source }}" placeholder="" id="" name="source">
                 </div>
             </div>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">缩略图：</label>
                 <div class="formControls col-xs-8 col-sm-9">
                     <div class="uploader-thum-container">
-                        <div id="fileList" class="uploader-list"></div>
+                        <div id="fileList" class="uploader-list">
+                            <div class="pic-box" >
+
+                                @if($post->thumb!==''||$post!==null)
+                                    <img src="{{ $post->thumb }}" style="width: 200px;height: 200px;" alt="{{ $post->thumb }}">
+                                    @else
+                                    <img>
+                                @endif
+                            </div>
+                        </div>
                         <div id="filePicker">选择图片</div>
                         {{--<button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>--}}
                     </div>
                 </div>
-                <input type="hidden" name="thumb" value="" id="thumb_path">
             </div>
+            <input type="hidden" name="thumb">
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章内容：</label>
-                <div class="formControls col-xs-8 col-sm-9">
-                    <div id="content"><p>请输入内容...</p></div>
-                    <input type="hidden" name="content" value="" id="contents">
+                <div class="formControls col-xs-8 col-sm-9" >
+                    <div id="content"></div>
+                    <input type="hidden" name="content" value="">
                 </div>
             </div>
             <div class="row cl">
@@ -71,7 +80,6 @@
                     {{--<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>--}}
                 </div>
             </div>
-            <input type="hidden" value="0" name="status">
         </form>
     </article>
 @endsection
@@ -88,24 +96,8 @@
     <script type="text/javascript" src="/editor/release/wangEditor.min.js"></script>
     <script type="text/javascript" src="/editor/release/wangEditor-fullscreen-plugin.js"></script>
     <script type="text/javascript">
-        function HTMLEncode(html) {
-            var temp = document.createElement("div");
-            (temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html);
-            var output = temp.innerHTML;
-            temp = null;
-            return output;
-        }
-
-        function HTMLDecode(text) {
-            var temp = document.createElement("div");
-            temp.innerHTML = text;
-            var output = temp.innerText || temp.textContent;
-            temp = null;
-            return output;
-        }
         var E = window.wangEditor
         var editor = new E('#content')
-
         editor.customConfig.uploadImgServer = '{{ url('admin/upload') }}'
         editor.customConfig.uploadImgMaxSize = 3 * 1024 * 1024
         editor.customConfig.uploadFileName = 'file'
@@ -160,31 +152,18 @@
         }
         editor.customConfig.onchange = function (html) {
             // html 即变化之后的内容
+            //console.log(html)
             $("input[name='content']").val(html);
         }
-        editor.customConfig.menus = [
-            'head',  // 标题
-            'bold',  // 粗体
-            'italic',  // 斜体
-            'underline',  // 下划线
-            'strikeThrough',  // 删除线
-            'foreColor',  // 文字颜色
-            'backColor',  // 背景颜色
-            'link',  // 插入链接
-            'list',  // 列表
-            'justify',  // 对齐方式
-            'quote',  // 引用
-            'emoticon',  // 表情
-            'image',  // 插入图片
-            'table',  // 表格
-            'video',  // 插入视频
-            'code',  // 插入代码
-            'undo',  // 撤销
-            'redo'  // 重复
-        ];
         editor.create()
+        editor.txt.html(`{!! $post->content !!}`)
         E.fullscreen.init('#content');
         $(function(){
+            var content = $('#contents');
+            window.article_save_submit = function() {
+                content = editor.$textElem[0].innerHTML;
+                console.log(content)
+            }
             $('.skin-minimal input').iCheck({
                 checkboxClass: 'icheckbox-blue',
                 radioClass: 'iradio-blue',
@@ -196,8 +175,8 @@
                 $btn = $("#btn-star"),
                 state = "pending",
                 uploader;
-            var thumbnailWidth = 100;
-            var thumbnailHeight = 100;
+            var thumbnailWidth = 200;
+            var thumbnailHeight = 200;
             var uploader = WebUploader.create({
                 auto: true,
                 swf: '/lib/webuploader/0.1.5/Uploader.swf',
@@ -216,7 +195,7 @@
                     title: 'Images',
                     extensions: 'gif,jpg,jpeg,bmp,png',
                     mimeTypes: 'image/*'
-                },
+                }
             });
             uploader.on( 'fileQueued', function( file ) {
                 var $li = $(
@@ -255,10 +234,7 @@
             });
 
             // 文件上传成功，给item添加成功class, 用样式标记上传成功。
-            uploader.on( 'uploadSuccess', function( file, response ) {
-//                var res = eval("("+response+")");
-//                console.log(res)
-//                $('#thumb_path').val(res.filepath);
+            uploader.on( 'uploadSuccess', function( file, response) {
                 $('#thumb_path').val(response.filepath);
                 $( '#'+file.id ).addClass('upload-state-success').find(".state").text("已上传");
             });
@@ -295,7 +271,6 @@
                     uploader.upload();
                 }
             });
-
 
         });
     </script>

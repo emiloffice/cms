@@ -18,6 +18,14 @@
                 </ul>
             </dd>
         </dl>
+        <dl id="menu-devblog">
+            <dt><i class="Hui-iconfont">&#xe616;</i> 开发者日志<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
+            <dd>
+                <ul>
+                    <li><a href="{{ url('admin/blog-list') }}" title="日志管理">日志列表</a></li>
+                </ul>
+            </dd>
+        </dl>
         <dl id="menu-message">
             <dt><i class="Hui-iconfont">&#xe616;</i> 消息管理<i class="Hui-iconfont menu_dropdown-arrow">&#xe6d5;</i></dt>
             <dd>

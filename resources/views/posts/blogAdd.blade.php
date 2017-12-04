@@ -15,7 +15,7 @@
                     <input type="text" class="input-text" value="" placeholder="" id="" name="subtitle">
                 </div>
             </div>
-            <input type="hidden" name="system_cate_id" value="1">
+            <input type="hidden" name="system_cate_id" value="2">
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">排序值：</label>
                 <div class="formControls col-xs-8 col-sm-9">

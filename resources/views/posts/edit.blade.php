@@ -15,30 +15,7 @@
                     <input type="text" class="input-text" value="{{ $post->subtitle }}" placeholder="" id="" name="subtitle">
                 </div>
             </div>
-            <div class="row cl">
-                <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>分类栏目：</label>
-                <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
-				<select name="system_cate_id" class="select">
-                    @if($post['system_cate_id']===1)
-					<option value="1" selected>新闻资讯</option>
-					<option value="2">开发者日志</option>
-                        @elseif($post['system_cate_id']===2)
-                        <option value="1">新闻资讯</option>
-                        <option value="2" selected>开发者日志</option>
-                        @endif
-				</select>
-				</span> </div>
-            </div>
-            {{--<div class="row cl">
-                <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文章类型：</label>
-                <div class="formControls col-xs-8 col-sm-9"> <span class="select-box">
-				<select name="posts_category" class="select">
-					<option value="0">全部类型</option>
-					<option value="1">帮助说明</option>
-					<option value="2">新闻资讯</option>
-				</select>
-				</span> </div>
-            </div>--}}
+            <input type="hidden" name="system_cate_id" value="1">
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">排序值：</label>
                 <div class="formControls col-xs-8 col-sm-9">
@@ -71,37 +48,6 @@
                 </div>
             </div>
             <div class="row cl">
-                <label class="form-label col-xs-4 col-sm-2">允许评论：</label>
-                <div class="formControls col-xs-8 col-sm-9 skin-minimal">
-                    <div class="check-box">
-                        <input type="checkbox" id="checkbox-pinglun" name="comment_cate" value="{{ $post->comment_cate }}">
-                        <label for="checkbox-pinglun">&nbsp;</label>
-                    </div>
-                </div>
-            </div>
-            <div class="row cl">
-                <label class="form-label col-xs-4 col-sm-2">评论开始日期：</label>
-                <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin" class="input-text Wdate" name="comment_start_date" value="{{ $post->comment_start_date }}">
-                </div>
-            </div>
-            <div class="row cl">
-                <label class="form-label col-xs-4 col-sm-2">评论结束日期：</label>
-                <div class="formControls col-xs-8 col-sm-9">
-                    <input type="text" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:'#F{$dp.$D(\'datemin\')}'})" id="datemax" class="input-text Wdate" name="comment_end_date" value="{{ $post->comment_end_date }}">
-                </div>
-            </div>
-            {{--<div class="row cl">
-                <label class="form-label col-xs-4 col-sm-2">使用独立模版：</label>
-                <div class="formControls col-xs-8 col-sm-9 skin-minimal">
-                    <div class="check-box">
-                        <input type="checkbox" id="checkbox-moban">
-                        <label for="checkbox-moban">&nbsp;</label>
-                    </div>
-                    <button onClick="mobanxuanze()" class="btn btn-default radius ml-10">选择模版</button>
-                </div>
-            </div>--}}
-            <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">缩略图：</label>
                 <div class="formControls col-xs-8 col-sm-9">
                     <div class="uploader-thum-container">
@@ -132,7 +78,6 @@
                 <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
                     <button onClick="" class="btn btn-primary radius" type="submit"><i class="Hui-iconfont">&#xe632;</i> 保存并提交审核</button>
                     {{--<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>--}}
-                    <button onClick="removeIframe();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
                 </div>
             </div>
         </form>
@@ -149,20 +94,21 @@
     <script type="text/javascript" src="/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
     <script type="text/javascript" src="/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
     <script type="text/javascript" src="/editor/release/wangEditor.min.js"></script>
+    <script type="text/javascript" src="/editor/release/wangEditor-fullscreen-plugin.js"></script>
     <script type="text/javascript">
         var E = window.wangEditor
-        var editor2 = new E('#content')
-        editor2.customConfig.uploadImgServer = '{{ url('admin/upload') }}'
-        editor2.customConfig.uploadImgMaxSize = 3 * 1024 * 1024
-        editor2.customConfig.uploadFileName = 'file'
-        editor2.customConfig.uploadImgHeaders = {
+        var editor = new E('#content')
+        editor.customConfig.uploadImgServer = '{{ url('admin/upload') }}'
+        editor.customConfig.uploadImgMaxSize = 3 * 1024 * 1024
+        editor.customConfig.uploadFileName = 'file'
+        editor.customConfig.uploadImgHeaders = {
             'Accept' : 'multipart/form-data',
         }
-        editor2.customConfig.uploadImgParams = {
+        editor.customConfig.uploadImgParams = {
             _token: '{{csrf_token()}}'   // 属性值会自动进行 encode ，此处无需 encode
         }
 
-        editor2.customConfig.uploadImgHooks = {
+        editor.customConfig.uploadImgHooks = {
             before: function (xhr, editor, file) {
                 // 图片上传之前触发
                 // xhr 是 XMLHttpRequst 对象，editor 是编辑器对象，files 是选择的图片文件
@@ -204,18 +150,18 @@
                 // result 必须是一个 JSON 格式字符串！！！否则报错
             }
         }
-        editor2.customConfig.onchange = function (html) {
+        editor.customConfig.onchange = function (html) {
             // html 即变化之后的内容
             //console.log(html)
             $("input[name='content']").val(html);
         }
-        editor2.create()
-        editor2.txt.html(`{!! $post->content !!}`)
-
+        editor.create()
+        editor.txt.html(`{!! $post->content !!}`)
+        E.fullscreen.init('#content');
         $(function(){
             var content = $('#contents');
             window.article_save_submit = function() {
-                content = editor2.$textElem[0].innerHTML;
+                content = editor.$textElem[0].innerHTML;
                 console.log(content)
             }
             $('.skin-minimal input').iCheck({
