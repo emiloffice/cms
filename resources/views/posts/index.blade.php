@@ -54,8 +54,9 @@
                     </tr>
                     </thead>
                     <tbody>
+
                     @foreach($posts as $post)
-                    <td class="text-c">
+                        <tr class="text-c">
                         <td><input type="checkbox" value="" name=""></td>
                         <td>{{$post->id}}</td>
                         <td class="text-l">
@@ -77,7 +78,6 @@
                                 <a style="text-decoration:none" class="ml-5" onClick="article_edit('资讯编辑','{{ url('admin/posts-edit') }}','{{ $post->id }}')" href="javascript:;" title="编辑"><i class="Hui-iconfont">&#xe6df;</i></a>
                                 <a style="text-decoration:none" class="ml-5" onClick="article_del(this,'{{ $post->id }}')" href="javascript:;" title="删除"><i class="Hui-iconfont">&#xe6e2;</i></a>
                             </td>
-
                         @elseif($post['status']==0)
                             <td class="td-status">
                                 <span class="label label-error radius">未发布</span>
@@ -106,6 +106,7 @@
                             <td class="td-status"></td>
                             <td class="f-14 td-manage"></td>
                         @endif
+                    </tr>
                     @endforeach
                     </tbody>
                 </table>
