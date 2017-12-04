@@ -31,7 +31,7 @@
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章摘要：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <textarea name="description" cols="" rows="" class="textarea description"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！"  maxlength="200">{{ $post->description }}</textarea>
+                    <textarea name="description" cols="" rows="" class="textarea description"  placeholder="说点什么...最少输入30个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！"  maxlength="200">{{ $post->description }}</textarea>
                 </div>
             </div>
             <div class="row cl">
@@ -84,21 +84,21 @@
 @endsection
 @section('script')
     <!--请在下方写此页面业务相关的脚本-->
-    <script type="text/javascript" src="/lib/My97DatePicker/4.8/WdatePicker.js"></script>
-    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
-    <script type="text/javascript" src="/lib//jquery.textlength.js"></script>
-    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/validate-methods.js"></script>
-    <script type="text/javascript" src="/lib/jquery.validation/1.14.0/messages_zh.js"></script>
-    <script type="text/javascript" src="/lib/webuploader/0.1.5/webuploader.min.js"></script>
-    <script type="text/javascript" src="/lib/ueditor/1.4.3/ueditor.config.js"></script>
-    <script type="text/javascript" src="/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
-    <script type="text/javascript" src="/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
-    <script type="text/javascript" src="/editor/release/wangEditor.min.js"></script>
-    <script type="text/javascript" src="/editor/release/wangEditor-fullscreen-plugin.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib//jquery.textlength.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/jquery.validation/1.14.0/messages_zh.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/webuploader/0.1.5/webuploader.min.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/ueditor/1.4.3/ueditor.config.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/ueditor/1.4.3/ueditor.all.min.js"> </script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/editor/release/wangEditor.min.js"></script>
+    <script type="text/javascript" src="//{{getenv('RESOURCE_PATH')}}/editor/release/wangEditor-fullscreen-plugin.js"></script>
     <script type="text/javascript">
         $(".description").Huitextarealength({
             minlength:30,
-            maxlength:200
+            maxlength:190
         });
         var E = window.wangEditor
         var editor = new E('#content')
