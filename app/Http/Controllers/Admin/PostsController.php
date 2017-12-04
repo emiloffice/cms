@@ -67,8 +67,6 @@ class PostsController extends Controller
     {
         if ($request->isMethod('post')){
             $update = $request->all();
-//            $up = unset($update[0]);
-//            dd($update);
             $postDB = DB::table('posts')->where('id',$id)->update(request(['title', 'subtitle', 'system_cate_id', 'posts_category', 'sort', 'thumb', 'keyword', 'description', 'author','content']));
             return redirect('admin/blogs');
         }

@@ -31,8 +31,7 @@
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章摘要：</label>
                 <div class="formControls col-xs-8 col-sm-9">
-                    <textarea name="description" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,200)"></textarea>
-                    <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+                    <textarea name="description" cols="" rows="" class="textarea description"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="textarealength(this,200)"></textarea>
                 </div>
             </div>
             <div class="row cl">
@@ -79,6 +78,7 @@
     <!--请在下方写此页面业务相关的脚本-->
     <script type="text/javascript" src="/lib/My97DatePicker/4.8/WdatePicker.js"></script>
     <script type="text/javascript" src="/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="/lib/jquery.textlength.js"></script>
     <script type="text/javascript" src="/lib/jquery.validation/1.14.0/validate-methods.js"></script>
     <script type="text/javascript" src="/lib/jquery.validation/1.14.0/messages_zh.js"></script>
     <script type="text/javascript" src="/lib/webuploader/0.1.5/webuploader.min.js"></script>
@@ -88,6 +88,10 @@
     <script type="text/javascript" src="/editor/release/wangEditor.min.js"></script>
     <script type="text/javascript" src="/editor/release/wangEditor-fullscreen-plugin.js"></script>
     <script type="text/javascript">
+        $(".description").Huitextarealength({
+            minlength:30,
+            maxlength:200
+        });
         function HTMLEncode(html) {
             var temp = document.createElement("div");
             (temp.textContent != null) ? (temp.textContent = html) : (temp.innerText = html);
