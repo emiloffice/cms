@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div id="filePicker">选择图片</div>
-                        {{--<button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>--}}
+                        <input type="hidden" name="thumb" value="" id="thumb_path">
                     </div>
                 </div>
             </div>
