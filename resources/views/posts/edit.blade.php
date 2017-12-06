@@ -61,11 +61,11 @@
                             </div>
                         </div>
                         <div id="filePicker">选择图片</div>
-                        <input type="hidden" name="thumb" value="" id="thumb_path">
+
                     </div>
                 </div>
             </div>
-            <input type="hidden" name="thumb">
+            <input type="hidden" name="thumb" value="" id="thumb_path">
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章内容：</label>
                 <div class="formControls col-xs-8 col-sm-9" >

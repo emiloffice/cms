@@ -55,8 +55,8 @@
                         {{--<button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>--}}
                     </div>
                 </div>
-                <input type="hidden" name="thumb" value="" id="thumb_path">
             </div>
+            <input type="hidden" name="thumb" value="" id="thumb_path">
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章内容：</label>
                 <div class="formControls col-xs-8 col-sm-9">
