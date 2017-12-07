@@ -15,18 +15,17 @@
                             <div class="play_btn" @click="play_video(list.video)" style="position: absolute;top: 50%;left: 50%;margin-top: -32px;margin-left: -32px;" v-if="list.isPlay"></div>
                         </div>
                         <a :href="list.link" class="more" target="_blank" rel="nofollow"><img src="/images/more.png" alt=""></a>
-                        <div class="des">{{list.des}}</div>
+                        <div class="des"><p>{{list.des}}</p></div>
                     </li>
                 </ul>
 
             </div>
             <div class="section" id="about" style="">
                 <div class="left">
-                <img src="/images/about-us.png" alt="ABOUT US" class="title">
-                <div class="des" v-html="$t('index_view.about_des')">
-
-                </div>
-
+                    <img src="/images/about-us.png" alt="ABOUT US" class="title">
+                    <div class="des" v-html="$t('index_view.about_des')">
+                    </div>
+                    <a class="more" href="/about"><img src="/images/more_across.png" alt="more" style="height: 60px;margin-top: 25px;"></a>
                 </div>
             </div>
             <div class="section" id="news">

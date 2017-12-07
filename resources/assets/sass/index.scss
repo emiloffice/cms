@@ -10,11 +10,16 @@
         display: none;
         width: 700px;
         border: 1px solid #999999;
-        height: 60px;
         overflow: hidden;
         margin-top: -80px;
         margin-left: 70px;
         padding: 10px;
+        p{
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+        }
       }
       .more{
         display: none;

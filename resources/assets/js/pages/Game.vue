@@ -17,7 +17,7 @@
                     <p class="des">
                         {{list.des}}
                     </p>
-                    <a :href="list.link" target="_blank" rel="nofollow"><i class="fa fa-external-link red"></i>{{$t('game_page.link_name')}}</a>
+                    <a :href="list.link" target="_blank" rel="nofollow"><i class="fa fa-external-link red" style="margin-right: 5px"></i>{{$t('game_page.link_name')}}</a>
                 </div>
             </li>
         </ul>
