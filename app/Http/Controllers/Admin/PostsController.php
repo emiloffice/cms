@@ -59,11 +59,7 @@ class PostsController extends Controller
     {
         if ($request->isMethod('post')){
             $update = $request->all();
-            if($request->content==''||$request->content==null){
-                $postDB = DB::table('posts')->where('id',$id)->update(request(['title', 'subtitle', 'system_cate_id', 'posts_category', 'sort', 'thumb', 'keyword', 'description', 'author']));
-            }else{
-                $postDB = DB::table('posts')->where('id',$id)->update(request(['title', 'subtitle', 'system_cate_id', 'posts_category', 'sort', 'thumb', 'keyword', 'description', 'author','content']));
-            }
+            $postDB = DB::table('posts')->where('id',$id)->update(request(['title', 'subtitle', 'system_cate_id', 'posts_category', 'sort', 'thumb', 'keyword', 'description', 'author','content']));
             return redirect('admin/posts');
         }
     }
@@ -71,11 +67,7 @@ class PostsController extends Controller
     {
         if ($request->isMethod('post')){
             $update = $request->all();
-            if($request->content==''||$request->content==null){
-                $postDB = DB::table('posts')->where('id',$id)->update(request(['title', 'subtitle', 'system_cate_id', 'posts_category', 'sort', 'thumb', 'keyword', 'description', 'author']));
-            }else{
-                $postDB = DB::table('posts')->where('id',$id)->update(request(['title', 'subtitle', 'system_cate_id', 'posts_category', 'sort', 'thumb', 'keyword', 'description', 'author','content']));
-            }
+            $postDB = DB::table('posts')->where('id',$id)->update(request(['title', 'subtitle', 'system_cate_id', 'posts_category', 'sort', 'thumb', 'keyword', 'description', 'author','content']));
             return redirect('admin/blogs');
         }
     }

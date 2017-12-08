@@ -210,10 +210,13 @@ a{
 
 .input-group{
   margin: 20px 0;
+
   .input{
     border: 1px solid #999999;
     font-size: 24px;
     background: none;
+    color: #999;
+    text-indent: 10px;
   }
   label{
     width: 100px;
@@ -253,6 +256,10 @@ a{
     border:none;
     border-radius:5px;
     background-color: #999999;
+  }
+  .submit:hover{
+    background: red;
+    color: #ffffff;
   }
 }
 .clearfix{
@@ -373,7 +380,7 @@ a{
   cursor: pointer;
 }
 .play_btn:hover{
-  animation: shake 1.5s;
+  animation: shake s;
 }
 .text-center{
   text-align: center;

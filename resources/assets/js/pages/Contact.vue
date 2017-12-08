@@ -27,23 +27,23 @@
             <p><img src="/images/question.png" alt=""></p>
             <div class="input-group fl">
                 <label for="name"><i class="icon iconfont">&#xe609;</i>{{$t("input.name.label")}}</label>
-                <input type="text" name="name" id="name" class="input md">
+                <input type="text" name="name" id="name" class="input md" required>
             </div>
             <div class="input-group fr">
                 <label for="company"><i class="icon iconfont">&#xe61e;</i>{{$t("input.company.label")}}</label>
-                <input type="text" name="company" id="company" class="input md">
+                <input type="text" name="company" id="company" class="input md" required>
             </div>
             <div class="input-group fl">
                 <label for="email"><i class="icon iconfont">&#xe687;</i>{{$t("input.email.label")}}</label>
-                <input type="text" name="email" id="email" class="input md">
+                <input type="text" name="email" id="email" class="input md" required>
             </div>
             <div class="input-group fr">
                 <label for="mobile"><i class="icon iconfont">&#xe600</i>{{$t("input.mobile.label")}}</label>
-                <input type="text" name="mobile" id="mobile" class="input md">
+                <input type="text" name="mobile" id="mobile" class="input md" required>
             </div>
             <div class="input-group fl">
                 <label for="content" style="vertical-align: top;"><i class="icon iconfont">&#xe686;</i>{{$t("input.content.label")}}</label>
-                <textarea type="text" name="content" id="content" ></textarea>
+                <textarea type="text" name="content" id="content" required></textarea>
             </div>
             <div class="clearfix"></div>
             <div class="input-group tc">

@@ -70,7 +70,7 @@
                 <label class="form-label col-xs-4 col-sm-2">文章内容：</label>
                 <div class="formControls col-xs-8 col-sm-9" >
                     <div id="content"></div>
-                    <input type="hidden" name="content" value="">
+                    <input type="hidden" name="content" value="{!! $post->content !!}">
                 </div>
             </div>
             <div class="row cl">
