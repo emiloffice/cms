@@ -30,6 +30,9 @@
           width: auto;
         }
       }
+      .more:hover{
+        animation: shake 1.5s;
+      }
       .thumb{
         position: relative;
         img.cover{
@@ -241,8 +244,12 @@
       margin: 10px;
       .thumb{
         height: 100%;
+        width: 100%;
       }
 
     }
+   li:hover{
+     transform: scale(0.95);
+   }
  }
 }

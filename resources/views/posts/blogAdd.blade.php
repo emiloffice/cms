@@ -52,7 +52,7 @@
                     <div class="uploader-thum-container">
                         <div id="fileList" class="uploader-list"></div>
                         <div id="filePicker">选择图片</div>
-                        {{--<button id="btn-star" class="btn btn-default btn-uploadstar radius ml-10">开始上传</button>--}}
+                        <div>参考图片分辨率：300*340</div>
                     </div>
                 </div>
             </div>

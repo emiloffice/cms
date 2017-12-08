@@ -61,7 +61,7 @@
                             </div>
                         </div>
                         <div id="filePicker">选择图片</div>
-
+                        <div>参考图片分辨率：680*365</div>
                     </div>
                 </div>
             </div>

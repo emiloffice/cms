@@ -8,6 +8,14 @@
     margin: 50px 0;
     border-right: 1px solid #999999;
     width: calc(50% - 1px);
+    li{
+      p{
+        a:hover{
+          color: red;
+        }
+      }
+    }
+
   }
   ul:last-of-type{
     border-right: none;

@@ -1,4 +1,13 @@
+.job_links{
+  position: absolute;
+  top: 75%;
+  left: 8%;
+}
+.job_links:hover{
+  animation:shake 1.5s;
+}
 .job-page{
+
   p{
     padding: 10px 0;
     line-height: 20px;

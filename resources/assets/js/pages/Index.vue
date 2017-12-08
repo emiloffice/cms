@@ -10,11 +10,11 @@
                 <ul class="game-list">
                     <li v-for="list in $t('games')">
                         <div class="thumb">
-                            <img :src="list.cover" :alt="list.cover_alt" class="cover">
+                            <a href="/game"><img :src="list.cover" :alt="list.cover_alt" class="cover"></a>
 
                             <div class="play_btn" @click="play_video(list.video)" style="position: absolute;top: 50%;left: 50%;margin-top: -32px;margin-left: -32px;" v-if="list.isPlay"></div>
                         </div>
-                        <a :href="list.link" class="more" target="_blank" rel="nofollow"><img src="/images/more.png" alt=""></a>
+                        <a :href="list.link" class="more" target="_blank" rel="nofollow" v-on:mouseenter="shake"><img src="/images/more.png" alt=""></a>
                         <div class="des"><p>{{list.des}}</p></div>
                     </li>
                 </ul>
@@ -31,7 +31,7 @@
             <div class="section" id="news">
                 <div class="container"><img src="/images/new_title.png" alt="" style="margin-top: 110px"></div>
                 <ul class="news-list container">
-                    <li v-for="(list, index) in $t('news')" v-if="index<3">
+                    <li v-for="(list, index) in $t('news')" v-if="index<4">
                         <a :href="list.link" target="_blank">
                         <div class="thumb">
                             <img :src="list.cover" alt="">

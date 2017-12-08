@@ -372,6 +372,9 @@ a{
   background: url(/images/play_btn.png) no-repeat center;
   cursor: pointer;
 }
+.play_btn:hover{
+  animation: shake 1.5s;
+}
 .text-center{
   text-align: center;
 }
