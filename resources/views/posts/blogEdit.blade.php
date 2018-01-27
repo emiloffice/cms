@@ -1,7 +1,7 @@
 @extends('layouts.adminMaster')
 @section('content')
     <article class="page-container">
-        <form class="form form-horizontal" id="form-article-add" action="{{url('admin/blogs-update')}}/{{$post->id}}" method="post" enctype="multipart/form-data">
+        <form class="form form-horizontal" id="form-article-add" action="{{url('admin/blogs-update/'.$post->id)}}" method="post" enctype="multipart/form-data">
             <input type="hidden" name="_token"         value="{{csrf_token()}}"/>
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>文章标题：</label>
@@ -62,15 +62,16 @@
                         </div>
                         <div id="filePicker">选择图片</div>
                         <div>参考图片分辨率：300*340</div>
+
                     </div>
                 </div>
             </div>
-            <input type="hidden" name="thumb" value="" id="thumb_path">
+            <input type="hidden" name="thumb" value="{{ $post->thumb }}" id="thumb_path">
             <div class="row cl">
                 <label class="form-label col-xs-4 col-sm-2">文章内容：</label>
                 <div class="formControls col-xs-8 col-sm-9" >
                     <div id="content"></div>
-                    <input type="hidden" name="content" value="{!! $post->content !!}">
+                    <input type="hidden" name="content" value="{{$post->content}}">
                 </div>
             </div>
             <div class="row cl">

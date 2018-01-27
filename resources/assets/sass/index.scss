@@ -44,6 +44,9 @@
       .thumb:hover .play_btn{
         display: block!important;
       }
+      .thumb:hover .play_btn:hover{
+        animation: shake 1.5s;
+      }
       img.cover{
         position:relative;
         transition: all 0.6s;
@@ -67,6 +70,9 @@
         .play_btn{
           display: block!important;
           z-index: 10;
+        }
+        .play_btn:hover{
+          animation: shake 1.5s;
         }
         img.cover {
           position:relative;
@@ -124,6 +130,9 @@
       font-weight: bold;
       letter-spacing: 2px;
       z-index: 10;
+    }
+    .more:hover{
+      animation: shake 1.5s;
     }
   }
 }

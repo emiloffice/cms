@@ -5,8 +5,8 @@
 
             <ul class="menu" >
                 <li v-for="(m ,index) in $t('nav.menu')" v-on:click="navActive(index)" v-bind:class="{ active: index + 1 == navIndex}"><a :href="m.link">{{m.name}}</a></li>
-                <li><a v-on:click="switchLang('en-US')" class="" v-if="this.$i18n.locale==='zh-CN'">EN</a>
-                    <a v-on:click="switchLang('zh-CN')" class="" v-if="this.$i18n.locale==='en-US'">中文</a></li>
+                <li><a v-on:click="switchLang('en-US')" class="" v-if="this.$i18n.locale==='zh-CN'" style="cursor: pointer">EN</a>
+                    <a v-on:click="switchLang('zh-CN')" class="" v-if="this.$i18n.locale==='en-US'" style="cursor: pointer">中文</a></li>
             </ul>
         </div>
     </nav>

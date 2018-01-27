@@ -13,7 +13,6 @@ class AmbassadorController extends Controller
     public function index()
     {
         $users = User::with('point')->where('status',1)->get();
-       // echo ($users);
         return view('admin.ambassador.index',compact('users'));
     }
     /*

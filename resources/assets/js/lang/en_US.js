@@ -102,8 +102,8 @@ export default {
         {title:"SEEKING DAWN AIMS TO BE ONE OF THE LARGEST VR GAMES YET",cover:"https://www.gamecrate.com/sites/default/files/field/image/seeking-dawn-vr-grassland.jpg",link:"https://www.gamecrate.com/seeking-dawn-aims-be-one-largest-vr-games-yet/16570",created_at:"MAY 2ND, 2017"},
         {title:"One Of The Largest VR Action Survival Games: Seeking Dawn",cover:"https://www.vrfocus.com/wp-content/uploads/2017/06/2-1130x580.jpg",link:"https://www.vrfocus.com/2017/06/one-of-the-largest-vr-action-survival-games-seeking-dawn/",created_at:"Jun 19, 2017"},
         // {title:"Seeking Dawn Looks Like A Hugely Ambitious VR Shooter",cover:"https://cdn.uploadvr.com/wp-content/uploads/bfi_thumb/Seeking-Dawn-1000x563-n7xffffjnqqy4gzmpcctozy0ic7w3u3qzx95r0qpku.jpg",link:"https://uploadvr.com/seeking-dawn-looks-like-hugely-ambitious-vr-shooter/",created_at:"MAY 2ND, 2017"},
-        {title:"E3 2017: Hands-On With Ambitious Sci-Fi Shooter Seeking Dawn",cover:"http://www.seekingdawnvr.com/images/screenshot/thumb_12.png",link:"https://uploadvr.com/e3-2017-hands-sci-fi-shooter-seeking-dawn/",created_at:"JUNE 19TH, 2017"},
-        {title:"Seeking Dawn Might Be The VR RPG Shooter That We\'ve All Been Waiting For",cover:"http://vrthegamers.com/wp-content/uploads/2017/05/seeking-dawn-header-1170x658.png",link:"http://vrthegamers.com/seeking-dawn-might-vr-rpg-shooter-weve-waiting/#.Wg7BWIyCyHt",created_at:"MAY 2ND, 2017"},
+        {title:"E3 2017: Hands-On With Ambitious Sci-Fi Shooter Seeking Dawn",cover:"https://cdn.multiverseinc.com/images/post_cover_default.png",link:"https://uploadvr.com/e3-2017-hands-sci-fi-shooter-seeking-dawn/",created_at:"JUNE 19TH, 2017"},
+        {title:"Seeking Dawn Might Be The VR RPG Shooter That We\'ve All Been Waiting For",cover:"https://www.gamecrate.com/sites/default/files/field/image/seeking-dawn-vr-grassland.jpg",link:"http://vrthegamers.com/seeking-dawn-might-vr-rpg-shooter-weve-waiting/#.Wg7BWIyCyHt",created_at:"MAY 2ND, 2017"},
     ],
     careers_link:{
         title:"Indeed",
