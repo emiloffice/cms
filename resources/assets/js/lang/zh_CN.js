@@ -14,15 +14,15 @@ export default {
         link_name:'官方网站'
     },
     games:[
-        {name:'《寻求黎明》',cover:"/images/seekingdawn.jpg",cover_alt:'寻求黎明', des:'Seeking Dawn是由Multiverse制作的大型科幻RPG类VR/PC游戏，游戏具有丰富的合成玩法和生存元素，带你进入身临其境的外星死亡世界。 玩家需要利用好各种各样的道具和建造系统在游戏中生存下去，并且一步步去探索揭开这个神秘星球的真面目。',link:'http://www.seekingdawnvr.com/',video:"https://player.youku.com/embed/XMjc1MTgwNTYxMg==",isPlay:true},
-        {name:'《梦幻风之旅》',cover:'/images/thumb4.png',cover_alt:'梦幻风之旅', des:'《梦幻风之旅》Dream Flight是一款让你尽情享受充满梦幻虚拟世界的美丽游戏。驾驶着纸飞机的小姑娘，穿越充满魔力的梦幻世界，寻找失散的同伴。不需要手柄，也没有血腥的厮杀，Dream Flight让你彻底陶醉在充满艺术感的视听盛宴中。',link:'https://www.oculus.com/experiences/gear-vr/1013248532088752/',video:"http://player.youku.com/embed/XMjEyMjIzMzAzMg==",isPlay:true},
-        {name:'《特工22号：越狱》',cover:'/images/thumb2.png',cover_alt:'特工22号：越狱', des:'《特工22号:越狱》是一款VR密室逃脱游戏，22号特工身陷牢笼，不过这显然不是22号第一次经历越狱，找寻一切可能用得上的道具做好出逃准备吧，当然你也得避开一些危险。作为一款带有探索解密性质的VR游戏，这款游戏上手容易，操作简单，解密难度逐渐增强，非常适合喜欢解密探索元素的玩家。如果较长时间没有解锁关卡，游戏中即可获得提示线索，让轻度玩家也能愉快畅玩。《特工22:越狱》由法国团队XXII开发，Multiverse发行。',link:'http://store.steampowered.com/app/538050/The_baron_got_you_again/',video:"https://player.youku.com/embed/XMzEzOTAyNzQ2NA==",isPlay:true},
-        {name:'《圣域纷争》',cover:'/images/thumb3.jpg',cover_alt:'圣域纷争', des:'《圣域纷争》是由深圳火花幻境研发，Multiverse发行的一款塔防类VR游戏。玩家需要在游戏中扮演一名孤胆英雄，利用好陷阱和道具面对敌人，通过陷阱阻止他们前行守护最后的圣域。',link:'http://store.steampowered.com/app/638900/Defenders_of_the_Realm_VR/',video:"https://player.youku.com/embed/XMjc5ODE0MTg3Ng==",isPlay:true},
-        {name:'《银河穿梭VR》',cover:'/images/thumb5.jpg',cover_alt:'银河穿梭VR', des:'《银河穿梭VR》是一款VR跑酷类游戏，玩家仿佛星际穿梭一般，穿越了时空的界限，在充满次世代的音乐背景中极速飞行！富含科幻感的时空隧道内，你需要高度集中注意力，紧盯着路径上的红点，随时躲避前方的障碍物。',link:'https://play.google.com/store/apps/details?id=com.multiverse.galaxyrush&hl=en',video:"",isPlay:false},
+        {name:'《寻求黎明》',cover:"/images/seekingdawn.jpg",cover_alt:'寻求黎明', des:'Seeking Dawn是由深圳市摩登世纪科技有限公司（Multiverse）制作的大型科幻RPG类VR/PC游戏，游戏具有丰富的合成玩法和生存元素，带你进入身临其境的外星死亡世界。 玩家需要利用好各种各样的道具和建造系统在游戏中生存下去，并且一步步去探索揭开这个神秘星球的真面目。',link:'#',video:"https://player.youku.com/embed/XMjc1MTgwNTYxMg==",isPlay:true},
+        {name:'《梦幻风之旅》',cover:'/images/thumb4.png',cover_alt:'梦幻风之旅', des:'《梦幻风之旅》Dream Flight是一款让你尽情享受充满梦幻虚拟世界的美丽游戏。驾驶着纸飞机的小姑娘，穿越充满魔力的梦幻世界，寻找失散的同伴。不需要手柄，也没有血腥的厮杀，Dream Flight让你彻底陶醉在充满艺术感的视听盛宴中。',link:'#',video:"http://player.youku.com/embed/XMjEyMjIzMzAzMg==",isPlay:true},
+        // {name:'《特工22号：越狱》',cover:'/images/thumb2.png',cover_alt:'特工22号：越狱', des:'《特工22号:越狱》是一款VR密室逃脱游戏，22号特工身陷牢笼，不过这显然不是22号第一次经历越狱，找寻一切可能用得上的道具做好出逃准备吧，当然你也得避开一些危险。作为一款带有探索解密性质的VR游戏，这款游戏上手容易，操作简单，解密难度逐渐增强，非常适合喜欢解密探索元素的玩家。如果较长时间没有解锁关卡，游戏中即可获得提示线索，让轻度玩家也能愉快畅玩。《特工22:越狱》由法国团队XXII开发，Multiverse发行。',link:'http://store.steampowered.com/app/538050/The_baron_got_you_again/',video:"https://player.youku.com/embed/XMzEzOTAyNzQ2NA==",isPlay:true},
+        // {name:'《圣域纷争》',cover:'/images/thumb3.jpg',cover_alt:'圣域纷争', des:'《圣域纷争》是由深圳火花幻境研发，Multiverse发行的一款塔防类VR游戏。玩家需要在游戏中扮演一名孤胆英雄，利用好陷阱和道具面对敌人，通过陷阱阻止他们前行守护最后的圣域。',link:'http://store.steampowered.com/app/638900/Defenders_of_the_Realm_VR/',video:"https://player.youku.com/embed/XMjc5ODE0MTg3Ng==",isPlay:true},
+        {name:'《银河穿梭VR》',cover:'/images/thumb5.jpg',cover_alt:'银河穿梭VR', des:'《银河穿梭VR》是一款VR跑酷类游戏，玩家仿佛星际穿梭一般，穿越了时空的界限，在充满次世代的音乐背景中极速飞行！富含科幻感的时空隧道内，你需要高度集中注意力，紧盯着路径上的红点，随时躲避前方的障碍物。',link:'#',video:"",isPlay:false},
     ],
     work_view:{
         env_title:"公司的环境、氛围",
-        env_des:"Multiverse是一家高效且有趣的跨国游戏公司。在这里，你将感受到亲切、严谨以及无阶层的办公氛围。任何有趣的想法你都可以大胆的提出来，并且只要你能流畅的陈述出它的利弊，或许你将是下一个项目的负责人。",
+        env_des:"深圳市摩登世纪科技有限公司（Multiverse）是一家高效且有趣的跨国游戏公司。在这里，你将感受到亲切、严谨以及无阶层的办公氛围。任何有趣的想法你都可以大胆的提出来，并且只要你能流畅的陈述出它的利弊，或许你将是下一个项目的负责人。",
         /*culture_title:"公司文化",
         culture_des:"Multiverse以游戏为核心，以研发为驱动，以发行为目标，以给玩家带来有趣且好玩的游戏为宗旨正在行动着。",*/
         culture_title:"公司的价值观",
@@ -65,15 +65,19 @@ export default {
         "                        招聘邮箱：careers@multiverseinc.com<br>\n" +
         "                        电话：0755-86564169<br>\n" +
         "\n" +
-        "                        MULTIVERSE 欢迎您的加入！"}
+        "                        深圳市摩登世纪科技有限公司（Multiverse） 欢迎您的加入！"}
     ],
     contact_view:{
+        company:"公司名称",
+        company_name:"深圳市摩登世纪科技有限公司",
         Regular:"沟通交流",
         Public:"公共关系",
-        Public_email:"bo.liu@multiverseinc.com",
+        Public_email:"chenjun.li@multiverseinc.com",
         mailto_Public_email:"mailto:bo.liu@multiverseinc.com",
         Human:"英才招聘",
         Business:"商务合作",
+        address:"公司地址",
+        address_content:"深圳市南山区南山大道南园枫叶大厦10L",
     },
     input: {
         name:{
@@ -103,14 +107,14 @@ export default {
         send:'发送'
     },
     about_view:{
-        intro:" <span>Multiverse是一家世界级的内容提供商和发行商。团队成员毕业于斯坦福大学、卡内基梅隆大学、Darden商学院等世界知名学府，并拥有来自Wevr、迪士尼、Riot（英雄联盟）、CJ E&M、银汉游戏、SGN等顶尖VR及游戏企业的高端人才。公司的上一款产品《Reveries: Dream Flight》是目前Gear VR全球评分最高的国产VR游戏。开发中的大型游戏项目《Seeking Dawn》获得腾讯GAD VR开发大赛最佳视觉奖。</span>\n" +
+        intro:" <span>深圳市摩登世纪科技有限公司（Multiverse）是一家世界级的内容提供商。团队成员毕业于斯坦福大学、卡内基梅隆大学、Darden商学院等世界知名学府，并拥有来自Wevr、迪士尼、Riot（英雄联盟）、CJ E&M、银汉游戏、SGN等顶尖VR及游戏企业的高端人才。公司的上一款产品《Reveries: Dream Flight》是目前Gear VR全球评分最高的国产VR游戏。开发中的大型游戏项目《Seeking Dawn》获得腾讯GAD VR开发大赛最佳视觉奖。</span>\n" +
         "                            <p>· 我们的愿景</p>\n" +
-        "                            <span> 我们希望能够成为世界顶尖的游戏开发商和发行商，做出能够风靡世界的3A游戏。为中国游戏的崛起做出努力，为世界游戏行业锦上添花。</span>\n" +
+        "                            <span> 我们希望能够成为世界顶尖的游戏开发商，做出能够风靡世界的3A游戏。为中国游戏的崛起做出努力，为世界游戏行业锦上添花。</span>\n" +
         "                            <p>·  公司环境、氛围</p>\n" +
         "                            <span> Multiverse是一家高效且有趣的跨国游戏公司。在这里，你将感受到亲切、严谨以及无阶层的办公氛围。任何有趣的想法你都可以大胆的提出来，并且只要你能流畅的陈述出它的利弊，或许你将是下一个项目的负责人。</span>\n" +
         "                            <p>· 我们的价值观</p>\n" +
         "                            <span>始终以技术和内容创新为核心，始终以玩家体验为核心，始终以游戏梦想为核心。</span>",
-        story:"Multiverse立足于深圳，将目光看向世界，成立之初的产品《Dream Flight》获得了国产移动VR游戏在Gear VR平台上的最高评分。第二款研发的大型VR游戏《Seeking Dawn》在开发中期就获得了腾讯GAD开发大赛最佳视觉奖。在开发过程中CEO受到UNITY公司邀请，前往VISION大会进行演讲。2017 E3期间，《Seeking Dawn》成为了英特尔i9处理器发布会上唯一MR合作伙伴，通过MR技术向世界玩家展示了我们的游戏，同时E3展上《Seeking Dawn》成为了最受玩家欢迎的VR游戏之一。而在未来，我们将会不忘初心，继续努力！",
+        story:"深圳市摩登世纪科技有限公司（Multiverse）立足于深圳，将目光看向世界，成立之初的产品《Dream Flight》获得了国产移动VR游戏在Gear VR平台上的最高评分。第二款研发的大型VR游戏《Seeking Dawn》在开发中期就获得了腾讯GAD开发大赛最佳视觉奖。在开发过程中CEO受到UNITY公司邀请，前往VISION大会进行演讲。2017 E3期间，《Seeking Dawn》成为了英特尔i9处理器发布会上唯一MR合作伙伴，通过MR技术向世界玩家展示了我们的游戏，同时E3展上《Seeking Dawn》成为了最受玩家欢迎的VR游戏之一。而在未来，我们将会不忘初心，继续努力！",
     },
     index_view:{
         about_des:"                    <p class=\"title\">我们的愿景</p>\n" +
@@ -137,17 +141,17 @@ export default {
     ],
     news:[
         {title:"最刺激的星际吃鸡",cover:"/images/new1-thumb.png",link:"http://mp.weixin.qq.com/s/To8yixNKIxgCHUXyf9cEGg",created_at:"2017.08.31"},
-        {title:"在Vision Summit上 Multiverse到底分享了什么经验？",cover:"/images/new2.png",link:"http://mp.weixin.qq.com/s/srXc6XZkTQOUoRyi6mjYxg",created_at:"2017.06.05"},
+        {title:"在Vision Summit上深圳市摩登世纪科技有限公司（Multiverse）到底分享了什么经验？",cover:"/images/new2.png",link:"http://mp.weixin.qq.com/s/srXc6XZkTQOUoRyi6mjYxg",created_at:"2017.06.05"},
         {title:"新款GearVR要来了，你期待吗？",cover:"/images/new3.png",link:"http://mp.weixin.qq.com/s/Lw1RwyTeaphVUSiXntVsYg",created_at:"2017.08.31"},
         {title:"《寻找黎明》荣获GAD最佳视觉奖  超美画面抢先放送",cover:"/images/new4.png",link:"http://mp.weixin.qq.com/s/KMvlWJNm0uHCet4cqiynEA",created_at:"2017.08.31"},
-        {title:"独家专访Multiverse范威洋",cover:"/images/new5.png",link:"http://mp.weixin.qq.com/s/lyTZj5ySbWCq_nIQVDYzBA",created_at:"2017.08.31"},
+        {title:"独家专访深圳市摩登世纪科技有限公司（Multiverse）范威洋",cover:"/images/new5.png",link:"http://mp.weixin.qq.com/s/lyTZj5ySbWCq_nIQVDYzBA",created_at:"2017.08.31"},
         {title:"《寻找黎明》荣获最佳视觉奖的背后 开发大饼吐槽中",cover:"/images/new6.png",link:"http://mp.weixin.qq.com/s/czv-i_shg6B9CfyBfKBBGg",created_at:"2017.08.31"},
-        {title:"与微软谷歌同台！Multiverse在Vision......",cover:"/images/new7.png",link:"http://mp.weixin.qq.com/s/oEGNhDhPQ1X37by05lHkqg",created_at:"2017.08.31"},
+        {title:"与微软谷歌同台！深圳市摩登世纪科技有限公司（Multiverse）在Vision......",cover:"/images/new7.png",link:"http://mp.weixin.qq.com/s/oEGNhDhPQ1X37by05lHkqg",created_at:"2017.08.31"},
         {title:"《梦幻风之旅》迎更新内容 圣诞彩蛋炫丽登场 ",cover:"/images/new8.png",link:"http://mp.weixin.qq.com/s/FP_aIb0Qg1vVbtykRhFclA",created_at:"2017.08.31"},
         {title:"扯淡系列、VR游戏最重要的是什么？",cover:"/images/new9.png",link:"http://mp.weixin.qq.com/s/ORuDZ3V5I_ieyobAdfic9w",created_at:"2017.08.31"},
         {title:"HTC生态大会 《寻找黎明》在这里",cover:"/images/new10.png",link:"http://mp.weixin.qq.com/s/JGWQKRMlIipqSCwzZIph6A",created_at:"2017.08.31"},
-        {title:"VR|Multiverse最新科幻大作，《Seeking Dawn》震撼来袭！",cover:"/images/new11.png",link:"http://mp.weixin.qq.com/s/c2zIflVsfzS7qRdOhPfpsQ",created_at:"2017.08.31"},
-        {title:"Multiverse干货分享|如何制作好的VR内容 ",cover:"/images/new12.png",link:"http://mp.weixin.qq.com/s/j0WGJrwqdfHEYjx0VJ8cGA",created_at:"2017.08.31"},
+        {title:"VR|深圳市摩登世纪科技有限公司（Multiverse）最新科幻大作，《Seeking Dawn》震撼来袭！",cover:"/images/new11.png",link:"http://mp.weixin.qq.com/s/c2zIflVsfzS7qRdOhPfpsQ",created_at:"2017.08.31"},
+        {title:"深圳市摩登世纪科技有限公司（Multiverse）干货分享|如何制作好的VR内容 ",cover:"/images/new12.png",link:"http://mp.weixin.qq.com/s/j0WGJrwqdfHEYjx0VJ8cGA",created_at:"2017.08.31"},
         {title:"99%的人没有机会体验！你想不想过那1%的生活！",cover:"/images/new13.png",link:"http://mp.weixin.qq.com/s/mrIgYuRNn2jyGf8piCWYVA",created_at:"2016.11.25"},
 
     ],

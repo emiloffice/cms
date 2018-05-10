@@ -10,11 +10,20 @@
         </div>
         <div class="contact_info container">
             <p><img src="/images/contact.png" alt=""></p>
-            <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <li><p><a href="mailto:contact@multiverseinc.com"><i class="icon iconfont">&#xe632;</i>{{$t("contact_view.Regular")}}：contact@multiverseinc.com</a></p></li>
-                <li><p><a :href="$t('contact_view.mailto_Public_email')"><i class="icon iconfont">&#xe61f;</i>{{$t("contact_view.Public")}}：{{$t("contact_view.Public_email")}}</a></p></li>
-                <li><p><a  href="mailto:careers@multiverseinc.com"><i class="icon iconfont">&#xe6dc;</i>{{$t("contact_view.Human")}}：careers@multiverseinc.com</a></p></li>
-                <li><p><a  href="mailto:chenjun.li@multiverseinc.com"><i class="icon iconfont">&#xe640;</i>{{$t("contact_view.Business")}}：chenjun.li@multiverseinc.com</a></p></li>
+            <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12" v-if="this.$i18n.locale=='zh-CN'">
+                <li><p><a href="#"><i class="icon iconfont">&#xe632;</i>{{$t("contact_view.company")}}：{{$t("contact_view.company_name")}}</a></p></li>
+                <li><p><a href="mailto:contact@multiverseinc.com"><i class="icon iconfont">&#xe632;</i>{{$t("contact_view.Regular")}}：李先生 contact@multiverseinc.com</a></p></li>
+                <li><p><a :href="$t('contact_view.mailto_Public_email')"><i class="icon iconfont">&#xe61f;</i>{{$t("contact_view.Public")}}：李先生 {{$t("contact_view.Public_email")}}</a></p></li>
+                <li><p><a  href="mailto:careers@multiverseinc.com"><i class="icon iconfont">&#xe6dc;</i>{{$t("contact_view.Human")}}：李先生 careers@multiverseinc.com</a></p></li>
+                <li><p><a  href="mailto:chenjun.li@multiverseinc.com"><i class="icon iconfont">&#xe640;</i>{{$t("contact_view.Business")}}：李经理 chenjun.li@multiverseinc.com</a></p></li>
+                <li><p><a  href="#"><i class="icon iconfont">&#xe640;</i>{{$t("contact_view.address")}}：{{$t("contact_view.address_content")}}</a></p></li>
+            </ul>
+            <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12" v-else>
+                <li><p><a href="mailto:contact@multiverseinc.com"><i class="icon iconfont">&#xe632;</i>{{$t("contact_view.Regular")}}： contact@multiverseinc.com</a></p></li>
+                <li><p><a :href="$t('contact_view.mailto_Public_email')"><i class="icon iconfont">&#xe61f;</i>{{$t("contact_view.Public")}}： {{$t("contact_view.Public_email")}}</a></p></li>
+                <li><p><a  href="mailto:careers@multiverseinc.com"><i class="icon iconfont">&#xe6dc;</i>{{$t("contact_view.Human")}}： careers@multiverseinc.com</a></p></li>
+                <li><p><a  href="mailto:chenjun.li@multiverseinc.com"><i class="icon iconfont">&#xe640;</i>{{$t("contact_view.Business")}}： chenjun.li@multiverseinc.com</a></p></li>
+
             </ul>
             <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                 <li><p><i class="icon iconfont">&#xe66e;</i><a href="https://facebook.com/MultiverseVR">facebook.com/MultiverseVR</a></p></li>
@@ -66,8 +75,12 @@
         },
         data(){
             return{
-                navIndex: 6
+                navIndex: 6,
+                language: this.$i18n.locale
             }
+        },
+        created(){
+            console.log(this.$i18n)
         }
     }
 
