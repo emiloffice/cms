@@ -3,7 +3,8 @@
         <nav-bar></nav-bar>
         <div id="fullpage">
             <div class="section " id="section0">
-                <img src="/images/index-banner.png" alt="">
+                <div class="slide text-center"><img src="/images/index-banner.png" alt="Multiverse E3 show"></div>
+                <div class="slide text-center"><img src="/images/index-banner2.png" alt="Multiverse Team"></div>
             </div>
             <div class="section" id="section1">
                 <img src="/images/released-games.png" class="title" alt="RELEASED GAMES" style="position: absolute;top: 10px;left: 10px;">
@@ -87,7 +88,8 @@
     }
     #section0 img{
         display: block;
-        width: 85%;
+        width: auto;
+        height: 100%;
         margin: 0 auto;
     }
     #section1>img{

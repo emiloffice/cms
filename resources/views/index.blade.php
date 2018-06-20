@@ -31,13 +31,16 @@
             $('#fullpage').fullpage({
                 anchors: ['1st', '2st', '3st', '4st'],
                 menu: '#menu',
-                navigation: true,
+                navigation: false,
                 navigationPosition: 'left',
                 navigationColor:'#999999',
                 navigationTooltips: ['HOME', 'GAMES', 'ABOUT US', 'NEWS'],
                 scrollingSpeed: 1000,
                 scrollOverflow: true,
                 lazyLoading: true,
+                slidesNavigation: true,
+                slidesNavPosition: "bottom",
+                controlArrows: false,
                 scrollOverflowOptions: {
                     click: true
                 }
